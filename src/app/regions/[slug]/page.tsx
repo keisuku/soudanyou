@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { mockRegions, mockWines } from "@/lib/mock-data";
+
+export function generateStaticParams() {
+  return mockRegions.map((region) => ({ slug: region.slug }));
+}
 import { WineCard } from "@/components/wine/wine-card";
 import { Badge } from "@/components/ui/badge";
 
