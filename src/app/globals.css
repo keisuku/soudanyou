@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1a0a10;
+  --foreground: #f5ede0;
+  --card: #2a1520;
+  --card-foreground: #f5ede0;
+  --popover: #2a1520;
+  --popover-foreground: #f5ede0;
+  --primary: #8b2252;
+  --primary-foreground: #f5ede0;
+  --secondary: #3d1a2e;
+  --secondary-foreground: #f5ede0;
+  --muted: #3d1a2e;
+  --muted-foreground: #b89aaa;
+  --accent: #6b2fa0;
+  --accent-foreground: #f5ede0;
+  --destructive: #dc2626;
+  --destructive-foreground: #f5ede0;
+  --border: #4a2035;
+  --input: #4a2035;
+  --ring: #8b2252;
+  --gold: #d4a843;
+  --wine-red: #722f37;
+  --wine-white: #f5e6c8;
+  --wine-rose: #e8a0b4;
+  --wine-sparkling: #e8d5b0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-wine-red: var(--wine-red);
+  --color-wine-white: var(--wine-white);
+  --color-wine-rose: var(--wine-rose);
+  --color-wine-sparkling: var(--wine-sparkling);
+  --font-sans: "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), "Hiragino Kaku Gothic ProN", "Noto Sans JP",
+    sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
