@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { mockWines, mockTweets } from "@/lib/mock-data";
+
+export function generateStaticParams() {
+  return mockWines.map((wine) => ({ id: wine.id }));
+}
 import { RatingBadge } from "@/components/wine/rating-badge";
 import { PriceComparison } from "@/components/wine/price-comparison";
 import { PriceChart } from "@/components/wine/price-chart";
