@@ -1,96 +1,97 @@
-import { Search, Star, TrendingUp, Globe } from "lucide-react";
-import { mockWines, mockTrends, mockTweets } from "@/lib/mock-data";
+import { Flame, Wine, Sparkles, TrendingUp } from "lucide-react";
+import { mockWines } from "@/lib/mock-data";
 import { WineCard } from "@/components/wine/wine-card";
-import { TrendList } from "@/components/trends/trend-list";
-import { TweetCard } from "@/components/trends/tweet-card";
-import { Card, CardContent } from "@/components/ui/card";
+import type { WineType } from "@/types/wine";
 
-const features = [
-  {
-    icon: Search,
-    title: "価格比較",
-    description:
-      "楽天、Amazon、エノテカなど複数サイトの価格を一括比較。最安値を見逃しません。",
-  },
-  {
-    icon: Star,
-    title: "世界の評価",
-    description:
-      "Vivino、Wine Searcher、CellarTrackerの評価を集約。信頼できるスコアで選べます。",
-  },
-  {
-    icon: TrendingUp,
-    title: "トレンド",
-    description:
-      "SNSやメディアで話題のワインをリアルタイムで追跡。トレンドを先取りしましょう。",
-  },
+const categories: { type: WineType; label: string; emoji: string; catch: string }[] = [
+  { type: "red", label: "赤ワイン", emoji: "🍷", catch: "コンビニ赤ならこれ！" },
+  { type: "white", label: "白ワイン", emoji: "🥂", catch: "白ならこれ！" },
+  { type: "sparkling", label: "スパークリング", emoji: "🍾", catch: "泡ならこれ！" },
+  { type: "rose", label: "ロゼ", emoji: "🌸", catch: "ロゼならこれ！" },
 ];
 
-export default function Home() {
-  const latestWines = mockWines.slice(0, 4);
-  const latestTweets = mockTweets.slice(0, 3);
+function getTopByBuzz(type: WineType, limit = 3) {
+  return mockWines
+    .filter((w) => w.type === type)
+    .sort((a, b) => b.buzzScore - a.buzzScore)
+    .slice(0, limit);
+}
 
+const buzzRanking = [...mockWines]
+  .sort((a, b) => b.buzzScore - a.buzzScore)
+  .slice(0, 5);
+
+const cospaRanking = [...mockWines]
+  .sort((a, b) => b.costPerformance - a.costPerformance)
+  .slice(0, 5);
+
+export default function Home() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       {/* Hero */}
-      <section className="py-16 text-center sm:py-24">
+      <section className="py-12 text-center sm:py-20">
         <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
-          あなたのワイン体験を、
-          <br className="sm:hidden" />
-          もっと豊かに
-        </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-          価格比較、世界中の評価、最新トレンドを一箇所に集約。
+          今買うべきワインが
           <br />
-          あなたにぴったりの一本を見つけましょう。
+          <span className="text-gold">すぐわかる</span>
+        </h1>
+        <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground">
+          コンビニ・スーパーで買えるワインをSNS話題度とコスパで厳選。
+          <br />
+          あなたの「今日の一本」がここにあります。
         </p>
       </section>
 
-      {/* Feature cards */}
-      <section className="grid gap-6 sm:grid-cols-3">
-        {features.map((f) => (
-          <Card key={f.title} className="text-center">
-            <CardContent className="flex flex-col items-center gap-3 p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20">
-                <f.icon className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground">{f.title}</h3>
-              <p className="text-sm text-muted-foreground">{f.description}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </section>
-
-      {/* Latest trending wines */}
-      <section className="mt-16">
+      {/* SNS話題度ランキング */}
+      <section>
         <div className="flex items-center gap-2">
-          <Globe className="h-5 w-5 text-gold" />
-          <h2 className="text-2xl font-bold text-foreground">注目のワイン</h2>
+          <Flame className="h-5 w-5 text-orange-400" />
+          <h2 className="text-2xl font-bold text-foreground">SNS話題度ランキング</h2>
         </div>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {latestWines.map((wine) => (
-            <WineCard key={wine.id} wine={wine} />
+        <p className="mt-1 text-sm text-muted-foreground">
+          今、SNSで最も話題のワインTOP5
+        </p>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {buzzRanking.map((wine, i) => (
+            <WineCard key={wine.id} wine={wine} rank={i + 1} />
           ))}
         </div>
       </section>
 
-      {/* Trending topics */}
-      <section className="mt-16">
+      {/* カテゴリ別 今買うべきワイン */}
+      {categories.map((cat) => {
+        const wines = getTopByBuzz(cat.type);
+        if (wines.length === 0) return null;
+        return (
+          <section key={cat.type} className="mt-14">
+            <div className="flex items-center gap-2">
+              <span className="text-xl">{cat.emoji}</span>
+              <h2 className="text-2xl font-bold text-foreground">{cat.catch}</h2>
+            </div>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {cat.label}のSNS話題度TOP3
+            </p>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {wines.map((wine, i) => (
+                <WineCard key={wine.id} wine={wine} rank={i + 1} />
+              ))}
+            </div>
+          </section>
+        );
+      })}
+
+      {/* コスパ最強ランキング */}
+      <section className="mt-14 pb-16">
         <div className="flex items-center gap-2">
           <TrendingUp className="h-5 w-5 text-gold" />
-          <h2 className="text-2xl font-bold text-foreground">トレンドトピック</h2>
+          <h2 className="text-2xl font-bold text-foreground">コスパ最強ランキング</h2>
         </div>
-        <div className="mt-6">
-          <TrendList trends={mockTrends} />
-        </div>
-      </section>
-
-      {/* Recent tweets */}
-      <section className="mt-16 pb-16">
-        <h2 className="text-2xl font-bold text-foreground">最近の話題</h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {latestTweets.map((tweet) => (
-            <TweetCard key={tweet.id} tweet={tweet} />
+        <p className="mt-1 text-sm text-muted-foreground">
+          評価が高いのに安い！お値打ちワインTOP5
+        </p>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {cospaRanking.map((wine, i) => (
+            <WineCard key={wine.id} wine={wine} rank={i + 1} />
           ))}
         </div>
       </section>

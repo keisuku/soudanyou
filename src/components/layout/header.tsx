@@ -7,9 +7,6 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/wines", label: "ワイン一覧" },
-  { href: "/map", label: "産地マップ" },
-  { href: "/prices", label: "価格比較" },
-  { href: "/trends", label: "トレンド" },
 ];
 
 export function Header() {
