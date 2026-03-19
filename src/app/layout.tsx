@@ -4,8 +4,8 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: "相談ヨウ | ワイン情報アグリゲーター",
-  description: "ワインの価格比較、評価、トレンドを一箇所で",
+  title: "相談ヨウ | 今買うべきワインがすぐわかる",
+  description: "コンビニ・スーパーで買えるワインをSNS話題度とコスパで厳選",
 };
 
 export default function RootLayout({
