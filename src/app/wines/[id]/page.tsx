@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatPrice } from "@/lib/utils";
 import { Star, MapPin, ArrowLeft, MessageCircle } from "lucide-react";
-import { SnsPostCard } from "@/components/wine/sns-post-card";
+import { TweetEmbed } from "@/components/wine/tweet-embed";
 
 export function generateStaticParams() {
   return mockWines.map((wine) => ({ id: wine.id }));
@@ -140,19 +140,19 @@ export default async function WineDetailPage({
             </div>
           </CardContent>
         </Card>
-        {/* SNS Posts */}
-        {wine.posts.length > 0 && (
+        {/* Tweets */}
+        {wine.tweetUrls.length > 0 && (
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <MessageCircle className="h-5 w-5" />
-                みんなの声（{wine.posts.length}件）
+                みんなのポスト（{wine.tweetUrls.length}件）
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-3">
-                {wine.posts.map((post) => (
-                  <SnsPostCard key={post.id} post={post} />
+              <div className="space-y-4">
+                {wine.tweetUrls.map((url) => (
+                  <TweetEmbed key={url} tweetUrl={url} />
                 ))}
               </div>
             </CardContent>
