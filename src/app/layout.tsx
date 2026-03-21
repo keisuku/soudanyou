@@ -5,8 +5,8 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: "相談ヨウ | 今買うべきワインがすぐわかる",
-  description: "コンビニ・スーパーで買えるワインをSNS話題度とコスパで厳選",
+  title: "ご近所ワイン | 今買うべきワインがすぐわかる",
+  description: "コンビニ・スーパーで買えるワインをコスパと話題度で厳選",
 };
 
 export default function RootLayout({

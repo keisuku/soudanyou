@@ -18,7 +18,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Wine className="h-6 w-6 text-gold" />
-          <span className="text-xl font-bold text-gold">相談ヨウ</span>
+          <span className="text-xl font-bold text-primary">ご近所ワイン</span>
         </Link>
 
         {/* Desktop nav */}
