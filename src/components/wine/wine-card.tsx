@@ -98,25 +98,16 @@ export function WineCard({ wine, rank, className }: WineCardProps) {
             <span>最安 {cheapestStore.name} {formatPrice(cheapestStore.price)}</span>
           </div>
 
-          {/* Buzz + posts count */}
+          {/* Buzz + tweets count */}
           <div className="mt-2 flex items-center justify-between">
             <BuzzBadge score={wine.buzzScore} />
-            {wine.posts.length > 0 && (
+            {wine.tweetUrls.length > 0 && (
               <span className="flex items-center gap-1 text-xs text-muted-foreground">
                 <MessageCircle className="h-3 w-3" />
-                {wine.posts.length}件の投稿
+                {wine.tweetUrls.length}件のポスト
               </span>
             )}
           </div>
-
-          {/* SNS post preview */}
-          {wine.posts.length > 0 && (
-            <div className="mt-2 rounded-lg bg-secondary/50 p-2">
-              <p className="line-clamp-2 text-[11px] text-foreground/70">
-                &ldquo;{wine.posts[0].content}&rdquo;
-              </p>
-            </div>
-          )}
         </CardContent>
       </Card>
     </Link>

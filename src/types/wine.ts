@@ -42,16 +42,6 @@ export interface Wine {
   costPerformance: number;
   /** おすすめタグ（シーン・用途） */
   tags: string[];
-  /** 関連SNS投稿 */
-  posts: SnsPost[];
-}
-
-export interface SnsPost {
-  id: string;
-  platform: "x" | "instagram";
-  authorName: string;
-  authorHandle: string;
-  content: string;
-  likes: number;
-  postedAt: string;
+  /** 関連ツイートURL */
+  tweetUrls: string[];
 }

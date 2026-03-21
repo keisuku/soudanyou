@@ -24,10 +24,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.7,
     costPerformance: 88,
     tags: ["家飲み", "肉料理", "コンビニ"],
-    posts: [
-      { id: "p1-1", platform: "x", authorName: "ワイン初心者OL", authorHandle: "@wine_ollife", content: "セブンで買ったカッシェロ・デル・ディアブロ、698円なのに普通にうまい…！肉じゃがと合わせたら最高でした", likes: 342, postedAt: "2026-03-18" },
-      { id: "p1-2", platform: "instagram", authorName: "おうちワイン部", authorHandle: "@ouchi_wine", content: "今夜のお供はディアブロ赤🍷 コンビニワインの域を超えてる。ステーキにぴったり！", likes: 891, postedAt: "2026-03-15" },
-    ],
+    tweetUrls: ["https://x.com/Kirin_Brewery/status/1764939658847195155", "https://x.com/Kirin_Brewery/status/1653293996956078080"],
   },
   {
     id: "2",
@@ -50,9 +47,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.4,
     costPerformance: 92,
     tags: ["家飲み", "ワンコイン", "コンビニ"],
-    posts: [
-      { id: "p2-1", platform: "x", authorName: "節約ワイン道", authorHandle: "@setsuyaku_wine", content: "フロンテラ498円、マジでワンコイン最強説。味はちゃんとカベルネしてる", likes: 215, postedAt: "2026-03-17" },
-    ],
+    tweetUrls: ["https://x.com/conosur_japan/status/1877639017635930436"],
   },
   {
     id: "3",
@@ -75,9 +70,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.6,
     costPerformance: 90,
     tags: ["家飲み", "イタリアン", "パスタ"],
-    posts: [
-      { id: "p3-1", platform: "x", authorName: "パスタとワイン", authorHandle: "@pasta_vino", content: "カルディで見つけたモンテプルチアーノ598円。ボロネーゼと合わせたら幸せすぎた", likes: 178, postedAt: "2026-03-16" },
-    ],
+    tweetUrls: ["https://x.com/KALDI_webshop/status/1846823626450034926"],
   },
   {
     id: "4",
@@ -100,10 +93,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.8,
     costPerformance: 85,
     tags: ["手土産", "フランス", "本格派"],
-    posts: [
-      { id: "p4-1", platform: "x", authorName: "ソムリエ見習い", authorHandle: "@somme_trainee", content: "ギガルのコート・デュ・ローヌが1,380円って信じられる？フランスワインの底力を感じる", likes: 523, postedAt: "2026-03-18" },
-      { id: "p4-2", platform: "instagram", authorName: "ワインと料理", authorHandle: "@wine_cuisine", content: "カルディで買えるフランスワイン🇫🇷 ローヌの赤、ビーフシチューと最高の組み合わせ", likes: 1205, postedAt: "2026-03-14" },
-    ],
+    tweetUrls: ["https://x.com/miyamoto_ryuta/status/1926625554209403076"],
   },
   {
     id: "5",
@@ -126,9 +116,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.5,
     costPerformance: 86,
     tags: ["家飲み", "和食", "コンビニ"],
-    posts: [
-      { id: "p5-1", platform: "x", authorName: "和食ワインペアリング", authorHandle: "@washoku_wine", content: "ディアブロのピノ・ノワール、筑前煮と合わせたら意外とイケる。698円で和食ペアリング楽しめるの最高", likes: 287, postedAt: "2026-03-17" },
-    ],
+    tweetUrls: ["https://x.com/Kirin_Brewery/status/1764939658847195155"],
   },
 
   // ===== 白ワイン =====
@@ -154,10 +142,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.6,
     costPerformance: 89,
     tags: ["家飲み", "魚料理", "コンビニ", "万能"],
-    posts: [
-      { id: "p6-1", platform: "x", authorName: "コンビニワイン研究家", authorHandle: "@cvs_wine", content: "ディアブロのシャルドネ、全コンビニ白ワインの中でダントツ1位だと思う。698円でこの樽香はすごい", likes: 645, postedAt: "2026-03-19" },
-      { id: "p6-2", platform: "instagram", authorName: "晩酌タイム", authorHandle: "@banshaku_time", content: "今日はセブンのディアブロ白🥂 お刺身と一緒に。トロピカルな香りが最高〜", likes: 432, postedAt: "2026-03-16" },
-    ],
+    tweetUrls: ["https://x.com/Kirin_Brewery/status/1764939658847195155", "https://x.com/Kirin_Brewery/status/1653293996956078080"],
   },
   {
     id: "7",
@@ -180,9 +165,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.5,
     costPerformance: 91,
     tags: ["家飲み", "刺身", "ワンコイン"],
-    posts: [
-      { id: "p7-1", platform: "x", authorName: "デイリーワイン派", authorHandle: "@daily_wine", content: "サンタ・リタ120のソーヴィニヨン・ブラン、500円台で買えるのにちゃんと爽やか。刺身の日はこれ", likes: 156, postedAt: "2026-03-15" },
-    ],
+    tweetUrls: ["https://x.com/conosur_japan/status/1877639017635930436"],
   },
   {
     id: "8",
@@ -205,11 +188,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 4.0,
     costPerformance: 87,
     tags: ["SNS話題", "手土産", "リッチ"],
-    posts: [
-      { id: "p8-1", platform: "x", authorName: "ワイン沼にハマった人", authorHandle: "@wine_numa", content: "ボーグルのシャルドネ飲んだら人生変わった。コストコで1,298円。この価格でカリフォルニアのリッチ白が飲めるの反則", likes: 1893, postedAt: "2026-03-19" },
-      { id: "p8-2", platform: "instagram", authorName: "コストコワイン部", authorHandle: "@costco_wine_bu", content: "コストコで見つけたボーグル🍾 バターとバニラの香りがたまらない。1,298円は即買い！", likes: 2341, postedAt: "2026-03-17" },
-      { id: "p8-3", platform: "x", authorName: "成城石井マニア", authorHandle: "@seijo_mania", content: "成城石井でボーグルシャルドネ買った。SNSで話題になってるだけある。リッチなのにスイスイ飲める", likes: 567, postedAt: "2026-03-14" },
-    ],
+    tweetUrls: ["https://x.com/kozewine/status/1926625554209403076"],
   },
   {
     id: "9",
@@ -232,9 +211,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.8,
     costPerformance: 84,
     tags: ["アロマティック", "新発見", "エスニック"],
-    posts: [
-      { id: "p9-1", platform: "x", authorName: "隠れ名品ハンター", authorHandle: "@kakure_meihin", content: "トロンテスっていう品種知ってる？マスカットみたいな香りなのに辛口。エスニック料理に合う！カルディにあるよ", likes: 312, postedAt: "2026-03-16" },
-    ],
+    tweetUrls: ["https://x.com/kozewine/status/1996552974836244480"],
   },
   {
     id: "10",
@@ -257,10 +234,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 4.0,
     costPerformance: 75,
     tags: ["ご褒美", "手土産", "定番"],
-    posts: [
-      { id: "p10-1", platform: "x", authorName: "ワインレビュアー", authorHandle: "@wine_reviewer", content: "クラウディー・ベイは別格。NZソーヴィニヨン・ブランの教科書的存在。手土産に持っていくと必ず喜ばれる", likes: 876, postedAt: "2026-03-18" },
-      { id: "p10-2", platform: "instagram", authorName: "ご褒美ワイン", authorHandle: "@gohoubi_wine", content: "金曜のご褒美にクラウディー・ベイ🥂 パッションフルーツの香りが最高すぎる", likes: 1543, postedAt: "2026-03-14" },
-    ],
+    tweetUrls: ["https://x.com/madameFIGARO_jp/status/1762372183832056229"],
   },
 
   // ===== ロゼ =====
@@ -285,9 +259,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.4,
     costPerformance: 83,
     tags: ["BBQ", "ピクニック", "微発泡"],
-    posts: [
-      { id: "p11-1", platform: "x", authorName: "ピクニック好き", authorHandle: "@picnic_love", content: "マテウスロゼ持ってBBQしてきた！微発泡で飲みやすいし780円だし、アウトドアワインの正解", likes: 234, postedAt: "2026-03-15" },
-    ],
+    tweetUrls: ["https://x.com/madameFIGARO_jp/status/1762372183832056229"],
   },
   {
     id: "12",
@@ -310,11 +282,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.9,
     costPerformance: 72,
     tags: ["SNS話題", "パーティ", "おしゃれ", "ご褒美"],
-    posts: [
-      { id: "p12-1", platform: "instagram", authorName: "映えワイン", authorHandle: "@bae_wine", content: "ウィスパリング・エンジェル💕 このサーモンピンクの美しさよ…味も繊細で最高。パーティの主役", likes: 3421, postedAt: "2026-03-19" },
-      { id: "p12-2", platform: "x", authorName: "ロゼ専門家", authorHandle: "@rose_expert", content: "ウィスパリングエンジェル、インスタで見ない日がないくらいバズってる。実際飲んでも美味しいからすごい", likes: 1234, postedAt: "2026-03-17" },
-      { id: "p12-3", platform: "instagram", authorName: "おしゃれワイン会", authorHandle: "@oshare_wine", content: "女子会にウィスパリング・エンジェル🌸 見た目も味も完璧なロゼ！", likes: 2876, postedAt: "2026-03-13" },
-    ],
+    tweetUrls: ["https://x.com/Redlionstaffs/status/1817243825045180573", "https://x.com/majesticwgc/status/1836703284565856634", "https://x.com/Dorsetecho/status/1936492021708931552"],
   },
 
   // ===== スパークリング =====
@@ -340,10 +308,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.6,
     costPerformance: 88,
     tags: ["パーティ", "コンビニ", "乾杯"],
-    posts: [
-      { id: "p13-1", platform: "x", authorName: "泡好き", authorHandle: "@awa_suki", content: "フレシネの黒ボトルかっこよすぎ。コンビニで1,098円で本格カヴァ買えるの知らない人多すぎ", likes: 456, postedAt: "2026-03-18" },
-      { id: "p13-2", platform: "instagram", authorName: "乾杯ワイン", authorHandle: "@kanpai_wine", content: "今夜はフレシネで乾杯🥂 黒ボトルが映える！辛口で食事にも合う万能泡", likes: 789, postedAt: "2026-03-15" },
-    ],
+    tweetUrls: ["https://x.com/Seicomart_TW/status/1864218500199592173"],
   },
   {
     id: "14",
@@ -366,9 +331,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.7,
     costPerformance: 82,
     tags: ["初心者", "スイーツ", "女子会"],
-    posts: [
-      { id: "p14-1", platform: "x", authorName: "ワイン初心者", authorHandle: "@wine_beginner", content: "マルティーニのアスティ、甘くて飲みやすい！ワイン苦手な友達もこれは美味しいって言ってた", likes: 345, postedAt: "2026-03-16" },
-    ],
+    tweetUrls: ["https://x.com/Seicomart_TW/status/1864218500199592173"],
   },
   {
     id: "15",
@@ -391,10 +354,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.9,
     costPerformance: 86,
     tags: ["記念日", "手土産", "プレミアム"],
-    posts: [
-      { id: "p15-1", platform: "x", authorName: "シャンパン代わりに", authorHandle: "@champagne_alt", content: "シャンドン、モエ系列なのに1,980円。シャンパンの半額以下でこのクオリティは反則。記念日に使える", likes: 987, postedAt: "2026-03-18" },
-      { id: "p15-2", platform: "instagram", authorName: "お祝いワイン", authorHandle: "@oiwai_wine", content: "誕生日にシャンドンで乾杯🎂 2,000円以下とは思えない華やかさ！", likes: 1567, postedAt: "2026-03-12" },
-    ],
+    tweetUrls: ["https://x.com/kozewine/status/1926625554209403076"],
   },
   {
     id: "16",
@@ -417,9 +377,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.4,
     costPerformance: 93,
     tags: ["ワンコイン", "家飲み", "コスパ最強"],
-    posts: [
-      { id: "p16-1", platform: "x", authorName: "コスパ番長", authorHandle: "@cospa_bancho", content: "コドーニュのカヴァ、ドンキで598円。500円台のスパークリングで一番うまいと思う", likes: 198, postedAt: "2026-03-14" },
-    ],
+    tweetUrls: ["https://x.com/Seicomart_TW/status/1864218500199592173"],
   },
 
   // ===== ちょっと贅沢（〜5,000円） =====
@@ -444,9 +402,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.8,
     costPerformance: 80,
     tags: ["手土産", "ブルゴーニュ", "ご褒美"],
-    posts: [
-      { id: "p17-1", platform: "x", authorName: "ブルゴーニュ入門", authorHandle: "@bourgogne_101", content: "ルイ・ジャドのブルゴーニュシャルドネ、2,480円でブルゴーニュ体験できるの最高。ミネラル感がたまらん", likes: 432, postedAt: "2026-03-17" },
-    ],
+    tweetUrls: ["https://x.com/kozewine/status/1926625554209403076"],
   },
   {
     id: "18",
@@ -469,10 +425,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.9,
     costPerformance: 83,
     tags: ["SNS話題", "鶏肉", "サーモン"],
-    posts: [
-      { id: "p18-1", platform: "x", authorName: "NZワイン推し", authorHandle: "@nz_wine_oshi", content: "オイスター・ベイのピノ、サーモンのムニエルと合わせたら天国だった。成城石井で1,980円", likes: 678, postedAt: "2026-03-19" },
-      { id: "p18-2", platform: "instagram", authorName: "ワインペアリング研究", authorHandle: "@pairing_lab", content: "オイスター・ベイ ピノ・ノワール🍷 鶏の照り焼きとの相性が神すぎた！", likes: 1123, postedAt: "2026-03-15" },
-    ],
+    tweetUrls: ["https://x.com/kozewine/status/1996552974836244480"],
   },
   {
     id: "19",
@@ -495,10 +448,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.8,
     costPerformance: 84,
     tags: ["SNS話題", "アペロール", "パーティ"],
-    posts: [
-      { id: "p19-1", platform: "instagram", authorName: "アペロールスプリッツ部", authorHandle: "@aperol_bu", content: "ミオネットのプロセッコでアペロール・スプリッツ作った🍹 カルディで1,580円！おうちバー最高", likes: 2156, postedAt: "2026-03-18" },
-      { id: "p19-2", platform: "x", authorName: "プロセッコ推し", authorHandle: "@prosecco_love", content: "ミオネットのプロセッコ、フルーティで飲みやすい。コストコで1,380円はお買い得すぎ", likes: 789, postedAt: "2026-03-16" },
-    ],
+    tweetUrls: ["https://x.com/kozewine/status/1926625554209403076"],
   },
   {
     id: "20",
@@ -521,9 +471,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.9,
     costPerformance: 86,
     tags: ["BBQ", "ステーキ", "濃厚"],
-    posts: [
-      { id: "p20-1", platform: "x", authorName: "肉とワイン", authorHandle: "@niku_wine", content: "ズッカルディのマルベック、BBQに合わせたら最高すぎた。濃厚な果実味とスモーキーさがステーキに寄り添う", likes: 543, postedAt: "2026-03-17" },
-    ],
+    tweetUrls: ["https://x.com/kozewine/status/1926625554209403076"],
   },
 ];
 
