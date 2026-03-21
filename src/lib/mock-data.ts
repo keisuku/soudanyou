@@ -24,7 +24,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.7,
     costPerformance: 88,
     tags: ["家飲み", "肉料理", "コンビニ"],
-    tweetUrls: ["https://x.com/Kirin_Brewery/status/1764939658847195155", "https://x.com/Kirin_Brewery/status/1653293996956078080"],
+    tweetUrls: ["https://x.com/Kirin_Brewery/status/1764939658847195155", "https://x.com/winenomuhito/status/1647408901904805891"],
   },
   {
     id: "2",
@@ -47,7 +47,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.4,
     costPerformance: 92,
     tags: ["家飲み", "ワンコイン", "コンビニ"],
-    tweetUrls: ["https://x.com/conosur_japan/status/1877639017635930436"],
+    tweetUrls: ["https://x.com/RocketNews24/status/1819192139110080944"],
   },
   {
     id: "3",
@@ -93,7 +93,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.8,
     costPerformance: 85,
     tags: ["手土産", "フランス", "本格派"],
-    tweetUrls: ["https://x.com/miyamoto_ryuta/status/1926625554209403076"],
+    tweetUrls: ["https://x.com/winenomuhito/status/2033307192301105209"],
   },
   {
     id: "5",
@@ -116,7 +116,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.5,
     costPerformance: 86,
     tags: ["家飲み", "和食", "コンビニ"],
-    tweetUrls: ["https://x.com/Kirin_Brewery/status/1764939658847195155"],
+    tweetUrls: ["https://x.com/Kirin_Brewery/status/1653293996956078080"],
   },
 
   // ===== 白ワイン =====
@@ -142,7 +142,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.6,
     costPerformance: 89,
     tags: ["家飲み", "魚料理", "コンビニ", "万能"],
-    tweetUrls: ["https://x.com/Kirin_Brewery/status/1764939658847195155", "https://x.com/Kirin_Brewery/status/1653293996956078080"],
+    tweetUrls: ["https://x.com/winenomuhito/status/1829698946614387023"],
   },
   {
     id: "7",
@@ -165,7 +165,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.5,
     costPerformance: 91,
     tags: ["家飲み", "刺身", "ワンコイン"],
-    tweetUrls: ["https://x.com/conosur_japan/status/1877639017635930436"],
+    tweetUrls: ["https://x.com/Pogometon/status/1975277968709877905"],
   },
   {
     id: "8",
@@ -259,7 +259,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.4,
     costPerformance: 83,
     tags: ["BBQ", "ピクニック", "微発泡"],
-    tweetUrls: ["https://x.com/madameFIGARO_jp/status/1762372183832056229"],
+    tweetUrls: ["https://x.com/winenomuhito/status/2011727082708222221"],
   },
   {
     id: "12",
@@ -282,7 +282,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.9,
     costPerformance: 72,
     tags: ["SNS話題", "パーティ", "おしゃれ", "ご褒美"],
-    tweetUrls: ["https://x.com/Redlionstaffs/status/1817243825045180573", "https://x.com/majesticwgc/status/1836703284565856634", "https://x.com/Dorsetecho/status/1936492021708931552"],
+    tweetUrls: ["https://x.com/Redlionstaffs/status/1817243825045180573", "https://x.com/Dorsetecho/status/1936492021708931552"],
   },
 
   // ===== スパークリング =====
@@ -331,7 +331,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.7,
     costPerformance: 82,
     tags: ["初心者", "スイーツ", "女子会"],
-    tweetUrls: ["https://x.com/Seicomart_TW/status/1864218500199592173"],
+    tweetUrls: ["https://x.com/winenomuhito/status/1990547137298575505"],
   },
   {
     id: "15",
@@ -354,7 +354,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.9,
     costPerformance: 86,
     tags: ["記念日", "手土産", "プレミアム"],
-    tweetUrls: ["https://x.com/kozewine/status/1926625554209403076"],
+    tweetUrls: ["https://x.com/ndjohnwine/status/1688579425636433920"],
   },
   {
     id: "16",
@@ -377,7 +377,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.4,
     costPerformance: 93,
     tags: ["ワンコイン", "家飲み", "コスパ最強"],
-    tweetUrls: ["https://x.com/Seicomart_TW/status/1864218500199592173"],
+    tweetUrls: ["https://x.com/conosur_japan/status/1877639017635930436"],
   },
 
   // ===== ちょっと贅沢（〜5,000円） =====
@@ -402,7 +402,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.8,
     costPerformance: 80,
     tags: ["手土産", "ブルゴーニュ", "ご褒美"],
-    tweetUrls: ["https://x.com/kozewine/status/1926625554209403076"],
+    tweetUrls: ["https://x.com/winenomuhito/status/2033307192301105209"],
   },
   {
     id: "18",
@@ -425,7 +425,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.9,
     costPerformance: 83,
     tags: ["SNS話題", "鶏肉", "サーモン"],
-    tweetUrls: ["https://x.com/kozewine/status/1996552974836244480"],
+    tweetUrls: ["https://x.com/miyamoto_ryuta/status/1926625554209403076"],
   },
   {
     id: "19",
@@ -448,7 +448,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.8,
     costPerformance: 84,
     tags: ["SNS話題", "アペロール", "パーティ"],
-    tweetUrls: ["https://x.com/kozewine/status/1926625554209403076"],
+    tweetUrls: ["https://x.com/majesticwgc/status/1836703284565856634"],
   },
   {
     id: "20",
@@ -471,7 +471,7 @@ export const mockWines: Wine[] = [
     vivinoScore: 3.9,
     costPerformance: 86,
     tags: ["BBQ", "ステーキ", "濃厚"],
-    tweetUrls: ["https://x.com/kozewine/status/1926625554209403076"],
+    tweetUrls: ["https://x.com/MirrorWeirdNews/status/1830591507663053002"],
   },
 ];
 
