@@ -20,6 +20,12 @@ export interface Store {
   inStock: boolean;
 }
 
+export interface BuyLink {
+  store: string;
+  url: string;
+  price: number;
+}
+
 export interface Wine {
   id: string;
   name: string;
@@ -30,18 +36,21 @@ export interface Wine {
   type: WineType;
   grapeVarieties: string[];
   description: string;
-  /** 価格（税込・代表価格） */
   price: number;
-  /** 購入できる店舗 */
   stores: Store[];
-  /** SNS話題度スコア (0-100) */
   buzzScore: number;
-  /** Vivinoスコア (0-5) */
   vivinoScore: number | null;
-  /** コスパ指標 (0-100): 評価÷価格の正規化値 */
   costPerformance: number;
-  /** おすすめタグ（シーン・用途） */
   tags: string[];
-  /** 関連ツイートURL */
   tweetUrls: string[];
+  /** アルコール度数 */
+  abv: number;
+  /** 飲み頃温度 */
+  servingTemp: string;
+  /** 合う料理 */
+  pairings: string[];
+  /** 今買うべき理由（1行キャッチ） */
+  whyBuyNow: string;
+  /** 購入リンク */
+  buyLinks: BuyLink[];
 }

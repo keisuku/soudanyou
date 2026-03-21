@@ -3,16 +3,14 @@
 import Link from "next/link";
 import type { Wine } from "@/types/wine";
 import { cn, formatPrice } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { BuzzBadge } from "@/components/wine/buzz-badge";
-import { Star, MapPin, MessageCircle } from "lucide-react";
+import { Star } from "lucide-react";
 
 const wineTypeColors: Record<Wine["type"], string> = {
-  red: "#722f37",
-  white: "#f5e6c8",
-  rose: "#e8a0b4",
-  sparkling: "#e8d5b0",
+  red: "bg-wine-red",
+  white: "bg-wine-white",
+  rose: "bg-wine-rose",
+  sparkling: "bg-wine-sparkling",
 };
 
 const wineTypeLabels: Record<Wine["type"], string> = {
@@ -29,9 +27,6 @@ interface WineCardProps {
 }
 
 export function WineCard({ wine, rank, className }: WineCardProps) {
-  const cheapestStore = wine.stores.reduce((min, s) =>
-    s.price < min.price ? s : min, wine.stores[0]);
-
   return (
     <Link href={`/wines/${wine.id}`}>
       <Card
@@ -41,72 +36,46 @@ export function WineCard({ wine, rank, className }: WineCardProps) {
         )}
       >
         <CardContent className="p-4">
-          {/* Rank + type + name */}
-          <div className="flex items-start gap-3">
-            {rank != null && (
-              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/20 text-sm font-bold text-gold">
-                {rank}
+          {/* Top row: rank + type badge + price + vivino */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              {rank != null && (
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                  {rank}
+                </span>
+              )}
+              <span className={cn("rounded-full px-2 py-0.5 text-[10px] font-bold", wineTypeColors[wine.type], wine.type === "red" ? "text-white" : "text-foreground")}>
+                {wineTypeLabels[wine.type]}
               </span>
-            )}
-            <span
-              className="mt-1 inline-block h-3 w-3 shrink-0 rounded-full border border-border"
-              style={{ backgroundColor: wineTypeColors[wine.type] }}
-              title={wineTypeLabels[wine.type]}
-            />
-            <div className="min-w-0 flex-1">
-              <h3 className="truncate font-semibold text-foreground">
-                {wine.nameJa}
-              </h3>
-              <p className="truncate text-xs text-muted-foreground">
-                {wine.producer} / {wine.country}
-              </p>
             </div>
-          </div>
-
-          {/* Description */}
-          <p className="mt-2 line-clamp-2 text-xs text-muted-foreground">
-            {wine.description}
-          </p>
-
-          {/* Tags */}
-          {wine.tags.length > 0 && (
-            <div className="mt-2 flex flex-wrap gap-1">
-              {wine.tags.slice(0, 3).map((tag) => (
-                <Badge key={tag} variant="secondary" className="text-[10px]">
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          )}
-
-          {/* Price + Vivino */}
-          <div className="mt-3 flex items-center justify-between">
             <span className="text-lg font-bold text-primary">
               {formatPrice(wine.price)}
             </span>
+          </div>
+
+          {/* Wine name */}
+          <h3 className="mt-2 font-semibold leading-tight text-foreground">
+            {wine.nameJa}
+          </h3>
+
+          {/* Why buy now - the key selling point */}
+          <p className="mt-1 text-sm leading-snug text-muted-foreground">
+            {wine.whyBuyNow}
+          </p>
+
+          {/* Bottom row: vivino + pairings */}
+          <div className="mt-3 flex items-center justify-between">
             {wine.vivinoScore && (
-              <span className="flex items-center gap-0.5 text-sm text-gold">
+              <span className="flex items-center gap-0.5 text-sm font-medium text-gold">
                 <Star className="h-3.5 w-3.5 fill-gold" />
                 {wine.vivinoScore.toFixed(1)}
               </span>
             )}
-          </div>
-
-          {/* Cheapest store */}
-          <div className="mt-1 flex items-center gap-1 text-xs text-muted-foreground">
-            <MapPin className="h-3 w-3" />
-            <span>最安 {cheapestStore.name} {formatPrice(cheapestStore.price)}</span>
-          </div>
-
-          {/* Buzz + tweets count */}
-          <div className="mt-2 flex items-center justify-between">
-            <BuzzBadge score={wine.buzzScore} />
-            {wine.tweetUrls.length > 0 && (
-              <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                <MessageCircle className="h-3 w-3" />
-                {wine.tweetUrls.length}件のポスト
-              </span>
-            )}
+            <div className="flex gap-1 text-[10px] text-muted-foreground">
+              {wine.pairings.slice(0, 2).map((p) => (
+                <span key={p} className="rounded bg-secondary px-1.5 py-0.5">{p}</span>
+              ))}
+            </div>
           </div>
         </CardContent>
       </Card>
