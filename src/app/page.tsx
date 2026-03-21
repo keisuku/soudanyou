@@ -1,6 +1,7 @@
 import { Flame, TrendingUp } from "lucide-react";
-import { mockWines } from "@/lib/mock-data";
+import { mockWines, storeRecommendedTweets } from "@/lib/mock-data";
 import { WineCard } from "@/components/wine/wine-card";
+import { StoreTweets } from "@/components/wine/store-tweets";
 import type { WineType } from "@/types/wine";
 
 const categories: { type: WineType; label: string; emoji: string; catch: string; id: string }[] = [
@@ -161,6 +162,12 @@ export default function Home() {
                     <WineCard key={wine.id} wine={wine} />
                   ))}
                 </div>
+                {storeRecommendedTweets[store.type] && (
+                  <StoreTweets
+                    storeName={store.label}
+                    tweetUrls={storeRecommendedTweets[store.type]}
+                  />
+                )}
               </div>
             );
           })}
