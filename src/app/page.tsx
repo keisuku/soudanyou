@@ -1,139 +1,95 @@
-import { Flame, TrendingUp } from "lucide-react";
-import { mockWines, storeRecommendedTweets } from "@/lib/mock-data";
+import { mockWines } from "@/lib/mock-data";
 import { WineCard } from "@/components/wine/wine-card";
-import { StoreTweets } from "@/components/wine/store-tweets";
 import type { WineType } from "@/types/wine";
 
-const categories: { type: WineType; label: string; emoji: string; catch: string; id: string }[] = [
-  { type: "red", label: "赤ワイン", emoji: "🍷", catch: "赤ならこれ！", id: "red" },
-  { type: "white", label: "白ワイン", emoji: "🥂", catch: "白ならこれ！", id: "white" },
-  { type: "sparkling", label: "スパークリング", emoji: "🍾", catch: "泡ならこれ！", id: "sparkling" },
-  { type: "rose", label: "ロゼ", emoji: "🌸", catch: "ロゼならこれ！", id: "rose" },
+const typeNav: { type: WineType; label: string; id: string }[] = [
+  { type: "red", label: "🍷 赤", id: "red" },
+  { type: "white", label: "🥂 白", id: "white" },
+  { type: "sparkling", label: "🍾 泡", id: "sparkling" },
+  { type: "rose", label: "🌸 ロゼ", id: "rose" },
 ];
 
-const storeGroups = [
-  {
-    label: "コンビニ",
-    id: "convenience",
-    stores: [
-      { type: "seven", label: "セブン" },
-      { type: "lawson", label: "ローソン" },
-      { type: "familymart", label: "ファミマ" },
-    ],
-  },
-  {
-    label: "スーパー",
-    id: "super",
-    stores: [
-      { type: "aeon", label: "イオン" },
-      { type: "seijoishii", label: "成城石井" },
-      { type: "costco", label: "コストコ" },
-    ],
-  },
-  {
-    label: "専門店",
-    id: "specialty",
-    stores: [
-      { type: "kaldi", label: "カルディ" },
-      { type: "donki", label: "ドンキ" },
-      { type: "liquor_shop", label: "酒屋" },
-    ],
-  },
+const budgetNav = [
+  { label: "〜1,000円", id: "budget-1000", max: 1000 },
+  { label: "〜2,000円", id: "budget-2000", max: 2000 },
+  { label: "2,000円〜", id: "budget-over", max: 99999 },
 ];
 
-const menuItems = [
-  { href: "#sns", label: "🔥 SNS話題" },
-  { href: "#red", label: "🍷 赤" },
-  { href: "#white", label: "🥂 白" },
-  { href: "#sparkling", label: "🍾 泡" },
-  { href: "#rose", label: "🌸 ロゼ" },
-  { href: "#convenience", label: "🏪 コンビニ" },
-  { href: "#super", label: "🛒 スーパー" },
-  { href: "#specialty", label: "🍶 専門店" },
-  { href: "#cospa", label: "💰 コスパ" },
-];
-
-function getTopByBuzz(type: WineType, limit = 3) {
+function getWines(type: WineType) {
   return mockWines
     .filter((w) => w.type === type)
-    .sort((a, b) => b.buzzScore - a.buzzScore)
-    .slice(0, limit);
+    .sort((a, b) => b.costPerformance - a.costPerformance);
 }
 
-function getWinesByStore(storeType: string) {
-  return mockWines
-    .filter((w) => w.stores.some((s) => s.type === storeType))
-    .sort((a, b) => b.buzzScore - a.buzzScore)
-    .slice(0, 3);
-}
-
-const buzzRanking = [...mockWines]
-  .sort((a, b) => b.buzzScore - a.buzzScore)
-  .slice(0, 5);
-
-const cospaRanking = [...mockWines]
-  .sort((a, b) => b.costPerformance - a.costPerformance)
-  .slice(0, 5);
+const topPick = [...mockWines].sort((a, b) => b.buzzScore - a.buzzScore)[0];
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      {/* Hero */}
-      <section className="py-10 text-center sm:py-16">
-        <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
-          今買うべきワインが
-          <br />
-          <span className="text-primary">すぐわかる</span>
+    <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      {/* Hero + Top Pick */}
+      <section className="py-10 sm:py-14">
+        <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
+          今買うべきワインが<span className="text-primary">すぐわかる</span>
         </h1>
-        <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground">
-          コンビニ・スーパーで買えるワインをSNS話題度とコスパで厳選
+        <p className="mt-2 text-sm text-muted-foreground">
+          コンビニ・スーパーの手頃なワインをコスパと話題度で厳選
         </p>
+
+        {/* Featured pick */}
+        <div className="mt-6 rounded-2xl border-2 border-primary/20 bg-primary/5 p-5">
+          <p className="text-xs font-bold uppercase tracking-wider text-primary">
+            今週のイチオシ
+          </p>
+          <h2 className="mt-1 text-xl font-bold text-foreground">{topPick.nameJa}</h2>
+          <p className="mt-1 text-sm text-muted-foreground">{topPick.whyBuyNow}</p>
+          <div className="mt-3 flex items-center gap-4">
+            <span className="text-2xl font-bold text-primary">
+              {new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(topPick.price)}
+            </span>
+            <a
+              href={`/soudanyou/wines/${topPick.id}`}
+              className="rounded-full bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              詳しく見る
+            </a>
+          </div>
+        </div>
       </section>
 
-      {/* Quick nav menu */}
-      <nav className="sticky top-16 z-40 -mx-4 overflow-x-auto border-b border-border bg-card/90 px-4 py-2 backdrop-blur-md sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-        <div className="flex gap-2 whitespace-nowrap">
-          {menuItems.map((item) => (
+      {/* Category nav */}
+      <nav className="sticky top-16 z-40 -mx-4 border-b border-border bg-background/95 px-4 py-3 backdrop-blur-sm sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+        <div className="flex gap-2 overflow-x-auto">
+          {typeNav.map((t) => (
             <a
-              key={item.href}
-              href={item.href}
-              className="rounded-full border border-border bg-secondary px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+              key={t.id}
+              href={`#${t.id}`}
+              className="shrink-0 rounded-full border border-border px-4 py-1.5 text-sm font-medium transition-colors hover:bg-primary hover:text-primary-foreground"
             >
-              {item.label}
+              {t.label}
+            </a>
+          ))}
+          <span className="mx-1 self-center text-border">|</span>
+          {budgetNav.map((b) => (
+            <a
+              key={b.id}
+              href={`#${b.id}`}
+              className="shrink-0 rounded-full border border-border px-4 py-1.5 text-sm font-medium transition-colors hover:bg-primary hover:text-primary-foreground"
+            >
+              {b.label}
             </a>
           ))}
         </div>
       </nav>
 
-      {/* SNS話題度ランキング */}
-      <section id="sns" className="mt-8 scroll-mt-28">
-        <div className="flex items-center gap-2">
-          <Flame className="h-5 w-5 text-orange-400" />
-          <h2 className="text-2xl font-bold text-foreground">SNS話題度ランキング</h2>
-        </div>
-        <p className="mt-1 text-sm text-muted-foreground">
-          今、SNSで最も話題のワインTOP5
-        </p>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {buzzRanking.map((wine, i) => (
-            <WineCard key={wine.id} wine={wine} rank={i + 1} />
-          ))}
-        </div>
-      </section>
-
-      {/* カテゴリ別 */}
-      {categories.map((cat) => {
-        const wines = getTopByBuzz(cat.type);
+      {/* Wine sections by type */}
+      {typeNav.map((cat) => {
+        const wines = getWines(cat.type);
         if (wines.length === 0) return null;
         return (
-          <section key={cat.type} id={cat.id} className="mt-12 scroll-mt-28">
-            <div className="flex items-center gap-2">
-              <span className="text-xl">{cat.emoji}</span>
-              <h2 className="text-2xl font-bold text-foreground">{cat.catch}</h2>
-            </div>
-            <p className="mt-1 text-sm text-muted-foreground">
-              {cat.label}のSNS話題度TOP3
-            </p>
+          <section key={cat.type} id={cat.id} className="mt-10 scroll-mt-28">
+            <h2 className="text-xl font-bold text-foreground">
+              {cat.label}
+            </h2>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {wines.map((wine, i) => (
                 <WineCard key={wine.id} wine={wine} rank={i + 1} />
@@ -143,50 +99,40 @@ export default function Home() {
         );
       })}
 
-      {/* 店舗別セクション */}
-      {storeGroups.map((group) => (
-        <section key={group.id} id={group.id} className="mt-12 scroll-mt-28">
-          <h2 className="text-2xl font-bold text-foreground">
-            {group.label}で買うなら
-          </h2>
-          {group.stores.map((store) => {
-            const wines = getWinesByStore(store.type);
-            if (wines.length === 0) return null;
-            return (
-              <div key={store.type} className="mt-6">
-                <h3 className="text-lg font-semibold text-foreground">
-                  {store.label}
-                </h3>
-                <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {wines.map((wine) => (
-                    <WineCard key={wine.id} wine={wine} />
-                  ))}
-                </div>
-                {storeRecommendedTweets[store.type] && (
-                  <StoreTweets
-                    storeName={store.label}
-                    tweetUrls={storeRecommendedTweets[store.type]}
-                  />
-                )}
-              </div>
-            );
-          })}
-        </section>
-      ))}
-
-      {/* コスパ最強ランキング */}
-      <section id="cospa" className="mt-12 scroll-mt-28 pb-16">
-        <div className="flex items-center gap-2">
-          <TrendingUp className="h-5 w-5 text-gold" />
-          <h2 className="text-2xl font-bold text-foreground">コスパ最強ランキング</h2>
+      {/* Budget sections */}
+      <section id="budget-1000" className="mt-12 scroll-mt-28">
+        <h2 className="text-xl font-bold text-foreground">〜1,000円のベスト</h2>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {mockWines
+            .filter((w) => w.price <= 1000)
+            .sort((a, b) => b.costPerformance - a.costPerformance)
+            .map((wine, i) => (
+              <WineCard key={wine.id} wine={wine} rank={i + 1} />
+            ))}
         </div>
-        <p className="mt-1 text-sm text-muted-foreground">
-          評価が高いのに安い！お値打ちワインTOP5
-        </p>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {cospaRanking.map((wine, i) => (
-            <WineCard key={wine.id} wine={wine} rank={i + 1} />
-          ))}
+      </section>
+
+      <section id="budget-2000" className="mt-12 scroll-mt-28">
+        <h2 className="text-xl font-bold text-foreground">1,000〜2,000円のベスト</h2>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {mockWines
+            .filter((w) => w.price > 1000 && w.price <= 2000)
+            .sort((a, b) => b.costPerformance - a.costPerformance)
+            .map((wine, i) => (
+              <WineCard key={wine.id} wine={wine} rank={i + 1} />
+            ))}
+        </div>
+      </section>
+
+      <section id="budget-over" className="mt-12 scroll-mt-28 pb-16">
+        <h2 className="text-xl font-bold text-foreground">2,000円〜 ちょっと贅沢</h2>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {mockWines
+            .filter((w) => w.price > 2000)
+            .sort((a, b) => b.costPerformance - a.costPerformance)
+            .map((wine, i) => (
+              <WineCard key={wine.id} wine={wine} rank={i + 1} />
+            ))}
         </div>
       </section>
     </div>
