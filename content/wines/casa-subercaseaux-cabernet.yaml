@@ -1,0 +1,35 @@
+id: casa-subercaseaux-cabernet
+name: Casa Subercaseaux Cabernet Sauvignon
+nameJa: カーサ・スベルカソー カベルネ・ソーヴィニヨン
+producer: Concha y Toro
+country: Chile
+countryCode: CL
+type: red
+grapeVarieties:
+  - カベルネ・ソーヴィニヨン
+description: >
+  チリの果実味が凝縮されたカベルネ・ソーヴィニヨン。バランスの取れた味わいと
+  プラムのような香り。ローソンワイン10年連続売上1位のロングセラー。
+price: 598
+abv: 12.0
+servingTemp: 16-18℃
+stores:
+  - type: lawson
+    name: ローソン
+    price: 598
+    inStock: true
+tags:
+  - ローソン
+  - 10年連続No.1
+  - チリカベ
+  - コスパ
+pairings:
+  - ハンバーグステーキ
+  - ビーフシチュー
+  - 赤身肉
+whyBuyNow: ローソン10年連続No.1！598円の奇跡的コスパ赤
+buzzScore: 83
+vivinoScore: null
+costPerformance: 92
+tweetUrls: []
+buyLinks: []

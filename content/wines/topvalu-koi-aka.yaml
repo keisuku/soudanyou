@@ -1,0 +1,36 @@
+id: topvalu-koi-aka
+name: TOPVALU Preservative-Free Wine Rich Red
+nameJa: トップバリュ 酸化防止剤無添加 濃い赤
+producer: TOPVALU
+country: Japan
+countryCode: JP
+type: red
+grapeVarieties:
+  - 赤ワイン用ブドウ
+description: >
+  イオンのプライベートブランド。酸化防止剤を使用せず自然な風味を大切にした赤。
+  甘過ぎず程よい酸味と渋みのあるコク旨な味。438円という驚異の価格。
+price: 438
+abv: 11.0
+servingTemp: 14-16℃
+stores:
+  - type: aeon
+    name: イオン
+    price: 438
+    inStock: true
+tags:
+  - イオン
+  - 無添加
+  - ワンコイン以下
+  - デイリー赤
+pairings:
+  - 家庭料理全般
+  - 鍋料理
+  - 唐揚げ
+  - 餃子
+whyBuyNow: 無添加で438円！毎日飲める罪悪感ゼロのデイリー赤
+buzzScore: 73
+vivinoScore: null
+costPerformance: 95
+tweetUrls: []
+buyLinks: []

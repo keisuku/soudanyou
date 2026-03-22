@@ -1,0 +1,47 @@
+id: il-pumo-primitivo
+name: Il Pumo Primitivo
+nameJa: イル・プーモ プリミティーヴォ
+producer: San Marzano
+country: Italy
+countryCode: IT
+type: red
+grapeVarieties:
+  - プリミティーヴォ
+description: >
+  スミレ、チェリーやプラムのアロマにバニラやローズマリーのニュアンス。
+  ルカ・マローニ94点、サクラアワード金賞。Vivinoで世界上位5%の驚異の高評価。
+price: 1100
+abv: 13.5
+servingTemp: 16-18℃
+stores:
+  - type: kaldi
+    name: カルディ
+    price: 1100
+    inStock: true
+  - type: seijoishii
+    name: 成城石井
+    price: 1100
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 1017
+    inStock: true
+tags:
+  - Vivino世界TOP5%
+  - ルカマローニ94点
+  - サクラアワード金賞
+  - 南イタリア
+pairings:
+  - グリルチキン
+  - トマト煮込み
+  - ラグーパスタ
+  - サラミ
+whyBuyNow: Vivino世界TOP5%！1000円台で買える南イタリアの至宝
+buzzScore: 87
+vivinoScore: 3.9
+costPerformance: 87
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/イルプーモ+プリミティーヴォ/
+    price: 1017

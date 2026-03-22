@@ -1,0 +1,47 @@
+id: kwv-pinotage
+name: KWV Classic Collection Pinotage
+nameJa: KWV クラシック ピノタージュ
+producer: KWV
+country: South Africa
+countryCode: ZA
+type: red
+grapeVarieties:
+  - ピノタージュ
+description: >
+  南アフリカ固有品種ピノタージュのベリー系の明確な香り。ドライでボリュームある味わい。
+  創業105年超、南アフリカ最大手の最も賞賛されるブランド。
+price: 1188
+abv: 13.5
+servingTemp: 16-18℃
+stores:
+  - type: familymart
+    name: ファミリーマート
+    price: 1188
+    inStock: true
+  - type: kaldi
+    name: カルディ
+    price: 1188
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 1188
+    inStock: true
+tags:
+  - 南アフリカ
+  - ピノタージュ
+  - 固有品種
+  - ファミマ
+pairings:
+  - BBQ
+  - スペアリブ
+  - 焼き鳥（タレ）
+  - カレー
+whyBuyNow: 南アフリカ固有品種の新体験！コンビニで出会える世界最高峰ブランド
+buzzScore: 76
+vivinoScore: 3.5
+costPerformance: 83
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/KWV+ピノタージュ/
+    price: 1188

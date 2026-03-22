@@ -1,0 +1,47 @@
+id: conosur-cabernet
+name: Cono Sur Bicicleta Reserva Cabernet Sauvignon
+nameJa: コノスル ビシクレタ カベルネ・ソーヴィニヨン
+producer: Vina Cono Sur
+country: Chile
+countryCode: CL
+type: red
+grapeVarieties:
+  - カベルネ・ソーヴィニヨン
+description: >
+  カシス、チェリー、プラムの果実香にミントや胡椒のスパイス香が重なる。
+  ボリューム感たっぷりのリッチな味わい。自転車ラベルのチリコスパの代名詞。
+price: 800
+abv: 13.0
+servingTemp: 16-18℃
+stores:
+  - type: kaldi
+    name: カルディ
+    price: 800
+    inStock: true
+  - type: yamaya
+    name: ヤマヤ
+    price: 759
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 759
+    inStock: true
+tags:
+  - カルディ
+  - 自転車ラベル
+  - 38万人評価
+  - チリカベ
+pairings:
+  - ハンバーガー
+  - グリル肉
+  - チョリソー
+  - シチュー
+whyBuyNow: 38万人が評価！自転車ラベルのチリカベは裏切らない
+buzzScore: 83
+vivinoScore: 3.5
+costPerformance: 88
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/コノスル+ビシクレタ+カベルネ/
+    price: 759

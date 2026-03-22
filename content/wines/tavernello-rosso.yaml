@@ -1,0 +1,35 @@
+id: tavernello-rosso
+name: Tavernello Rosso
+nameJa: タヴェルネッロ ロッソ
+producer: Caviro
+country: Italy
+countryCode: IT
+type: red
+grapeVarieties:
+  - サンジョヴェーゼ
+description: >
+  イタリアで最も売れているワインブランドのセブン限定版。
+  紫の花のようなフローラルな香りとカシスのようなフルーティーな味わい。飲みやすい。
+price: 550
+abv: 12.5
+servingTemp: 16-18℃
+stores:
+  - type: seven
+    name: セブン-イレブン
+    price: 550
+    inStock: true
+tags:
+  - セブン
+  - イタリアNo.1
+  - ワンコイン
+  - 初心者向け
+pairings:
+  - ピザ
+  - パスタ
+  - サラミ
+whyBuyNow: イタリアNo.1ブランドがセブンに！ワンコインで本場の味
+buzzScore: 74
+vivinoScore: 3.3
+costPerformance: 89
+tweetUrls: []
+buyLinks: []
