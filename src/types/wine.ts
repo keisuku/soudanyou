@@ -11,6 +11,7 @@ export type StoreType =
   | "ozeki"
   | "seijoishii"
   | "kaldi"
+  | "life"
   // 酒屋
   | "kakuyasu"
   | "yamaya"
@@ -47,6 +48,7 @@ export interface Wine {
   producer: string;
   country: string;
   countryCode: string;
+  region?: string;
   type: WineType;
   grapeVarieties: string[];
   description: string;

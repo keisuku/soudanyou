@@ -24,6 +24,7 @@ export const storeLabels: Record<string, string> = {
   ozeki: "オオゼキ",
   seijoishii: "成城石井",
   kaldi: "カルディ",
+  life: "ライフ",
   // 酒屋
   kakuyasu: "カクヤス",
   yamaya: "ヤマヤ",
@@ -71,6 +72,7 @@ export const storeCategories: StoreCategoryDef[] = [
       { type: "ozeki", label: "オオゼキ" },
       { type: "seijoishii", label: "成城石井" },
       { type: "kaldi", label: "カルディ" },
+      { type: "life", label: "ライフ" },
     ],
   },
   {
@@ -96,4 +98,35 @@ export const storeCategories: StoreCategoryDef[] = [
       { type: "ukiuki", label: "うきうきワイン" },
     ],
   },
+];
+
+export interface CountrySubRegion {
+  key: string;
+  label: string;
+}
+
+export interface CountryCategoryDef {
+  country: string;
+  label: string;
+  subRegions?: CountrySubRegion[];
+}
+
+export const countryCategories: CountryCategoryDef[] = [
+  {
+    country: "France",
+    label: "フランス",
+    subRegions: [
+      { key: "ブルゴーニュ", label: "ブルゴーニュ" },
+      { key: "シャンパーニュ", label: "シャンパーニュ" },
+      { key: "ボルドー", label: "ボルドー" },
+      { key: "その他", label: "その他" },
+    ],
+  },
+  { country: "Italy", label: "イタリア" },
+  { country: "Spain", label: "スペイン" },
+  { country: "Chile", label: "チリ" },
+  { country: "South Africa", label: "南アフリカ" },
+  { country: "Australia", label: "オーストラリア" },
+  { country: "Germany", label: "ドイツ" },
+  { country: "Japan", label: "日本" },
 ];

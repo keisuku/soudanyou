@@ -140,6 +140,7 @@
     "producer": "Various",
     "country": "France",
     "countryCode": "FR",
+    "region": "その他",
     "type": "sparkling",
     "grapeVarieties": [
       "シャルドネ",
@@ -191,6 +192,7 @@
     "producer": "Famille Despagne",
     "country": "France",
     "countryCode": "FR",
+    "region": "ボルドー",
     "type": "red",
     "grapeVarieties": [
       "メルロー",

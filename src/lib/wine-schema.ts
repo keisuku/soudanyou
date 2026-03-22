@@ -4,7 +4,7 @@ const storeTypes = [
   // コンビニ
   "seven", "lawson", "familymart",
   // スーパー
-  "aeon", "summit", "ozeki", "seijoishii", "kaldi",
+  "aeon", "summit", "ozeki", "seijoishii", "kaldi", "life",
   // 酒屋
   "kakuyasu", "yamaya", "biccamera", "liquorman",
   // ネットショップ
@@ -21,6 +21,7 @@ export const wineSchema = z.object({
   producer: z.string().min(1),
   country: z.string().min(1),
   countryCode: z.string().length(2),
+  region: z.string().optional(),
   type: z.enum(wineTypes),
   grapeVarieties: z.array(z.string()).min(1),
   description: z.string().min(1),

@@ -29,6 +29,7 @@ const storeIcons: Record<string, string> = {
   ozeki: "大",
   seijoishii: "成",
   kaldi: "K",
+  life: "LF",
   kakuyasu: "カ",
   yamaya: "Y",
   biccamera: "B",
