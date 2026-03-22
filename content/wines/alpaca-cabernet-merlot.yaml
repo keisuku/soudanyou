@@ -41,7 +41,8 @@ whyBuyNow: どこでも買える！ワンコインチリワインの絶対王者
 buzzScore: 84
 vivinoScore: 3.4
 costPerformance: 93
-tweetUrls: []
+tweetUrls:
+  - https://x.com/hiropyon0628/status/1990800455908405266
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/アルパカ+カベルネ+メルロー/

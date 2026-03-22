@@ -43,6 +43,9 @@ buzzScore: 92
 vivinoScore: null
 costPerformance: 96
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/miyamoto_ryuta/status/1796842401690267832
+  - https://x.com/TatsuoNakatsuka/status/1957756629438579096
+  - https://x.com/tanabe_duvin/status/1949964036637958199
 
 buyLinks: []

@@ -41,7 +41,9 @@ buzzScore: 82
 vivinoScore: null
 costPerformance: 85
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/7premium_jp/status/1894205608251068437
+  - https://x.com/711sej/status/1276787353806204928
 
 buyLinks:
   - store: 楽天

@@ -40,7 +40,8 @@ buzzScore: 80
 vivinoScore: null
 costPerformance: 87
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/KALDI_webshop/status/1917489827894997141
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/レッドウッド+シャルドネ/
