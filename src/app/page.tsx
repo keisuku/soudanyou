@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { wines as allWines } from "@/lib/wines";
 import { WineCard } from "@/components/wine/wine-card";
+import { HomeFilters } from "@/components/home-filters";
 import type { WineType } from "@/types/wine";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -49,6 +50,11 @@ export default function Home() {
         <p className="mt-2 text-sm text-muted-foreground">
           コンビニ・スーパーで手に入る{allWines.length}本を厳選。コスパと話題度でランキング。
         </p>
+
+        {/* Filters */}
+        <div className="mt-5">
+          <HomeFilters />
+        </div>
 
         {/* Featured pick */}
         <div className="mt-6 rounded-2xl border-2 border-primary/20 bg-primary/5 p-5">

@@ -211,9 +211,15 @@ export default async function WineDetailPage({
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                {wine.tweetUrls.map((url) => (
-                  <TweetEmbed key={url} tweetUrl={url} />
-                ))}
+                {[...wine.tweetUrls]
+                  .sort((a, b) => {
+                    const aPin = a.includes("/winenomuhito/") ? 0 : 1;
+                    const bPin = b.includes("/winenomuhito/") ? 0 : 1;
+                    return aPin - bPin;
+                  })
+                  .map((url) => (
+                    <TweetEmbed key={url} tweetUrl={url} />
+                  ))}
               </div>
             </CardContent>
           </Card>
