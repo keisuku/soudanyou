@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { wines as allWines } from "@/lib/wines";
-import { storeCategories, storeLabels } from "@/lib/wines";
+import { storeCategories, storeLabels, countryCategories } from "@/lib/wines";
 import { WineCard } from "@/components/wine/wine-card";
 import { SearchBar } from "@/components/search/search-bar";
 import { Badge } from "@/components/ui/badge";
@@ -32,9 +32,21 @@ const sortOptions = [
 
 type SortKey = (typeof sortOptions)[number]["value"];
 
+function countryLabel(country: string): string {
+  return countryCategories.find((c) => c.country === country)?.label ?? country;
+}
+
+function regionLabel(country: string, region: string): string {
+  const cat = countryCategories.find((c) => c.country === country);
+  if (!cat?.subRegions) return region;
+  return cat.subRegions.find((r) => r.key === region)?.label ?? region;
+}
+
 function WinesContent() {
   const searchParams = useSearchParams();
   const storeParam = searchParams.get("store");
+  const countryParam = searchParams.get("country");
+  const regionParam = searchParams.get("region");
 
   const [searchQuery, setSearchQuery] = useState("");
   const [activeType, setActiveType] = useState<WineType | null>(null);
@@ -42,12 +54,21 @@ function WinesContent() {
   const [sortBy, setSortBy] = useState<SortKey>("cospa");
   const [activeStore, setActiveStore] = useState<string | null>(storeParam);
   const [storeFilterOpen, setStoreFilterOpen] = useState(!!storeParam);
+  const [activeCountry, setActiveCountry] = useState<string | null>(countryParam);
+  const [activeRegion, setActiveRegion] = useState<string | null>(regionParam);
+  const [countryFilterOpen, setCountryFilterOpen] = useState(!!countryParam);
 
-  // Sync with URL param
+  // Sync with URL params
   useEffect(() => {
     setActiveStore(storeParam);
     if (storeParam) setStoreFilterOpen(true);
   }, [storeParam]);
+
+  useEffect(() => {
+    setActiveCountry(countryParam);
+    setActiveRegion(regionParam);
+    if (countryParam) setCountryFilterOpen(true);
+  }, [countryParam, regionParam]);
 
   const filteredWines = useMemo(() => {
     let result = allWines.filter((wine) => {
@@ -62,6 +83,10 @@ function WinesContent() {
       }
       if (activeStore) {
         if (!wine.stores.some((s) => s.type === activeStore)) return false;
+      }
+      if (activeCountry) {
+        if (wine.country !== activeCountry) return false;
+        if (activeRegion && wine.region !== activeRegion) return false;
       }
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
@@ -87,15 +112,21 @@ function WinesContent() {
     });
 
     return result;
-  }, [searchQuery, activeType, activeBudget, sortBy, activeStore]);
+  }, [searchQuery, activeType, activeBudget, sortBy, activeStore, activeCountry, activeRegion]);
+
+  // Build heading
+  let heading = `全${allWines.length}本のワイン`;
+  if (activeStore) {
+    heading = `${storeLabels[activeStore] ?? activeStore}のワイン`;
+  } else if (activeCountry) {
+    heading = activeRegion
+      ? `${countryLabel(activeCountry)} ${regionLabel(activeCountry, activeRegion)}のワイン`
+      : `${countryLabel(activeCountry)}のワイン`;
+  }
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="text-2xl font-bold">
-        {activeStore
-          ? `${storeLabels[activeStore] ?? activeStore}のワイン`
-          : `全${allWines.length}本のワイン`}
-      </h1>
+      <h1 className="text-2xl font-bold">{heading}</h1>
 
       <div className="mt-4">
         <SearchBar
@@ -198,6 +229,81 @@ function WinesContent() {
                         </Badge>
                       ))}
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Country filter */}
+        <div>
+          <button
+            type="button"
+            className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"
+            onClick={() => setCountryFilterOpen(!countryFilterOpen)}
+          >
+            <span className="mr-1">国:</span>
+            {activeCountry ? (
+              <Badge variant="default" className="text-xs">
+                {countryLabel(activeCountry)}
+                {activeRegion && ` / ${regionLabel(activeCountry, activeRegion)}`}
+                <span
+                  className="ml-1 cursor-pointer"
+                  onClick={(e) => { e.stopPropagation(); setActiveCountry(null); setActiveRegion(null); }}
+                >
+                  ×
+                </span>
+              </Badge>
+            ) : (
+              <Badge
+                variant={countryFilterOpen ? "default" : "outline"}
+                className="cursor-pointer text-xs"
+              >
+                {countryFilterOpen ? "閉じる" : "国で絞る"}
+              </Badge>
+            )}
+          </button>
+
+          {countryFilterOpen && !activeCountry && (
+            <div className="mt-2 rounded-lg border border-border bg-card p-3">
+              <div className="space-y-3">
+                {countryCategories.map((cat) => (
+                  <div key={cat.country}>
+                    {cat.subRegions ? (
+                      <>
+                        <h4 className="mb-1.5 text-xs font-bold uppercase tracking-wider text-primary">
+                          {cat.label}
+                        </h4>
+                        <div className="flex flex-wrap gap-1">
+                          <Badge
+                            variant="outline"
+                            className="cursor-pointer text-xs hover:bg-primary hover:text-primary-foreground"
+                            onClick={() => { setActiveCountry(cat.country); setActiveRegion(null); }}
+                          >
+                            すべて
+                          </Badge>
+                          {cat.subRegions.map((r) => (
+                            <Badge
+                              key={r.key}
+                              variant="outline"
+                              className="cursor-pointer text-xs hover:bg-primary hover:text-primary-foreground"
+                              onClick={() => { setActiveCountry(cat.country); setActiveRegion(r.key); }}
+                            >
+                              {r.label}
+                            </Badge>
+                          ))}
+                        </div>
+                      </>
+                    ) : (
+                      <Badge
+                        variant="outline"
+                        className="cursor-pointer text-xs hover:bg-primary hover:text-primary-foreground"
+                        onClick={() => { setActiveCountry(cat.country); setActiveRegion(null); }}
+                      >
+                        {cat.label}
+                      </Badge>
+                    )}
                   </div>
                 ))}
               </div>
