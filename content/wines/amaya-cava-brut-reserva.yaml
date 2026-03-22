@@ -48,6 +48,6 @@ costPerformance: 95
 tweetUrls: []
 
 buyLinks:
-  - store: Amazon
-    url: https://www.amazon.co.jp/s?k=アマヤ+カヴァ+ブリュット+レゼルバ
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/アマヤ+カヴァ+ブリュット+レゼルバ/
     price: 1100

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { Wine, Menu, X } from "lucide-react";
+import { Wine, Menu, X, ChevronDown, Store } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { storeCategories } from "@/lib/wines";
 
 const navItems = [
   { href: "/wines", label: "全ワイン" },
@@ -15,6 +16,20 @@ const navItems = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [storeMenuOpen, setStoreMenuOpen] = useState(false);
+  const [mobileStoreOpen, setMobileStoreOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setStoreMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-card/80 backdrop-blur-md">
@@ -36,6 +51,49 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+
+          {/* Store dropdown */}
+          <div className="relative" ref={dropdownRef}>
+            <button
+              type="button"
+              className={cn(
+                "inline-flex items-center gap-1 text-sm font-medium transition-colors hover:text-foreground",
+                storeMenuOpen ? "text-foreground" : "text-muted-foreground"
+              )}
+              onClick={() => setStoreMenuOpen(!storeMenuOpen)}
+            >
+              <Store className="h-4 w-4" />
+              お店で探す
+              <ChevronDown className={cn("h-3 w-3 transition-transform", storeMenuOpen && "rotate-180")} />
+            </button>
+
+            {storeMenuOpen && (
+              <div className="absolute right-0 top-full mt-2 w-[520px] rounded-xl border border-border bg-card p-4 shadow-xl">
+                <div className="grid grid-cols-2 gap-4">
+                  {storeCategories.map((cat) => (
+                    <div key={cat.category}>
+                      <h3 className="mb-2 text-xs font-bold uppercase tracking-wider text-primary">
+                        {cat.label}
+                      </h3>
+                      <ul className="space-y-1">
+                        {cat.stores.map((store) => (
+                          <li key={store.type}>
+                            <Link
+                              href={`/wines?store=${store.type}`}
+                              className="block rounded-md px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                              onClick={() => setStoreMenuOpen(false)}
+                            >
+                              {store.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Mobile hamburger */}
@@ -63,6 +121,43 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+
+            {/* Mobile store accordion */}
+            <button
+              type="button"
+              className="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              onClick={() => setMobileStoreOpen(!mobileStoreOpen)}
+            >
+              <span className="flex items-center gap-2">
+                <Store className="h-4 w-4" />
+                お店で探す
+              </span>
+              <ChevronDown className={cn("h-4 w-4 transition-transform", mobileStoreOpen && "rotate-180")} />
+            </button>
+
+            {mobileStoreOpen && (
+              <div className="space-y-3 px-3 pb-2">
+                {storeCategories.map((cat) => (
+                  <div key={cat.category}>
+                    <h4 className="mb-1 text-xs font-bold uppercase tracking-wider text-primary">
+                      {cat.label}
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {cat.stores.map((store) => (
+                        <Link
+                          key={store.type}
+                          href={`/wines?store=${store.type}`}
+                          className="rounded-full bg-secondary px-3 py-1 text-sm text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                          onClick={() => { setMobileOpen(false); setMobileStoreOpen(false); }}
+                        >
+                          {store.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </nav>
       )}

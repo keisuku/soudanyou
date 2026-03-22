@@ -1,8 +1,15 @@
 import { z } from "zod";
 
 const storeTypes = [
-  "seven", "lawson", "familymart", "aeon", "seijoishii",
-  "kaldi", "donki", "costco", "summit", "rakuten", "amazon", "liquor_shop",
+  // コンビニ
+  "seven", "lawson", "familymart",
+  // スーパー
+  "aeon", "summit", "ozeki", "seijoishii", "kaldi",
+  // 酒屋
+  "kakuyasu", "yamaya", "biccamera", "liquorman",
+  // ネットショップ
+  "rakuten", "africaer", "ginza_grandmarche", "takamura",
+  "felicity", "wine_ohashi", "ukiuki",
 ] as const;
 
 const wineTypes = ["red", "white", "rose", "sparkling"] as const;

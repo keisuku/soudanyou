@@ -44,8 +44,8 @@
     "whyBuyNow": "シャンパン製法で18ヶ月熟成のカヴァが1,098円。セブンの奇跡",
     "buyLinks": [
       {
-        "store": "Amazon",
-        "url": "https://www.amazon.co.jp/s?k=アマヤ+カヴァ+ブリュット+レゼルバ",
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/アマヤ+カヴァ+ブリュット+レゼルバ/",
         "price": 1100
       }
     ]
@@ -103,12 +103,12 @@
     "grapeVarieties": [
       "カベルネ・ソーヴィニヨン"
     ],
-    "description": "ドン・キホーテで年間3万ケース以上売れるメガセラー。 438円というワンコイン以下の価格で、しっかりした果実味のチリカベルネが楽しめる。\n",
+    "description": "年間3万ケース以上売れるメガセラー。 438円というワンコイン以下の価格で、しっかりした果実味のチリカベルネが楽しめる。\n",
     "price": 438,
     "stores": [
       {
-        "type": "donki",
-        "name": "ドン・キホーテ",
+        "type": "yamaya",
+        "name": "ヤマヤ",
         "price": 438,
         "inStock": true
       }
@@ -117,7 +117,7 @@
     "vivinoScore": null,
     "costPerformance": 95,
     "tags": [
-      "ドンキ",
+      "ヤマヤ",
       "ワンコイン以下",
       "メガセラー",
       "コスパ最強"
@@ -130,7 +130,7 @@
       "ピザ",
       "パスタ"
     ],
-    "whyBuyNow": "438円で年間3万ケースのメガセラー。ドンキ最安の本格チリ赤",
+    "whyBuyNow": "438円で年間3万ケースのメガセラー。ワンコイン以下の本格チリ赤",
     "buyLinks": []
   },
   {
@@ -150,8 +150,8 @@
     "price": 2600,
     "stores": [
       {
-        "type": "amazon",
-        "name": "Amazon",
+        "type": "rakuten",
+        "name": "楽天",
         "price": 2600,
         "inStock": true
       }
@@ -178,8 +178,8 @@
     "whyBuyNow": "アマヤの上位互換。シャンパンとスパークリングの中間という唯一無二の存在",
     "buyLinks": [
       {
-        "store": "Amazon",
-        "url": "https://www.amazon.co.jp/s?k=クレマン+ド+リムー",
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/クレマン+ド+リムー/",
         "price": 2600
       }
     ]
@@ -242,8 +242,8 @@
     "price": 2000,
     "stores": [
       {
-        "type": "amazon",
-        "name": "Amazon",
+        "type": "rakuten",
+        "name": "楽天",
         "price": 2000,
         "inStock": true
       }
@@ -273,8 +273,8 @@
     "whyBuyNow": "ブルピノの代替に。開栓2日目に化ける南アの常備ワイン",
     "buyLinks": [
       {
-        "store": "Amazon",
-        "url": "https://www.amazon.co.jp/s?k=ドルニエ+ピノタージュ",
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/ドルニエ+ピノタージュ/",
         "price": 2000
       }
     ]
@@ -290,12 +290,12 @@
     "grapeVarieties": [
       "テンプラニーリョ"
     ],
-    "description": "ドン・キホーテオリジナルのスペイン赤。36ヶ月樽熟成のグランレゼルバが 878円という価格破壊。60ヶ月版も968円で展開。\n",
+    "description": "スペイン赤。36ヶ月樽熟成のグランレゼルバが 878円という価格破壊。60ヶ月版も968円で展開。\n",
     "price": 878,
     "stores": [
       {
-        "type": "donki",
-        "name": "ドン・キホーテ",
+        "type": "yamaya",
+        "name": "ヤマヤ",
         "price": 878,
         "inStock": true
       }
@@ -304,7 +304,7 @@
     "vivinoScore": null,
     "costPerformance": 93,
     "tags": [
-      "ドンキ",
+      "ヤマヤ",
       "グランレゼルバ",
       "長期熟成",
       "価格破壊"
@@ -317,7 +317,7 @@
       "ハンバーグ",
       "ミートソースパスタ"
     ],
-    "whyBuyNow": "36ヶ月樽熟成グランレゼルバが878円。ドンキの価格破壊ワイン",
+    "whyBuyNow": "36ヶ月樽熟成グランレゼルバが878円。価格破壊のスペインワイン",
     "buyLinks": []
   },
   {
@@ -335,8 +335,8 @@
     "price": 2000,
     "stores": [
       {
-        "type": "amazon",
-        "name": "Amazon",
+        "type": "rakuten",
+        "name": "楽天",
         "price": 2000,
         "inStock": true
       }
@@ -365,8 +365,8 @@
     "whyBuyNow": "2千円以下で超鉄板。南アのエレガント系カベルネの最高峰",
     "buyLinks": [
       {
-        "store": "Amazon",
-        "url": "https://www.amazon.co.jp/s?k=ハスケル+カベルネソーヴィニヨン+南アフリカ",
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/ハスケル+カベルネソーヴィニヨン+南アフリカ/",
         "price": 2000
       }
     ]
@@ -393,8 +393,8 @@
         "inStock": true
       },
       {
-        "type": "amazon",
-        "name": "Amazon",
+        "type": "rakuten",
+        "name": "楽天",
         "price": 1210,
         "inStock": true
       }
@@ -425,8 +425,8 @@
     "whyBuyNow": "アマヤと並ぶ「不動の2トップ」。スクリューキャップで再栓可能な日常スパークリング",
     "buyLinks": [
       {
-        "store": "Amazon",
-        "url": "https://www.amazon.co.jp/s?k=デボルトリ+ジャンピエール+ブリュット",
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/デボルトリ+ジャンピエール+ブリュット/",
         "price": 1210
       }
     ]
@@ -569,8 +569,8 @@
     "whyBuyNow": "カルディ赤ワイン売上No.1。880円で王道カリフォルニアカベルネ",
     "buyLinks": [
       {
-        "store": "Amazon",
-        "url": "https://www.amazon.co.jp/s?k=レッドウッド+カベルネソーヴィニヨン+カルディ",
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/レッドウッド+カベルネソーヴィニヨン/",
         "price": 880
       }
     ]
@@ -659,8 +659,8 @@
     "whyBuyNow": "累計2,000万本のセブン看板シリーズ最高峰。980円の本格ピノ",
     "buyLinks": [
       {
-        "store": "Amazon",
-        "url": "https://www.amazon.co.jp/s?k=ヨセミテロード+ピノノワール",
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/ヨセミテロード+ピノノワール/",
         "price": 980
       }
     ]
