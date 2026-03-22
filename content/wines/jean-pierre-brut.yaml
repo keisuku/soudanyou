@@ -1,0 +1,59 @@
+# ジャンピエール ブリュット — 鉄板常備・ハウスワイン級スパークリング
+id: jean-pierre-brut
+name: De Bortoli Jean Pierre Brut
+nameJa: ジャンピエール ブリュット
+producer: De Bortoli Wines
+country: Australia
+countryCode: AU
+type: sparkling
+grapeVarieties:
+  - シャルドネ
+  - ピノ・ノワール
+
+description: >
+  豪州デ・ボルトリ社のスパークリング。シャンパンと同じ品種（シャルドネ80%、ピノ・ノワール20%）。
+  特許取得のスクリューキャップで再栓可能。ワインキングダム誌で4つ星・ベストバイ獲得。
+  アマヤと「不動の2トップ」として常備ワインに指定されている。
+
+price: 1210
+abv: 11.0
+servingTemp: 6-8℃
+
+stores:
+  - type: summit
+    name: サミット
+    price: 1210
+    inStock: true
+  - type: amazon
+    name: Amazon
+    price: 1210
+    inStock: true
+
+tags:
+  - サミット
+  - 鉄板常備
+  - ハウスワイン
+  - アマヤ2トップ
+  - スクリューキャップ
+
+pairings:
+  - 生ハム
+  - サラダ
+  - シーフード
+  - チーズ
+
+whyBuyNow: アマヤと並ぶ「不動の2トップ」。スクリューキャップで再栓可能な日常スパークリング
+
+buzzScore: 88
+vivinoScore: 3.1
+costPerformance: 93
+
+tweetUrls:
+  - https://x.com/winenomuhito/status/1942713400821481529
+  - https://x.com/winenomuhito/status/1922787327597764899
+  - https://x.com/winenomuhito/status/1888725732391821663
+
+buyLinks:
+  - store: Amazon
+    url: https://www.amazon.co.jp/s?k=デボルトリ+ジャンピエール+ブリュット
+    price: 1210

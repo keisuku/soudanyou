@@ -1,0 +1,48 @@
+# デスパーニュ ルージュ — ファミマ×神の雫 ボルドー
+id: despagne-rouge
+name: Despagne Rouge
+nameJa: デスパーニュ ルージュ
+producer: Famille Despagne
+country: France
+countryCode: FR
+type: red
+grapeVarieties:
+  - メルロー
+  - カベルネ・ソーヴィニヨン
+  - カベルネ・フラン
+
+description: >
+  神の雫に登場したシャトー・モンペラの造り手デスパーニュ家のボルドー赤。
+  ファミマ限定で神の雫コラボにより売上120%増。
+  5年熟成のボルドーが1,200円台で買える奇跡。
+
+price: 1218
+abv: 13.5
+servingTemp: 16-18℃
+
+stores:
+  - type: familymart
+    name: ファミリーマート
+    price: 1218
+    inStock: true
+
+tags:
+  - ファミマ
+  - 神の雫
+  - ボルドー
+  - コンビニ
+
+pairings:
+  - ビーフシチュー
+  - チーズ
+  - ローストビーフ
+
+whyBuyNow: 神の雫モンペラの造り手によるボルドー赤が1,218円。ファミマで買える本格派
+
+buzzScore: 85
+vivinoScore: null
+costPerformance: 88
+
+tweetUrls: []
+
+buyLinks: []

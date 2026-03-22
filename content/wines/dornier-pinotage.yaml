@@ -1,0 +1,53 @@
+# ドルニエ ピノタージュ — @winenomuhito 常備ワイン指定
+id: dornier-pinotage
+name: Dornier Pinotage
+nameJa: ドルニエ ピノタージュ
+producer: Dornier Wines
+country: South Africa
+countryCode: ZA
+type: red
+grapeVarieties:
+  - ピノタージュ
+
+description: >
+  南アフリカ・ステレンボッシュの名門。ブルゴーニュのピノ・ノワールの安価代替として
+  ワイン通に支持される。開栓2日目に化ける熟成ポテンシャルも魅力。
+  「確実にヒット打ってくれる安定感」と常備ワインに指定されている。
+
+price: 2000
+abv: 14.0
+servingTemp: 16-18℃
+
+stores:
+  - type: amazon
+    name: Amazon
+    price: 2000
+    inStock: true
+
+tags:
+  - 南アフリカ
+  - 常備ワイン
+  - ブルピノ代替
+  - 開栓2日目
+
+pairings:
+  - ラム肉
+  - BBQ
+  - スパイス料理
+  - チーズ
+
+whyBuyNow: ブルピノの代替に。開栓2日目に化ける南アの常備ワイン
+
+buzzScore: 85
+vivinoScore: null
+costPerformance: 90
+
+tweetUrls:
+  - https://x.com/winenomuhito/status/2030772994482803022
+  - https://x.com/winenomuhito/status/2031135707184730604
+  - https://x.com/winenomuhito/status/1900125339042619457
+
+buyLinks:
+  - store: Amazon
+    url: https://www.amazon.co.jp/s?k=ドルニエ+ピノタージュ
+    price: 2000

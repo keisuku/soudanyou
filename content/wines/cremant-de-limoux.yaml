@@ -1,0 +1,52 @@
+# クレマン・ド・リムー — アマヤの上位互換スパークリング
+id: cremant-de-limoux
+name: Crémant de Limoux
+nameJa: クレマン・ド・リムー
+producer: Various
+country: France
+countryCode: FR
+type: sparkling
+grapeVarieties:
+  - シャルドネ
+  - シュナン・ブラン
+  - モーザック
+
+description: >
+  フランス・ラングドック産のクレマン。シャンパンとスパークリングの中間的存在。
+  セブンのアマヤの上位互換として最近注目。
+  うきうきワインさんのセールが狙い目。
+
+price: 2600
+abv: 12.0
+servingTemp: 6-8℃
+
+stores:
+  - type: amazon
+    name: Amazon
+    price: 2600
+    inStock: true
+
+tags:
+  - クレマン
+  - アマヤ上位互換
+  - シャンパン代替
+
+pairings:
+  - 魚介料理
+  - 前菜
+  - フルーツ
+
+whyBuyNow: アマヤの上位互換。シャンパンとスパークリングの中間という唯一無二の存在
+
+buzzScore: 80
+vivinoScore: null
+costPerformance: 82
+
+tweetUrls:
+  - https://x.com/winenomuhito/status/2027152843388706854
+  - https://x.com/winenomuhito/status/2016999072599855211
+
+buyLinks:
+  - store: Amazon
+    url: https://www.amazon.co.jp/s?k=クレマン+ド+リムー
+    price: 2600

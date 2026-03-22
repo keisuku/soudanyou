@@ -1,0 +1,50 @@
+# ピーツピュア シラーズ — ローソン/エノテカの豪州ワイン
+id: petes-pure-shiraz
+name: Pete's Pure Shiraz
+nameJa: ピーツ・ピュア シラーズ
+producer: Pete's Pure
+country: Australia
+countryCode: AU
+type: red
+grapeVarieties:
+  - シラーズ
+  - ピノ・ノワール
+
+description: >
+  オーストラリア・ニューサウスウェールズ産。エノテカが輸入しローソンで展開。
+  サクラアワード2024ダイヤモンドトロフィー受賞。ヴィーガン対応のサステナブルワイン。
+  エノテカ公式で売上の90%を占める異常な人気。
+
+price: 1430
+abv: 13.5
+servingTemp: 16-18℃
+
+stores:
+  - type: lawson
+    name: ローソン
+    price: 1430
+    inStock: true
+
+tags:
+  - ローソン
+  - エノテカ
+  - サクラアワード
+  - サステナブル
+
+pairings:
+  - BBQ
+  - スパイスカレー
+  - チーズバーガー
+
+whyBuyNow: サクラアワード最高賞。エノテカ売上90%の怪物ワインがローソンで買える
+
+buzzScore: 88
+vivinoScore: 3.8
+costPerformance: 90
+
+tweetUrls: []
+
+buyLinks:
+  - store: エノテカ
+    url: https://www.enoteca.co.jp/producer/detail/2085
+    price: 1430

@@ -1,0 +1,668 @@
+[
+  {
+    "id": "amaya-cava-brut-reserva",
+    "name": "Amaya Cava Brut Reserva",
+    "nameJa": "アマヤ カヴァ ブリュット レゼルバ",
+    "producer": "La Quarta Vinicola",
+    "country": "Spain",
+    "countryCode": "ES",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "チャレッロ",
+      "マカベオ",
+      "パレリャーダ",
+      "シャルドネ"
+    ],
+    "description": "セブンイレブン限定のスペイン産カヴァ。瓶内二次発酵で18ヶ月熟成のレゼルバ規格。 レモンやグレープフルーツの爽やかな香りに、蜂蜜のニュアンスが加わる。 シャンパンと同じ製法で1,000円台は奇跡的コスパ。\n",
+    "price": 1098,
+    "stores": [
+      {
+        "type": "seven",
+        "name": "セブン-イレブン",
+        "price": 1098,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 90,
+    "vivinoScore": 3.4,
+    "costPerformance": 95,
+    "tags": [
+      "セブン最強",
+      "コンビニ",
+      "カヴァ",
+      "瓶内二次発酵"
+    ],
+    "tweetUrls": [],
+    "abv": 11.5,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "唐揚げ",
+      "生ハム",
+      "シーフードサラダ",
+      "チーズ"
+    ],
+    "whyBuyNow": "シャンパン製法で18ヶ月熟成のカヴァが1,098円。セブンの奇跡",
+    "buyLinks": [
+      {
+        "store": "Amazon",
+        "url": "https://www.amazon.co.jp/s?k=アマヤ+カヴァ+ブリュット+レゼルバ",
+        "price": 1100
+      }
+    ]
+  },
+  {
+    "id": "casa-subercaseaux-shiraz",
+    "name": "Casa Subercaseaux Shiraz",
+    "nameJa": "カーサ・スベルカソー シラーズ",
+    "producer": "Concha y Toro",
+    "country": "Chile",
+    "countryCode": "CL",
+    "type": "red",
+    "grapeVarieties": [
+      "シラーズ"
+    ],
+    "description": "ローソン限定、コンチャ・イ・トロが手がけるチリ赤。 「ローソンで500円のワイン買ったら美味すぎて銀座の高いワイン何だったの」と SNSでバズり社会現象に。10年以上ローソン売上No.1。\n",
+    "price": 640,
+    "stores": [
+      {
+        "type": "lawson",
+        "name": "ローソン",
+        "price": 640,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 88,
+    "vivinoScore": null,
+    "costPerformance": 95,
+    "tags": [
+      "ローソン最強",
+      "コンビニ",
+      "SNSバズ",
+      "ワンコイン級"
+    ],
+    "tweetUrls": [],
+    "abv": 13,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "からあげクン",
+      "カレー",
+      "焼き鳥",
+      "ピザ"
+    ],
+    "whyBuyNow": "640円でローソン10年連続No.1。SNSバズの伝説的コンビニ赤",
+    "buyLinks": []
+  },
+  {
+    "id": "chilano-cabernet-sauvignon",
+    "name": "Chilano Cabernet Sauvignon",
+    "nameJa": "チラーノ カベルネ・ソーヴィニヨン",
+    "producer": "Viña Ventisquero",
+    "country": "Chile",
+    "countryCode": "CL",
+    "type": "red",
+    "grapeVarieties": [
+      "カベルネ・ソーヴィニヨン"
+    ],
+    "description": "ドン・キホーテで年間3万ケース以上売れるメガセラー。 438円というワンコイン以下の価格で、しっかりした果実味のチリカベルネが楽しめる。\n",
+    "price": 438,
+    "stores": [
+      {
+        "type": "donki",
+        "name": "ドン・キホーテ",
+        "price": 438,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 75,
+    "vivinoScore": null,
+    "costPerformance": 95,
+    "tags": [
+      "ドンキ",
+      "ワンコイン以下",
+      "メガセラー",
+      "コスパ最強"
+    ],
+    "tweetUrls": [],
+    "abv": 13,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "焼き鳥",
+      "ピザ",
+      "パスタ"
+    ],
+    "whyBuyNow": "438円で年間3万ケースのメガセラー。ドンキ最安の本格チリ赤",
+    "buyLinks": []
+  },
+  {
+    "id": "cremant-de-limoux",
+    "name": "Crémant de Limoux",
+    "nameJa": "クレマン・ド・リムー",
+    "producer": "Various",
+    "country": "France",
+    "countryCode": "FR",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "シャルドネ",
+      "シュナン・ブラン",
+      "モーザック"
+    ],
+    "description": "フランス・ラングドック産のクレマン。シャンパンとスパークリングの中間的存在。 セブンのアマヤの上位互換として最近注目。 うきうきワインさんのセールが狙い目。\n",
+    "price": 2600,
+    "stores": [
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 2600,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": null,
+    "costPerformance": 82,
+    "tags": [
+      "クレマン",
+      "アマヤ上位互換",
+      "シャンパン代替"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/2027152843388706854",
+      "https://x.com/winenomuhito/status/2016999072599855211"
+    ],
+    "abv": 12,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "魚介料理",
+      "前菜",
+      "フルーツ"
+    ],
+    "whyBuyNow": "アマヤの上位互換。シャンパンとスパークリングの中間という唯一無二の存在",
+    "buyLinks": [
+      {
+        "store": "Amazon",
+        "url": "https://www.amazon.co.jp/s?k=クレマン+ド+リムー",
+        "price": 2600
+      }
+    ]
+  },
+  {
+    "id": "despagne-rouge",
+    "name": "Despagne Rouge",
+    "nameJa": "デスパーニュ ルージュ",
+    "producer": "Famille Despagne",
+    "country": "France",
+    "countryCode": "FR",
+    "type": "red",
+    "grapeVarieties": [
+      "メルロー",
+      "カベルネ・ソーヴィニヨン",
+      "カベルネ・フラン"
+    ],
+    "description": "神の雫に登場したシャトー・モンペラの造り手デスパーニュ家のボルドー赤。 ファミマ限定で神の雫コラボにより売上120%増。 5年熟成のボルドーが1,200円台で買える奇跡。\n",
+    "price": 1218,
+    "stores": [
+      {
+        "type": "familymart",
+        "name": "ファミリーマート",
+        "price": 1218,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 85,
+    "vivinoScore": null,
+    "costPerformance": 88,
+    "tags": [
+      "ファミマ",
+      "神の雫",
+      "ボルドー",
+      "コンビニ"
+    ],
+    "tweetUrls": [],
+    "abv": 13.5,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "ビーフシチュー",
+      "チーズ",
+      "ローストビーフ"
+    ],
+    "whyBuyNow": "神の雫モンペラの造り手によるボルドー赤が1,218円。ファミマで買える本格派",
+    "buyLinks": []
+  },
+  {
+    "id": "dornier-pinotage",
+    "name": "Dornier Pinotage",
+    "nameJa": "ドルニエ ピノタージュ",
+    "producer": "Dornier Wines",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "type": "red",
+    "grapeVarieties": [
+      "ピノタージュ"
+    ],
+    "description": "南アフリカ・ステレンボッシュの名門。ブルゴーニュのピノ・ノワールの安価代替として ワイン通に支持される。開栓2日目に化ける熟成ポテンシャルも魅力。 「確実にヒット打ってくれる安定感」と常備ワインに指定されている。\n",
+    "price": 2000,
+    "stores": [
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 2000,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 85,
+    "vivinoScore": null,
+    "costPerformance": 90,
+    "tags": [
+      "南アフリカ",
+      "常備ワイン",
+      "ブルピノ代替",
+      "開栓2日目"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/2030772994482803022",
+      "https://x.com/winenomuhito/status/2031135707184730604",
+      "https://x.com/winenomuhito/status/1900125339042619457"
+    ],
+    "abv": 14,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "ラム肉",
+      "BBQ",
+      "スパイス料理",
+      "チーズ"
+    ],
+    "whyBuyNow": "ブルピノの代替に。開栓2日目に化ける南アの常備ワイン",
+    "buyLinks": [
+      {
+        "store": "Amazon",
+        "url": "https://www.amazon.co.jp/s?k=ドルニエ+ピノタージュ",
+        "price": 2000
+      }
+    ]
+  },
+  {
+    "id": "gran-sovento-gran-reserva",
+    "name": "Gran Sovento Gran Reserva",
+    "nameJa": "グラン・ソヴェント グランレゼルバ",
+    "producer": "Gran Sovento",
+    "country": "Spain",
+    "countryCode": "ES",
+    "type": "red",
+    "grapeVarieties": [
+      "テンプラニーリョ"
+    ],
+    "description": "ドン・キホーテオリジナルのスペイン赤。36ヶ月樽熟成のグランレゼルバが 878円という価格破壊。60ヶ月版も968円で展開。\n",
+    "price": 878,
+    "stores": [
+      {
+        "type": "donki",
+        "name": "ドン・キホーテ",
+        "price": 878,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 78,
+    "vivinoScore": null,
+    "costPerformance": 93,
+    "tags": [
+      "ドンキ",
+      "グランレゼルバ",
+      "長期熟成",
+      "価格破壊"
+    ],
+    "tweetUrls": [],
+    "abv": 13,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "焼肉",
+      "ハンバーグ",
+      "ミートソースパスタ"
+    ],
+    "whyBuyNow": "36ヶ月樽熟成グランレゼルバが878円。ドンキの価格破壊ワイン",
+    "buyLinks": []
+  },
+  {
+    "id": "haskell-cabernet-sauvignon",
+    "name": "Haskell Cabernet Sauvignon",
+    "nameJa": "ハスケル カベルネ・ソーヴィニヨン",
+    "producer": "Haskell Vineyards",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "type": "red",
+    "grapeVarieties": [
+      "カベルネ・ソーヴィニヨン"
+    ],
+    "description": "南アフリカ・ステレンボッシュ産。ネット最安2千円以下のハイコスパ。 パイナップル・アプリコットのフルーティーさとエレガントな口当たり。 南アらしいパワフルさも兼ね備えた優等生。\n",
+    "price": 2000,
+    "stores": [
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 2000,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 83,
+    "vivinoScore": null,
+    "costPerformance": 92,
+    "tags": [
+      "南アフリカ",
+      "常備ワイン",
+      "超鉄板",
+      "エレガント"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/1860817941320872320",
+      "https://x.com/winenomuhito/status/1906485979264975337",
+      "https://x.com/winenomuhito/status/1867531567498965182"
+    ],
+    "abv": 14,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "ステーキ",
+      "ローストビーフ",
+      "ハンバーグ"
+    ],
+    "whyBuyNow": "2千円以下で超鉄板。南アのエレガント系カベルネの最高峰",
+    "buyLinks": [
+      {
+        "store": "Amazon",
+        "url": "https://www.amazon.co.jp/s?k=ハスケル+カベルネソーヴィニヨン+南アフリカ",
+        "price": 2000
+      }
+    ]
+  },
+  {
+    "id": "jean-pierre-brut",
+    "name": "De Bortoli Jean Pierre Brut",
+    "nameJa": "ジャンピエール ブリュット",
+    "producer": "De Bortoli Wines",
+    "country": "Australia",
+    "countryCode": "AU",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "シャルドネ",
+      "ピノ・ノワール"
+    ],
+    "description": "豪州デ・ボルトリ社のスパークリング。シャンパンと同じ品種（シャルドネ80%、ピノ・ノワール20%）。 特許取得のスクリューキャップで再栓可能。ワインキングダム誌で4つ星・ベストバイ獲得。 アマヤと「不動の2トップ」として常備ワインに指定されている。\n",
+    "price": 1210,
+    "stores": [
+      {
+        "type": "summit",
+        "name": "サミット",
+        "price": 1210,
+        "inStock": true
+      },
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 1210,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 88,
+    "vivinoScore": 3.1,
+    "costPerformance": 93,
+    "tags": [
+      "サミット",
+      "鉄板常備",
+      "ハウスワイン",
+      "アマヤ2トップ",
+      "スクリューキャップ"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/1942713400821481529",
+      "https://x.com/winenomuhito/status/1922787327597764899",
+      "https://x.com/winenomuhito/status/1888725732391821663"
+    ],
+    "abv": 11,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "生ハム",
+      "サラダ",
+      "シーフード",
+      "チーズ"
+    ],
+    "whyBuyNow": "アマヤと並ぶ「不動の2トップ」。スクリューキャップで再栓可能な日常スパークリング",
+    "buyLinks": [
+      {
+        "store": "Amazon",
+        "url": "https://www.amazon.co.jp/s?k=デボルトリ+ジャンピエール+ブリュット",
+        "price": 1210
+      }
+    ]
+  },
+  {
+    "id": "petes-pure-sauvignon-blanc",
+    "name": "Pete's Pure Sauvignon Blanc",
+    "nameJa": "ピーツ・ピュア ソーヴィニヨン・ブラン",
+    "producer": "Pete's Pure",
+    "country": "Australia",
+    "countryCode": "AU",
+    "type": "white",
+    "grapeVarieties": [
+      "ソーヴィニヨン・ブラン",
+      "シャルドネ",
+      "コロンバール"
+    ],
+    "description": "グレープフルーツの爽やかなアロマ。クセがなく、昼飲みにも最適な白ワイン。 Vivinoで2,300件以上のレビューを集める世界的人気。\n",
+    "price": 1430,
+    "stores": [
+      {
+        "type": "lawson",
+        "name": "ローソン",
+        "price": 1430,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 85,
+    "vivinoScore": 3.8,
+    "costPerformance": 88,
+    "tags": [
+      "ローソン",
+      "エノテカ",
+      "昼飲み",
+      "爽やか"
+    ],
+    "tweetUrls": [],
+    "abv": 12.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "サラダ",
+      "カルパッチョ",
+      "枝豆",
+      "生春巻き"
+    ],
+    "whyBuyNow": "Vivino 2,300件超えの世界的人気白。グレフル系爽やかワインの決定版",
+    "buyLinks": [
+      {
+        "store": "エノテカ",
+        "url": "https://www.enoteca.co.jp/producer/detail/2085",
+        "price": 1430
+      }
+    ]
+  },
+  {
+    "id": "petes-pure-shiraz",
+    "name": "Pete's Pure Shiraz",
+    "nameJa": "ピーツ・ピュア シラーズ",
+    "producer": "Pete's Pure",
+    "country": "Australia",
+    "countryCode": "AU",
+    "type": "red",
+    "grapeVarieties": [
+      "シラーズ",
+      "ピノ・ノワール"
+    ],
+    "description": "オーストラリア・ニューサウスウェールズ産。エノテカが輸入しローソンで展開。 サクラアワード2024ダイヤモンドトロフィー受賞。ヴィーガン対応のサステナブルワイン。 エノテカ公式で売上の90%を占める異常な人気。\n",
+    "price": 1430,
+    "stores": [
+      {
+        "type": "lawson",
+        "name": "ローソン",
+        "price": 1430,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 88,
+    "vivinoScore": 3.8,
+    "costPerformance": 90,
+    "tags": [
+      "ローソン",
+      "エノテカ",
+      "サクラアワード",
+      "サステナブル"
+    ],
+    "tweetUrls": [],
+    "abv": 13.5,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "BBQ",
+      "スパイスカレー",
+      "チーズバーガー"
+    ],
+    "whyBuyNow": "サクラアワード最高賞。エノテカ売上90%の怪物ワインがローソンで買える",
+    "buyLinks": [
+      {
+        "store": "エノテカ",
+        "url": "https://www.enoteca.co.jp/producer/detail/2085",
+        "price": 1430
+      }
+    ]
+  },
+  {
+    "id": "redwood-cabernet-sauvignon",
+    "name": "Redwood Cabernet Sauvignon",
+    "nameJa": "レッドウッド カベルネ・ソーヴィニヨン",
+    "producer": "Redwood Vineyards",
+    "country": "United States",
+    "countryCode": "US",
+    "type": "red",
+    "grapeVarieties": [
+      "カベルネ・ソーヴィニヨン"
+    ],
+    "description": "カルディの赤ワイン売上No.1。カリフォルニア産カベルネの王道スタイル。 しっかりした果実味とスパイス感。Yahoo!ショッピングカルディランキングでも1位。\n",
+    "price": 880,
+    "stores": [
+      {
+        "type": "kaldi",
+        "name": "カルディ",
+        "price": 880,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": null,
+    "costPerformance": 90,
+    "tags": [
+      "カルディ最強",
+      "カリフォルニア",
+      "売上No.1"
+    ],
+    "tweetUrls": [],
+    "abv": 13,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "ステーキ",
+      "ハンバーグ",
+      "ピザ"
+    ],
+    "whyBuyNow": "カルディ赤ワイン売上No.1。880円で王道カリフォルニアカベルネ",
+    "buyLinks": [
+      {
+        "store": "Amazon",
+        "url": "https://www.amazon.co.jp/s?k=レッドウッド+カベルネソーヴィニヨン+カルディ",
+        "price": 880
+      }
+    ]
+  },
+  {
+    "id": "xisto-gran-reserva",
+    "name": "Xisto Gran Reserva Vendimia Seleccionada",
+    "nameJa": "ジスト グランレゼルバ",
+    "producer": "Bodegas Yuntero",
+    "country": "Spain",
+    "countryCode": "ES",
+    "type": "red",
+    "grapeVarieties": [
+      "テンプラニーリョ"
+    ],
+    "description": "ファミリーマート限定のスペイン赤。ラ・マンチャ産テンプラニーリョ100%を 13年以上熟成。煮詰めたプラム、ビターチョコ、オリエンタルスパイスの複雑な香り。 神の雫の作者が「時を飲み込んだようなワイン」と表現。\n",
+    "price": 1098,
+    "stores": [
+      {
+        "type": "familymart",
+        "name": "ファミリーマート",
+        "price": 1098,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 92,
+    "vivinoScore": null,
+    "costPerformance": 96,
+    "tags": [
+      "ファミマ最強",
+      "コンビニ",
+      "神の雫",
+      "長期熟成",
+      "フルボディ"
+    ],
+    "tweetUrls": [],
+    "abv": 13.5,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "ファミチキ",
+      "ステーキ",
+      "焼肉",
+      "ハンバーグ"
+    ],
+    "whyBuyNow": "13年熟成グランレゼルバが1,098円。神の雫コラボで話題沸騰",
+    "buyLinks": []
+  },
+  {
+    "id": "yosemite-road-pinot-noir",
+    "name": "Yosemite Road Special Selection Pinot Noir",
+    "nameJa": "ヨセミテ・ロード 特別セレクション ピノ・ノワール",
+    "producer": "Yosemite Road",
+    "country": "United States",
+    "countryCode": "US",
+    "type": "red",
+    "grapeVarieties": [
+      "ピノ・ノワール"
+    ],
+    "description": "セブンイレブンの看板シリーズ「ヨセミテロード」の最上位。 ラズベリー、野イチゴ、茶葉のアロマ。 シリーズ累計2,000万本突破の実力派。\n",
+    "price": 980,
+    "stores": [
+      {
+        "type": "seven",
+        "name": "セブン-イレブン",
+        "price": 980,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 82,
+    "vivinoScore": null,
+    "costPerformance": 85,
+    "tags": [
+      "セブン",
+      "コンビニ",
+      "カリフォルニア",
+      "2000万本"
+    ],
+    "tweetUrls": [],
+    "abv": 13,
+    "servingTemp": "14-16℃",
+    "pairings": [
+      "サーモン",
+      "鶏の照り焼き",
+      "キノコ料理"
+    ],
+    "whyBuyNow": "累計2,000万本のセブン看板シリーズ最高峰。980円の本格ピノ",
+    "buyLinks": [
+      {
+        "store": "Amazon",
+        "url": "https://www.amazon.co.jp/s?k=ヨセミテロード+ピノノワール",
+        "price": 980
+      }
+    ]
+  }
+]
