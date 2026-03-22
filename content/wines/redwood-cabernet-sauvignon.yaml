@@ -1,0 +1,47 @@
+# レッドウッド カベルネ・ソーヴィニヨン — カルディ赤No.1
+id: redwood-cabernet-sauvignon
+name: Redwood Cabernet Sauvignon
+nameJa: レッドウッド カベルネ・ソーヴィニヨン
+producer: Redwood Vineyards
+country: United States
+countryCode: US
+type: red
+grapeVarieties:
+  - カベルネ・ソーヴィニヨン
+
+description: >
+  カルディの赤ワイン売上No.1。カリフォルニア産カベルネの王道スタイル。
+  しっかりした果実味とスパイス感。Yahoo!ショッピングカルディランキングでも1位。
+
+price: 880
+abv: 13.0
+servingTemp: 16-18℃
+
+stores:
+  - type: kaldi
+    name: カルディ
+    price: 880
+    inStock: true
+
+tags:
+  - カルディ最強
+  - カリフォルニア
+  - 売上No.1
+
+pairings:
+  - ステーキ
+  - ハンバーグ
+  - ピザ
+
+whyBuyNow: カルディ赤ワイン売上No.1。880円で王道カリフォルニアカベルネ
+
+buzzScore: 80
+vivinoScore: null
+costPerformance: 90
+
+tweetUrls: []
+
+buyLinks:
+  - store: Amazon
+    url: https://www.amazon.co.jp/s?k=レッドウッド+カベルネソーヴィニヨン+カルディ
+    price: 880

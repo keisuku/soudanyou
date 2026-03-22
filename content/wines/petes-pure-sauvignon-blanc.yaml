@@ -1,0 +1,51 @@
+# ピーツピュア ソーヴィニヨン・ブラン — 白の代表格
+id: petes-pure-sauvignon-blanc
+name: Pete's Pure Sauvignon Blanc
+nameJa: ピーツ・ピュア ソーヴィニヨン・ブラン
+producer: Pete's Pure
+country: Australia
+countryCode: AU
+type: white
+grapeVarieties:
+  - ソーヴィニヨン・ブラン
+  - シャルドネ
+  - コロンバール
+
+description: >
+  グレープフルーツの爽やかなアロマ。クセがなく、昼飲みにも最適な白ワイン。
+  Vivinoで2,300件以上のレビューを集める世界的人気。
+
+price: 1430
+abv: 12.5
+servingTemp: 8-10℃
+
+stores:
+  - type: lawson
+    name: ローソン
+    price: 1430
+    inStock: true
+
+tags:
+  - ローソン
+  - エノテカ
+  - 昼飲み
+  - 爽やか
+
+pairings:
+  - サラダ
+  - カルパッチョ
+  - 枝豆
+  - 生春巻き
+
+whyBuyNow: Vivino 2,300件超えの世界的人気白。グレフル系爽やかワインの決定版
+
+buzzScore: 85
+vivinoScore: 3.8
+costPerformance: 88
+
+tweetUrls: []
+
+buyLinks:
+  - store: エノテカ
+    url: https://www.enoteca.co.jp/producer/detail/2085
+    price: 1430

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { mockWines } from "@/lib/mock-data";
+import { wines as allWines } from "@/lib/wines";
 import { WineCard } from "@/components/wine/wine-card";
 import type { WineType } from "@/types/wine";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,12 +12,12 @@ const typeNav: { type: WineType; label: string; emoji: string; id: string }[] = 
 ];
 
 function getWines(type: WineType) {
-  return mockWines
+  return allWines
     .filter((w) => w.type === type)
     .sort((a, b) => b.costPerformance - a.costPerformance);
 }
 
-const topPick = [...mockWines].sort((a, b) => b.buzzScore - a.buzzScore)[0];
+const topPick = [...allWines].sort((a, b) => b.buzzScore - a.buzzScore)[0];
 
 const faqs = [
   {
@@ -47,7 +47,7 @@ export default function Home() {
           今買うべきワインが<span className="text-primary">すぐわかる</span>
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          コンビニ・スーパーで手に入る{mockWines.length}本を厳選。コスパと話題度でランキング。
+          コンビニ・スーパーで手に入る{allWines.length}本を厳選。コスパと話題度でランキング。
         </p>
 
         {/* Featured pick */}
@@ -94,18 +94,18 @@ export default function Home() {
 
       {/* Wine sections by type */}
       {typeNav.map((cat) => {
-        const wines = getWines(cat.type);
-        if (wines.length === 0) return null;
+        const typeWines = getWines(cat.type);
+        if (typeWines.length === 0) return null;
         return (
           <section key={cat.type} id={cat.id} className="mt-10 scroll-mt-28">
             <h2 className="text-xl font-bold text-foreground">
               {cat.emoji} {cat.label}
             </h2>
             <p className="mt-1 text-xs text-muted-foreground">
-              コスパ順で{wines.length}本
+              コスパ順で{typeWines.length}本
             </p>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {wines.map((wine, i) => (
+              {typeWines.map((wine, i) => (
                 <WineCard key={wine.id} wine={wine} rank={i + 1} />
               ))}
             </div>

@@ -1,0 +1,45 @@
+# グラン・ソヴェント グランレゼルバ — ドンキの隠れた名品
+id: gran-sovento-gran-reserva
+name: Gran Sovento Gran Reserva
+nameJa: グラン・ソヴェント グランレゼルバ
+producer: Gran Sovento
+country: Spain
+countryCode: ES
+type: red
+grapeVarieties:
+  - テンプラニーリョ
+
+description: >
+  ドン・キホーテオリジナルのスペイン赤。36ヶ月樽熟成のグランレゼルバが
+  878円という価格破壊。60ヶ月版も968円で展開。
+
+price: 878
+abv: 13.0
+servingTemp: 16-18℃
+
+stores:
+  - type: donki
+    name: ドン・キホーテ
+    price: 878
+    inStock: true
+
+tags:
+  - ドンキ
+  - グランレゼルバ
+  - 長期熟成
+  - 価格破壊
+
+pairings:
+  - 焼肉
+  - ハンバーグ
+  - ミートソースパスタ
+
+whyBuyNow: 36ヶ月樽熟成グランレゼルバが878円。ドンキの価格破壊ワイン
+
+buzzScore: 78
+vivinoScore: null
+costPerformance: 93
+
+tweetUrls: []
+
+buyLinks: []

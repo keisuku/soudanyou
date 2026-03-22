@@ -9,6 +9,7 @@ export type StoreType =
   | "kaldi"
   | "donki"
   | "costco"
+  | "summit"
   | "rakuten"
   | "amazon"
   | "liquor_shop";

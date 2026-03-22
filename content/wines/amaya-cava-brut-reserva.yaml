@@ -1,0 +1,53 @@
+# アマヤ カヴァ ブリュット レゼルバ — セブンイレブン最強スパークリング
+id: amaya-cava-brut-reserva
+name: Amaya Cava Brut Reserva
+nameJa: アマヤ カヴァ ブリュット レゼルバ
+producer: La Quarta Vinicola
+country: Spain
+countryCode: ES
+type: sparkling
+grapeVarieties:
+  - チャレッロ
+  - マカベオ
+  - パレリャーダ
+  - シャルドネ
+
+description: >
+  セブンイレブン限定のスペイン産カヴァ。瓶内二次発酵で18ヶ月熟成のレゼルバ規格。
+  レモンやグレープフルーツの爽やかな香りに、蜂蜜のニュアンスが加わる。
+  シャンパンと同じ製法で1,000円台は奇跡的コスパ。
+
+price: 1098
+abv: 11.5
+servingTemp: 6-8℃
+
+stores:
+  - type: seven
+    name: セブン-イレブン
+    price: 1098
+    inStock: true
+
+tags:
+  - セブン最強
+  - コンビニ
+  - カヴァ
+  - 瓶内二次発酵
+
+pairings:
+  - 唐揚げ
+  - 生ハム
+  - シーフードサラダ
+  - チーズ
+
+whyBuyNow: シャンパン製法で18ヶ月熟成のカヴァが1,098円。セブンの奇跡
+
+buzzScore: 90
+vivinoScore: 3.4
+costPerformance: 95
+
+tweetUrls: []
+
+buyLinks:
+  - store: Amazon
+    url: https://www.amazon.co.jp/s?k=アマヤ+カヴァ+ブリュット+レゼルバ
+    price: 1100

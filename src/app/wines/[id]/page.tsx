@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { mockWines } from "@/lib/mock-data";
+import { wines as allWines } from "@/lib/wines";
 import { WineCard } from "@/components/wine/wine-card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,7 +13,7 @@ import {
 import { TweetEmbed } from "@/components/wine/tweet-embed";
 
 export function generateStaticParams() {
-  return mockWines.map((wine) => ({ id: wine.id }));
+  return allWines.map((wine) => ({ id: wine.id }));
 }
 
 export async function generateMetadata({
@@ -22,7 +22,7 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const wine = mockWines.find((w) => w.id === id);
+  const wine = allWines.find((w) => w.id === id);
   if (!wine) return { title: "ワインが見つかりません" };
   return {
     title: `${wine.nameJa} ${formatPrice(wine.price)} | ご近所ワイン`,
@@ -43,7 +43,7 @@ export default async function WineDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const wine = mockWines.find((w) => w.id === id);
+  const wine = allWines.find((w) => w.id === id);
 
   if (!wine) {
     notFound();
@@ -51,7 +51,7 @@ export default async function WineDetailPage({
 
   const sortedStores = [...wine.stores].sort((a, b) => a.price - b.price);
 
-  const similarWines = mockWines
+  const similarWines = allWines
     .filter((w) => w.id !== wine.id && w.type === wine.type)
     .sort((a, b) => b.costPerformance - a.costPerformance)
     .slice(0, 3);

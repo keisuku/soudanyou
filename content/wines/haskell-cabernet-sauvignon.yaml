@@ -1,0 +1,52 @@
+# ハスケル カベルネ・ソーヴィニヨン — 超鉄板・常備リスト常連
+id: haskell-cabernet-sauvignon
+name: Haskell Cabernet Sauvignon
+nameJa: ハスケル カベルネ・ソーヴィニヨン
+producer: Haskell Vineyards
+country: South Africa
+countryCode: ZA
+type: red
+grapeVarieties:
+  - カベルネ・ソーヴィニヨン
+
+description: >
+  南アフリカ・ステレンボッシュ産。ネット最安2千円以下のハイコスパ。
+  パイナップル・アプリコットのフルーティーさとエレガントな口当たり。
+  南アらしいパワフルさも兼ね備えた優等生。
+
+price: 2000
+abv: 14.0
+servingTemp: 16-18℃
+
+stores:
+  - type: amazon
+    name: Amazon
+    price: 2000
+    inStock: true
+
+tags:
+  - 南アフリカ
+  - 常備ワイン
+  - 超鉄板
+  - エレガント
+
+pairings:
+  - ステーキ
+  - ローストビーフ
+  - ハンバーグ
+
+whyBuyNow: 2千円以下で超鉄板。南アのエレガント系カベルネの最高峰
+
+buzzScore: 83
+vivinoScore: null
+costPerformance: 92
+
+tweetUrls:
+  - https://x.com/winenomuhito/status/1860817941320872320
+  - https://x.com/winenomuhito/status/1906485979264975337
+  - https://x.com/winenomuhito/status/1867531567498965182
+
+buyLinks:
+  - store: Amazon
+    url: https://www.amazon.co.jp/s?k=ハスケル+カベルネソーヴィニヨン+南アフリカ
+    price: 2000

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { mockWines } from "@/lib/mock-data";
+import { wines as allWines } from "@/lib/wines";
 import { WineCard } from "@/components/wine/wine-card";
 import { SearchBar } from "@/components/search/search-bar";
 import { Badge } from "@/components/ui/badge";
@@ -36,7 +36,7 @@ export default function WinesPage() {
   const [sortBy, setSortBy] = useState<SortKey>("cospa");
 
   const filteredWines = useMemo(() => {
-    let result = mockWines.filter((wine) => {
+    let result = allWines.filter((wine) => {
       if (activeType && wine.type !== activeType) return false;
       if (activeBudget) {
         if (activeBudget === 99999) {
@@ -74,7 +74,7 @@ export default function WinesPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="text-2xl font-bold">全{mockWines.length}本のワイン</h1>
+      <h1 className="text-2xl font-bold">全{allWines.length}本のワイン</h1>
 
       <div className="mt-4">
         <SearchBar
@@ -160,7 +160,7 @@ export default function WinesPage() {
       )}
 
       <p className="mt-4 text-xs text-muted-foreground">
-        {filteredWines.length}/{mockWines.length}件表示
+        {filteredWines.length}/{allWines.length}件表示
       </p>
     </div>
   );

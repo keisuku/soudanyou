@@ -1,0 +1,45 @@
+# チラーノ カベルネ・ソーヴィニヨン — ドンキのメガセラー
+id: chilano-cabernet-sauvignon
+name: Chilano Cabernet Sauvignon
+nameJa: チラーノ カベルネ・ソーヴィニヨン
+producer: Viña Ventisquero
+country: Chile
+countryCode: CL
+type: red
+grapeVarieties:
+  - カベルネ・ソーヴィニヨン
+
+description: >
+  ドン・キホーテで年間3万ケース以上売れるメガセラー。
+  438円というワンコイン以下の価格で、しっかりした果実味のチリカベルネが楽しめる。
+
+price: 438
+abv: 13.0
+servingTemp: 16-18℃
+
+stores:
+  - type: donki
+    name: ドン・キホーテ
+    price: 438
+    inStock: true
+
+tags:
+  - ドンキ
+  - ワンコイン以下
+  - メガセラー
+  - コスパ最強
+
+pairings:
+  - 焼き鳥
+  - ピザ
+  - パスタ
+
+whyBuyNow: 438円で年間3万ケースのメガセラー。ドンキ最安の本格チリ赤
+
+buzzScore: 75
+vivinoScore: null
+costPerformance: 95
+
+tweetUrls: []
+
+buyLinks: []

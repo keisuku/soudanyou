@@ -1,0 +1,48 @@
+# ジスト グランレゼルバ — ファミマ限定。神の雫コラボ
+id: xisto-gran-reserva
+name: Xisto Gran Reserva Vendimia Seleccionada
+nameJa: ジスト グランレゼルバ
+producer: Bodegas Yuntero
+country: Spain
+countryCode: ES
+type: red
+grapeVarieties:
+  - テンプラニーリョ
+
+description: >
+  ファミリーマート限定のスペイン赤。ラ・マンチャ産テンプラニーリョ100%を
+  13年以上熟成。煮詰めたプラム、ビターチョコ、オリエンタルスパイスの複雑な香り。
+  神の雫の作者が「時を飲み込んだようなワイン」と表現。
+
+price: 1098
+abv: 13.5
+servingTemp: 16-18℃
+
+stores:
+  - type: familymart
+    name: ファミリーマート
+    price: 1098
+    inStock: true
+
+tags:
+  - ファミマ最強
+  - コンビニ
+  - 神の雫
+  - 長期熟成
+  - フルボディ
+
+pairings:
+  - ファミチキ
+  - ステーキ
+  - 焼肉
+  - ハンバーグ
+
+whyBuyNow: 13年熟成グランレゼルバが1,098円。神の雫コラボで話題沸騰
+
+buzzScore: 92
+vivinoScore: null
+costPerformance: 96
+
+tweetUrls: []
+
+buyLinks: []

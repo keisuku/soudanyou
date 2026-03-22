@@ -1,0 +1,49 @@
+# ヨセミテロード 特別セレクション ピノ・ノワール — セブン看板シリーズ最高峰
+id: yosemite-road-pinot-noir
+name: Yosemite Road Special Selection Pinot Noir
+nameJa: ヨセミテ・ロード 特別セレクション ピノ・ノワール
+producer: Yosemite Road
+country: United States
+countryCode: US
+type: red
+grapeVarieties:
+  - ピノ・ノワール
+
+description: >
+  セブンイレブンの看板シリーズ「ヨセミテロード」の最上位。
+  ラズベリー、野イチゴ、茶葉のアロマ。
+  シリーズ累計2,000万本突破の実力派。
+
+price: 980
+abv: 13.0
+servingTemp: 14-16℃
+
+stores:
+  - type: seven
+    name: セブン-イレブン
+    price: 980
+    inStock: true
+
+tags:
+  - セブン
+  - コンビニ
+  - カリフォルニア
+  - 2000万本
+
+pairings:
+  - サーモン
+  - 鶏の照り焼き
+  - キノコ料理
+
+whyBuyNow: 累計2,000万本のセブン看板シリーズ最高峰。980円の本格ピノ
+
+buzzScore: 82
+vivinoScore: null
+costPerformance: 85
+
+tweetUrls: []
+
+buyLinks:
+  - store: Amazon
+    url: https://www.amazon.co.jp/s?k=ヨセミテロード+ピノノワール
+    price: 980
