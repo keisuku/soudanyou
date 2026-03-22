@@ -4,13 +4,13 @@ import Link from "next/link";
 import type { Wine } from "@/types/wine";
 import { cn, formatPrice } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, UtensilsCrossed } from "lucide-react";
 
-const wineTypeColors: Record<Wine["type"], string> = {
-  red: "bg-wine-red",
-  white: "bg-wine-white",
-  rose: "bg-wine-rose",
-  sparkling: "bg-wine-sparkling",
+const wineTypeGradients: Record<Wine["type"], string> = {
+  red: "from-red-800 via-red-700 to-red-900",
+  white: "from-amber-200 via-yellow-100 to-amber-300",
+  rose: "from-pink-300 via-rose-200 to-pink-400",
+  sparkling: "from-sky-300 via-cyan-200 to-blue-300",
 };
 
 const wineTypeLabels: Record<Wine["type"], string> = {
@@ -18,6 +18,20 @@ const wineTypeLabels: Record<Wine["type"], string> = {
   white: "白",
   rose: "ロゼ",
   sparkling: "泡",
+};
+
+const storeIcons: Record<string, string> = {
+  seven: "7",
+  lawson: "L",
+  familymart: "F",
+  aeon: "A",
+  seijoishii: "成",
+  kaldi: "K",
+  donki: "D",
+  costco: "C",
+  rakuten: "楽",
+  amazon: "Am",
+  liquor_shop: "酒",
 };
 
 interface WineCardProps {
@@ -31,12 +45,15 @@ export function WineCard({ wine, rank, className }: WineCardProps) {
     <Link href={`/wines/${wine.id}`}>
       <Card
         className={cn(
-          "group cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:border-primary hover:shadow-lg hover:shadow-primary/10",
+          "group cursor-pointer overflow-hidden transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10",
           className
         )}
       >
+        {/* Color bar */}
+        <div className={cn("h-2 bg-gradient-to-r", wineTypeGradients[wine.type])} />
+
         <CardContent className="p-4">
-          {/* Top row: rank + type badge + price + vivino */}
+          {/* Top: rank + type + price */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               {rank != null && (
@@ -44,8 +61,8 @@ export function WineCard({ wine, rank, className }: WineCardProps) {
                   {rank}
                 </span>
               )}
-              <span className={cn("rounded-full px-2 py-0.5 text-[10px] font-bold", wineTypeColors[wine.type], wine.type === "red" ? "text-white" : "text-foreground")}>
-                {wineTypeLabels[wine.type]}
+              <span className="rounded-full bg-secondary px-2 py-0.5 text-[10px] font-bold text-secondary-foreground">
+                {wineTypeLabels[wine.type]} {wine.abv}%
               </span>
             </div>
             <span className="text-lg font-bold text-primary">
@@ -53,17 +70,17 @@ export function WineCard({ wine, rank, className }: WineCardProps) {
             </span>
           </div>
 
-          {/* Wine name */}
+          {/* Name */}
           <h3 className="mt-2 font-semibold leading-tight text-foreground">
             {wine.nameJa}
           </h3>
 
-          {/* Why buy now - the key selling point */}
+          {/* Why buy now */}
           <p className="mt-1 text-sm leading-snug text-muted-foreground">
             {wine.whyBuyNow}
           </p>
 
-          {/* Bottom row: vivino + pairings */}
+          {/* Vivino + pairings */}
           <div className="mt-3 flex items-center justify-between">
             {wine.vivinoScore && (
               <span className="flex items-center gap-0.5 text-sm font-medium text-gold">
@@ -71,11 +88,25 @@ export function WineCard({ wine, rank, className }: WineCardProps) {
                 {wine.vivinoScore.toFixed(1)}
               </span>
             )}
-            <div className="flex gap-1 text-[10px] text-muted-foreground">
+            <div className="flex items-center gap-1 text-[10px] text-muted-foreground">
+              <UtensilsCrossed className="h-3 w-3" />
               {wine.pairings.slice(0, 2).map((p) => (
                 <span key={p} className="rounded bg-secondary px-1.5 py-0.5">{p}</span>
               ))}
             </div>
+          </div>
+
+          {/* Store availability icons */}
+          <div className="mt-2 flex gap-1">
+            {wine.stores.map((s) => (
+              <span
+                key={s.type}
+                className="flex h-5 w-5 items-center justify-center rounded bg-muted text-[8px] font-bold text-muted-foreground"
+                title={s.name}
+              >
+                {storeIcons[s.type] ?? "?"}
+              </span>
+            ))}
           </div>
         </CardContent>
       </Card>
