@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { wines as allWines } from "@/lib/wines";
-import { WineCard } from "@/components/wine/wine-card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatPrice } from "@/lib/utils";
@@ -50,11 +49,6 @@ export default async function WineDetailPage({
   }
 
   const sortedStores = [...wine.stores].sort((a, b) => a.price - b.price);
-
-  const similarWines = allWines
-    .filter((w) => w.id !== wine.id && w.type === wine.type)
-    .sort((a, b) => b.costPerformance - a.costPerformance)
-    .slice(0, 3);
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
@@ -225,19 +219,6 @@ export default async function WineDetailPage({
           </Card>
         )}
 
-        {/* Similar wines */}
-        {similarWines.length > 0 && (
-          <div>
-            <h2 className="text-lg font-bold text-foreground">
-              同じタイプのおすすめ
-            </h2>
-            <div className="mt-3 grid gap-3 sm:grid-cols-3">
-              {similarWines.map((w) => (
-                <WineCard key={w.id} wine={w} />
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
