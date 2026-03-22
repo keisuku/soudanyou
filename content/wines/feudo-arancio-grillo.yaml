@@ -49,7 +49,8 @@ buzzScore: 78
 vivinoScore: 3.7
 costPerformance: 84
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/soave_classico/status/1841063928190943285
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/フェウドアランチョ+グリッロ/
