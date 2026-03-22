@@ -37,7 +37,8 @@ whyBuyNow: 和食に寄り添う日本ワインの最高峰。日本人のため
 buzzScore: 77
 vivinoScore: 3.4
 costPerformance: 72
-tweetUrls: []
+tweetUrls:
+  - https://x.com/chateaumercian/status/1835879784125776274
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/メルシャン+マスカットベーリーA/

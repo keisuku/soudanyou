@@ -40,7 +40,8 @@ whyBuyNow: Vivino世界TOP5%！1000円台で買える南イタリアの至宝
 buzzScore: 87
 vivinoScore: 3.9
 costPerformance: 87
-tweetUrls: []
+tweetUrls:
+  - https://x.com/EugeneArima/status/1959129933424599346
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/イルプーモ+プリミティーヴォ/

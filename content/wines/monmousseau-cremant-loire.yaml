@@ -38,7 +38,8 @@ whyBuyNow: シャンパンの半額以下！ANAビジネスクラス採用の実
 buzzScore: 81
 vivinoScore: null
 costPerformance: 83
-tweetUrls: []
+tweetUrls:
+  - https://x.com/tanabe_duvin/status/1675160444380807169
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/モンムソー+クレマン+ロワール/

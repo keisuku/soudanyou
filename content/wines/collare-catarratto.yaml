@@ -41,5 +41,6 @@ buzzScore: 68
 vivinoScore: null
 costPerformance: 91
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/soave_classico/status/1841063928190943285
 buyLinks: []

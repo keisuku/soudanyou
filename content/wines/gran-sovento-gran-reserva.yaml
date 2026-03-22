@@ -40,6 +40,7 @@ buzzScore: 78
 vivinoScore: null
 costPerformance: 93
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/TatsuoNakatsuka/status/1957756629438579096
 
 buyLinks: []

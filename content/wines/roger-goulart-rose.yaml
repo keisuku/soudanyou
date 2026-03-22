@@ -33,7 +33,8 @@ whyBuyNow: ドンペリロゼに勝った伝説のカヴァ！20分の1の価格
 buzzScore: 91
 vivinoScore: null
 costPerformance: 80
-tweetUrls: []
+tweetUrls:
+  - https://x.com/inochi_mikoto/status/1944367801189486731
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/ロジャーグラート+ロゼ/

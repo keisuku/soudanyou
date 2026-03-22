@@ -40,6 +40,7 @@ buzzScore: 75
 vivinoScore: null
 costPerformance: 95
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/miyamoto_ryuta/status/1825337455614316827
 
 buyLinks: []
