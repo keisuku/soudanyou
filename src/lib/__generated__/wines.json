@@ -373,47 +373,48 @@
   },
   {
     "id": "jean-pierre-brut",
-    "name": "Jean Pierre Brut",
+    "name": "De Bortoli Jean Pierre Brut",
     "nameJa": "ジャンピエール ブリュット",
-    "producer": "Jean Pierre",
-    "country": "France",
-    "countryCode": "FR",
+    "producer": "De Bortoli Wines",
+    "country": "Australia",
+    "countryCode": "AU",
     "type": "sparkling",
     "grapeVarieties": [
       "シャルドネ",
-      "シュナン・ブラン"
+      "ピノ・ノワール"
     ],
-    "description": "フランス産スパークリング。1,200円ながら高クオリティな味わいと酸味。 アマヤと「不動の2トップ」として常備ワインに指定されている。 木村硝子ピッコロで飲むと最高、との評判。\n",
-    "price": 1200,
+    "description": "豪州デ・ボルトリ社のスパークリング。シャンパンと同じ品種（シャルドネ80%、ピノ・ノワール20%）。 特許取得のスクリューキャップで再栓可能。ワインキングダム誌で4つ星・ベストバイ獲得。 アマヤと「不動の2トップ」として常備ワインに指定されている。\n",
+    "price": 1210,
     "stores": [
       {
         "type": "summit",
         "name": "サミット",
-        "price": 1200,
+        "price": 1210,
         "inStock": true
       },
       {
         "type": "amazon",
         "name": "Amazon",
-        "price": 1200,
+        "price": 1210,
         "inStock": true
       }
     ],
     "buzzScore": 88,
-    "vivinoScore": null,
+    "vivinoScore": 3.1,
     "costPerformance": 93,
     "tags": [
       "サミット",
       "鉄板常備",
       "ハウスワイン",
-      "アマヤ2トップ"
+      "アマヤ2トップ",
+      "スクリューキャップ"
     ],
     "tweetUrls": [
       "https://x.com/winenomuhito/status/1942713400821481529",
       "https://x.com/winenomuhito/status/1922787327597764899",
       "https://x.com/winenomuhito/status/1888725732391821663"
     ],
-    "abv": 11.5,
+    "abv": 11,
     "servingTemp": "6-8℃",
     "pairings": [
       "生ハム",
@@ -421,12 +422,12 @@
       "シーフード",
       "チーズ"
     ],
-    "whyBuyNow": "アマヤと並ぶ「不動の2トップ」。1,200円のハウスワイン級スパークリング",
+    "whyBuyNow": "アマヤと並ぶ「不動の2トップ」。スクリューキャップで再栓可能な日常スパークリング",
     "buyLinks": [
       {
         "store": "Amazon",
-        "url": "https://www.amazon.co.jp/s?k=ジャンピエール+スパークリング+ブリュット",
-        "price": 1200
+        "url": "https://www.amazon.co.jp/s?k=デボルトリ+ジャンピエール+ブリュット",
+        "price": 1210
       }
     ]
   },
