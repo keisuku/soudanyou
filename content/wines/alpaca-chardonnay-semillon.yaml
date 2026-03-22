@@ -46,7 +46,8 @@ buzzScore: 80
 vivinoScore: 3.1
 costPerformance: 92
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/db54hCVPwe49026/status/1987110265582985646
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/アルパカ+シャルドネ+セミヨン/

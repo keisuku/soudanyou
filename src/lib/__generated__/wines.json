@@ -42,7 +42,10 @@
       "チリカベ",
       "世界50カ国"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/hiropyon0628/status/1990800455908405266",
+      "https://x.com/osake_am/status/1960720725574091072"
+    ],
     "abv": 13.5,
     "servingTemp": "16-18℃",
     "pairings": [
@@ -97,7 +100,9 @@
       "ワンコイン",
       "チリ白"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/db54hCVPwe49026/status/1987110265582985646"
+    ],
     "abv": 13,
     "servingTemp": "8-10℃",
     "pairings": [
@@ -196,7 +201,10 @@
       "チリカベ",
       "コスパ"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/akiko_lawson/status/1838866091889885557",
+      "https://x.com/akakit/status/1908311563490255004"
+    ],
     "abv": 12,
     "servingTemp": "16-18℃",
     "pairings": [
@@ -255,48 +263,6 @@
     ]
   },
   {
-    "id": "casa-subercaseaux-shiraz",
-    "name": "Casa Subercaseaux Shiraz",
-    "nameJa": "カーサ・スベルカソー シラーズ",
-    "producer": "Concha y Toro",
-    "country": "Chile",
-    "countryCode": "CL",
-    "type": "red",
-    "grapeVarieties": [
-      "シラーズ"
-    ],
-    "description": "ローソン限定、コンチャ・イ・トロが手がけるチリ赤。 「ローソンで500円のワイン買ったら美味すぎて銀座の高いワイン何だったの」と SNSでバズり社会現象に。10年以上ローソン売上No.1。\n",
-    "price": 640,
-    "stores": [
-      {
-        "type": "lawson",
-        "name": "ローソン",
-        "price": 640,
-        "inStock": true
-      }
-    ],
-    "buzzScore": 88,
-    "vivinoScore": null,
-    "costPerformance": 95,
-    "tags": [
-      "ローソン最強",
-      "コンビニ",
-      "SNSバズ",
-      "ワンコイン級"
-    ],
-    "tweetUrls": [],
-    "abv": 13,
-    "servingTemp": "16-18℃",
-    "pairings": [
-      "からあげクン",
-      "カレー",
-      "焼き鳥",
-      "ピザ"
-    ],
-    "whyBuyNow": "640円でローソン10年連続No.1。SNSバズの伝説的コンビニ赤",
-    "buyLinks": []
-  },
-  {
     "id": "casillero-del-diablo",
     "name": "Casillero del Diablo Cabernet Sauvignon",
     "nameJa": "カッシェロ・デル・ディアブロ カベルネ・ソーヴィニヨン",
@@ -338,7 +304,12 @@
       "チリカベ上級",
       "1000円台"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/Kirin_Brewery/status/1764939658847195155",
+      "https://x.com/Kirin_Brewery/status/1914620947509993791",
+      "https://x.com/NOMOOO_INFO/status/1955192557341905187",
+      "https://x.com/Kirin_Brewery/status/2011348307902415350"
+    ],
     "abv": 13.5,
     "servingTemp": "16-18℃",
     "pairings": [
@@ -529,7 +500,10 @@
       "38万人評価",
       "チリカベ"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/miyamoto_ryuta/status/1825337455614316827",
+      "https://x.com/nahomaro1224/status/1705932156349157887"
+    ],
     "abv": 13,
     "servingTemp": "16-18℃",
     "pairings": [
@@ -743,7 +717,9 @@
       "チリ白",
       "樽系"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/10chf/status/1830169074980307153"
+    ],
     "abv": 13,
     "servingTemp": "8-10℃",
     "pairings": [
@@ -794,7 +770,9 @@
       "ボルドー",
       "コンビニ"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/famima_now/status/1718192127237358068"
+    ],
     "abv": 13.5,
     "servingTemp": "16-18℃",
     "pairings": [
@@ -899,7 +877,9 @@
       "Berlin金賞",
       "シチリア"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/soave_classico/status/1841063928190943285"
+    ],
     "abv": 13,
     "servingTemp": "8-10℃",
     "pairings": [
@@ -1753,7 +1733,10 @@
       "サクラアワード",
       "サステナブル"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/enoteca_online/status/2027232647442006338",
+      "https://x.com/ministop_fan/status/1850809729389600893"
+    ],
     "abv": 13.5,
     "servingTemp": "16-18℃",
     "pairings": [
@@ -1800,7 +1783,9 @@
       "DOCG",
       "ソムリエ絶賛"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/tanabe_duvin/status/1828244784030630080"
+    ],
     "abv": 13,
     "servingTemp": "16-18℃",
     "pairings": [
@@ -1841,7 +1826,11 @@
       "カリフォルニア",
       "売上No.1"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/KALDI_webshop/status/1917489827894997141",
+      "https://x.com/KALDI_webshop/status/1979097289445773399",
+      "https://x.com/KALDI_webshop/status/1925824483740250386"
+    ],
     "abv": 13,
     "servingTemp": "16-18℃",
     "pairings": [
@@ -1888,7 +1877,9 @@
       "カリフォルニア",
       "飲みやすい"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/KALDI_webshop/status/1917489827894997141"
+    ],
     "abv": 12.5,
     "servingTemp": "8-10℃",
     "pairings": [
@@ -2038,7 +2029,9 @@
       "ドイツ",
       "やや甘口"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/KirinCity_beer/status/1223788124951760904"
+    ],
     "abv": 9.5,
     "servingTemp": "6-8℃",
     "pairings": [
@@ -2272,7 +2265,9 @@
       "ワンコイン以下",
       "デイリー赤"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/TOPVALUOFFICIAL/status/1816783019858125215"
+    ],
     "abv": 11,
     "servingTemp": "14-16℃",
     "pairings": [
@@ -2423,7 +2418,15 @@
       "長期熟成",
       "フルボディ"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/miyamoto_ryuta/status/1796842401690267832",
+      "https://x.com/TatsuoNakatsuka/status/1957756629438579096",
+      "https://x.com/tanabe_duvin/status/1949964036637958199",
+      "https://x.com/agitadashi/status/1950776486577008869",
+      "https://x.com/nano_723/status/2018614296625004592",
+      "https://x.com/brandydaddy86/status/2014266263552549237",
+      "https://x.com/sendai_buriko0/status/2023310454366626145"
+    ],
     "abv": 13.5,
     "servingTemp": "16-18℃",
     "pairings": [
@@ -2465,7 +2468,10 @@
       "マツコ絶賛",
       "カリフォルニア"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/711sej/status/1276787353806204928",
+      "https://x.com/711SEJ/status/920198428105121793"
+    ],
     "abv": 13,
     "servingTemp": "16-18℃",
     "pairings": [
@@ -2507,7 +2513,9 @@
       "2000万本突破",
       "カリフォルニア"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/711sej/status/1276787353806204928"
+    ],
     "abv": 13,
     "servingTemp": "8-10℃",
     "pairings": [
@@ -2548,7 +2556,10 @@
       "カリフォルニア",
       "2000万本"
     ],
-    "tweetUrls": [],
+    "tweetUrls": [
+      "https://x.com/7premium_jp/status/1894205608251068437",
+      "https://x.com/711sej/status/1276787353806204928"
+    ],
     "abv": 13,
     "servingTemp": "14-16℃",
     "pairings": [

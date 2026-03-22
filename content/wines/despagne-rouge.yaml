@@ -44,6 +44,7 @@ buzzScore: 85
 vivinoScore: null
 costPerformance: 88
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/famima_now/status/1718192127237358068
 
 buyLinks: []

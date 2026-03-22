@@ -40,5 +40,6 @@ buzzScore: 88
 vivinoScore: 3.2
 costPerformance: 88
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/711sej/status/1276787353806204928
 buyLinks: []

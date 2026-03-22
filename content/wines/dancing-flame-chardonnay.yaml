@@ -45,7 +45,8 @@ buzzScore: 76
 vivinoScore: null
 costPerformance: 94
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/10chf/status/1830169074980307153
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/ダンシングフレイム+シャルドネ/
