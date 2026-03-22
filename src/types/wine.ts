@@ -1,18 +1,31 @@
 export type WineType = "red" | "white" | "rose" | "sparkling";
 
 export type StoreType =
+  // コンビニ
   | "seven"
   | "lawson"
   | "familymart"
+  // スーパー
   | "aeon"
+  | "summit"
+  | "ozeki"
   | "seijoishii"
   | "kaldi"
-  | "donki"
-  | "costco"
-  | "summit"
+  // 酒屋
+  | "kakuyasu"
+  | "yamaya"
+  | "biccamera"
+  | "liquorman"
+  // ネットショップ
   | "rakuten"
-  | "amazon"
-  | "liquor_shop";
+  | "africaer"
+  | "ginza_grandmarche"
+  | "takamura"
+  | "felicity"
+  | "wine_ohashi"
+  | "ukiuki";
+
+export type StoreCategory = "convenience" | "supermarket" | "liquor" | "online";
 
 export interface Store {
   type: StoreType;

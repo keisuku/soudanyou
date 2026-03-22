@@ -21,8 +21,8 @@ abv: 12.0
 servingTemp: 6-8℃
 
 stores:
-  - type: amazon
-    name: Amazon
+  - type: rakuten
+    name: 楽天
     price: 2600
     inStock: true
 
@@ -47,6 +47,6 @@ tweetUrls:
   - https://x.com/winenomuhito/status/2016999072599855211
 
 buyLinks:
-  - store: Amazon
-    url: https://www.amazon.co.jp/s?k=クレマン+ド+リムー
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/クレマン+ド+リムー/
     price: 2600

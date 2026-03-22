@@ -42,6 +42,6 @@ costPerformance: 90
 tweetUrls: []
 
 buyLinks:
-  - store: Amazon
-    url: https://www.amazon.co.jp/s?k=レッドウッド+カベルネソーヴィニヨン+カルディ
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/レッドウッド+カベルネソーヴィニヨン/
     price: 880

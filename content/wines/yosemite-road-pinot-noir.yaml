@@ -44,6 +44,6 @@ costPerformance: 85
 tweetUrls: []
 
 buyLinks:
-  - store: Amazon
-    url: https://www.amazon.co.jp/s?k=ヨセミテロード+ピノノワール
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/ヨセミテロード+ピノノワール/
     price: 980

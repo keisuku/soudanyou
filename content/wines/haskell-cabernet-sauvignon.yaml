@@ -19,8 +19,8 @@ abv: 14.0
 servingTemp: 16-18℃
 
 stores:
-  - type: amazon
-    name: Amazon
+  - type: rakuten
+    name: 楽天
     price: 2000
     inStock: true
 
@@ -47,6 +47,6 @@ tweetUrls:
   - https://x.com/winenomuhito/status/1867531567498965182
 
 buyLinks:
-  - store: Amazon
-    url: https://www.amazon.co.jp/s?k=ハスケル+カベルネソーヴィニヨン+南アフリカ
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/ハスケル+カベルネソーヴィニヨン+南アフリカ/
     price: 2000
