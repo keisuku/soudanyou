@@ -1,0 +1,40 @@
+id: segura-viudas-brut
+name: Segura Viudas Brut Reserva
+nameJa: セグラヴューダス ブルート レゼルバ
+producer: Segura Viudas
+country: Spain
+countryCode: ES
+type: sparkling
+grapeVarieties:
+  - マカベオ
+  - パレリャーダ
+  - チャレロ
+description: >
+  1992年バルセロナ五輪公式カヴァ。スペイン王室御用達。
+  法定9ヶ月を大幅に超える15ヶ月以上の瓶内熟成。一番搾り50%のみ使用。
+price: 1408
+abv: 12.0
+servingTemp: 6-8℃
+stores:
+  - type: rakuten
+    name: 楽天
+    price: 1408
+    inStock: true
+tags:
+  - 五輪公式
+  - 王室御用達
+  - カバ
+  - 瓶内二次発酵
+pairings:
+  - パエリア
+  - 魚介のフリット
+  - 鶏肉のグリル
+whyBuyNow: 五輪公式・王室御用達カヴァが1400円台！世界が認めた実力派
+buzzScore: 82
+vivinoScore: null
+costPerformance: 85
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/セグラヴューダス+ブルート+レゼルバ/
+    price: 1408

@@ -1,0 +1,39 @@
+id: cavicchioli-lambrusco
+name: Cavicchioli Lambrusco Rosso Dolce
+nameJa: カビッキオーリ ランブルスコ ロッソ ドルチェ
+producer: Cavicchioli
+country: Italy
+countryCode: IT
+type: sparkling
+grapeVarieties:
+  - ランブルスコ
+description: >
+  ランブルスコの本場イタリアで最高人気の生産者。イチゴのようなソフトな甘みの
+  赤の微発泡ワイン。渋みが少なく初心者にも飲みやすい。ガンベロ・ロッソ高評価。
+price: 750
+abv: 7.5
+servingTemp: 8-10℃
+stores:
+  - type: rakuten
+    name: 楽天
+    price: 728
+    inStock: true
+tags:
+  - ランブルスコ
+  - 甘口
+  - 低アルコール
+  - 赤泡
+pairings:
+  - 生ハム
+  - パルミジャーノ
+  - ボロネーゼ
+  - ピザ
+whyBuyNow: 700円台で買える"大人のファンタグレープ"！赤い泡の新体験
+buzzScore: 77
+vivinoScore: null
+costPerformance: 89
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/カビッキオーリ+ランブルスコ/
+    price: 728

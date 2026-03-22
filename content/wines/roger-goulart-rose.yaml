@@ -1,0 +1,40 @@
+id: roger-goulart-rose
+name: Roger Goulart Cava Rose Brut
+nameJa: ロジャーグラート カヴァ ロゼ ブリュット
+producer: Roger Goulart
+country: Spain
+countryCode: ES
+type: sparkling
+grapeVarieties:
+  - ガルナッチャ
+  - モナストレル
+  - ピノ・ノワール
+description: >
+  芸能人格付けチェックで「ドンペリロゼより美味しい」と絶賛された伝説のカヴァ。
+  シャンパン基準を超える18ヶ月瓶内熟成。完熟イチゴとチェリーの香り。
+price: 2442
+abv: 12.0
+servingTemp: 6-8℃
+stores:
+  - type: rakuten
+    name: 楽天
+    price: 2442
+    inStock: true
+tags:
+  - 格付けチェック
+  - ドンペリ超え
+  - カバ
+  - ロゼ泡
+pairings:
+  - ローストチキン
+  - エビのアヒージョ
+  - トマトパスタ
+whyBuyNow: ドンペリロゼに勝った伝説のカヴァ！20分の1の価格で至福の泡
+buzzScore: 91
+vivinoScore: null
+costPerformance: 80
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/ロジャーグラート+ロゼ/
+    price: 2442

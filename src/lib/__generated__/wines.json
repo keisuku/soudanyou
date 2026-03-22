@@ -195,6 +195,54 @@
     "buyLinks": []
   },
   {
+    "id": "cavicchioli-lambrusco",
+    "name": "Cavicchioli Lambrusco Rosso Dolce",
+    "nameJa": "カビッキオーリ ランブルスコ ロッソ ドルチェ",
+    "producer": "Cavicchioli",
+    "country": "Italy",
+    "countryCode": "IT",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "ランブルスコ"
+    ],
+    "description": "ランブルスコの本場イタリアで最高人気の生産者。イチゴのようなソフトな甘みの 赤の微発泡ワイン。渋みが少なく初心者にも飲みやすい。ガンベロ・ロッソ高評価。\n",
+    "price": 750,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 728,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 77,
+    "vivinoScore": null,
+    "costPerformance": 89,
+    "tags": [
+      "ランブルスコ",
+      "甘口",
+      "低アルコール",
+      "赤泡"
+    ],
+    "tweetUrls": [],
+    "abv": 7.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "生ハム",
+      "パルミジャーノ",
+      "ボロネーゼ",
+      "ピザ"
+    ],
+    "whyBuyNow": "700円台で買える\"大人のファンタグレープ\"！赤い泡の新体験",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/カビッキオーリ+ランブルスコ/",
+        "price": 728
+      }
+    ]
+  },
+  {
     "id": "chilano-cabernet-sauvignon",
     "name": "Chilano Cabernet Sauvignon",
     "nameJa": "チラーノ カベルネ・ソーヴィニヨン",
@@ -328,6 +376,60 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/コノスル+ゲヴュルツトラミネール/",
         "price": 794
+      }
+    ]
+  },
+  {
+    "id": "conosur-rose",
+    "name": "Cono Sur Bicicleta Reserva Pinot Noir Rose",
+    "nameJa": "コノスル ビシクレタ ピノ・ノワール ロゼ",
+    "producer": "Vina Cono Sur",
+    "country": "Chile",
+    "countryCode": "CL",
+    "type": "rose",
+    "grapeVarieties": [
+      "ピノ・ノワール"
+    ],
+    "description": "チリを代表するコスパワインブランドのロゼ。チェリーやストロベリーの フレッシュなアロマ。やわらかくジューシーで溌剌とした酸味。\n",
+    "price": 850,
+    "stores": [
+      {
+        "type": "yamaya",
+        "name": "ヤマヤ",
+        "price": 850,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 793,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 74,
+    "vivinoScore": 3.3,
+    "costPerformance": 87,
+    "tags": [
+      "自転車ラベル",
+      "ピノ・ノワール100%",
+      "チリロゼ",
+      "1000円以下"
+    ],
+    "tweetUrls": [],
+    "abv": 12.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "餃子",
+      "エスニック料理",
+      "サーモンのマリネ",
+      "ポークソテー"
+    ],
+    "whyBuyNow": "自転車ラベルのチリ産ロゼ、1000円以下でピノ・ノワール100%！",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/コノスル+ロゼ+ピノノワール/",
+        "price": 793
       }
     ]
   },
@@ -594,6 +696,62 @@
     ]
   },
   {
+    "id": "freixenet-cordon-negro",
+    "name": "Freixenet Cordon Negro Brut",
+    "nameJa": "フレシネ コルドン ネグロ ブリュット",
+    "producer": "Freixenet",
+    "country": "Spain",
+    "countryCode": "ES",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "マカベオ",
+      "パレリャーダ",
+      "チャレロ"
+    ],
+    "description": "世界150カ国以上で販売されるスパークリングワイン世界No.1ブランド。 シャンパンと同じ瓶内二次発酵で15ヶ月熟成。レモンやシトラスのキリッとした辛口。\n",
+    "price": 1050,
+    "stores": [
+      {
+        "type": "aeon",
+        "name": "イオン",
+        "price": 1050,
+        "inStock": true
+      },
+      {
+        "type": "kakuyasu",
+        "name": "カクヤス",
+        "price": 1050,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 85,
+    "vivinoScore": 3.6,
+    "costPerformance": 88,
+    "tags": [
+      "世界No.1",
+      "瓶内二次発酵",
+      "カバ",
+      "黒ボトル"
+    ],
+    "tweetUrls": [],
+    "abv": 11.5,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "寿司",
+      "天ぷら",
+      "生ハム",
+      "チーズ"
+    ],
+    "whyBuyNow": "世界が認めた黒ボトル！1000円台でシャンパン級の乾杯",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/フレシネ+コルドンネグロ/",
+        "price": 1050
+      }
+    ]
+  },
+  {
     "id": "gran-sovento-gran-reserva",
     "name": "Gran Sovento Gran Reserva",
     "nameJa": "グラン・ソヴェント グランレゼルバ",
@@ -795,6 +953,55 @@
     ]
   },
   {
+    "id": "kobo-no-awa-koshu",
+    "name": "Manns Wine Kobo no Awa Koshu Brut",
+    "nameJa": "マンズワイン 酵母の泡 甲州 ブリュット",
+    "producer": "Manns Wines",
+    "country": "Japan",
+    "countryCode": "JP",
+    "region": "山梨",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "甲州"
+    ],
+    "description": "2016年伊勢志摩サミット採用。IWC2025銅賞、サクラアワード2025ゴールド受賞。 日本固有品種「甲州」で醸造。柚子や甘夏の和柑橘の香りにフレッシュな酸味。\n",
+    "price": 1155,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 1155,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 79,
+    "vivinoScore": null,
+    "costPerformance": 82,
+    "tags": [
+      "G7サミット採用",
+      "日本ワイン",
+      "甲州",
+      "山梨"
+    ],
+    "tweetUrls": [],
+    "abv": 12,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "刺身",
+      "天ぷら",
+      "焼き鳥（塩）",
+      "和食全般"
+    ],
+    "whyBuyNow": "G7サミット採用！日本が世界に誇る甲州スパークリング",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/マンズワイン+酵母の泡+甲州/",
+        "price": 1155
+      }
+    ]
+  },
+  {
     "id": "la-piuma-pecorino",
     "name": "La Piuma Pecorino",
     "nameJa": "ラピウマ ペコリーノ",
@@ -838,6 +1045,117 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/ラピウマ+ペコリーノ/",
         "price": 1580
+      }
+    ]
+  },
+  {
+    "id": "mateus-rose",
+    "name": "Mateus Rose",
+    "nameJa": "マテウス ロゼ",
+    "producer": "Sogrape Vinhos",
+    "country": "Portugal",
+    "countryCode": "PT",
+    "type": "rose",
+    "grapeVarieties": [
+      "バーガ",
+      "トゥーリガ・ナショナル"
+    ],
+    "description": "1942年発売の世界的ロングセラー。丸みのあるクラシックなボトルデザイン。 ほのかな甘味と微発泡性を持つ爽やかなロゼ。優しい飲み口。\n",
+    "price": 840,
+    "stores": [
+      {
+        "type": "liquorman",
+        "name": "リカマン",
+        "price": 840,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 840,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 72,
+    "vivinoScore": null,
+    "costPerformance": 85,
+    "tags": [
+      "80年超ロングセラー",
+      "ポルトガル",
+      "やや甘口",
+      "可愛いボトル"
+    ],
+    "tweetUrls": [],
+    "abv": 11,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "鶏の唐揚げ",
+      "お好み焼き",
+      "たこ焼き",
+      "BBQ"
+    ],
+    "whyBuyNow": "80年以上愛される世界的ロゼの定番！可愛いボトルで840円",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/マテウス+ロゼ/",
+        "price": 840
+      }
+    ]
+  },
+  {
+    "id": "monmousseau-cremant-loire",
+    "name": "Monmousseau Cremant de Loire Brut",
+    "nameJa": "モンムソー クレマン・ド・ロワール ブリュット",
+    "producer": "Monmousseau",
+    "country": "France",
+    "countryCode": "FR",
+    "region": "その他",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "シュナン・ブラン",
+      "シャルドネ",
+      "カベルネ・フラン"
+    ],
+    "description": "1886年創業の老舗。シャンパンと同じ瓶内二次発酵で36ヶ月熟成。 ANAビジネスクラス採用歴あり。漫画『神の雫』にも掲載された実力派。\n",
+    "price": 1870,
+    "stores": [
+      {
+        "type": "aeon",
+        "name": "イオン",
+        "price": 1870,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 1870,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 81,
+    "vivinoScore": null,
+    "costPerformance": 83,
+    "tags": [
+      "ANAビジネスクラス",
+      "神の雫",
+      "クレマン",
+      "瓶内36ヶ月熟成"
+    ],
+    "tweetUrls": [],
+    "abv": 12.5,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "白身魚のムニエル",
+      "ブリオッシュ",
+      "フルーツサラダ"
+    ],
+    "whyBuyNow": "シャンパンの半額以下！ANAビジネスクラス採用の実力派クレマン",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/モンムソー+クレマン+ロワール/",
+        "price": 1870
       }
     ]
   },
@@ -1033,6 +1351,108 @@
     ]
   },
   {
+    "id": "roger-goulart-rose",
+    "name": "Roger Goulart Cava Rose Brut",
+    "nameJa": "ロジャーグラート カヴァ ロゼ ブリュット",
+    "producer": "Roger Goulart",
+    "country": "Spain",
+    "countryCode": "ES",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "ガルナッチャ",
+      "モナストレル",
+      "ピノ・ノワール"
+    ],
+    "description": "芸能人格付けチェックで「ドンペリロゼより美味しい」と絶賛された伝説のカヴァ。 シャンパン基準を超える18ヶ月瓶内熟成。完熟イチゴとチェリーの香り。\n",
+    "price": 2442,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 2442,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 91,
+    "vivinoScore": null,
+    "costPerformance": 80,
+    "tags": [
+      "格付けチェック",
+      "ドンペリ超え",
+      "カバ",
+      "ロゼ泡"
+    ],
+    "tweetUrls": [],
+    "abv": 12,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "ローストチキン",
+      "エビのアヒージョ",
+      "トマトパスタ"
+    ],
+    "whyBuyNow": "ドンペリロゼに勝った伝説のカヴァ！20分の1の価格で至福の泡",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/ロジャーグラート+ロゼ/",
+        "price": 2442
+      }
+    ]
+  },
+  {
+    "id": "santero-asti",
+    "name": "Santero Angels Asti",
+    "nameJa": "サンテロ 天使のアスティ",
+    "producer": "Santero",
+    "country": "Italy",
+    "countryCode": "IT",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "モスカート・ビアンコ"
+    ],
+    "description": "マスカットの華やかな香りと爽やかな風味のイタリア産甘口スパークリング。 5年連続日本で最も売れたイタリアスパークリング生産者。サクラアワード金賞。\n",
+    "price": 1500,
+    "stores": [
+      {
+        "type": "kaldi",
+        "name": "カルディ",
+        "price": 1500,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 1500,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": null,
+    "costPerformance": 82,
+    "tags": [
+      "カルディ",
+      "甘口",
+      "低アルコール",
+      "天使ラベル"
+    ],
+    "tweetUrls": [],
+    "abv": 7.5,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "フルーツタルト",
+      "パンナコッタ",
+      "クリームチーズ"
+    ],
+    "whyBuyNow": "天使が描かれた甘い誘惑！ワイン初心者も安心の低アルコール",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/サンテロ+天使のアスティ/",
+        "price": 1500
+      }
+    ]
+  },
+  {
     "id": "schwarze-katz",
     "name": "Zeller Schwarze Katz",
     "nameJa": "ツェラー・シュヴァルツェ・カッツ",
@@ -1078,6 +1498,55 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/シュヴァルツェカッツ/",
         "price": 1000
+      }
+    ]
+  },
+  {
+    "id": "segura-viudas-brut",
+    "name": "Segura Viudas Brut Reserva",
+    "nameJa": "セグラヴューダス ブルート レゼルバ",
+    "producer": "Segura Viudas",
+    "country": "Spain",
+    "countryCode": "ES",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "マカベオ",
+      "パレリャーダ",
+      "チャレロ"
+    ],
+    "description": "1992年バルセロナ五輪公式カヴァ。スペイン王室御用達。 法定9ヶ月を大幅に超える15ヶ月以上の瓶内熟成。一番搾り50%のみ使用。\n",
+    "price": 1408,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 1408,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 82,
+    "vivinoScore": null,
+    "costPerformance": 85,
+    "tags": [
+      "五輪公式",
+      "王室御用達",
+      "カバ",
+      "瓶内二次発酵"
+    ],
+    "tweetUrls": [],
+    "abv": 12,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "パエリア",
+      "魚介のフリット",
+      "鶏肉のグリル"
+    ],
+    "whyBuyNow": "五輪公式・王室御用達カヴァが1400円台！世界が認めた実力派",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/セグラヴューダス+ブルート+レゼルバ/",
+        "price": 1408
       }
     ]
   },
@@ -1176,6 +1645,53 @@
     ],
     "whyBuyNow": "世界No.1ブランドのDOC格付！877円で本場イタリアの味",
     "buyLinks": []
+  },
+  {
+    "id": "tramari-rose",
+    "name": "San Marzano Tramari Rose di Primitivo",
+    "nameJa": "サン・マルツァーノ トラマーリ ロゼ",
+    "producer": "San Marzano",
+    "country": "Italy",
+    "countryCode": "IT",
+    "type": "rose",
+    "grapeVarieties": [
+      "プリミティーヴォ"
+    ],
+    "description": "楽天市場ロゼワインランキング1位。ルカマローニ96点の高得点。 チェリーやラズベリーのフレッシュなアロマ、瑞々しい果実味。\n",
+    "price": 1500,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 1500,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": null,
+    "costPerformance": 82,
+    "tags": [
+      "楽天ロゼ1位",
+      "ルカマローニ96点",
+      "南イタリア",
+      "プリミティーヴォ"
+    ],
+    "tweetUrls": [],
+    "abv": 12.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "トマトとモッツァレラ",
+      "グリル野菜",
+      "シーフードリゾット"
+    ],
+    "whyBuyNow": "楽天ロゼ1位！南イタリアの太陽が詰まったルカマローニ96点",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/トラマーリ+ロゼ/",
+        "price": 1500
+      }
+    ]
   },
   {
     "id": "xisto-gran-reserva",
@@ -1307,5 +1823,47 @@
         "price": 980
       }
     ]
+  },
+  {
+    "id": "yosemite-road-sparkling",
+    "name": "Yosemite Road Sparkling",
+    "nameJa": "ヨセミテ・ロード スパークリング",
+    "producer": "Mercian",
+    "country": "United States",
+    "countryCode": "US",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "シャルドネ",
+      "フレンチ・コロンバール"
+    ],
+    "description": "セブンイレブンのPBスパークリング。強炭酸のシュワッと弾ける鮮烈な泡立ちが特徴。 青リンゴのような香りと、やわらかい酸味とフルーティーな果実味のバランスが絶妙。\n",
+    "price": 899,
+    "stores": [
+      {
+        "type": "seven",
+        "name": "セブン-イレブン",
+        "price": 899,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 78,
+    "vivinoScore": null,
+    "costPerformance": 87,
+    "tags": [
+      "セブン",
+      "コンビニ泡",
+      "900円以下",
+      "カリフォルニア"
+    ],
+    "tweetUrls": [],
+    "abv": 13,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "カニカマ",
+      "チーズ",
+      "サラダチキン"
+    ],
+    "whyBuyNow": "セブンで買える本格泡！900円以下のカリフォルニアスパークリング",
+    "buyLinks": []
   }
 ]

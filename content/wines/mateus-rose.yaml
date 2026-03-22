@@ -1,0 +1,44 @@
+id: mateus-rose
+name: Mateus Rose
+nameJa: マテウス ロゼ
+producer: Sogrape Vinhos
+country: Portugal
+countryCode: PT
+type: rose
+grapeVarieties:
+  - バーガ
+  - トゥーリガ・ナショナル
+description: >
+  1942年発売の世界的ロングセラー。丸みのあるクラシックなボトルデザイン。
+  ほのかな甘味と微発泡性を持つ爽やかなロゼ。優しい飲み口。
+price: 840
+abv: 11.0
+servingTemp: 8-10℃
+stores:
+  - type: liquorman
+    name: リカマン
+    price: 840
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 840
+    inStock: true
+tags:
+  - 80年超ロングセラー
+  - ポルトガル
+  - やや甘口
+  - 可愛いボトル
+pairings:
+  - 鶏の唐揚げ
+  - お好み焼き
+  - たこ焼き
+  - BBQ
+whyBuyNow: 80年以上愛される世界的ロゼの定番！可愛いボトルで840円
+buzzScore: 72
+vivinoScore: null
+costPerformance: 85
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/マテウス+ロゼ/
+    price: 840
