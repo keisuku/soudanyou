@@ -154,6 +154,7 @@
       "瓶内二次発酵"
     ],
     "tweetUrls": [
+      "https://x.com/winenomuhito/status/2014469640374911278",
       "https://x.com/miyamoto_ryuta/status/1572877792676839427"
     ],
     "abv": 11.5,
@@ -668,7 +669,7 @@
         "inStock": true
       }
     ],
-    "buzzScore": 80,
+    "buzzScore": 86,
     "vivinoScore": null,
     "costPerformance": 82,
     "tags": [
@@ -819,7 +820,7 @@
         "inStock": true
       }
     ],
-    "buzzScore": 85,
+    "buzzScore": 91,
     "vivinoScore": null,
     "costPerformance": 90,
     "tags": [
@@ -831,7 +832,9 @@
     "tweetUrls": [
       "https://x.com/winenomuhito/status/2030772994482803022",
       "https://x.com/winenomuhito/status/2031135707184730604",
-      "https://x.com/winenomuhito/status/1900125339042619457"
+      "https://x.com/winenomuhito/status/1900125339042619457",
+      "https://x.com/winenomuhito/status/2029117064292770189",
+      "https://x.com/winenomuhito/status/1570174199020552193"
     ],
     "abv": 14,
     "servingTemp": "16-18℃",
@@ -1095,7 +1098,7 @@
         "inStock": true
       }
     ],
-    "buzzScore": 83,
+    "buzzScore": 90,
     "vivinoScore": null,
     "costPerformance": 92,
     "tags": [
@@ -1107,7 +1110,9 @@
     "tweetUrls": [
       "https://x.com/winenomuhito/status/1860817941320872320",
       "https://x.com/winenomuhito/status/1906485979264975337",
-      "https://x.com/winenomuhito/status/1867531567498965182"
+      "https://x.com/winenomuhito/status/1867531567498965182",
+      "https://x.com/winenomuhito/status/1859914627431448954",
+      "https://x.com/winenomuhito/status/1605732599238119424"
     ],
     "abv": 14,
     "servingTemp": "16-18℃",
@@ -1266,7 +1271,7 @@
         "inStock": true
       }
     ],
-    "buzzScore": 88,
+    "buzzScore": 93,
     "vivinoScore": 3.1,
     "costPerformance": 93,
     "tags": [
@@ -1279,7 +1284,9 @@
     "tweetUrls": [
       "https://x.com/winenomuhito/status/1942713400821481529",
       "https://x.com/winenomuhito/status/1922787327597764899",
-      "https://x.com/winenomuhito/status/1888725732391821663"
+      "https://x.com/winenomuhito/status/1923526882240418285",
+      "https://x.com/winenomuhito/status/1888725732391821663",
+      "https://x.com/winenomuhito/status/1694311542828024180"
     ],
     "abv": 11,
     "servingTemp": "6-8℃",
@@ -1756,7 +1763,7 @@
       "シラーズ",
       "ピノ・ノワール"
     ],
-    "description": "オーストラリア・ニューサウスウェールズ産。エノテカが輸入しローソンで展開。 サクラアワード2024ダイヤモンドトロフィー受賞。ヴィーガン対応のサステナブルワイン。 エノテカ公式で売上の90%を占める異常な人気。\n",
+    "description": "オーストラリア産。エノテカが輸入しローソン・カクヤスで展開。 サクラアワード2024ダイヤモンドトロフィー受賞。特にピノノワールが 「千円ちょっとで3000円クオリティ」「コンビニピノ部門で頭2〜3つ抜け」と 高頻度リピーターを生む。冷やしめ推奨。薄味・軽いつまみと抜群の相性。\n",
     "price": 1430,
     "stores": [
       {
@@ -1766,18 +1773,23 @@
         "inStock": true
       }
     ],
-    "buzzScore": 88,
+    "buzzScore": 93,
     "vivinoScore": 3.8,
     "costPerformance": 90,
     "tags": [
       "ローソン",
       "エノテカ",
       "サクラアワード",
-      "サステナブル"
+      "高頻度リピート",
+      "ピノノワール最強"
     ],
     "tweetUrls": [
-      "https://x.com/enoteca_online/status/2027232647442006338",
-      "https://x.com/ministop_fan/status/1850809729389600893"
+      "https://x.com/winenomuhito/status/2031496791330533491",
+      "https://x.com/winenomuhito/status/2027875522685096023",
+      "https://x.com/winenomuhito/status/2019542079538696524",
+      "https://x.com/winenomuhito/status/2029117064292770189",
+      "https://x.com/winenomuhito/status/1960839599925944725",
+      "https://x.com/enoteca_online/status/2027232647442006338"
     ],
     "abv": 13.5,
     "servingTemp": "16-18℃",
@@ -1786,7 +1798,7 @@
       "スパイスカレー",
       "チーズバーガー"
     ],
-    "whyBuyNow": "サクラアワード最高賞。エノテカ売上90%の怪物ワインがローソンで買える",
+    "whyBuyNow": "1100円で3000円クオリティ。コンビニピノ部門で頭2〜3つ抜けの怪物",
     "buyLinks": [
       {
         "store": "エノテカ",
