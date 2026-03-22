@@ -39,7 +39,8 @@ whyBuyNow: JWC金賞のシチリア赤！日常に取り入れたい実力派
 buzzScore: 78
 vivinoScore: 3.6
 costPerformance: 84
-tweetUrls: []
+tweetUrls:
+  - https://x.com/soave_classico/status/1841063928190943285
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/フェウドアランチョ+ネロダーヴォラ/

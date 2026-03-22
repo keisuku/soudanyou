@@ -45,7 +45,8 @@ buzzScore: 83
 vivinoScore: 3.6
 costPerformance: 87
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/miyamoto_ryuta/status/1825337455614316827
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/コノスル+ゲヴュルツトラミネール/

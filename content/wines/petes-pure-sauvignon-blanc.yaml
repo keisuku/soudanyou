@@ -43,7 +43,8 @@ buzzScore: 85
 vivinoScore: 3.8
 costPerformance: 88
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/enoteca_online/status/2027232647442006338
 
 buyLinks:
   - store: エノテカ

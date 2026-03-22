@@ -35,7 +35,8 @@ whyBuyNow: 天使が描かれた甘い誘惑！ワイン初心者も安心の低
 buzzScore: 80
 vivinoScore: null
 costPerformance: 82
-tweetUrls: []
+tweetUrls:
+  - https://x.com/momochiko5/status/1827686113575850167
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/サンテロ+天使のアスティ/

@@ -40,7 +40,8 @@ whyBuyNow: 南アフリカ固有品種の新体験！コンビニで出会える
 buzzScore: 76
 vivinoScore: 3.5
 costPerformance: 83
-tweetUrls: []
+tweetUrls:
+  - https://x.com/sakenoabc/status/1948941656889459022
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/KWV+ピノタージュ/

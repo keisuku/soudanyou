@@ -40,7 +40,8 @@ buzzScore: 79
 vivinoScore: null
 costPerformance: 80
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/tanabe_duvin/status/1675160444380807169
 buyLinks:
   - store: 楽天
     url: https://search.rakuten.co.jp/search/mall/ラピウマ+ペコリーノ/
