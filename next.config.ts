@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  // Supabase接続時は動的レンダリングを使うためexportモードは無効化
+  // output: "export",
   basePath: "/soudanyou",
   images: {
     unoptimized: true,
