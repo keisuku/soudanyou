@@ -42,7 +42,9 @@ buzzScore: 88
 vivinoScore: 3.8
 costPerformance: 90
 
-tweetUrls: []
+tweetUrls:
+  - https://x.com/enoteca_online/status/2027232647442006338
+  - https://x.com/ministop_fan/status/1850809729389600893
 
 buyLinks:
   - store: エノテカ
