@@ -1,0 +1,49 @@
+# サントリー ジャパンプレミアム 甲州 — 日本固有品種の代表
+id: japan-premium-koshu
+name: Suntory Japan Premium Koshu
+nameJa: サントリー ジャパンプレミアム 甲州
+producer: Suntory
+country: Japan
+countryCode: JP
+region: 山梨
+type: white
+grapeVarieties:
+  - 甲州
+
+description: >
+  千年以上の歴史を持つ日本固有品種「甲州」100%使用。八朔やみかんなど
+  和柑橘の上品な香り、ほのかなハーブ香。爽やかさと旨みのバランス。
+
+price: 1798
+abv: 12.0
+servingTemp: 6-8℃
+
+stores:
+  - type: rakuten
+    name: 楽天
+    price: 1798
+    inStock: true
+
+tags:
+  - 日本ワイン
+  - 甲州
+  - 山梨
+  - 和食に合う
+
+pairings:
+  - お寿司
+  - 白身魚の天ぷら
+  - 和食全般
+  - 枝豆
+
+whyBuyNow: 世界が注目する日本固有品種！和食との相性は唯一無二
+
+buzzScore: 77
+vivinoScore: 3.5
+costPerformance: 75
+
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/サントリー+ジャパンプレミアム+甲州/
+    price: 1798

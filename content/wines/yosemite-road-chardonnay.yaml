@@ -1,0 +1,44 @@
+# ヨセミテ・ロード シャルドネ — マツコも絶賛セブン白
+id: yosemite-road-chardonnay
+name: Yosemite Road Chardonnay
+nameJa: ヨセミテ・ロード シャルドネ
+producer: Mercian
+country: United States
+countryCode: US
+type: white
+grapeVarieties:
+  - シャルドネ
+
+description: >
+  累計2,000万本突破。「マツコの知らない世界」でも絶賛された
+  セブンプレミアムの看板白。華やかな果実や花の香、まろやかな辛口。
+
+price: 767
+abv: 13.0
+servingTemp: 8-10℃
+
+stores:
+  - type: seven
+    name: セブン-イレブン
+    price: 767
+    inStock: true
+
+tags:
+  - セブン
+  - マツコ絶賛
+  - 2000万本突破
+  - カリフォルニア
+
+pairings:
+  - 唐揚げ
+  - 白身魚のムニエル
+  - ミックスナッツ
+
+whyBuyNow: マツコも絶賛！2000万本突破のコンビニ最強シャルドネ
+
+buzzScore: 88
+vivinoScore: 3.2
+costPerformance: 88
+
+tweetUrls: []
+buyLinks: []

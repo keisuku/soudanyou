@@ -1,5 +1,60 @@
 [
   {
+    "id": "alpaca-chardonnay-semillon",
+    "name": "Santa Helena Alpaca Chardonnay-Semillon",
+    "nameJa": "アルパカ シャルドネ・セミヨン",
+    "producer": "Vina Santa Helena",
+    "country": "Chile",
+    "countryCode": "CL",
+    "type": "white",
+    "grapeVarieties": [
+      "シャルドネ",
+      "セミヨン"
+    ],
+    "description": "世界50カ国で愛飲されるチリのパイオニアブランド。トロピカルフルーツや ピーチを思わせる豊かな果実味となめらかな飲み口の辛口白。\n",
+    "price": 550,
+    "stores": [
+      {
+        "type": "aeon",
+        "name": "イオン",
+        "price": 550,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 550,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": 3.1,
+    "costPerformance": 92,
+    "tags": [
+      "イオン",
+      "世界50カ国",
+      "ワンコイン",
+      "チリ白"
+    ],
+    "tweetUrls": [],
+    "abv": 13,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "豚肉料理",
+      "サーモン",
+      "野菜料理",
+      "貝類"
+    ],
+    "whyBuyNow": "500円台でこの実力！日本で最も売れているチリ白の王道",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/アルパカ+シャルドネ+セミヨン/",
+        "price": 550
+      }
+    ]
+  },
+  {
     "id": "amaya-cava-brut-reserva",
     "name": "Amaya Cava Brut Reserva",
     "nameJa": "アマヤ カヴァ ブリュット レゼルバ",
@@ -47,6 +102,53 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/アマヤ+カヴァ+ブリュット+レゼルバ/",
         "price": 1100
+      }
+    ]
+  },
+  {
+    "id": "casa-subercaseaux-chardonnay",
+    "name": "Casa Subercaseaux Chardonnay",
+    "nameJa": "カーサ・スベルカソー シャルドネ",
+    "producer": "Concha y Toro",
+    "country": "Chile",
+    "countryCode": "CL",
+    "type": "white",
+    "grapeVarieties": [
+      "シャルドネ"
+    ],
+    "description": "ローソンで10年以上売上トップの白ワイン。りんごや洋梨のような爽やかな果実味と やわらかな口当たり。樽やバニラの香りも感じられるリッチな味わい。\n",
+    "price": 640,
+    "stores": [
+      {
+        "type": "lawson",
+        "name": "ローソン",
+        "price": 640,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 82,
+    "vivinoScore": 3.1,
+    "costPerformance": 90,
+    "tags": [
+      "ローソン",
+      "10年連続No.1",
+      "チリ白",
+      "コスパ"
+    ],
+    "tweetUrls": [],
+    "abv": 12,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "カルボナーラ",
+      "シーフードグラタン",
+      "天ぷら"
+    ],
+    "whyBuyNow": "10年連続売上No.1！ソムリエが認めた640円のローソン白",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/カーサスベルカソー+シャルドネ/",
+        "price": 640
       }
     ]
   },
@@ -134,6 +236,102 @@
     "buyLinks": []
   },
   {
+    "id": "collare-catarratto",
+    "name": "Collare Catarratto",
+    "nameJa": "コラーレ・カタラット",
+    "producer": "Collare",
+    "country": "Italy",
+    "countryCode": "IT",
+    "type": "white",
+    "grapeVarieties": [
+      "カタラット"
+    ],
+    "description": "甘口を思わせる華やかな香りだが意外に辛口。グレープフルーツやレモンの 柑橘系の酸味と心地よいミネラル感。スッキリ爽やかな味わい。\n",
+    "price": 580,
+    "stores": [
+      {
+        "type": "aeon",
+        "name": "イオン",
+        "price": 580,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 68,
+    "vivinoScore": null,
+    "costPerformance": 91,
+    "tags": [
+      "イオン",
+      "ワンコイン級",
+      "シチリア",
+      "辛口"
+    ],
+    "tweetUrls": [],
+    "abv": 12,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "シーフードサラダ",
+      "白身魚のフリット",
+      "前菜",
+      "冷製パスタ"
+    ],
+    "whyBuyNow": "580円のシチリアの隠れた名品！イオンで見つけたら即買い",
+    "buyLinks": []
+  },
+  {
+    "id": "conosur-gewurztraminer",
+    "name": "Cono Sur Bicicleta Reserva Gewurztraminer",
+    "nameJa": "コノスル ビシクレタ ゲヴュルツトラミネール",
+    "producer": "Vina Cono Sur",
+    "country": "Chile",
+    "countryCode": "CL",
+    "type": "white",
+    "grapeVarieties": [
+      "ゲヴュルツトラミネール"
+    ],
+    "description": "日本で最も売れているゲヴュルツトラミネール。鮮烈なライチの香り、 マスカット、メロン、バラの花びらの甘くエキゾチックな香り。ドライな味わい。\n",
+    "price": 850,
+    "stores": [
+      {
+        "type": "kaldi",
+        "name": "カルディ",
+        "price": 850,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 794,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 83,
+    "vivinoScore": 3.6,
+    "costPerformance": 87,
+    "tags": [
+      "カルディ",
+      "自転車ラベル",
+      "ライチ香",
+      "エスニック相性抜群"
+    ],
+    "tweetUrls": [],
+    "abv": 12.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "エスニック料理",
+      "タイカレー",
+      "中華料理",
+      "スパイシーな料理"
+    ],
+    "whyBuyNow": "自転車ラベルでおなじみ！日本で一番売れてるゲヴュルツ",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/コノスル+ゲヴュルツトラミネール/",
+        "price": 794
+      }
+    ]
+  },
+  {
     "id": "cremant-de-limoux",
     "name": "Crémant de Limoux",
     "nameJa": "クレマン・ド・リムー",
@@ -182,6 +380,60 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/クレマン+ド+リムー/",
         "price": 2600
+      }
+    ]
+  },
+  {
+    "id": "dancing-flame-chardonnay",
+    "name": "Dancing Flame Chardonnay",
+    "nameJa": "ダンシングフレイム シャルドネ",
+    "producer": "Luis Felipe Edwards",
+    "country": "Chile",
+    "countryCode": "CL",
+    "type": "white",
+    "grapeVarieties": [
+      "シャルドネ"
+    ],
+    "description": "MONOQLOの白ワインランキングでベストバイ受賞。スモーキーな樽系の 本格的な香りでシャルドネがしっかり味わえる。後味はスッキリ。\n",
+    "price": 500,
+    "stores": [
+      {
+        "type": "aeon",
+        "name": "イオン",
+        "price": 500,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 500,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 76,
+    "vivinoScore": null,
+    "costPerformance": 94,
+    "tags": [
+      "MONOQLOベストバイ",
+      "ワンコイン",
+      "チリ白",
+      "樽系"
+    ],
+    "tweetUrls": [],
+    "abv": 13,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "グラタン",
+      "クリームパスタ",
+      "鶏肉のソテー",
+      "チーズ"
+    ],
+    "whyBuyNow": "MONOQLOベストバイ！500円以下の最強チリシャルドネ",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/ダンシングフレイム+シャルドネ/",
+        "price": 500
       }
     ]
   },
@@ -282,6 +534,66 @@
     ]
   },
   {
+    "id": "feudo-arancio-grillo",
+    "name": "Feudo Arancio Grillo Sicilia DOC",
+    "nameJa": "フェウド・アランチョ グリッロ",
+    "producer": "Feudo Arancio",
+    "country": "Italy",
+    "countryCode": "IT",
+    "type": "white",
+    "grapeVarieties": [
+      "グリッロ"
+    ],
+    "description": "Berlin Wine Trophy金賞受賞。白桃のようなジューシーな香り、 紅茶やジャスミンのフレーバー。丸みのある印象でほんのりビターな余韻。\n",
+    "price": 1100,
+    "stores": [
+      {
+        "type": "kaldi",
+        "name": "カルディ",
+        "price": 1100,
+        "inStock": true
+      },
+      {
+        "type": "seijoishii",
+        "name": "成城石井",
+        "price": 1100,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 1100,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 78,
+    "vivinoScore": 3.7,
+    "costPerformance": 84,
+    "tags": [
+      "カルディ",
+      "成城石井",
+      "Berlin金賞",
+      "シチリア"
+    ],
+    "tweetUrls": [],
+    "abv": 13,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "貝類のパスタ",
+      "カルパッチョ",
+      "前菜",
+      "ベジタリアン料理"
+    ],
+    "whyBuyNow": "Berlin Wine Trophy金賞！シチリアの太陽が詰まった1本",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/フェウドアランチョ+グリッロ/",
+        "price": 1100
+      }
+    ]
+  },
+  {
     "id": "gran-sovento-gran-reserva",
     "name": "Gran Sovento Gran Reserva",
     "nameJa": "グラン・ソヴェント グランレゼルバ",
@@ -374,6 +686,55 @@
     ]
   },
   {
+    "id": "japan-premium-koshu",
+    "name": "Suntory Japan Premium Koshu",
+    "nameJa": "サントリー ジャパンプレミアム 甲州",
+    "producer": "Suntory",
+    "country": "Japan",
+    "countryCode": "JP",
+    "region": "山梨",
+    "type": "white",
+    "grapeVarieties": [
+      "甲州"
+    ],
+    "description": "千年以上の歴史を持つ日本固有品種「甲州」100%使用。八朔やみかんなど 和柑橘の上品な香り、ほのかなハーブ香。爽やかさと旨みのバランス。\n",
+    "price": 1798,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 1798,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 77,
+    "vivinoScore": 3.5,
+    "costPerformance": 75,
+    "tags": [
+      "日本ワイン",
+      "甲州",
+      "山梨",
+      "和食に合う"
+    ],
+    "tweetUrls": [],
+    "abv": 12,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "お寿司",
+      "白身魚の天ぷら",
+      "和食全般",
+      "枝豆"
+    ],
+    "whyBuyNow": "世界が注目する日本固有品種！和食との相性は唯一無二",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/サントリー+ジャパンプレミアム+甲州/",
+        "price": 1798
+      }
+    ]
+  },
+  {
     "id": "jean-pierre-brut",
     "name": "De Bortoli Jean Pierre Brut",
     "nameJa": "ジャンピエール ブリュット",
@@ -430,6 +791,53 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/デボルトリ+ジャンピエール+ブリュット/",
         "price": 1210
+      }
+    ]
+  },
+  {
+    "id": "la-piuma-pecorino",
+    "name": "La Piuma Pecorino",
+    "nameJa": "ラピウマ ペコリーノ",
+    "producer": "La Piuma",
+    "country": "Italy",
+    "countryCode": "IT",
+    "type": "white",
+    "grapeVarieties": [
+      "ペコリーノ"
+    ],
+    "description": "成城石井Yahoo!ショッピング白ワインランキング1位。フレッシュでフルーティー。 高い酸味とミネラル感、白桃やマンゴーの華やかな香り。\n",
+    "price": 1580,
+    "stores": [
+      {
+        "type": "seijoishii",
+        "name": "成城石井",
+        "price": 1580,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 79,
+    "vivinoScore": null,
+    "costPerformance": 80,
+    "tags": [
+      "成城石井",
+      "Yahoo!1位",
+      "ペコリーノ",
+      "アブルッツォ"
+    ],
+    "tweetUrls": [],
+    "abv": 12.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "白身魚のカルパッチョ",
+      "レモン料理",
+      "魚介のマリネ"
+    ],
+    "whyBuyNow": "Yahoo!評価4.59！成城石井ランキング1位のイタリア白",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/ラピウマ+ペコリーノ/",
+        "price": 1580
       }
     ]
   },
@@ -578,6 +986,198 @@
     ]
   },
   {
+    "id": "redwood-chardonnay",
+    "name": "Redwood Vineyards Chardonnay",
+    "nameJa": "レッドウッド シャルドネ",
+    "producer": "Bronco Wine Company",
+    "country": "United States",
+    "countryCode": "US",
+    "type": "white",
+    "grapeVarieties": [
+      "シャルドネ"
+    ],
+    "description": "カルディ白ワイン人気No.1。洋梨、りんご、トロピカルフルーツ、バニラの香り。 果実の甘味と酸のバランスが良く、果実味豊かで飲みやすい。\n",
+    "price": 880,
+    "stores": [
+      {
+        "type": "kaldi",
+        "name": "カルディ",
+        "price": 880,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": null,
+    "costPerformance": 87,
+    "tags": [
+      "カルディ",
+      "カルディ白No.1",
+      "カリフォルニア",
+      "飲みやすい"
+    ],
+    "tweetUrls": [],
+    "abv": 12.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "魚のムニエル",
+      "白身肉のソテー",
+      "白カビ系チーズ"
+    ],
+    "whyBuyNow": "カルディ不動の人気No.1！880円のカリフォルニア白",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/レッドウッド+シャルドネ/",
+        "price": 880
+      }
+    ]
+  },
+  {
+    "id": "schwarze-katz",
+    "name": "Zeller Schwarze Katz",
+    "nameJa": "ツェラー・シュヴァルツェ・カッツ",
+    "producer": "Josef Drathen",
+    "country": "Germany",
+    "countryCode": "DE",
+    "type": "white",
+    "grapeVarieties": [
+      "リースリング",
+      "ミュラー・トゥルガウ"
+    ],
+    "description": "黒猫ラベルでおなじみのドイツ白ワイン。やや甘口ながら甘すぎず飲みやすい。 ライチや白桃の香りがふんわり広がり、まろやかでスムーズな飲み口。\n",
+    "price": 1000,
+    "stores": [
+      {
+        "type": "kaldi",
+        "name": "カルディ",
+        "price": 1000,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 72,
+    "vivinoScore": 3.3,
+    "costPerformance": 80,
+    "tags": [
+      "カルディ",
+      "黒猫ラベル",
+      "ドイツ",
+      "やや甘口"
+    ],
+    "tweetUrls": [],
+    "abv": 9.5,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "エスニック料理",
+      "フルーツサラダ",
+      "軽めの前菜",
+      "チーズ"
+    ],
+    "whyBuyNow": "黒猫ラベルが目印！リピーター続出のドイツ甘口白",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/シュヴァルツェカッツ/",
+        "price": 1000
+      }
+    ]
+  },
+  {
+    "id": "sileni-sauvignon-blanc",
+    "name": "Sileni Estates Cellar Selection Sauvignon Blanc",
+    "nameJa": "シレーニ セラー・セレクション ソーヴィニヨン・ブラン",
+    "producer": "Sileni Estates",
+    "country": "New Zealand",
+    "countryCode": "NZ",
+    "type": "white",
+    "grapeVarieties": [
+      "ソーヴィニヨン・ブラン"
+    ],
+    "description": "日本で一番売れているNZワイン。ワイン屋大賞2025白ワイン部門1位受賞。 トロピカルフルーツ、レモン、ライムにハーブの洗練された香り。\n",
+    "price": 1650,
+    "stores": [
+      {
+        "type": "seijoishii",
+        "name": "成城石井",
+        "price": 1650,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天",
+        "price": 1650,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 90,
+    "vivinoScore": 3.8,
+    "costPerformance": 82,
+    "tags": [
+      "成城石井",
+      "ワイン屋大賞2025",
+      "NZ白1位",
+      "マールボロ"
+    ],
+    "tweetUrls": [],
+    "abv": 12.5,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "生牡蠣",
+      "白身魚のグリル",
+      "シェーヴルチーズ",
+      "サラダ"
+    ],
+    "whyBuyNow": "ワイン屋大賞2025白ワイン1位！NZソーヴィニヨンの決定版",
+    "buyLinks": [
+      {
+        "store": "楽天",
+        "url": "https://search.rakuten.co.jp/search/mall/シレーニ+セラーセレクション+ソーヴィニヨンブラン/",
+        "price": 1650
+      }
+    ]
+  },
+  {
+    "id": "tavernello-trebbiano",
+    "name": "Tavernello Romagna DOC Trebbiano",
+    "nameJa": "タヴェルネッロ ロマーニャ トレッビアーノ",
+    "producer": "Caviro",
+    "country": "Italy",
+    "countryCode": "IT",
+    "type": "white",
+    "grapeVarieties": [
+      "トレッビアーノ"
+    ],
+    "description": "イタリアワイン販売数量世界No.1ブランドのDOC格付ワイン。 レモンやライム、青リンゴの香り。キリッとした辛口で爽やかな飲み口。\n",
+    "price": 877,
+    "stores": [
+      {
+        "type": "seven",
+        "name": "セブン-イレブン",
+        "price": 877,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 75,
+    "vivinoScore": 3.3,
+    "costPerformance": 85,
+    "tags": [
+      "セブン",
+      "世界No.1ブランド",
+      "DOC格付",
+      "イタリア"
+    ],
+    "tweetUrls": [],
+    "abv": 12,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "パスタ",
+      "ピザ",
+      "魚介のフリット",
+      "カプレーゼ"
+    ],
+    "whyBuyNow": "世界No.1ブランドのDOC格付！877円で本場イタリアの味",
+    "buyLinks": []
+  },
+  {
     "id": "xisto-gran-reserva",
     "name": "Xisto Gran Reserva Vendimia Seleccionada",
     "nameJa": "ジスト グランレゼルバ",
@@ -618,6 +1218,47 @@
       "ハンバーグ"
     ],
     "whyBuyNow": "13年熟成グランレゼルバが1,098円。神の雫コラボで話題沸騰",
+    "buyLinks": []
+  },
+  {
+    "id": "yosemite-road-chardonnay",
+    "name": "Yosemite Road Chardonnay",
+    "nameJa": "ヨセミテ・ロード シャルドネ",
+    "producer": "Mercian",
+    "country": "United States",
+    "countryCode": "US",
+    "type": "white",
+    "grapeVarieties": [
+      "シャルドネ"
+    ],
+    "description": "累計2,000万本突破。「マツコの知らない世界」でも絶賛された セブンプレミアムの看板白。華やかな果実や花の香、まろやかな辛口。\n",
+    "price": 767,
+    "stores": [
+      {
+        "type": "seven",
+        "name": "セブン-イレブン",
+        "price": 767,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 88,
+    "vivinoScore": 3.2,
+    "costPerformance": 88,
+    "tags": [
+      "セブン",
+      "マツコ絶賛",
+      "2000万本突破",
+      "カリフォルニア"
+    ],
+    "tweetUrls": [],
+    "abv": 13,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "唐揚げ",
+      "白身魚のムニエル",
+      "ミックスナッツ"
+    ],
+    "whyBuyNow": "マツコも絶賛！2000万本突破のコンビニ最強シャルドネ",
     "buyLinks": []
   },
   {
