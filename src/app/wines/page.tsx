@@ -8,17 +8,23 @@ import { Badge } from "@/components/ui/badge";
 import type { WineType } from "@/types/wine";
 
 const typeFilters: { type: WineType; label: string }[] = [
-  { type: "red", label: "赤" },
-  { type: "white", label: "白" },
-  { type: "sparkling", label: "泡" },
-  { type: "rose", label: "ロゼ" },
+  { type: "red", label: "🍷 赤" },
+  { type: "white", label: "🥂 白" },
+  { type: "sparkling", label: "🍾 泡" },
+  { type: "rose", label: "🌸 ロゼ" },
+];
+
+const budgetFilters = [
+  { label: "〜1,000円", max: 1000 },
+  { label: "〜2,000円", max: 2000 },
+  { label: "2,000円〜", max: 99999 },
 ];
 
 const sortOptions = [
-  { value: "buzz", label: "話題度順" },
   { value: "cospa", label: "コスパ順" },
+  { value: "buzz", label: "話題度順" },
   { value: "price-asc", label: "安い順" },
-  { value: "price-desc", label: "高い順" },
+  { value: "vivino", label: "評価順" },
 ] as const;
 
 type SortKey = (typeof sortOptions)[number]["value"];
@@ -26,11 +32,20 @@ type SortKey = (typeof sortOptions)[number]["value"];
 export default function WinesPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeType, setActiveType] = useState<WineType | null>(null);
-  const [sortBy, setSortBy] = useState<SortKey>("buzz");
+  const [activeBudget, setActiveBudget] = useState<number | null>(null);
+  const [sortBy, setSortBy] = useState<SortKey>("cospa");
 
   const filteredWines = useMemo(() => {
     let result = mockWines.filter((wine) => {
       if (activeType && wine.type !== activeType) return false;
+      if (activeBudget) {
+        if (activeBudget === 99999) {
+          if (wine.price <= 2000) return false;
+        } else {
+          const min = activeBudget === 1000 ? 0 : 1001;
+          if (wine.price < min || wine.price > activeBudget) return false;
+        }
+      }
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
         return (
@@ -38,6 +53,7 @@ export default function WinesPage() {
           wine.nameJa.includes(q) ||
           wine.producer.toLowerCase().includes(q) ||
           wine.tags.some((t) => t.includes(q)) ||
+          wine.pairings.some((p) => p.includes(q)) ||
           wine.grapeVarieties.some((g) => g.includes(q))
         );
       }
@@ -49,73 +65,102 @@ export default function WinesPage() {
         case "buzz": return b.buzzScore - a.buzzScore;
         case "cospa": return b.costPerformance - a.costPerformance;
         case "price-asc": return a.price - b.price;
-        case "price-desc": return b.price - a.price;
+        case "vivino": return (b.vivinoScore ?? 0) - (a.vivinoScore ?? 0);
       }
     });
 
     return result;
-  }, [searchQuery, activeType, sortBy]);
+  }, [searchQuery, activeType, activeBudget, sortBy]);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold">ワイン一覧</h1>
-      <p className="mt-1 text-sm text-muted-foreground">
-        全{mockWines.length}本から探す
-      </p>
+    <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
+      <h1 className="text-2xl font-bold">全{mockWines.length}本のワイン</h1>
 
-      <div className="mt-6">
+      <div className="mt-4">
         <SearchBar
           onSearch={setSearchQuery}
-          placeholder="ワイン名、品種、タグで検索..."
+          placeholder="ワイン名、品種、料理名で検索..."
         />
       </div>
 
-      {/* Type filters + sort */}
-      <div className="mt-4 flex flex-wrap items-center gap-2">
-        <Badge
-          variant={activeType === null ? "gold" : "secondary"}
-          className="cursor-pointer"
-          onClick={() => setActiveType(null)}
-        >
-          すべて
-        </Badge>
-        {typeFilters.map((f) => (
+      {/* Filters */}
+      <div className="mt-4 space-y-2">
+        {/* Type */}
+        <div className="flex flex-wrap items-center gap-1.5">
+          <span className="mr-1 text-xs text-muted-foreground">タイプ:</span>
           <Badge
-            key={f.type}
-            variant={activeType === f.type ? "gold" : "secondary"}
-            className="cursor-pointer"
-            onClick={() => setActiveType(activeType === f.type ? null : f.type)}
+            variant={activeType === null ? "default" : "outline"}
+            className="cursor-pointer text-xs"
+            onClick={() => setActiveType(null)}
           >
-            {f.label}
+            すべて
           </Badge>
-        ))}
-        <span className="mx-2 text-muted-foreground">|</span>
-        {sortOptions.map((opt) => (
+          {typeFilters.map((f) => (
+            <Badge
+              key={f.type}
+              variant={activeType === f.type ? "default" : "outline"}
+              className="cursor-pointer text-xs"
+              onClick={() => setActiveType(activeType === f.type ? null : f.type)}
+            >
+              {f.label}
+            </Badge>
+          ))}
+        </div>
+
+        {/* Budget */}
+        <div className="flex flex-wrap items-center gap-1.5">
+          <span className="mr-1 text-xs text-muted-foreground">予算:</span>
           <Badge
-            key={opt.value}
-            variant={sortBy === opt.value ? "default" : "outline"}
-            className="cursor-pointer"
-            onClick={() => setSortBy(opt.value)}
+            variant={activeBudget === null ? "default" : "outline"}
+            className="cursor-pointer text-xs"
+            onClick={() => setActiveBudget(null)}
           >
-            {opt.label}
+            すべて
           </Badge>
-        ))}
+          {budgetFilters.map((b) => (
+            <Badge
+              key={b.max}
+              variant={activeBudget === b.max ? "default" : "outline"}
+              className="cursor-pointer text-xs"
+              onClick={() => setActiveBudget(activeBudget === b.max ? null : b.max)}
+            >
+              {b.label}
+            </Badge>
+          ))}
+        </div>
+
+        {/* Sort */}
+        <div className="flex flex-wrap items-center gap-1.5">
+          <span className="mr-1 text-xs text-muted-foreground">並び:</span>
+          {sortOptions.map((opt) => (
+            <Badge
+              key={opt.value}
+              variant={sortBy === opt.value ? "gold" : "outline"}
+              className="cursor-pointer text-xs"
+              onClick={() => setSortBy(opt.value)}
+            >
+              {opt.label}
+            </Badge>
+          ))}
+        </div>
       </div>
 
+      {/* Results */}
       {filteredWines.length === 0 ? (
         <div className="py-12 text-center text-muted-foreground">
           <p className="text-lg">条件に合うワインが見つかりませんでした</p>
+          <p className="mt-2 text-sm">フィルタを変更してお試しください</p>
         </div>
       ) : (
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredWines.map((wine) => (
-            <WineCard key={wine.id} wine={wine} />
+          {filteredWines.map((wine, i) => (
+            <WineCard key={wine.id} wine={wine} rank={i + 1} />
           ))}
         </div>
       )}
 
-      <p className="mt-4 text-sm text-muted-foreground">
-        {filteredWines.length}件表示
+      <p className="mt-4 text-xs text-muted-foreground">
+        {filteredWines.length}/{mockWines.length}件表示
       </p>
     </div>
   );

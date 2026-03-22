@@ -6,7 +6,11 @@ import { Wine, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/wines", label: "ワイン一覧" },
+  { href: "/wines", label: "全ワイン" },
+  { href: "/#red", label: "🍷 赤" },
+  { href: "/#white", label: "🥂 白" },
+  { href: "/#sparkling", label: "🍾 泡" },
+  { href: "/#guide", label: "📖 ガイド" },
 ];
 
 export function Header() {

@@ -1,6 +1,8 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { mockWines } from "@/lib/mock-data";
+import { WineCard } from "@/components/wine/wine-card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatPrice } from "@/lib/utils";
@@ -12,6 +14,20 @@ import { TweetEmbed } from "@/components/wine/tweet-embed";
 
 export function generateStaticParams() {
   return mockWines.map((wine) => ({ id: wine.id }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const wine = mockWines.find((w) => w.id === id);
+  if (!wine) return { title: "ワインが見つかりません" };
+  return {
+    title: `${wine.nameJa} ${formatPrice(wine.price)} | ご近所ワイン`,
+    description: wine.whyBuyNow,
+  };
 }
 
 const wineTypeLabels: Record<string, string> = {
@@ -34,6 +50,11 @@ export default async function WineDetailPage({
   }
 
   const sortedStores = [...wine.stores].sort((a, b) => a.price - b.price);
+
+  const similarWines = mockWines
+    .filter((w) => w.id !== wine.id && w.type === wine.type)
+    .sort((a, b) => b.costPerformance - a.costPerformance)
+    .slice(0, 3);
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
@@ -202,6 +223,20 @@ export default async function WineDetailPage({
               </div>
             </CardContent>
           </Card>
+        )}
+
+        {/* Similar wines */}
+        {similarWines.length > 0 && (
+          <div>
+            <h2 className="text-lg font-bold text-foreground">
+              同じタイプのおすすめ
+            </h2>
+            <div className="mt-3 grid gap-3 sm:grid-cols-3">
+              {similarWines.map((w) => (
+                <WineCard key={w.id} wine={w} />
+              ))}
+            </div>
+          </div>
         )}
       </div>
     </div>

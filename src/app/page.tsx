@@ -1,18 +1,14 @@
+import Link from "next/link";
 import { mockWines } from "@/lib/mock-data";
 import { WineCard } from "@/components/wine/wine-card";
 import type { WineType } from "@/types/wine";
+import { Card, CardContent } from "@/components/ui/card";
 
-const typeNav: { type: WineType; label: string; id: string }[] = [
-  { type: "red", label: "🍷 赤", id: "red" },
-  { type: "white", label: "🥂 白", id: "white" },
-  { type: "sparkling", label: "🍾 泡", id: "sparkling" },
-  { type: "rose", label: "🌸 ロゼ", id: "rose" },
-];
-
-const budgetNav = [
-  { label: "〜1,000円", id: "budget-1000", max: 1000 },
-  { label: "〜2,000円", id: "budget-2000", max: 2000 },
-  { label: "2,000円〜", id: "budget-over", max: 99999 },
+const typeNav: { type: WineType; label: string; emoji: string; id: string }[] = [
+  { type: "red", label: "赤ワイン", emoji: "🍷", id: "red" },
+  { type: "white", label: "白ワイン", emoji: "🥂", id: "white" },
+  { type: "sparkling", label: "スパークリング", emoji: "🍾", id: "sparkling" },
+  { type: "rose", label: "ロゼ", emoji: "🌸", id: "rose" },
 ];
 
 function getWines(type: WineType) {
@@ -23,16 +19,35 @@ function getWines(type: WineType) {
 
 const topPick = [...mockWines].sort((a, b) => b.buzzScore - a.buzzScore)[0];
 
+const faqs = [
+  {
+    q: "Vivinoスコアって何？",
+    a: "世界最大のワインアプリVivino（利用者6,300万人）のユーザー評価。5点満点で3.5以上あれば十分美味しいワインです。",
+  },
+  {
+    q: "コンビニワインって美味しいの？",
+    a: "最近のコンビニワインは品質が大幅に向上。特にチリ産カベルネやスペイン産カヴァは、専門店と遜色ない味わいが楽しめます。",
+  },
+  {
+    q: "赤と白、どっちを選ぶ？",
+    a: "肉料理やトマト系なら赤、魚・和食・サラダなら白がおすすめ。迷ったらスパークリングが万能です。",
+  },
+  {
+    q: "コスパ指標って何？",
+    a: "Vivinoスコアと価格のバランスを100点満点で表した独自指標。高いほど「評価の割にお得」なワインです。",
+  },
+];
+
 export default function Home() {
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-      {/* Hero + Top Pick */}
+      {/* Hero */}
       <section className="py-10 sm:py-14">
         <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
           今買うべきワインが<span className="text-primary">すぐわかる</span>
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          コンビニ・スーパーの手頃なワインをコスパと話題度で厳選
+          コンビニ・スーパーで手に入る{mockWines.length}本を厳選。コスパと話題度でランキング。
         </p>
 
         {/* Featured pick */}
@@ -46,12 +61,12 @@ export default function Home() {
             <span className="text-2xl font-bold text-primary">
               {new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(topPick.price)}
             </span>
-            <a
-              href={`/soudanyou/wines/${topPick.id}`}
+            <Link
+              href={`/wines/${topPick.id}`}
               className="rounded-full bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               詳しく見る
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -65,19 +80,15 @@ export default function Home() {
               href={`#${t.id}`}
               className="shrink-0 rounded-full border border-border px-4 py-1.5 text-sm font-medium transition-colors hover:bg-primary hover:text-primary-foreground"
             >
-              {t.label}
+              {t.emoji} {t.label}
             </a>
           ))}
-          <span className="mx-1 self-center text-border">|</span>
-          {budgetNav.map((b) => (
-            <a
-              key={b.id}
-              href={`#${b.id}`}
-              className="shrink-0 rounded-full border border-border px-4 py-1.5 text-sm font-medium transition-colors hover:bg-primary hover:text-primary-foreground"
-            >
-              {b.label}
-            </a>
-          ))}
+          <a
+            href="#guide"
+            className="shrink-0 rounded-full border border-border px-4 py-1.5 text-sm font-medium transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            📖 選び方ガイド
+          </a>
         </div>
       </nav>
 
@@ -88,8 +99,11 @@ export default function Home() {
         return (
           <section key={cat.type} id={cat.id} className="mt-10 scroll-mt-28">
             <h2 className="text-xl font-bold text-foreground">
-              {cat.label}
+              {cat.emoji} {cat.label}
             </h2>
+            <p className="mt-1 text-xs text-muted-foreground">
+              コスパ順で{wines.length}本
+            </p>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {wines.map((wine, i) => (
                 <WineCard key={wine.id} wine={wine} rank={i + 1} />
@@ -99,40 +113,18 @@ export default function Home() {
         );
       })}
 
-      {/* Budget sections */}
-      <section id="budget-1000" className="mt-12 scroll-mt-28">
-        <h2 className="text-xl font-bold text-foreground">〜1,000円のベスト</h2>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {mockWines
-            .filter((w) => w.price <= 1000)
-            .sort((a, b) => b.costPerformance - a.costPerformance)
-            .map((wine, i) => (
-              <WineCard key={wine.id} wine={wine} rank={i + 1} />
-            ))}
-        </div>
-      </section>
-
-      <section id="budget-2000" className="mt-12 scroll-mt-28">
-        <h2 className="text-xl font-bold text-foreground">1,000〜2,000円のベスト</h2>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {mockWines
-            .filter((w) => w.price > 1000 && w.price <= 2000)
-            .sort((a, b) => b.costPerformance - a.costPerformance)
-            .map((wine, i) => (
-              <WineCard key={wine.id} wine={wine} rank={i + 1} />
-            ))}
-        </div>
-      </section>
-
-      <section id="budget-over" className="mt-12 scroll-mt-28 pb-16">
-        <h2 className="text-xl font-bold text-foreground">2,000円〜 ちょっと贅沢</h2>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {mockWines
-            .filter((w) => w.price > 2000)
-            .sort((a, b) => b.costPerformance - a.costPerformance)
-            .map((wine, i) => (
-              <WineCard key={wine.id} wine={wine} rank={i + 1} />
-            ))}
+      {/* Guide section */}
+      <section id="guide" className="mt-14 scroll-mt-28 pb-16">
+        <h2 className="text-xl font-bold text-foreground">📖 ワイン選びガイド</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {faqs.map((faq) => (
+            <Card key={faq.q}>
+              <CardContent className="p-4">
+                <h3 className="font-semibold text-foreground">{faq.q}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{faq.a}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
     </div>
