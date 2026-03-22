@@ -255,48 +255,6 @@
     ]
   },
   {
-    "id": "casa-subercaseaux-shiraz",
-    "name": "Casa Subercaseaux Shiraz",
-    "nameJa": "カーサ・スベルカソー シラーズ",
-    "producer": "Concha y Toro",
-    "country": "Chile",
-    "countryCode": "CL",
-    "type": "red",
-    "grapeVarieties": [
-      "シラーズ"
-    ],
-    "description": "ローソン限定、コンチャ・イ・トロが手がけるチリ赤。 「ローソンで500円のワイン買ったら美味すぎて銀座の高いワイン何だったの」と SNSでバズり社会現象に。10年以上ローソン売上No.1。\n",
-    "price": 640,
-    "stores": [
-      {
-        "type": "lawson",
-        "name": "ローソン",
-        "price": 640,
-        "inStock": true
-      }
-    ],
-    "buzzScore": 88,
-    "vivinoScore": null,
-    "costPerformance": 95,
-    "tags": [
-      "ローソン最強",
-      "コンビニ",
-      "SNSバズ",
-      "ワンコイン級"
-    ],
-    "tweetUrls": [],
-    "abv": 13,
-    "servingTemp": "16-18℃",
-    "pairings": [
-      "からあげクン",
-      "カレー",
-      "焼き鳥",
-      "ピザ"
-    ],
-    "whyBuyNow": "640円でローソン10年連続No.1。SNSバズの伝説的コンビニ赤",
-    "buyLinks": []
-  },
-  {
     "id": "casillero-del-diablo",
     "name": "Casillero del Diablo Cabernet Sauvignon",
     "nameJa": "カッシェロ・デル・ディアブロ カベルネ・ソーヴィニヨン",
