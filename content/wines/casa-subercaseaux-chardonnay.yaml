@@ -1,0 +1,47 @@
+# カーサ・スベルカソー シャルドネ — ローソン10年連続No.1白
+id: casa-subercaseaux-chardonnay
+name: Casa Subercaseaux Chardonnay
+nameJa: カーサ・スベルカソー シャルドネ
+producer: Concha y Toro
+country: Chile
+countryCode: CL
+type: white
+grapeVarieties:
+  - シャルドネ
+
+description: >
+  ローソンで10年以上売上トップの白ワイン。りんごや洋梨のような爽やかな果実味と
+  やわらかな口当たり。樽やバニラの香りも感じられるリッチな味わい。
+
+price: 640
+abv: 12.0
+servingTemp: 8-10℃
+
+stores:
+  - type: lawson
+    name: ローソン
+    price: 640
+    inStock: true
+
+tags:
+  - ローソン
+  - 10年連続No.1
+  - チリ白
+  - コスパ
+
+pairings:
+  - カルボナーラ
+  - シーフードグラタン
+  - 天ぷら
+
+whyBuyNow: 10年連続売上No.1！ソムリエが認めた640円のローソン白
+
+buzzScore: 82
+vivinoScore: 3.1
+costPerformance: 90
+
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/カーサスベルカソー+シャルドネ/
+    price: 640

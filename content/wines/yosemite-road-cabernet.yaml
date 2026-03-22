@@ -1,0 +1,36 @@
+id: yosemite-road-cabernet
+name: Yosemite Road Cabernet Sauvignon
+nameJa: ヨセミテ・ロード カベルネ・ソーヴィニヨン
+producer: Mercian
+country: United States
+countryCode: US
+type: red
+grapeVarieties:
+  - カベルネ・ソーヴィニヨン
+description: >
+  赤い果実の香りとふくよかな果実味にタンニンが溶け込んだ滑らかな赤。
+  フレッシュ＆フルーティで飲み飽きない。累計2,000万本突破の大人気シリーズ。
+price: 712
+abv: 13.0
+servingTemp: 16-18℃
+stores:
+  - type: seven
+    name: セブン-イレブン
+    price: 712
+    inStock: true
+tags:
+  - セブン
+  - 2000万本突破
+  - マツコ絶賛
+  - カリフォルニア
+pairings:
+  - パスタ
+  - ピザ
+  - 焼き鳥
+  - ハンバーグ
+whyBuyNow: マツコも絶賛！セブンで買える神コスパ赤、迷ったらこれ
+buzzScore: 86
+vivinoScore: null
+costPerformance: 90
+tweetUrls: []
+buyLinks: []

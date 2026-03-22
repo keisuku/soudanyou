@@ -1,0 +1,46 @@
+id: mont-perat-rouge
+name: Chateau Mont-Perat Rouge
+nameJa: シャトー・モンペラ ルージュ
+producer: Despagne Family
+country: France
+countryCode: FR
+region: ボルドー
+type: red
+grapeVarieties:
+  - メルロー
+  - カベルネ・フラン
+  - カベルネ・ソーヴィニヨン
+description: >
+  漫画『神の雫』で一躍有名になったボルドーワイン。ボリューム感がありながら
+  酸味・渋味が柔らかくバランス抜群。成城石井の定番人気赤ワイン。
+price: 2200
+abv: 13.5
+servingTemp: 16-18℃
+stores:
+  - type: seijoishii
+    name: 成城石井
+    price: 2200
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 2000
+    inStock: true
+tags:
+  - 神の雫
+  - ボルドー
+  - 成城石井定番
+  - デスパーニュ
+pairings:
+  - ローストビーフ
+  - 鴨肉
+  - ビーフシチュー
+  - ブリーチーズ
+whyBuyNow: 神の雫が世界に知らしめた逸品。2000円台でボルドーの真髄
+buzzScore: 86
+vivinoScore: 3.6
+costPerformance: 78
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/モンペラ+ルージュ/
+    price: 2000

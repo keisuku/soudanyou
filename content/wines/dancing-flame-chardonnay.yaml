@@ -1,0 +1,52 @@
+# ダンシングフレイム シャルドネ — MONOQLOベストバイ白
+id: dancing-flame-chardonnay
+name: Dancing Flame Chardonnay
+nameJa: ダンシングフレイム シャルドネ
+producer: Luis Felipe Edwards
+country: Chile
+countryCode: CL
+type: white
+grapeVarieties:
+  - シャルドネ
+
+description: >
+  MONOQLOの白ワインランキングでベストバイ受賞。スモーキーな樽系の
+  本格的な香りでシャルドネがしっかり味わえる。後味はスッキリ。
+
+price: 500
+abv: 13.0
+servingTemp: 8-10℃
+
+stores:
+  - type: aeon
+    name: イオン
+    price: 500
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 500
+    inStock: true
+
+tags:
+  - MONOQLOベストバイ
+  - ワンコイン
+  - チリ白
+  - 樽系
+
+pairings:
+  - グラタン
+  - クリームパスタ
+  - 鶏肉のソテー
+  - チーズ
+
+whyBuyNow: MONOQLOベストバイ！500円以下の最強チリシャルドネ
+
+buzzScore: 76
+vivinoScore: null
+costPerformance: 94
+
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/ダンシングフレイム+シャルドネ/
+    price: 500

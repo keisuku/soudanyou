@@ -1,0 +1,45 @@
+# タヴェルネッロ トレッビアーノ — 世界No.1ブランドのDOC白
+id: tavernello-trebbiano
+name: Tavernello Romagna DOC Trebbiano
+nameJa: タヴェルネッロ ロマーニャ トレッビアーノ
+producer: Caviro
+country: Italy
+countryCode: IT
+type: white
+grapeVarieties:
+  - トレッビアーノ
+
+description: >
+  イタリアワイン販売数量世界No.1ブランドのDOC格付ワイン。
+  レモンやライム、青リンゴの香り。キリッとした辛口で爽やかな飲み口。
+
+price: 877
+abv: 12.0
+servingTemp: 8-10℃
+
+stores:
+  - type: seven
+    name: セブン-イレブン
+    price: 877
+    inStock: true
+
+tags:
+  - セブン
+  - 世界No.1ブランド
+  - DOC格付
+  - イタリア
+
+pairings:
+  - パスタ
+  - ピザ
+  - 魚介のフリット
+  - カプレーゼ
+
+whyBuyNow: 世界No.1ブランドのDOC格付！877円で本場イタリアの味
+
+buzzScore: 75
+vivinoScore: 3.3
+costPerformance: 85
+
+tweetUrls: []
+buyLinks: []

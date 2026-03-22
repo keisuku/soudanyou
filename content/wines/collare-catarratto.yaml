@@ -1,0 +1,45 @@
+# コラーレ・カタラット — イオン580円のシチリア白
+id: collare-catarratto
+name: Collare Catarratto
+nameJa: コラーレ・カタラット
+producer: Collare
+country: Italy
+countryCode: IT
+type: white
+grapeVarieties:
+  - カタラット
+
+description: >
+  甘口を思わせる華やかな香りだが意外に辛口。グレープフルーツやレモンの
+  柑橘系の酸味と心地よいミネラル感。スッキリ爽やかな味わい。
+
+price: 580
+abv: 12.0
+servingTemp: 8-10℃
+
+stores:
+  - type: aeon
+    name: イオン
+    price: 580
+    inStock: true
+
+tags:
+  - イオン
+  - ワンコイン級
+  - シチリア
+  - 辛口
+
+pairings:
+  - シーフードサラダ
+  - 白身魚のフリット
+  - 前菜
+  - 冷製パスタ
+
+whyBuyNow: 580円のシチリアの隠れた名品！イオンで見つけたら即買い
+
+buzzScore: 68
+vivinoScore: null
+costPerformance: 91
+
+tweetUrls: []
+buyLinks: []

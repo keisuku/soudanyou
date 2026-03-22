@@ -1,0 +1,42 @@
+id: santero-asti
+name: Santero Angels Asti
+nameJa: サンテロ 天使のアスティ
+producer: Santero
+country: Italy
+countryCode: IT
+type: sparkling
+grapeVarieties:
+  - モスカート・ビアンコ
+description: >
+  マスカットの華やかな香りと爽やかな風味のイタリア産甘口スパークリング。
+  5年連続日本で最も売れたイタリアスパークリング生産者。サクラアワード金賞。
+price: 1500
+abv: 7.5
+servingTemp: 6-8℃
+stores:
+  - type: kaldi
+    name: カルディ
+    price: 1500
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 1500
+    inStock: true
+tags:
+  - カルディ
+  - 甘口
+  - 低アルコール
+  - 天使ラベル
+pairings:
+  - フルーツタルト
+  - パンナコッタ
+  - クリームチーズ
+whyBuyNow: 天使が描かれた甘い誘惑！ワイン初心者も安心の低アルコール
+buzzScore: 80
+vivinoScore: null
+costPerformance: 82
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/サンテロ+天使のアスティ/
+    price: 1500

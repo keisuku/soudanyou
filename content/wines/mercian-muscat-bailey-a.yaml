@@ -1,0 +1,44 @@
+id: mercian-muscat-bailey-a
+name: Chateau Mercian Yamanashi Muscat Bailey A
+nameJa: シャトー・メルシャン 山梨マスカット・ベーリーA
+producer: Chateau Mercian
+country: Japan
+countryCode: JP
+region: 山梨
+type: red
+grapeVarieties:
+  - マスカット・ベーリーA
+description: >
+  日本固有品種マスカット・ベーリーAの本格日本ワイン。サクランボやラズベリーの
+  赤い果実のアロマ。程よい酸と柔らかいタンニンが和食と驚くほど合う。12ヶ月樽熟成。
+price: 2200
+abv: 11.5
+servingTemp: 14-16℃
+stores:
+  - type: seijoishii
+    name: 成城石井
+    price: 2200
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 2000
+    inStock: true
+tags:
+  - 日本ワイン
+  - マスカットベーリーA
+  - 山梨
+  - 和食に合う
+pairings:
+  - 焼き鳥（タレ）
+  - 肉じゃが
+  - 酢豚
+  - 鰻重
+whyBuyNow: 和食に寄り添う日本ワインの最高峰。日本人のための赤
+buzzScore: 77
+vivinoScore: 3.4
+costPerformance: 72
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/メルシャン+マスカットベーリーA/
+    price: 2000

@@ -1,0 +1,49 @@
+# ツェラー・シュヴァルツェ・カッツ — 黒猫ラベルのドイツ白
+id: schwarze-katz
+name: Zeller Schwarze Katz
+nameJa: ツェラー・シュヴァルツェ・カッツ
+producer: Josef Drathen
+country: Germany
+countryCode: DE
+type: white
+grapeVarieties:
+  - リースリング
+  - ミュラー・トゥルガウ
+
+description: >
+  黒猫ラベルでおなじみのドイツ白ワイン。やや甘口ながら甘すぎず飲みやすい。
+  ライチや白桃の香りがふんわり広がり、まろやかでスムーズな飲み口。
+
+price: 1000
+abv: 9.5
+servingTemp: 6-8℃
+
+stores:
+  - type: kaldi
+    name: カルディ
+    price: 1000
+    inStock: true
+
+tags:
+  - カルディ
+  - 黒猫ラベル
+  - ドイツ
+  - やや甘口
+
+pairings:
+  - エスニック料理
+  - フルーツサラダ
+  - 軽めの前菜
+  - チーズ
+
+whyBuyNow: 黒猫ラベルが目印！リピーター続出のドイツ甘口白
+
+buzzScore: 72
+vivinoScore: 3.3
+costPerformance: 80
+
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/シュヴァルツェカッツ/
+    price: 1000

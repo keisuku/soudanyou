@@ -1,0 +1,48 @@
+id: alpaca-cabernet-merlot
+name: Santa Helena Alpaca Cabernet Sauvignon-Merlot
+nameJa: アルパカ カベルネ・メルロー
+producer: Vina Santa Helena
+country: Chile
+countryCode: CL
+type: red
+grapeVarieties:
+  - カベルネ・ソーヴィニヨン
+  - メルロー
+description: >
+  世界50カ国以上で愛されるチリの名門ブランド。熟したブラックチェリー、カシス、
+  プラムの果実味とまろやかなコク。日本での「チリカベ」人気を牽引。
+price: 550
+abv: 13.5
+servingTemp: 16-18℃
+stores:
+  - type: seven
+    name: セブン-イレブン
+    price: 600
+    inStock: true
+  - type: aeon
+    name: イオン
+    price: 550
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 515
+    inStock: true
+tags:
+  - どこでも買える
+  - ワンコイン
+  - チリカベ
+  - 世界50カ国
+pairings:
+  - 焼肉
+  - から揚げ
+  - 餃子
+  - ハンバーガー
+whyBuyNow: どこでも買える！ワンコインチリワインの絶対王者
+buzzScore: 84
+vivinoScore: 3.4
+costPerformance: 93
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/アルパカ+カベルネ+メルロー/
+    price: 515

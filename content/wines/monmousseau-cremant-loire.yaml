@@ -1,0 +1,45 @@
+id: monmousseau-cremant-loire
+name: Monmousseau Cremant de Loire Brut
+nameJa: モンムソー クレマン・ド・ロワール ブリュット
+producer: Monmousseau
+country: France
+countryCode: FR
+region: その他
+type: sparkling
+grapeVarieties:
+  - シュナン・ブラン
+  - シャルドネ
+  - カベルネ・フラン
+description: >
+  1886年創業の老舗。シャンパンと同じ瓶内二次発酵で36ヶ月熟成。
+  ANAビジネスクラス採用歴あり。漫画『神の雫』にも掲載された実力派。
+price: 1870
+abv: 12.5
+servingTemp: 6-8℃
+stores:
+  - type: aeon
+    name: イオン
+    price: 1870
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 1870
+    inStock: true
+tags:
+  - ANAビジネスクラス
+  - 神の雫
+  - クレマン
+  - 瓶内36ヶ月熟成
+pairings:
+  - 白身魚のムニエル
+  - ブリオッシュ
+  - フルーツサラダ
+whyBuyNow: シャンパンの半額以下！ANAビジネスクラス採用の実力派クレマン
+buzzScore: 81
+vivinoScore: null
+costPerformance: 83
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/モンムソー+クレマン+ロワール/
+    price: 1870

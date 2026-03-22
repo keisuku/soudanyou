@@ -1,0 +1,36 @@
+id: piccini-chianti
+name: Piccini Chianti D.O.C.G.
+nameJa: ピッチーニ キャンティ
+producer: Piccini
+country: Italy
+countryCode: IT
+type: red
+grapeVarieties:
+  - サンジョヴェーゼ
+description: >
+  1882年創業の老舗が造る本格キャンティ。熟した赤系果実とハーブの濃厚な香り。
+  ソムリエ田邉公一氏が「大発見」と絶賛。世界60カ国以上で販売。
+price: 1053
+abv: 13.0
+servingTemp: 16-18℃
+stores:
+  - type: familymart
+    name: ファミリーマート
+    price: 1053
+    inStock: true
+tags:
+  - ファミマ
+  - キャンティ
+  - DOCG
+  - ソムリエ絶賛
+pairings:
+  - トマトパスタ
+  - ピザ
+  - ラザニア
+  - 生ハム
+whyBuyNow: 有名ソムリエも大発見と唸った！ファミマで買える本格キャンティ
+buzzScore: 80
+vivinoScore: 3.5
+costPerformance: 86
+tweetUrls: []
+buyLinks: []

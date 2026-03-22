@@ -1,0 +1,47 @@
+id: casillero-del-diablo
+name: Casillero del Diablo Cabernet Sauvignon
+nameJa: カッシェロ・デル・ディアブロ カベルネ・ソーヴィニヨン
+producer: Concha y Toro
+country: Chile
+countryCode: CL
+type: red
+grapeVarieties:
+  - カベルネ・ソーヴィニヨン
+description: >
+  「悪魔の蔵」の伝説を持つチリの名門のフラッグシップ。濃いルビー色、
+  チェリーやブラックカラントの香り、オーク樽由来のヴァニラのニュアンス。
+price: 1100
+abv: 13.5
+servingTemp: 16-18℃
+stores:
+  - type: lawson
+    name: ローソン
+    price: 1100
+    inStock: true
+  - type: seijoishii
+    name: 成城石井
+    price: 1100
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 1100
+    inStock: true
+tags:
+  - 悪魔の蔵
+  - コンチャイトロ
+  - チリカベ上級
+  - 1000円台
+pairings:
+  - ステーキ
+  - ラム
+  - 煮込み料理
+  - 熟成チーズ
+whyBuyNow: 悪魔が守った伝説の味！チリワインの実力を1000円台で体感
+buzzScore: 85
+vivinoScore: 3.5
+costPerformance: 86
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/カッシェロデルディアブロ+カベルネ/
+    price: 1100

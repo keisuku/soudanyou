@@ -1,0 +1,36 @@
+id: yosemite-road-sparkling
+name: Yosemite Road Sparkling
+nameJa: ヨセミテ・ロード スパークリング
+producer: Mercian
+country: United States
+countryCode: US
+type: sparkling
+grapeVarieties:
+  - シャルドネ
+  - フレンチ・コロンバール
+description: >
+  セブンイレブンのPBスパークリング。強炭酸のシュワッと弾ける鮮烈な泡立ちが特徴。
+  青リンゴのような香りと、やわらかい酸味とフルーティーな果実味のバランスが絶妙。
+price: 899
+abv: 13.0
+servingTemp: 6-8℃
+stores:
+  - type: seven
+    name: セブン-イレブン
+    price: 899
+    inStock: true
+tags:
+  - セブン
+  - コンビニ泡
+  - 900円以下
+  - カリフォルニア
+pairings:
+  - カニカマ
+  - チーズ
+  - サラダチキン
+whyBuyNow: セブンで買える本格泡！900円以下のカリフォルニアスパークリング
+buzzScore: 78
+vivinoScore: null
+costPerformance: 87
+tweetUrls: []
+buyLinks: []

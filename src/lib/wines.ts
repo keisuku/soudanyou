@@ -1,17 +1,99 @@
 import wineData from "./__generated__/wines.json";
-import type { Wine } from "@/types/wine";
+import type { Wine, StoreCategory } from "@/types/wine";
+import { supabase, isSupabaseConfigured } from "./supabase";
 
-export const wines: Wine[] = wineData as Wine[];
+// ── 静的データ（JSONフォールバック） ──────────────────
+const staticWines: Wine[] = wineData as Wine[];
 
-export function getWineById(id: string): Wine | undefined {
-  return wines.find((w) => w.id === id);
+// ── データ取得関数（Supabase優先、未設定ならJSON） ──────
+
+/** DB行 → Wine型に変換 */
+function dbRowToWine(row: Record<string, unknown>, stores: Record<string, unknown>[], buyLinks: Record<string, unknown>[]): Wine {
+  return {
+    id: row.id as string,
+    name: row.name as string,
+    nameJa: row.name_ja as string,
+    producer: row.producer as string,
+    country: row.country as string,
+    countryCode: row.country_code as string,
+    region: (row.region as string) ?? undefined,
+    type: row.type as Wine["type"],
+    grapeVarieties: row.grape_varieties as string[],
+    description: row.description as string,
+    price: row.price as number,
+    abv: row.abv as number,
+    servingTemp: row.serving_temp as string,
+    pairings: row.pairings as string[],
+    tags: row.tags as string[],
+    whyBuyNow: row.why_buy_now as string,
+    buzzScore: row.buzz_score as number,
+    vivinoScore: row.vivino_score as number | null,
+    costPerformance: row.cost_performance as number,
+    tweetUrls: row.tweet_urls as string[],
+    stores: stores.map((s) => ({
+      type: s.store_type as string,
+      name: s.store_name as string,
+      price: s.price as number,
+      inStock: s.in_stock as boolean,
+    })) as Wine["stores"],
+    buyLinks: buyLinks.map((b) => ({
+      store: b.store as string,
+      url: b.url as string,
+      price: b.price as number,
+    })),
+  };
 }
+
+/** 全ワイン取得 */
+export async function getWines(): Promise<Wine[]> {
+  if (!isSupabaseConfigured || !supabase) return staticWines;
+
+  const { data: wines, error } = await supabase
+    .from("wines")
+    .select("*")
+    .eq("status", "published");
+
+  if (error || !wines) return staticWines;
+
+  const { data: allStores } = await supabase.from("wine_stores").select("*");
+  const { data: allBuyLinks } = await supabase.from("buy_links").select("*");
+
+  return wines.map((w) => dbRowToWine(
+    w,
+    (allStores ?? []).filter((s: Record<string, unknown>) => s.wine_id === w.id),
+    (allBuyLinks ?? []).filter((b: Record<string, unknown>) => b.wine_id === w.id),
+  ));
+}
+
+/** IDで1本取得 */
+export async function getWineById(id: string): Promise<Wine | undefined> {
+  if (!isSupabaseConfigured || !supabase) {
+    return staticWines.find((w) => w.id === id);
+  }
+
+  const { data: wine, error } = await supabase
+    .from("wines")
+    .select("*")
+    .eq("id", id)
+    .eq("status", "published")
+    .single();
+
+  if (error || !wine) return staticWines.find((w) => w.id === id);
+
+  const { data: stores } = await supabase.from("wine_stores").select("*").eq("wine_id", id);
+  const { data: buyLinks } = await supabase.from("buy_links").select("*").eq("wine_id", id);
+
+  return dbRowToWine(wine, stores ?? [], buyLinks ?? []);
+}
+
+// ── 同期アクセス（クライアントコンポーネント用、常にJSON） ──
+export const wines: Wine[] = staticWines;
 
 export function getWinesByType(type: string): Wine[] {
-  return wines.filter((w) => w.type === type);
+  return staticWines.filter((w) => w.type === type);
 }
 
-import type { StoreCategory } from "@/types/wine";
+// ── 定数定義（UI用、DBに入れない） ──────────────────
 
 export const storeLabels: Record<string, string> = {
   // コンビニ

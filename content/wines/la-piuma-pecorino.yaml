@@ -1,0 +1,47 @@
+# ラピウマ ペコリーノ — 成城石井Yahoo!1位
+id: la-piuma-pecorino
+name: La Piuma Pecorino
+nameJa: ラピウマ ペコリーノ
+producer: La Piuma
+country: Italy
+countryCode: IT
+type: white
+grapeVarieties:
+  - ペコリーノ
+
+description: >
+  成城石井Yahoo!ショッピング白ワインランキング1位。フレッシュでフルーティー。
+  高い酸味とミネラル感、白桃やマンゴーの華やかな香り。
+
+price: 1580
+abv: 12.5
+servingTemp: 8-10℃
+
+stores:
+  - type: seijoishii
+    name: 成城石井
+    price: 1580
+    inStock: true
+
+tags:
+  - 成城石井
+  - Yahoo!1位
+  - ペコリーノ
+  - アブルッツォ
+
+pairings:
+  - 白身魚のカルパッチョ
+  - レモン料理
+  - 魚介のマリネ
+
+whyBuyNow: Yahoo!評価4.59！成城石井ランキング1位のイタリア白
+
+buzzScore: 79
+vivinoScore: null
+costPerformance: 80
+
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/ラピウマ+ペコリーノ/
+    price: 1580

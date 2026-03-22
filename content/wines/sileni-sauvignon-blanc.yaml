@@ -1,0 +1,52 @@
+# シレーニ ソーヴィニヨン・ブラン — ワイン屋大賞2025白1位
+id: sileni-sauvignon-blanc
+name: Sileni Estates Cellar Selection Sauvignon Blanc
+nameJa: シレーニ セラー・セレクション ソーヴィニヨン・ブラン
+producer: Sileni Estates
+country: New Zealand
+countryCode: NZ
+type: white
+grapeVarieties:
+  - ソーヴィニヨン・ブラン
+
+description: >
+  日本で一番売れているNZワイン。ワイン屋大賞2025白ワイン部門1位受賞。
+  トロピカルフルーツ、レモン、ライムにハーブの洗練された香り。
+
+price: 1650
+abv: 12.5
+servingTemp: 6-8℃
+
+stores:
+  - type: seijoishii
+    name: 成城石井
+    price: 1650
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 1650
+    inStock: true
+
+tags:
+  - 成城石井
+  - ワイン屋大賞2025
+  - NZ白1位
+  - マールボロ
+
+pairings:
+  - 生牡蠣
+  - 白身魚のグリル
+  - シェーヴルチーズ
+  - サラダ
+
+whyBuyNow: ワイン屋大賞2025白ワイン1位！NZソーヴィニヨンの決定版
+
+buzzScore: 90
+vivinoScore: 3.8
+costPerformance: 82
+
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/シレーニ+セラーセレクション+ソーヴィニヨンブラン/
+    price: 1650

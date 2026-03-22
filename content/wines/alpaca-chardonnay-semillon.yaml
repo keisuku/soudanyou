@@ -1,0 +1,53 @@
+# アルパカ シャルドネ・セミヨン — 日本で最も見かけるチリ白
+id: alpaca-chardonnay-semillon
+name: Santa Helena Alpaca Chardonnay-Semillon
+nameJa: アルパカ シャルドネ・セミヨン
+producer: Vina Santa Helena
+country: Chile
+countryCode: CL
+type: white
+grapeVarieties:
+  - シャルドネ
+  - セミヨン
+
+description: >
+  世界50カ国で愛飲されるチリのパイオニアブランド。トロピカルフルーツや
+  ピーチを思わせる豊かな果実味となめらかな飲み口の辛口白。
+
+price: 550
+abv: 13.0
+servingTemp: 8-10℃
+
+stores:
+  - type: aeon
+    name: イオン
+    price: 550
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 550
+    inStock: true
+
+tags:
+  - イオン
+  - 世界50カ国
+  - ワンコイン
+  - チリ白
+
+pairings:
+  - 豚肉料理
+  - サーモン
+  - 野菜料理
+  - 貝類
+
+whyBuyNow: 500円台でこの実力！日本で最も売れているチリ白の王道
+
+buzzScore: 80
+vivinoScore: 3.1
+costPerformance: 92
+
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/アルパカ+シャルドネ+セミヨン/
+    price: 550

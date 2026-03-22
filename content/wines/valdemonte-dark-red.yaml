@@ -1,0 +1,48 @@
+id: valdemonte-dark-red
+name: Valdemonte Dark Red
+nameJa: バルデモンテ ダーク レッド
+producer: Fernando Castro
+country: Spain
+countryCode: ES
+type: red
+grapeVarieties:
+  - ガルナッチャ・ティントレラ
+  - テンプラニーリョ
+description: >
+  楽天グルメ大賞を11年連続受賞。黒みがかったガーネット色で果実のエキス分が豊富な
+  フルボディ。箱ワイン（3L）ならボトル換算499円の驚異のコスパ。Berlin金賞。
+price: 700
+abv: 13.5
+servingTemp: 16-18℃
+stores:
+  - type: kaldi
+    name: カルディ
+    price: 700
+    inStock: true
+  - type: yamaya
+    name: ヤマヤ
+    price: 700
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 700
+    inStock: true
+tags:
+  - 楽天11年連続大賞
+  - 箱ワインの王様
+  - Berlin金賞
+  - フルボディ
+pairings:
+  - パエリア
+  - BBQ
+  - チーズ
+  - ミートソースパスタ
+whyBuyNow: 楽天11年連続グルメ大賞！箱ワインの王様は伊達じゃない
+buzzScore: 88
+vivinoScore: 3.4
+costPerformance: 92
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/バルデモンテ+ダークレッド/
+    price: 700

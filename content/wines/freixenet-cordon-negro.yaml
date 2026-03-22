@@ -1,0 +1,45 @@
+id: freixenet-cordon-negro
+name: Freixenet Cordon Negro Brut
+nameJa: フレシネ コルドン ネグロ ブリュット
+producer: Freixenet
+country: Spain
+countryCode: ES
+type: sparkling
+grapeVarieties:
+  - マカベオ
+  - パレリャーダ
+  - チャレロ
+description: >
+  世界150カ国以上で販売されるスパークリングワイン世界No.1ブランド。
+  シャンパンと同じ瓶内二次発酵で15ヶ月熟成。レモンやシトラスのキリッとした辛口。
+price: 1050
+abv: 11.5
+servingTemp: 6-8℃
+stores:
+  - type: aeon
+    name: イオン
+    price: 1050
+    inStock: true
+  - type: kakuyasu
+    name: カクヤス
+    price: 1050
+    inStock: true
+tags:
+  - 世界No.1
+  - 瓶内二次発酵
+  - カバ
+  - 黒ボトル
+pairings:
+  - 寿司
+  - 天ぷら
+  - 生ハム
+  - チーズ
+whyBuyNow: 世界が認めた黒ボトル！1000円台でシャンパン級の乾杯
+buzzScore: 85
+vivinoScore: 3.6
+costPerformance: 88
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/フレシネ+コルドンネグロ/
+    price: 1050

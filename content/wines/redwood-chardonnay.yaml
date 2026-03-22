@@ -1,0 +1,47 @@
+# レッドウッド シャルドネ — カルディ白ワイン人気No.1
+id: redwood-chardonnay
+name: Redwood Vineyards Chardonnay
+nameJa: レッドウッド シャルドネ
+producer: Bronco Wine Company
+country: United States
+countryCode: US
+type: white
+grapeVarieties:
+  - シャルドネ
+
+description: >
+  カルディ白ワイン人気No.1。洋梨、りんご、トロピカルフルーツ、バニラの香り。
+  果実の甘味と酸のバランスが良く、果実味豊かで飲みやすい。
+
+price: 880
+abv: 12.5
+servingTemp: 8-10℃
+
+stores:
+  - type: kaldi
+    name: カルディ
+    price: 880
+    inStock: true
+
+tags:
+  - カルディ
+  - カルディ白No.1
+  - カリフォルニア
+  - 飲みやすい
+
+pairings:
+  - 魚のムニエル
+  - 白身肉のソテー
+  - 白カビ系チーズ
+
+whyBuyNow: カルディ不動の人気No.1！880円のカリフォルニア白
+
+buzzScore: 80
+vivinoScore: null
+costPerformance: 87
+
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/レッドウッド+シャルドネ/
+    price: 880

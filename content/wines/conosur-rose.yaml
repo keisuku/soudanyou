@@ -1,0 +1,43 @@
+id: conosur-rose
+name: Cono Sur Bicicleta Reserva Pinot Noir Rose
+nameJa: コノスル ビシクレタ ピノ・ノワール ロゼ
+producer: Vina Cono Sur
+country: Chile
+countryCode: CL
+type: rose
+grapeVarieties:
+  - ピノ・ノワール
+description: >
+  チリを代表するコスパワインブランドのロゼ。チェリーやストロベリーの
+  フレッシュなアロマ。やわらかくジューシーで溌剌とした酸味。
+price: 850
+abv: 12.5
+servingTemp: 8-10℃
+stores:
+  - type: yamaya
+    name: ヤマヤ
+    price: 850
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 793
+    inStock: true
+tags:
+  - 自転車ラベル
+  - ピノ・ノワール100%
+  - チリロゼ
+  - 1000円以下
+pairings:
+  - 餃子
+  - エスニック料理
+  - サーモンのマリネ
+  - ポークソテー
+whyBuyNow: 自転車ラベルのチリ産ロゼ、1000円以下でピノ・ノワール100%！
+buzzScore: 74
+vivinoScore: 3.3
+costPerformance: 87
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/コノスル+ロゼ+ピノノワール/
+    price: 793

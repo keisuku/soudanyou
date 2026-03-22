@@ -1,0 +1,56 @@
+# フェウド・アランチョ グリッロ — Berlin金賞のシチリア白
+id: feudo-arancio-grillo
+name: Feudo Arancio Grillo Sicilia DOC
+nameJa: フェウド・アランチョ グリッロ
+producer: Feudo Arancio
+country: Italy
+countryCode: IT
+type: white
+grapeVarieties:
+  - グリッロ
+
+description: >
+  Berlin Wine Trophy金賞受賞。白桃のようなジューシーな香り、
+  紅茶やジャスミンのフレーバー。丸みのある印象でほんのりビターな余韻。
+
+price: 1100
+abv: 13.0
+servingTemp: 8-10℃
+
+stores:
+  - type: kaldi
+    name: カルディ
+    price: 1100
+    inStock: true
+  - type: seijoishii
+    name: 成城石井
+    price: 1100
+    inStock: true
+  - type: rakuten
+    name: 楽天
+    price: 1100
+    inStock: true
+
+tags:
+  - カルディ
+  - 成城石井
+  - Berlin金賞
+  - シチリア
+
+pairings:
+  - 貝類のパスタ
+  - カルパッチョ
+  - 前菜
+  - ベジタリアン料理
+
+whyBuyNow: Berlin Wine Trophy金賞！シチリアの太陽が詰まった1本
+
+buzzScore: 78
+vivinoScore: 3.7
+costPerformance: 84
+
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/フェウドアランチョ+グリッロ/
+    price: 1100

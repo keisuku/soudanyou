@@ -1,0 +1,40 @@
+id: kobo-no-awa-koshu
+name: Manns Wine Kobo no Awa Koshu Brut
+nameJa: マンズワイン 酵母の泡 甲州 ブリュット
+producer: Manns Wines
+country: Japan
+countryCode: JP
+region: 山梨
+type: sparkling
+grapeVarieties:
+  - 甲州
+description: >
+  2016年伊勢志摩サミット採用。IWC2025銅賞、サクラアワード2025ゴールド受賞。
+  日本固有品種「甲州」で醸造。柚子や甘夏の和柑橘の香りにフレッシュな酸味。
+price: 1155
+abv: 12.0
+servingTemp: 6-8℃
+stores:
+  - type: rakuten
+    name: 楽天
+    price: 1155
+    inStock: true
+tags:
+  - G7サミット採用
+  - 日本ワイン
+  - 甲州
+  - 山梨
+pairings:
+  - 刺身
+  - 天ぷら
+  - 焼き鳥（塩）
+  - 和食全般
+whyBuyNow: G7サミット採用！日本が世界に誇る甲州スパークリング
+buzzScore: 79
+vivinoScore: null
+costPerformance: 82
+tweetUrls: []
+buyLinks:
+  - store: 楽天
+    url: https://search.rakuten.co.jp/search/mall/マンズワイン+酵母の泡+甲州/
+    price: 1155
