@@ -1,0 +1,59 @@
+id: dario-princic-natural
+name: Dario Princic Natural Wine
+nameJa: ダリオ プリンチッチ ナチュラルワイン
+producer: Dario Princic
+country: Italy
+countryCode: IT
+region: Friuli
+type: red
+grapeVarieties:
+  - ブレンド
+
+description: >
+  イタリアナチュラルワインの先駆けで果皮感ありつつ重くないエントリークラス。
+  Xで「バランス取れてて美味しい」とバズるコスパです。
+
+price: 2500
+abv: 12.5
+servingTemp: 14-16℃
+
+stores:
+  - type: rakuten
+    name: 楽天市場
+    price: 2500
+    inStock: true
+  - type: amazon
+    name: Amazon
+    price: 2500
+    inStock: true
+  - type: senmonten
+    name: 専門店
+    price: 2500
+    inStock: true
+
+tags:
+  - イタリア
+  - ナチュラルワイン
+  - コスパ赤
+  - Xバズ
+
+pairings:
+  - パスタ
+  - 肉料理
+  - 鹿肉
+
+whyBuyNow: Xおすすめイタリアコスパナチュラル！ダリオ プリンチッチの軽やかバランス
+
+buzzScore: 81
+vivinoScore: 3.7
+costPerformance: 80
+
+tweetUrls:
+  - https://x.com/kozewine/status/2026220560833724867
+  - https://x.com/Kitchen_Molo/status/1966831721216962963
+  - https://x.com/odoru_wine/status/1968246053838200860
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/ダリオプリンチッチ/
+    price: 2500

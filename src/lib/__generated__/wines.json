@@ -1015,6 +1015,70 @@
     ]
   },
   {
+    "id": "dario-princic-natural",
+    "name": "Dario Princic Natural Wine",
+    "nameJa": "ダリオ プリンチッチ ナチュラルワイン",
+    "producer": "Dario Princic",
+    "country": "Italy",
+    "countryCode": "IT",
+    "region": "Friuli",
+    "type": "red",
+    "grapeVarieties": [
+      "ブレンド"
+    ],
+    "description": "イタリアナチュラルワインの先駆けで果皮感ありつつ重くないエントリークラス。 Xで「バランス取れてて美味しい」とバズるコスパです。\n",
+    "price": 2500,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 2500,
+        "inStock": true
+      },
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 2500,
+        "inStock": true
+      },
+      {
+        "type": "senmonten",
+        "name": "専門店",
+        "price": 2500,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 81,
+    "vivinoScore": 3.7,
+    "costPerformance": 80,
+    "tags": [
+      "イタリア",
+      "ナチュラルワイン",
+      "コスパ赤",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/kozewine/status/2026220560833724867",
+      "https://x.com/Kitchen_Molo/status/1966831721216962963",
+      "https://x.com/odoru_wine/status/1968246053838200860"
+    ],
+    "abv": 12.5,
+    "servingTemp": "14-16℃",
+    "pairings": [
+      "パスタ",
+      "肉料理",
+      "鹿肉"
+    ],
+    "whyBuyNow": "Xおすすめイタリアコスパナチュラル！ダリオ プリンチッチの軽やかバランス",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ダリオプリンチッチ/",
+        "price": 2500
+      }
+    ]
+  },
+  {
     "id": "despagne-rouge",
     "name": "Despagne Rouge",
     "nameJa": "デスパーニュ ルージュ",
@@ -1607,6 +1671,69 @@
     ]
   },
   {
+    "id": "kwv-cathedral-cellar-pinotage",
+    "name": "KWV Cathedral Cellar Pinotage",
+    "nameJa": "KWV カセドラルセラー ピノタージュ",
+    "producer": "KWV",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "type": "red",
+    "grapeVarieties": [
+      "ピノタージュ"
+    ],
+    "description": "南アフリカらしいパワフル果実味と美しい酸味のバランスが秀逸。 Xで「優勝レベル」「リピート確定」と大バズのコスパピノタージュです。\n",
+    "price": 2497,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 2497,
+        "inStock": true
+      },
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 2497,
+        "inStock": true
+      },
+      {
+        "type": "sankyushop",
+        "name": "San Kyu Shop",
+        "price": 2497,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 88,
+    "vivinoScore": 3.8,
+    "costPerformance": 86,
+    "tags": [
+      "南アフリカ",
+      "ピノタージュ",
+      "Xバズ",
+      "リピート確定"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/1891342550180540774",
+      "https://x.com/winenomuhito/status/2018087414733144219",
+      "https://x.com/winenomuhito/status/1903592075406520437"
+    ],
+    "abv": 14,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "グリル肉",
+      "スパイシー料理",
+      "チーズ"
+    ],
+    "whyBuyNow": "X衝撃の南アコスパピノ！毎日飲みたくなる完成度",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/KWV+カセドラルセラー+ピノタージュ/",
+        "price": 2497
+      }
+    ]
+  },
+  {
     "id": "kwv-pinotage",
     "name": "KWV Classic Collection Pinotage",
     "nameJa": "KWV クラシック ピノタージュ",
@@ -1714,6 +1841,70 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/ラピウマ+ペコリーノ/",
         "price": 1580
+      }
+    ]
+  },
+  {
+    "id": "louis-jadot-beaujolais-villages",
+    "name": "Louis Jadot Beaujolais-Villages",
+    "nameJa": "ルイ・ジャド ボージョレ・ヴィラージュ",
+    "producer": "Louis Jadot",
+    "country": "France",
+    "countryCode": "FR",
+    "region": "Burgundy",
+    "type": "red",
+    "grapeVarieties": [
+      "ガメイ"
+    ],
+    "description": "ガメイ100%のジューシーな果実味と爽やか酸味が魅力の村名級赤ワイン。 Xで「3000円台で村名を超える」とバズるブルゴーニュコスパの定番です。\n",
+    "price": 2800,
+    "stores": [
+      {
+        "type": "yamaya",
+        "name": "やまや",
+        "price": 2800,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 2800,
+        "inStock": true
+      },
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 2800,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 85,
+    "vivinoScore": 3.6,
+    "costPerformance": 79,
+    "tags": [
+      "ブルゴーニュ",
+      "ガメイ",
+      "コスパ赤",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/1876839046523052088",
+      "https://x.com/TatsuoNakatsuka/status/1922791599395811425",
+      "https://x.com/mottox_official/status/1925461779653828796"
+    ],
+    "abv": 13,
+    "servingTemp": "14-16℃",
+    "pairings": [
+      "肉料理",
+      "チーズ",
+      "ジビエ"
+    ],
+    "whyBuyNow": "Xバズるブルゴーニュコスパ王道！ルイジャドのガメイで毎日飲める極み",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ルイジャド+ボージョレヴィラージュ/",
+        "price": 2800
       }
     ]
   },
@@ -2437,6 +2628,63 @@
     ]
   },
   {
+    "id": "santa-rita-heroes-sauvignon-blanc",
+    "name": "Santa Rita Heroes Sauvignon Blanc",
+    "nameJa": "サンタリタ ヒーローズ ソーヴィニヨン ブラン",
+    "producer": "Santa Rita",
+    "country": "Chile",
+    "countryCode": "CL",
+    "type": "white",
+    "grapeVarieties": [
+      "ソーヴィニヨン・ブラン"
+    ],
+    "description": "爽やか酸味と軽快な柑橘アロマのチリ白ワイン。 Xで「美味しい！！」と高評価の日常コスパSBでムール貝蒸しにも絶品です。\n",
+    "price": 1434,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 1434,
+        "inStock": true
+      },
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 1434,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": 3.5,
+    "costPerformance": 84,
+    "tags": [
+      "チリ",
+      "コスパ白",
+      "Xバズ",
+      "爽快"
+    ],
+    "tweetUrls": [
+      "https://x.com/wine_rouken/status/1918568955511488614",
+      "https://x.com/kozewine/status/1980479228954169757",
+      "https://x.com/odoru_wine/status/1890695051031781703"
+    ],
+    "abv": 12.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "シーフード",
+      "サラダ",
+      "オムレツ"
+    ],
+    "whyBuyNow": "Xバズチリコスパ白の新星！1400円台でこの爽快感は反則",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/サンタリタ+ヒーローズ+ソーヴィニヨンブラン/",
+        "price": 1434
+      }
+    ]
+  },
+  {
     "id": "santero-asti",
     "name": "Santero Angels Asti",
     "nameJa": "サンテロ 天使のアスティ",
@@ -2893,6 +3141,70 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/トラマーリ+ロゼ/",
         "price": 1500
+      }
+    ]
+  },
+  {
+    "id": "trola-tinto",
+    "name": "Trola Tinto",
+    "nameJa": "トロウラ・ティント",
+    "producer": "Trola",
+    "country": "Spain",
+    "countryCode": "ES",
+    "type": "red",
+    "grapeVarieties": [
+      "ガルナッチャ",
+      "テンプラニーリョ"
+    ],
+    "description": "ガルナッチャ60%・テンプラニーリョ40%のミディアムボディ赤。 ガーネット色で飲みやすくXで「ほんとにおいしい」と話題のスペインコスパです。\n",
+    "price": 1980,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 1980,
+        "inStock": true
+      },
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 1980,
+        "inStock": true
+      },
+      {
+        "type": "local_super",
+        "name": "地元スーパー",
+        "price": 1980,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 82,
+    "vivinoScore": 3.5,
+    "costPerformance": 83,
+    "tags": [
+      "スペイン",
+      "ミディアムボディ",
+      "コスパ赤",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/3jpMaria/status/2035276931839705519",
+      "https://x.com/RamenNatto_Asia/status/2034075760504541540",
+      "https://x.com/yebisu_kichi/status/1981635280340734178"
+    ],
+    "abv": 13.5,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "肉料理",
+      "パエリア",
+      "チーズ"
+    ],
+    "whyBuyNow": "Xでバズるスペインコスパ赤！飲みやすさ抜群の日常ワイン",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/トロウラ+ティント/",
+        "price": 1980
       }
     ]
   },

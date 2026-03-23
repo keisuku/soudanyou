@@ -1,0 +1,59 @@
+id: louis-jadot-beaujolais-villages
+name: Louis Jadot Beaujolais-Villages
+nameJa: ルイ・ジャド ボージョレ・ヴィラージュ
+producer: Louis Jadot
+country: France
+countryCode: FR
+region: Burgundy
+type: red
+grapeVarieties:
+  - ガメイ
+
+description: >
+  ガメイ100%のジューシーな果実味と爽やか酸味が魅力の村名級赤ワイン。
+  Xで「3000円台で村名を超える」とバズるブルゴーニュコスパの定番です。
+
+price: 2800
+abv: 13.0
+servingTemp: 14-16℃
+
+stores:
+  - type: yamaya
+    name: やまや
+    price: 2800
+    inStock: true
+  - type: rakuten
+    name: 楽天市場
+    price: 2800
+    inStock: true
+  - type: amazon
+    name: Amazon
+    price: 2800
+    inStock: true
+
+tags:
+  - ブルゴーニュ
+  - ガメイ
+  - コスパ赤
+  - Xバズ
+
+pairings:
+  - 肉料理
+  - チーズ
+  - ジビエ
+
+whyBuyNow: Xバズるブルゴーニュコスパ王道！ルイジャドのガメイで毎日飲める極み
+
+buzzScore: 85
+vivinoScore: 3.6
+costPerformance: 79
+
+tweetUrls:
+  - https://x.com/winenomuhito/status/1876839046523052088
+  - https://x.com/TatsuoNakatsuka/status/1922791599395811425
+  - https://x.com/mottox_official/status/1925461779653828796
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/ルイジャド+ボージョレヴィラージュ/
+    price: 2800
