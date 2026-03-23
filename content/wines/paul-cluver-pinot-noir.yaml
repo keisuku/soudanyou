@@ -1,0 +1,55 @@
+id: paul-cluver-pinot-noir
+name: Paul Cluver Estate Pinot Noir
+nameJa: ポールクルーバー エステート ピノノワール
+producer: Paul Cluver
+country: South Africa
+countryCode: ZA
+region: Elgin
+type: red
+grapeVarieties:
+  - ピノ・ノワール
+
+description: >
+  南アフリカ産のエレガントピノノワール。チェリー香と爽やか酸味の
+  バランスが抜群で軽やかながら深みのある赤ワインです。
+
+price: 2500
+abv: 13.0
+servingTemp: 14-16℃
+
+stores:
+  - type: amazon
+    name: Amazon
+    price: 2500
+    inStock: true
+  - type: rakuten
+    name: 楽天市場
+    price: 2500
+    inStock: true
+
+tags:
+  - 南アフリカ
+  - ピノノワール
+  - エレガント
+  - コスパ赤
+
+pairings:
+  - 鴨肉
+  - きのこ料理
+  - 軽め肉料理
+
+whyBuyNow: 南アピノコスパ王者！Xおすすめの赤
+
+buzzScore: 80
+vivinoScore: 3.7
+costPerformance: 82
+
+tweetUrls:
+  - https://x.com/kozewine/status/2000166973402128548
+  - https://x.com/kozewine/status/2033866237361754597
+  - https://x.com/kozewine/status/2034965623357526465
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/ポールクルーバー+ピノノワール/
+    price: 2500

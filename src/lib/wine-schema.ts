@@ -8,8 +8,10 @@ const storeTypes = [
   // 酒屋
   "kakuyasu", "yamaya", "biccamera", "liquorman",
   // ネットショップ
-  "rakuten", "africaer", "ginza_grandmarche", "takamura",
+  "rakuten", "amazon", "africaer", "ginza_grandmarche", "takamura",
   "felicity", "wine_ohashi", "ukiuki",
+  "wine_grocery", "sa_wine_jp", "miraido", "mikuni_wine",
+  "budouya", "shinanoya", "tuscany", "hasegawa", "kagadaya", "dragee",
 ] as const;
 
 const wineTypes = ["red", "white", "rose", "sparkling"] as const;

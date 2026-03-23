@@ -1,0 +1,59 @@
+id: mcmanis-viognier
+name: McManis Family Vineyards Viognier
+nameJa: マックマニス・ファミリー・ヴィンヤーズ ヴィオニエ
+producer: McManis Family Vineyards
+country: United States
+countryCode: US
+region: California
+type: white
+grapeVarieties:
+  - ヴィオニエ
+
+description: >
+  家族経営の丁寧な造りで同価格帯を大きく上回る品質。
+  アプリコットや花の豊かな香りでフルボディのエレガントな白ワインです。
+
+price: 2420
+abv: 13.5
+servingTemp: 8-10℃
+
+stores:
+  - type: rakuten
+    name: 楽天市場
+    price: 2420
+    inStock: true
+  - type: wine_grocery
+    name: Wine Grocery
+    price: 2420
+    inStock: true
+  - type: amazon
+    name: Amazon
+    price: 2420
+    inStock: true
+
+tags:
+  - コスパ白
+  - カリフォルニア
+  - フルボディ白
+  - Xバズ
+
+pairings:
+  - 鶏肉料理
+  - シーフード
+  - アジア料理
+
+whyBuyNow: Xでバズるコスパ白の王道！毎日飲みたい3千円の極み
+
+buzzScore: 82
+vivinoScore: 3.8
+costPerformance: 80
+
+tweetUrls:
+  - https://x.com/kozewine/status/2000166973402128548
+  - https://x.com/kozewine/status/2033866237361754597
+  - https://x.com/kozewine/status/2034965623357526465
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/マックマニス+ヴィオニエ/
+    price: 2420

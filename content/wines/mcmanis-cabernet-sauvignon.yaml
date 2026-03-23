@@ -1,0 +1,59 @@
+id: mcmanis-cabernet-sauvignon
+name: McManis Family Vineyards Cabernet Sauvignon
+nameJa: マックマニス・ファミリー・ヴィンヤーズ カベルネソーヴィニヨン
+producer: McManis Family Vineyards
+country: United States
+countryCode: US
+region: California
+type: red
+grapeVarieties:
+  - カベルネ・ソーヴィニヨン
+
+description: >
+  カリフォルニア産の果実味豊かでバランス良い赤ワイン。
+  家族経営の丁寧な造りで同価格帯トップクラスのコスパです。
+
+price: 2035
+abv: 13.5
+servingTemp: 16-18℃
+
+stores:
+  - type: rakuten
+    name: 楽天市場
+    price: 2035
+    inStock: true
+  - type: amazon
+    name: Amazon
+    price: 2035
+    inStock: true
+  - type: dragee
+    name: Dragee
+    price: 2035
+    inStock: true
+
+tags:
+  - カリフォルニア
+  - コスパ赤
+  - Xバズ
+  - 日常ワイン
+
+pairings:
+  - ステーキ
+  - 肉料理
+  - チーズ
+
+whyBuyNow: 赤もコスパ最強！Xバズ日常赤ワイン
+
+buzzScore: 83
+vivinoScore: 3.8
+costPerformance: 85
+
+tweetUrls:
+  - https://x.com/kozewine/status/2000166973402128548
+  - https://x.com/kozewine/status/2033866237361754597
+  - https://x.com/kozewine/status/2034965623357526465
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/マックマニス+カベルネソーヴィニヨン/
+    price: 2035

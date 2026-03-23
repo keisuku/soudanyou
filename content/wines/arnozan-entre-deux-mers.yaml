@@ -1,0 +1,61 @@
+id: arnozan-entre-deux-mers
+name: Arnozan Entre-Deux-Mers Blanc
+nameJa: アルノザン アントル・ドゥ・メール ブラン
+producer: Arnozan
+country: France
+countryCode: FR
+region: Bordeaux
+type: white
+grapeVarieties:
+  - ソーヴィニョン・ブラン
+  - セミヨン
+  - ミュスカデル
+
+description: >
+  ボルドーアントル・ドゥ・メール産のフレッシュで果実味豊かな白。
+  爽やか酸味が特徴の日常飲みやすい1本です。
+
+price: 2673
+abv: 12.0
+servingTemp: 8-10℃
+
+stores:
+  - type: rakuten
+    name: 楽天市場
+    price: 2673
+    inStock: true
+  - type: mikuni_wine
+    name: 三国ワイン
+    price: 2673
+    inStock: true
+  - type: budouya
+    name: ぶどう屋
+    price: 2673
+    inStock: true
+
+tags:
+  - ボルドー白
+  - フレッシュ
+  - コスパ白
+  - 爽快
+
+pairings:
+  - 牡蠣
+  - 魚料理
+  - サラダ
+
+whyBuyNow: フランスボルドーコスパ白！Xおすすめの爽快感
+
+buzzScore: 75
+vivinoScore: 3.5
+costPerformance: 78
+
+tweetUrls:
+  - https://x.com/kozewine/status/2000166973402128548
+  - https://x.com/kozewine/status/2033866237361754597
+  - https://x.com/kozewine/status/2034965623357526465
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/アルノザン+アントルドゥメール/
+    price: 2673

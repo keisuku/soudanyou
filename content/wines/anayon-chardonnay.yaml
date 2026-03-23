@@ -1,0 +1,59 @@
+id: anayon-chardonnay
+name: Anayon Chardonnay
+nameJa: アナヨン シャルドネ
+producer: Grandes Vinos
+country: Spain
+countryCode: ES
+region: Cariñena
+type: white
+grapeVarieties:
+  - シャルドネ
+
+description: >
+  スペインカリニェナ産の高地シャルドネ。新樽熟成で洋ナシ・白桃の
+  ふくよかな香りとバニラの複雑味が魅力のフラッグシップ白です。
+
+price: 2900
+abv: 13.5
+servingTemp: 10-12℃
+
+stores:
+  - type: rakuten
+    name: 楽天市場
+    price: 2900
+    inStock: true
+  - type: shinanoya
+    name: 信濃屋ワイン
+    price: 2900
+    inStock: true
+  - type: tuscany
+    name: Tuscany
+    price: 2900
+    inStock: true
+
+tags:
+  - スペイン
+  - 樽熟成
+  - コスパ白
+  - 濃厚
+
+pairings:
+  - パスタ
+  - 鶏肉
+  - クリーム料理
+
+whyBuyNow: スペインコスパ白の隠れ星！X話題の濃厚1本
+
+buzzScore: 77
+vivinoScore: 3.6
+costPerformance: 80
+
+tweetUrls:
+  - https://x.com/kozewine/status/2000166973402128548
+  - https://x.com/kozewine/status/2033866237361754597
+  - https://x.com/kozewine/status/2034965623357526465
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/アナヨン+シャルドネ/
+    price: 2900

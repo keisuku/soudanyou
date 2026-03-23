@@ -1,0 +1,54 @@
+id: boschkluif-shiraz
+name: Boschkluif Shiraz
+nameJa: ボッシュクルーフ シラー
+producer: Boschkluif
+country: South Africa
+countryCode: ZA
+type: red
+grapeVarieties:
+  - シラー
+
+description: >
+  南アフリカ産の力強いシラー。スパイシーで濃厚フルボディの赤ワインで
+  果実味とタンニンのバランスが秀逸です。
+
+price: 2500
+abv: 14.0
+servingTemp: 16-18℃
+
+stores:
+  - type: amazon
+    name: Amazon
+    price: 2500
+    inStock: true
+  - type: rakuten
+    name: 楽天市場
+    price: 2500
+    inStock: true
+
+tags:
+  - 南アフリカ
+  - シラー
+  - フルボディ
+  - コスパ赤
+
+pairings:
+  - グリル肉
+  - スパイシー料理
+  - チーズ
+
+whyBuyNow: シラーコスパの極み！Xバズ赤ワイン
+
+buzzScore: 79
+vivinoScore: 3.6
+costPerformance: 81
+
+tweetUrls:
+  - https://x.com/kozewine/status/2000166973402128548
+  - https://x.com/kozewine/status/2033866237361754597
+  - https://x.com/kozewine/status/2034965623357526465
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/ボッシュクルーフ+シラー/
+    price: 2500
