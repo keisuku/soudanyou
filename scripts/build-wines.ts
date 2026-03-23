@@ -26,7 +26,15 @@ for (const file of files) {
   if (!result.success) {
     errors.push(`${file}: ${result.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join(", ")}`);
   } else {
-    wines.push(result.data);
+    const wine = result.data as Record<string, unknown>;
+    // 千円以下のワインに「格安ワイン」タグを自動付与
+    if (typeof wine.price === "number" && wine.price < 1000) {
+      const tags = wine.tags as string[];
+      if (!tags.includes("格安ワイン")) {
+        tags.push("格安ワイン");
+      }
+    }
+    wines.push(wine);
   }
 }
 
