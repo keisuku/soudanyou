@@ -16,7 +16,6 @@ const typeFilters: { type: WineType; label: string }[] = [
 ];
 
 const budgetFilters = [
-  { label: "〜1,000円", max: 1000 },
   { label: "〜2,000円", max: 2000 },
   { label: "2,000円〜", max: 99999 },
 ];

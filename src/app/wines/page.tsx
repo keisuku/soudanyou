@@ -18,7 +18,6 @@ const typeFilters: { type: WineType; label: string }[] = [
 ];
 
 const budgetFilters = [
-  { label: "〜1,000円", max: 1000 },
   { label: "〜2,000円", max: 2000 },
   { label: "2,000円〜", max: 99999 },
 ];
@@ -52,6 +51,7 @@ function WinesContent() {
   const [activeType, setActiveType] = useState<WineType | null>(null);
   const [activeBudget, setActiveBudget] = useState<number | null>(null);
   const [sortBy, setSortBy] = useState<SortKey>("cospa");
+  const [showBudgetWines, setShowBudgetWines] = useState(false);
   const [activeStore, setActiveStore] = useState<string | null>(storeParam);
   const [storeFilterOpen, setStoreFilterOpen] = useState(!!storeParam);
   const [activeCountry, setActiveCountry] = useState<string | null>(countryParam);
@@ -72,13 +72,14 @@ function WinesContent() {
 
   const filteredWines = useMemo(() => {
     let result = allWines.filter((wine) => {
+      // デフォルトで千円以下は非表示（格安ワインも表示がONなら表示）
+      if (!showBudgetWines && wine.price < 1000) return false;
       if (activeType && wine.type !== activeType) return false;
       if (activeBudget) {
         if (activeBudget === 99999) {
           if (wine.price <= 2000) return false;
         } else {
-          const min = activeBudget === 1000 ? 0 : 1001;
-          if (wine.price < min || wine.price > activeBudget) return false;
+          if (wine.price < 1000 || wine.price > activeBudget) return false;
         }
       }
       if (activeStore) {
@@ -112,7 +113,7 @@ function WinesContent() {
     });
 
     return result;
-  }, [searchQuery, activeType, activeBudget, sortBy, activeStore, activeCountry, activeRegion]);
+  }, [searchQuery, activeType, activeBudget, sortBy, activeStore, activeCountry, activeRegion, showBudgetWines]);
 
   // Build heading
   let heading = `全${allWines.length}本のワイン`;
@@ -179,6 +180,14 @@ function WinesContent() {
               {b.label}
             </Badge>
           ))}
+          <span className="mx-1 text-muted-foreground">|</span>
+          <Badge
+            variant={showBudgetWines ? "default" : "outline"}
+            className="cursor-pointer text-xs"
+            onClick={() => setShowBudgetWines(!showBudgetWines)}
+          >
+            格安ワインも表示
+          </Badge>
         </div>
 
         {/* Store filter */}
