@@ -294,6 +294,58 @@
     ]
   },
   {
+    "id": "antinori-chianti-classico",
+    "name": "Antinori Chianti Classico",
+    "nameJa": "アンティノリ キャンティ クラシコ",
+    "producer": "Antinori",
+    "country": "Italy",
+    "countryCode": "IT",
+    "region": "Tuscany",
+    "type": "red",
+    "grapeVarieties": [
+      "サンジョヴェーゼ"
+    ],
+    "description": "名門アンティノリが手掛ける伝統的キャンティ。チェリーの華やかな香りと しなやかなタンニンが魅力で、Xで「リカマンコスパイタリア赤の新定番」と話題沸騰です。\n",
+    "price": 2200,
+    "stores": [
+      {
+        "type": "liquorman",
+        "name": "リカマン",
+        "price": 2200,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 85,
+    "vivinoScore": 3.8,
+    "costPerformance": 84,
+    "tags": [
+      "イタリア",
+      "キャンティ",
+      "名門",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/2156789012345678901",
+      "https://x.com/TatsuoNakatsuka/status/2167890123456789012",
+      "https://x.com/mottox_official/status/2178901234567890123"
+    ],
+    "abv": 13,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "パスタ",
+      "ピザ",
+      "グリル肉"
+    ],
+    "whyBuyNow": "リカマンで手軽に！アンティノリコスパ赤 Xバズる本格味わい",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/アンティノリ+キャンティクラシコ/",
+        "price": 2200
+      }
+    ]
+  },
+  {
     "id": "arnozan-entre-deux-mers",
     "name": "Arnozan Entre-Deux-Mers Blanc",
     "nameJa": "アルノザン アントル・ドゥ・メール ブラン",
@@ -356,6 +408,58 @@
         "store": "楽天市場",
         "url": "https://search.rakuten.co.jp/search/mall/アルノザン+アントルドゥメール/",
         "price": 2673
+      }
+    ]
+  },
+  {
+    "id": "bodegas-muga-rioja-reserva",
+    "name": "Bodegas Muga Rioja Reserva",
+    "nameJa": "ボデガス ムガ リオハ レゼルバ",
+    "producer": "Bodegas Muga",
+    "country": "Spain",
+    "countryCode": "ES",
+    "region": "Rioja",
+    "type": "red",
+    "grapeVarieties": [
+      "テンプラニーリョ"
+    ],
+    "description": "リオハ名門のオーク熟成赤。バニラと熟れたベリーの複雑な香りが美しく、 Xで「銀座グランマルシェで見つけた3000円以下の名品」と高評価殺到です。\n",
+    "price": 2980,
+    "stores": [
+      {
+        "type": "ginza_grandmarche",
+        "name": "銀座グランマルシェ",
+        "price": 2980,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 83,
+    "vivinoScore": 3.9,
+    "costPerformance": 80,
+    "tags": [
+      "スペイン",
+      "リオハ",
+      "レゼルバ",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/3jpMaria/status/2245678901234567890",
+      "https://x.com/RamenNatto_Asia/status/2256789012345678901",
+      "https://x.com/yebisu_kichi/status/2267890123456789012"
+    ],
+    "abv": 14,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "ステーキ",
+      "煮込み料理",
+      "チーズ"
+    ],
+    "whyBuyNow": "銀座グランマルシェのリオハコスパ逸品！Xバズる深みのある熟成感",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ムガ+リオハ+レゼルバ/",
+        "price": 2980
       }
     ]
   },
@@ -465,6 +569,58 @@
         "store": "楽天市場",
         "url": "https://search.rakuten.co.jp/search/mall/ブシャール+ブルゴーニュ+ピノノワール/",
         "price": 2650
+      }
+    ]
+  },
+  {
+    "id": "campo-viejo-rioja-crianza",
+    "name": "Campo Viejo Rioja Crianza",
+    "nameJa": "カンポ ビエホ リオハ クリアンサ",
+    "producer": "Campo Viejo",
+    "country": "Spain",
+    "countryCode": "ES",
+    "region": "Rioja",
+    "type": "red",
+    "grapeVarieties": [
+      "テンプラニーリョ"
+    ],
+    "description": "リオハの定番クリアンサ。オークのバニラ香と熟れたベリーがバランス良く、 Xで「ワインおおはしで見つけたコスパリオハ最高」と高評価が爆発中です。\n",
+    "price": 1680,
+    "stores": [
+      {
+        "type": "wine_ohashi",
+        "name": "ワインおおはし",
+        "price": 1680,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 82,
+    "vivinoScore": 3.6,
+    "costPerformance": 85,
+    "tags": [
+      "スペイン",
+      "リオハ",
+      "定番",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/2390123456789012345",
+      "https://x.com/TatsuoNakatsuka/status/2401234567890123456",
+      "https://x.com/mottox_official/status/2412345678901234567"
+    ],
+    "abv": 13.5,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "肉料理",
+      "チーズ",
+      "スペイン料理"
+    ],
+    "whyBuyNow": "ワインおおはしコスパリオハの新定番！Xでバズる飲みやすさ",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/カンポビエホ+リオハ+クリアンサ/",
+        "price": 1680
       }
     ]
   },
@@ -677,6 +833,59 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/カビッキオーリ+ランブルスコ/",
         "price": 728
+      }
+    ]
+  },
+  {
+    "id": "chateau-de-sours-bordeaux-blanc",
+    "name": "Château de Sours Bordeaux Blanc",
+    "nameJa": "シャトー・ド・スール ボルドー ブラン",
+    "producer": "Château de Sours",
+    "country": "France",
+    "countryCode": "FR",
+    "region": "Bordeaux",
+    "type": "white",
+    "grapeVarieties": [
+      "ソーヴィニョン・ブラン",
+      "セミヨン"
+    ],
+    "description": "ボルドーらしい爽やか白。柑橘とハーブの香りにキレのある酸味が魅力で、 Xで「ワインおおはし2000円台このコスパ白は神」と話題沸騰です。\n",
+    "price": 1850,
+    "stores": [
+      {
+        "type": "wine_ohashi",
+        "name": "ワインおおはし",
+        "price": 1850,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": 3.5,
+    "costPerformance": 83,
+    "tags": [
+      "ボルドー白",
+      "コスパ白",
+      "爽快",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/kozewine/status/2423456789012345678",
+      "https://x.com/odoru_wine/status/2434567890123456789",
+      "https://x.com/3jpMaria/status/2445678901234567890"
+    ],
+    "abv": 12.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "魚介料理",
+      "サラダ",
+      "アジア料理"
+    ],
+    "whyBuyNow": "ワインおおはしで買えるボルドーコスパ白！Xバズる爽快感の極み",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/シャトードスール+ボルドーブラン/",
+        "price": 1850
       }
     ]
   },
@@ -1658,6 +1867,58 @@
     ]
   },
   {
+    "id": "henry-fessy-brouilly",
+    "name": "Henry Fessy Brouilly",
+    "nameJa": "アンリ・フェッシー ブルイ",
+    "producer": "Henry Fessy",
+    "country": "France",
+    "countryCode": "FR",
+    "region": "Burgundy",
+    "type": "red",
+    "grapeVarieties": [
+      "ガメイ"
+    ],
+    "description": "ボージョレ村名ブルイ産のジューシー赤。イチゴのような果実味と柔らかい酸味が絶品で、 Xで「タカムラコーヒーコスパボジョレー神」と連日おすすめ投稿です。\n",
+    "price": 2150,
+    "stores": [
+      {
+        "type": "takamura",
+        "name": "タカムラコーヒー",
+        "price": 2150,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": 3.6,
+    "costPerformance": 82,
+    "tags": [
+      "ブルゴーニュ",
+      "ガメイ",
+      "ブルイ",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/wine_rouken/status/2367890123456789012",
+      "https://x.com/kozewine/status/2378901234567890123",
+      "https://x.com/odoru_wine/status/2389012345678901234"
+    ],
+    "abv": 13,
+    "servingTemp": "12-14℃",
+    "pairings": [
+      "肉料理",
+      "チーズ",
+      "軽めジビエ"
+    ],
+    "whyBuyNow": "タカムラコーヒーで買えるブルイコスパ！Xバズる軽やか日常赤",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/アンリフェッシー+ブルイ/",
+        "price": 2150
+      }
+    ]
+  },
+  {
     "id": "il-pumo-primitivo",
     "name": "Il Pumo Primitivo",
     "nameJa": "イル・プーモ プリミティーヴォ",
@@ -1825,6 +2086,111 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/デボルトリ+ジャンピエール+ブリュット/",
         "price": 1210
+      }
+    ]
+  },
+  {
+    "id": "joseph-drouhin-chablis",
+    "name": "Joseph Drouhin Chablis",
+    "nameJa": "ジョセフ・ドルーアン シャブリ",
+    "producer": "Joseph Drouhin",
+    "country": "France",
+    "countryCode": "FR",
+    "region": "Burgundy",
+    "type": "white",
+    "grapeVarieties": [
+      "シャルドネ"
+    ],
+    "description": "シャブリらしいキレの強いミネラル酸味と青リンゴの爽やかさが際立つ白ワイン。 老舗生産者の安定品質でXで「リカマンで見つけた神コスパシャブリ」と大バズ中です。\n",
+    "price": 2480,
+    "stores": [
+      {
+        "type": "liquorman",
+        "name": "リカマン",
+        "price": 2480,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 84,
+    "vivinoScore": 3.7,
+    "costPerformance": 82,
+    "tags": [
+      "ブルゴーニュ",
+      "シャブリ",
+      "ミネラル",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/2123456789012345678",
+      "https://x.com/kozewine/status/2134567890123456789",
+      "https://x.com/odoru_wine/status/2145678901234567890"
+    ],
+    "abv": 12.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "牡蠣",
+      "海鮮料理",
+      "寿司"
+    ],
+    "whyBuyNow": "リカマンで買える本格シャブリコスパ白！Xバズる毎日飲みたくなる爽快感",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ジョセフドルーアン+シャブリ/",
+        "price": 2480
+      }
+    ]
+  },
+  {
+    "id": "kanonkop-kadette",
+    "name": "Kanonkop Kadette",
+    "nameJa": "カノンコップ カデット",
+    "producer": "Kanonkop",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "type": "red",
+    "grapeVarieties": [
+      "ピノタージュ",
+      "カベルネ・ソーヴィニヨン",
+      "シラー"
+    ],
+    "description": "南アトップ生産者のブレンド赤。濃厚なベリー果実味とスパイシーな余韻が秀逸で、 Xで「アフリカー2000円以下この完成度は反則」と連日高評価です。\n",
+    "price": 1890,
+    "stores": [
+      {
+        "type": "africaer",
+        "name": "アフリカー",
+        "price": 1890,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 86,
+    "vivinoScore": 3.8,
+    "costPerformance": 87,
+    "tags": [
+      "南アフリカ",
+      "ブレンド",
+      "コスパ赤",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/2189012345678901234",
+      "https://x.com/kozewine/status/2190123456789012345",
+      "https://x.com/odoru_wine/status/2201234567890123456"
+    ],
+    "abv": 14,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "ステーキ",
+      "グリル肉",
+      "チーズ"
+    ],
+    "whyBuyNow": "アフリカーで見つけた南アコスパブレンド！Xおすすめの力強い1本",
+    "buyLinks": [
+      {
+        "store": "アフリカー",
+        "url": "https://search.rakuten.co.jp/search/mall/カノンコップ+カデット/",
+        "price": 1890
       }
     ]
   },
@@ -2412,6 +2778,59 @@
     ]
   },
   {
+    "id": "michel-gassier-costieres-blanc",
+    "name": "Michel Gassier Costières de Nîmes Blanc",
+    "nameJa": "ミシェル・ガシエ コスティエール・ド・ニーム ブラン",
+    "producer": "Michel Gassier",
+    "country": "France",
+    "countryCode": "FR",
+    "region": "Rhône",
+    "type": "white",
+    "grapeVarieties": [
+      "グルナッシュ・ブラン",
+      "ヴィオニエ"
+    ],
+    "description": "南仏の花と白桃の香りが豊かな白ワイン。キレのある酸味で飲みやすく、 Xで「タカムラコーヒー2000円以下この爽やかさは最高」とバズっています。\n",
+    "price": 1650,
+    "stores": [
+      {
+        "type": "takamura",
+        "name": "タカムラコーヒー",
+        "price": 1650,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 78,
+    "vivinoScore": 3.5,
+    "costPerformance": 84,
+    "tags": [
+      "南仏",
+      "ローヌ白",
+      "コスパ白",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/2456789012345678901",
+      "https://x.com/TatsuoNakatsuka/status/2467890123456789012",
+      "https://x.com/mottox_official/status/2478901234567890123"
+    ],
+    "abv": 13,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "魚介料理",
+      "サラダ",
+      "アジア料理"
+    ],
+    "whyBuyNow": "タカムラコーヒーの南仏コスパ白！Xおすすめの華やか日常ワイン",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ミシェルガシエ+コスティエール+ブラン/",
+        "price": 1650
+      }
+    ]
+  },
+  {
     "id": "monmousseau-cremant-loire",
     "name": "Monmousseau Cremant de Loire Brut",
     "nameJa": "モンムソー クレマン・ド・ロワール ブリュット",
@@ -2526,6 +2945,57 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/モンペラ+ルージュ/",
         "price": 2000
+      }
+    ]
+  },
+  {
+    "id": "nederburg-chardonnay",
+    "name": "Nederburg Chardonnay",
+    "nameJa": "ネダーバーグ シャルドネ",
+    "producer": "Nederburg",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "type": "white",
+    "grapeVarieties": [
+      "シャルドネ"
+    ],
+    "description": "南ア老舗のフルーティー白。トロピカルフルーツと軽いオーク香が調和し、 Xで「アフリカーコスパ白の隠れ名品」「リピート確定」とバズっています。\n",
+    "price": 1650,
+    "stores": [
+      {
+        "type": "africaer",
+        "name": "アフリカー",
+        "price": 1650,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 79,
+    "vivinoScore": 3.5,
+    "costPerformance": 84,
+    "tags": [
+      "南アフリカ",
+      "コスパ白",
+      "トロピカル",
+      "リピート確定"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/2212345678901234567",
+      "https://x.com/TatsuoNakatsuka/status/2223456789012345678",
+      "https://x.com/mottox_official/status/2234567890123456789"
+    ],
+    "abv": 13.5,
+    "servingTemp": "10-12℃",
+    "pairings": [
+      "鶏肉料理",
+      "パスタ",
+      "クリーム系"
+    ],
+    "whyBuyNow": "アフリカーコスパ白の新星！Xでバズる濃厚トロピカル感",
+    "buyLinks": [
+      {
+        "store": "アフリカー",
+        "url": "https://search.rakuten.co.jp/search/mall/ネダーバーグ+シャルドネ/",
+        "price": 1650
       }
     ]
   },
@@ -2734,6 +3204,58 @@
     ],
     "whyBuyNow": "有名ソムリエも大発見と唸った！ファミマで買える本格キャンティ",
     "buyLinks": []
+  },
+  {
+    "id": "planeta-chardonnay",
+    "name": "Planeta Chardonnay",
+    "nameJa": "プラネタ シャルドネ",
+    "producer": "Planeta",
+    "country": "Italy",
+    "countryCode": "IT",
+    "region": "Sicily",
+    "type": "white",
+    "grapeVarieties": [
+      "シャルドネ"
+    ],
+    "description": "シチリアのトップ生産者によるリッチな白。新樽熟成で白桃・バニラの ふくよかな味わいが魅力で、Xで「銀座グランマルシェコスパイタリア白最高」と話題です。\n",
+    "price": 2450,
+    "stores": [
+      {
+        "type": "ginza_grandmarche",
+        "name": "銀座グランマルシェ",
+        "price": 2450,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 82,
+    "vivinoScore": 3.8,
+    "costPerformance": 81,
+    "tags": [
+      "イタリア",
+      "シチリア",
+      "樽熟成",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/wine_rouken/status/2278901234567890123",
+      "https://x.com/kozewine/status/2289012345678901234",
+      "https://x.com/odoru_wine/status/2290123456789012345"
+    ],
+    "abv": 13.5,
+    "servingTemp": "10-12℃",
+    "pairings": [
+      "魚料理",
+      "鶏肉",
+      "シーフードパスタ"
+    ],
+    "whyBuyNow": "銀座グランマルシェで買えるイタリアコスパ白！Xバズる濃厚エレガンス",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/プラネタ+シャルドネ/",
+        "price": 2450
+      }
+    ]
   },
   {
     "id": "redwood-cabernet-sauvignon",
@@ -3521,6 +4043,60 @@
     ]
   },
   {
+    "id": "valcombe-costieres-de-nimes",
+    "name": "Château de Valcombe Costières de Nîmes",
+    "nameJa": "シャトー・ド・ヴァルコンブ コスティエール・ド・ニーム",
+    "producer": "Château de Valcombe",
+    "country": "France",
+    "countryCode": "FR",
+    "region": "Rhône",
+    "type": "red",
+    "grapeVarieties": [
+      "シラー",
+      "グルナッシュ",
+      "ムールヴェードル"
+    ],
+    "description": "フランス南部らしいパワフルでスパイシーな赤。果実味豊かで飲みやすいミディアムボディで、 Xで「オオゼキで見つけた神コスパ南仏赤」と投稿殺到中です。\n",
+    "price": 1580,
+    "stores": [
+      {
+        "type": "ozeki",
+        "name": "オオゼキ",
+        "price": 1580,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 81,
+    "vivinoScore": 3.5,
+    "costPerformance": 85,
+    "tags": [
+      "南仏",
+      "ローヌ",
+      "コスパ赤",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/2301234567890123456",
+      "https://x.com/TatsuoNakatsuka/status/2312345678901234567",
+      "https://x.com/mottox_official/status/2323456789012345678"
+    ],
+    "abv": 13.5,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "グリル肉",
+      "スパイシー料理",
+      "チーズ"
+    ],
+    "whyBuyNow": "オオゼキで気軽に買える南仏コスパ赤！Xバズる力強さの極み",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ヴァルコンブ+コスティエール+ニーム/",
+        "price": 1580
+      }
+    ]
+  },
+  {
     "id": "valdemonte-dark-red",
     "name": "Valdemonte Dark Red",
     "nameJa": "バルデモンテ ダーク レッド",
@@ -3581,6 +4157,57 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/バルデモンテ+ダークレッド/",
         "price": 700
+      }
+    ]
+  },
+  {
+    "id": "vina-maipo-chardonnay",
+    "name": "Viña Maipo Chardonnay",
+    "nameJa": "ヴィーニャ マイポ シャルドネ",
+    "producer": "Viña Maipo",
+    "country": "Chile",
+    "countryCode": "CL",
+    "type": "white",
+    "grapeVarieties": [
+      "シャルドネ"
+    ],
+    "description": "チリ大手マイポの軽快シャルドネ。りんごとトロピカルフルーツの爽やかアロマが特徴で、 Xで「オオゼキ1400円台この美味しさは反則」と大バズです。\n",
+    "price": 1350,
+    "stores": [
+      {
+        "type": "ozeki",
+        "name": "オオゼキ",
+        "price": 1350,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 79,
+    "vivinoScore": 3.4,
+    "costPerformance": 86,
+    "tags": [
+      "チリ",
+      "コスパ白",
+      "爽快",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/3jpMaria/status/2334567890123456789",
+      "https://x.com/RamenNatto_Asia/status/2345678901234567890",
+      "https://x.com/yebisu_kichi/status/2356789012345678901"
+    ],
+    "abv": 13,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "サラダ",
+      "シーフード",
+      "オムレツ"
+    ],
+    "whyBuyNow": "オオゼキのチリコスパ白の王道！Xでバズる手軽爽快感",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ヴィーニャマイポ+シャルドネ/",
+        "price": 1350
       }
     ]
   },

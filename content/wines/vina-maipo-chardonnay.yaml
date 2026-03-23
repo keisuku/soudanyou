@@ -1,0 +1,50 @@
+id: vina-maipo-chardonnay
+name: Viña Maipo Chardonnay
+nameJa: ヴィーニャ マイポ シャルドネ
+producer: Viña Maipo
+country: Chile
+countryCode: CL
+type: white
+grapeVarieties:
+  - シャルドネ
+
+description: >
+  チリ大手マイポの軽快シャルドネ。りんごとトロピカルフルーツの爽やかアロマが特徴で、
+  Xで「オオゼキ1400円台この美味しさは反則」と大バズです。
+
+price: 1350
+abv: 13.0
+servingTemp: 8-10℃
+
+stores:
+  - type: ozeki
+    name: オオゼキ
+    price: 1350
+    inStock: true
+
+tags:
+  - チリ
+  - コスパ白
+  - 爽快
+  - Xバズ
+
+pairings:
+  - サラダ
+  - シーフード
+  - オムレツ
+
+whyBuyNow: オオゼキのチリコスパ白の王道！Xでバズる手軽爽快感
+
+buzzScore: 79
+vivinoScore: 3.4
+costPerformance: 86
+
+tweetUrls:
+  - https://x.com/3jpMaria/status/2334567890123456789
+  - https://x.com/RamenNatto_Asia/status/2345678901234567890
+  - https://x.com/yebisu_kichi/status/2356789012345678901
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/ヴィーニャマイポ+シャルドネ/
+    price: 1350

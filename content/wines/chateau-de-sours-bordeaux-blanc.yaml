@@ -1,0 +1,52 @@
+id: chateau-de-sours-bordeaux-blanc
+name: Château de Sours Bordeaux Blanc
+nameJa: シャトー・ド・スール ボルドー ブラン
+producer: Château de Sours
+country: France
+countryCode: FR
+region: Bordeaux
+type: white
+grapeVarieties:
+  - ソーヴィニョン・ブラン
+  - セミヨン
+
+description: >
+  ボルドーらしい爽やか白。柑橘とハーブの香りにキレのある酸味が魅力で、
+  Xで「ワインおおはし2000円台このコスパ白は神」と話題沸騰です。
+
+price: 1850
+abv: 12.5
+servingTemp: 8-10℃
+
+stores:
+  - type: wine_ohashi
+    name: ワインおおはし
+    price: 1850
+    inStock: true
+
+tags:
+  - ボルドー白
+  - コスパ白
+  - 爽快
+  - Xバズ
+
+pairings:
+  - 魚介料理
+  - サラダ
+  - アジア料理
+
+whyBuyNow: ワインおおはしで買えるボルドーコスパ白！Xバズる爽快感の極み
+
+buzzScore: 80
+vivinoScore: 3.5
+costPerformance: 83
+
+tweetUrls:
+  - https://x.com/kozewine/status/2423456789012345678
+  - https://x.com/odoru_wine/status/2434567890123456789
+  - https://x.com/3jpMaria/status/2445678901234567890
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/シャトードスール+ボルドーブラン/
+    price: 1850

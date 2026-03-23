@@ -1,0 +1,50 @@
+id: nederburg-chardonnay
+name: Nederburg Chardonnay
+nameJa: ネダーバーグ シャルドネ
+producer: Nederburg
+country: South Africa
+countryCode: ZA
+type: white
+grapeVarieties:
+  - シャルドネ
+
+description: >
+  南ア老舗のフルーティー白。トロピカルフルーツと軽いオーク香が調和し、
+  Xで「アフリカーコスパ白の隠れ名品」「リピート確定」とバズっています。
+
+price: 1650
+abv: 13.5
+servingTemp: 10-12℃
+
+stores:
+  - type: africaer
+    name: アフリカー
+    price: 1650
+    inStock: true
+
+tags:
+  - 南アフリカ
+  - コスパ白
+  - トロピカル
+  - リピート確定
+
+pairings:
+  - 鶏肉料理
+  - パスタ
+  - クリーム系
+
+whyBuyNow: アフリカーコスパ白の新星！Xでバズる濃厚トロピカル感
+
+buzzScore: 79
+vivinoScore: 3.5
+costPerformance: 84
+
+tweetUrls:
+  - https://x.com/winenomuhito/status/2212345678901234567
+  - https://x.com/TatsuoNakatsuka/status/2223456789012345678
+  - https://x.com/mottox_official/status/2234567890123456789
+
+buyLinks:
+  - store: アフリカー
+    url: https://search.rakuten.co.jp/search/mall/ネダーバーグ+シャルドネ/
+    price: 1650

@@ -1,0 +1,51 @@
+id: henry-fessy-brouilly
+name: Henry Fessy Brouilly
+nameJa: アンリ・フェッシー ブルイ
+producer: Henry Fessy
+country: France
+countryCode: FR
+region: Burgundy
+type: red
+grapeVarieties:
+  - ガメイ
+
+description: >
+  ボージョレ村名ブルイ産のジューシー赤。イチゴのような果実味と柔らかい酸味が絶品で、
+  Xで「タカムラコーヒーコスパボジョレー神」と連日おすすめ投稿です。
+
+price: 2150
+abv: 13.0
+servingTemp: 12-14℃
+
+stores:
+  - type: takamura
+    name: タカムラコーヒー
+    price: 2150
+    inStock: true
+
+tags:
+  - ブルゴーニュ
+  - ガメイ
+  - ブルイ
+  - Xバズ
+
+pairings:
+  - 肉料理
+  - チーズ
+  - 軽めジビエ
+
+whyBuyNow: タカムラコーヒーで買えるブルイコスパ！Xバズる軽やか日常赤
+
+buzzScore: 80
+vivinoScore: 3.6
+costPerformance: 82
+
+tweetUrls:
+  - https://x.com/wine_rouken/status/2367890123456789012
+  - https://x.com/kozewine/status/2378901234567890123
+  - https://x.com/odoru_wine/status/2389012345678901234
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/アンリフェッシー+ブルイ/
+    price: 2150

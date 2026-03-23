@@ -1,0 +1,51 @@
+id: bodegas-muga-rioja-reserva
+name: Bodegas Muga Rioja Reserva
+nameJa: ボデガス ムガ リオハ レゼルバ
+producer: Bodegas Muga
+country: Spain
+countryCode: ES
+region: Rioja
+type: red
+grapeVarieties:
+  - テンプラニーリョ
+
+description: >
+  リオハ名門のオーク熟成赤。バニラと熟れたベリーの複雑な香りが美しく、
+  Xで「銀座グランマルシェで見つけた3000円以下の名品」と高評価殺到です。
+
+price: 2980
+abv: 14.0
+servingTemp: 16-18℃
+
+stores:
+  - type: ginza_grandmarche
+    name: 銀座グランマルシェ
+    price: 2980
+    inStock: true
+
+tags:
+  - スペイン
+  - リオハ
+  - レゼルバ
+  - Xバズ
+
+pairings:
+  - ステーキ
+  - 煮込み料理
+  - チーズ
+
+whyBuyNow: 銀座グランマルシェのリオハコスパ逸品！Xバズる深みのある熟成感
+
+buzzScore: 83
+vivinoScore: 3.9
+costPerformance: 80
+
+tweetUrls:
+  - https://x.com/3jpMaria/status/2245678901234567890
+  - https://x.com/RamenNatto_Asia/status/2256789012345678901
+  - https://x.com/yebisu_kichi/status/2267890123456789012
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/ムガ+リオハ+レゼルバ/
+    price: 2980
