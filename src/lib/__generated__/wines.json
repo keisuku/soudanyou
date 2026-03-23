@@ -177,6 +177,193 @@
     ]
   },
   {
+    "id": "anayon-chardonnay",
+    "name": "Anayon Chardonnay",
+    "nameJa": "アナヨン シャルドネ",
+    "producer": "Grandes Vinos",
+    "country": "Spain",
+    "countryCode": "ES",
+    "region": "Cariñena",
+    "type": "white",
+    "grapeVarieties": [
+      "シャルドネ"
+    ],
+    "description": "スペインカリニェナ産の高地シャルドネ。新樽熟成で洋ナシ・白桃の ふくよかな香りとバニラの複雑味が魅力のフラッグシップ白です。\n",
+    "price": 2900,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 2900,
+        "inStock": true
+      },
+      {
+        "type": "shinanoya",
+        "name": "信濃屋ワイン",
+        "price": 2900,
+        "inStock": true
+      },
+      {
+        "type": "tuscany",
+        "name": "Tuscany",
+        "price": 2900,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 77,
+    "vivinoScore": 3.6,
+    "costPerformance": 80,
+    "tags": [
+      "スペイン",
+      "樽熟成",
+      "コスパ白",
+      "濃厚"
+    ],
+    "tweetUrls": [
+      "https://x.com/kozewine/status/2000166973402128548",
+      "https://x.com/kozewine/status/2033866237361754597",
+      "https://x.com/kozewine/status/2034965623357526465"
+    ],
+    "abv": 13.5,
+    "servingTemp": "10-12℃",
+    "pairings": [
+      "パスタ",
+      "鶏肉",
+      "クリーム料理"
+    ],
+    "whyBuyNow": "スペインコスパ白の隠れ星！X話題の濃厚1本",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/アナヨン+シャルドネ/",
+        "price": 2900
+      }
+    ]
+  },
+  {
+    "id": "arnozan-entre-deux-mers",
+    "name": "Arnozan Entre-Deux-Mers Blanc",
+    "nameJa": "アルノザン アントル・ドゥ・メール ブラン",
+    "producer": "Arnozan",
+    "country": "France",
+    "countryCode": "FR",
+    "region": "Bordeaux",
+    "type": "white",
+    "grapeVarieties": [
+      "ソーヴィニョン・ブラン",
+      "セミヨン",
+      "ミュスカデル"
+    ],
+    "description": "ボルドーアントル・ドゥ・メール産のフレッシュで果実味豊かな白。 爽やか酸味が特徴の日常飲みやすい1本です。\n",
+    "price": 2673,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 2673,
+        "inStock": true
+      },
+      {
+        "type": "mikuni_wine",
+        "name": "三国ワイン",
+        "price": 2673,
+        "inStock": true
+      },
+      {
+        "type": "budouya",
+        "name": "ぶどう屋",
+        "price": 2673,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 75,
+    "vivinoScore": 3.5,
+    "costPerformance": 78,
+    "tags": [
+      "ボルドー白",
+      "フレッシュ",
+      "コスパ白",
+      "爽快"
+    ],
+    "tweetUrls": [
+      "https://x.com/kozewine/status/2000166973402128548",
+      "https://x.com/kozewine/status/2033866237361754597",
+      "https://x.com/kozewine/status/2034965623357526465"
+    ],
+    "abv": 12,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "牡蠣",
+      "魚料理",
+      "サラダ"
+    ],
+    "whyBuyNow": "フランスボルドーコスパ白！Xおすすめの爽快感",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/アルノザン+アントルドゥメール/",
+        "price": 2673
+      }
+    ]
+  },
+  {
+    "id": "boschkluif-shiraz",
+    "name": "Boschkluif Shiraz",
+    "nameJa": "ボッシュクルーフ シラー",
+    "producer": "Boschkluif",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "type": "red",
+    "grapeVarieties": [
+      "シラー"
+    ],
+    "description": "南アフリカ産の力強いシラー。スパイシーで濃厚フルボディの赤ワインで 果実味とタンニンのバランスが秀逸です。\n",
+    "price": 2500,
+    "stores": [
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 2500,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 2500,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 79,
+    "vivinoScore": 3.6,
+    "costPerformance": 81,
+    "tags": [
+      "南アフリカ",
+      "シラー",
+      "フルボディ",
+      "コスパ赤"
+    ],
+    "tweetUrls": [
+      "https://x.com/kozewine/status/2000166973402128548",
+      "https://x.com/kozewine/status/2033866237361754597",
+      "https://x.com/kozewine/status/2034965623357526465"
+    ],
+    "abv": 14,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "グリル肉",
+      "スパイシー料理",
+      "チーズ"
+    ],
+    "whyBuyNow": "シラーコスパの極み！Xバズ赤ワイン",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ボッシュクルーフ+シラー/",
+        "price": 2500
+      }
+    ]
+  },
+  {
     "id": "casa-subercaseaux-cabernet",
     "name": "Casa Subercaseaux Cabernet Sauvignon",
     "nameJa": "カーサ・スベルカソー カベルネ・ソーヴィニヨン",
@@ -431,6 +618,70 @@
     ],
     "whyBuyNow": "438円で年間3万ケースのメガセラー。ワンコイン以下の本格チリ赤",
     "buyLinks": []
+  },
+  {
+    "id": "chitose-kita-wine-kerner",
+    "name": "Chitose Winery Kita Wine Kerner",
+    "nameJa": "千歳ワイナリー 北ワイン ケルナー",
+    "producer": "千歳ワイナリー",
+    "country": "Japan",
+    "countryCode": "JP",
+    "region": "北海道余市",
+    "type": "white",
+    "grapeVarieties": [
+      "ケルナー"
+    ],
+    "description": "北海道余市産ケルナー100%使用。青リンゴや洋ナシの華やかアロマと 爽やか酸味の辛口白でJWC金賞受賞歴あり。\n",
+    "price": 2750,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 2750,
+        "inStock": true
+      },
+      {
+        "type": "hasegawa",
+        "name": "はせがわ酒店",
+        "price": 2750,
+        "inStock": true
+      },
+      {
+        "type": "kagadaya",
+        "name": "加賀田屋",
+        "price": 2750,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": null,
+    "costPerformance": 76,
+    "tags": [
+      "日本ワイン",
+      "北海道",
+      "JWC金賞",
+      "辛口白"
+    ],
+    "tweetUrls": [
+      "https://x.com/kozewine/status/2000166973402128548",
+      "https://x.com/kozewine/status/2033866237361754597",
+      "https://x.com/kozewine/status/2034965623357526465"
+    ],
+    "abv": 12,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "海鮮料理",
+      "寿司",
+      "和食"
+    ],
+    "whyBuyNow": "国産北海道コスパ白の新星！Xバズる爽やかさ",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/千歳ワイナリー+北ワイン+ケルナー/",
+        "price": 2750
+      }
+    ]
   },
   {
     "id": "collare-catarratto",
@@ -1525,6 +1776,134 @@
     ]
   },
   {
+    "id": "mcmanis-cabernet-sauvignon",
+    "name": "McManis Family Vineyards Cabernet Sauvignon",
+    "nameJa": "マックマニス・ファミリー・ヴィンヤーズ カベルネソーヴィニヨン",
+    "producer": "McManis Family Vineyards",
+    "country": "United States",
+    "countryCode": "US",
+    "region": "California",
+    "type": "red",
+    "grapeVarieties": [
+      "カベルネ・ソーヴィニヨン"
+    ],
+    "description": "カリフォルニア産の果実味豊かでバランス良い赤ワイン。 家族経営の丁寧な造りで同価格帯トップクラスのコスパです。\n",
+    "price": 2035,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 2035,
+        "inStock": true
+      },
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 2035,
+        "inStock": true
+      },
+      {
+        "type": "dragee",
+        "name": "Dragee",
+        "price": 2035,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 83,
+    "vivinoScore": 3.8,
+    "costPerformance": 85,
+    "tags": [
+      "カリフォルニア",
+      "コスパ赤",
+      "Xバズ",
+      "日常ワイン"
+    ],
+    "tweetUrls": [
+      "https://x.com/kozewine/status/2000166973402128548",
+      "https://x.com/kozewine/status/2033866237361754597",
+      "https://x.com/kozewine/status/2034965623357526465"
+    ],
+    "abv": 13.5,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "ステーキ",
+      "肉料理",
+      "チーズ"
+    ],
+    "whyBuyNow": "赤もコスパ最強！Xバズ日常赤ワイン",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/マックマニス+カベルネソーヴィニヨン/",
+        "price": 2035
+      }
+    ]
+  },
+  {
+    "id": "mcmanis-viognier",
+    "name": "McManis Family Vineyards Viognier",
+    "nameJa": "マックマニス・ファミリー・ヴィンヤーズ ヴィオニエ",
+    "producer": "McManis Family Vineyards",
+    "country": "United States",
+    "countryCode": "US",
+    "region": "California",
+    "type": "white",
+    "grapeVarieties": [
+      "ヴィオニエ"
+    ],
+    "description": "家族経営の丁寧な造りで同価格帯を大きく上回る品質。 アプリコットや花の豊かな香りでフルボディのエレガントな白ワインです。\n",
+    "price": 2420,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 2420,
+        "inStock": true
+      },
+      {
+        "type": "wine_grocery",
+        "name": "Wine Grocery",
+        "price": 2420,
+        "inStock": true
+      },
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 2420,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 82,
+    "vivinoScore": 3.8,
+    "costPerformance": 80,
+    "tags": [
+      "コスパ白",
+      "カリフォルニア",
+      "フルボディ白",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/kozewine/status/2000166973402128548",
+      "https://x.com/kozewine/status/2033866237361754597",
+      "https://x.com/kozewine/status/2034965623357526465"
+    ],
+    "abv": 13.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "鶏肉料理",
+      "シーフード",
+      "アジア料理"
+    ],
+    "whyBuyNow": "Xでバズるコスパ白の王道！毎日飲みたい3千円の極み",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/マックマニス+ヴィオニエ/",
+        "price": 2420
+      }
+    ]
+  },
+  {
     "id": "mercian-muscat-bailey-a",
     "name": "Chateau Mercian Yamanashi Muscat Bailey A",
     "nameJa": "シャトー・メルシャン 山梨マスカット・ベーリーA",
@@ -1696,6 +2075,64 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/モンペラ+ルージュ/",
         "price": 2000
+      }
+    ]
+  },
+  {
+    "id": "paul-cluver-pinot-noir",
+    "name": "Paul Cluver Estate Pinot Noir",
+    "nameJa": "ポールクルーバー エステート ピノノワール",
+    "producer": "Paul Cluver",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "region": "Elgin",
+    "type": "red",
+    "grapeVarieties": [
+      "ピノ・ノワール"
+    ],
+    "description": "南アフリカ産のエレガントピノノワール。チェリー香と爽やか酸味の バランスが抜群で軽やかながら深みのある赤ワインです。\n",
+    "price": 2500,
+    "stores": [
+      {
+        "type": "amazon",
+        "name": "Amazon",
+        "price": 2500,
+        "inStock": true
+      },
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 2500,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": 3.7,
+    "costPerformance": 82,
+    "tags": [
+      "南アフリカ",
+      "ピノノワール",
+      "エレガント",
+      "コスパ赤"
+    ],
+    "tweetUrls": [
+      "https://x.com/kozewine/status/2000166973402128548",
+      "https://x.com/kozewine/status/2033866237361754597",
+      "https://x.com/kozewine/status/2034965623357526465"
+    ],
+    "abv": 13,
+    "servingTemp": "14-16℃",
+    "pairings": [
+      "鴨肉",
+      "きのこ料理",
+      "軽め肉料理"
+    ],
+    "whyBuyNow": "南アピノコスパ王者！Xおすすめの赤",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ポールクルーバー+ピノノワール/",
+        "price": 2500
       }
     ]
   },
@@ -2209,6 +2646,70 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/シレーニ+セラーセレクション+ソーヴィニヨンブラン/",
         "price": 1650
+      }
+    ]
+  },
+  {
+    "id": "stellenrust-chenin-blanc",
+    "name": "Stellenrust Old Bushvine Chenin Blanc",
+    "nameJa": "ステレンラスト オールド・ブッシュヴァイン シュナン・ブラン",
+    "producer": "Stellenrust",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "region": "Stellenbosch",
+    "type": "white",
+    "grapeVarieties": [
+      "シュナン・ブラン"
+    ],
+    "description": "樹齢43年の古木から造られる濃厚で複雑な味わい。 南アフリカトップ生産者の逸品で果実味豊かで深みがあります。\n",
+    "price": 2448,
+    "stores": [
+      {
+        "type": "rakuten",
+        "name": "楽天市場",
+        "price": 2448,
+        "inStock": true
+      },
+      {
+        "type": "sa_wine_jp",
+        "name": "South Africa Wine JP",
+        "price": 2448,
+        "inStock": true
+      },
+      {
+        "type": "miraido",
+        "name": "Miraido",
+        "price": 2448,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 78,
+    "vivinoScore": 3.7,
+    "costPerformance": 82,
+    "tags": [
+      "南アフリカ",
+      "古木",
+      "コスパ白",
+      "隠れ名品"
+    ],
+    "tweetUrls": [
+      "https://x.com/kozewine/status/2000166973402128548",
+      "https://x.com/kozewine/status/2033866237361754597",
+      "https://x.com/kozewine/status/2034965623357526465"
+    ],
+    "abv": 13.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "魚介料理",
+      "チーズ",
+      "白肉"
+    ],
+    "whyBuyNow": "南アコスパ隠れ名品！Xで話題の白ワイン",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ステレンラスト+シュナンブラン/",
+        "price": 2448
       }
     ]
   },

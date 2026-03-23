@@ -1,0 +1,59 @@
+id: chitose-kita-wine-kerner
+name: Chitose Winery Kita Wine Kerner
+nameJa: 千歳ワイナリー 北ワイン ケルナー
+producer: 千歳ワイナリー
+country: Japan
+countryCode: JP
+region: 北海道余市
+type: white
+grapeVarieties:
+  - ケルナー
+
+description: >
+  北海道余市産ケルナー100%使用。青リンゴや洋ナシの華やかアロマと
+  爽やか酸味の辛口白でJWC金賞受賞歴あり。
+
+price: 2750
+abv: 12.0
+servingTemp: 6-8℃
+
+stores:
+  - type: rakuten
+    name: 楽天市場
+    price: 2750
+    inStock: true
+  - type: hasegawa
+    name: はせがわ酒店
+    price: 2750
+    inStock: true
+  - type: kagadaya
+    name: 加賀田屋
+    price: 2750
+    inStock: true
+
+tags:
+  - 日本ワイン
+  - 北海道
+  - JWC金賞
+  - 辛口白
+
+pairings:
+  - 海鮮料理
+  - 寿司
+  - 和食
+
+whyBuyNow: 国産北海道コスパ白の新星！Xバズる爽やかさ
+
+buzzScore: 80
+vivinoScore: null
+costPerformance: 76
+
+tweetUrls:
+  - https://x.com/kozewine/status/2000166973402128548
+  - https://x.com/kozewine/status/2033866237361754597
+  - https://x.com/kozewine/status/2034965623357526465
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/千歳ワイナリー+北ワイン+ケルナー/
+    price: 2750

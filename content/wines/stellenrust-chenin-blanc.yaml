@@ -1,0 +1,59 @@
+id: stellenrust-chenin-blanc
+name: Stellenrust Old Bushvine Chenin Blanc
+nameJa: ステレンラスト オールド・ブッシュヴァイン シュナン・ブラン
+producer: Stellenrust
+country: South Africa
+countryCode: ZA
+region: Stellenbosch
+type: white
+grapeVarieties:
+  - シュナン・ブラン
+
+description: >
+  樹齢43年の古木から造られる濃厚で複雑な味わい。
+  南アフリカトップ生産者の逸品で果実味豊かで深みがあります。
+
+price: 2448
+abv: 13.5
+servingTemp: 8-10℃
+
+stores:
+  - type: rakuten
+    name: 楽天市場
+    price: 2448
+    inStock: true
+  - type: sa_wine_jp
+    name: South Africa Wine JP
+    price: 2448
+    inStock: true
+  - type: miraido
+    name: Miraido
+    price: 2448
+    inStock: true
+
+tags:
+  - 南アフリカ
+  - 古木
+  - コスパ白
+  - 隠れ名品
+
+pairings:
+  - 魚介料理
+  - チーズ
+  - 白肉
+
+whyBuyNow: 南アコスパ隠れ名品！Xで話題の白ワイン
+
+buzzScore: 78
+vivinoScore: 3.7
+costPerformance: 82
+
+tweetUrls:
+  - https://x.com/kozewine/status/2000166973402128548
+  - https://x.com/kozewine/status/2033866237361754597
+  - https://x.com/kozewine/status/2034965623357526465
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/ステレンラスト+シュナンブラン/
+    price: 2448
