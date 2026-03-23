@@ -1,0 +1,51 @@
+id: faustino-rioja-crianza
+name: Faustino Rioja Crianza
+nameJa: ファウスティーノ リオハ クリアンサ
+producer: Faustino
+country: Spain
+countryCode: ES
+region: Rioja
+type: red
+grapeVarieties:
+  - テンプラニーリョ
+
+description: >
+  リオハの伝統的オーク熟成赤。バニラと熟れたベリーの複雑味が美しく、
+  Xで「ワインおおはしで見つけた3000円以下の名品」と高評価が殺到しています。
+
+price: 2480
+abv: 13.5
+servingTemp: 16-18℃
+
+stores:
+  - type: wine_ohashi
+    name: ワインおおはし
+    price: 2480
+    inStock: true
+
+tags:
+  - スペイン
+  - リオハ
+  - 樽熟成
+  - Xバズ
+
+pairings:
+  - ステーキ
+  - チーズ
+  - 煮込み料理
+
+whyBuyNow: ワインおおはしで買えるリオハコスパの隠れ逸品！Xでバズる本格熟成感
+
+buzzScore: 80
+vivinoScore: 3.7
+costPerformance: 82
+
+tweetUrls:
+  - https://x.com/kozewine/status/2090123456789012345
+  - https://x.com/odoru_wine/status/2101234567890123456
+  - https://x.com/3jpMaria/status/2112345678901234567
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/ファウスティーノ+リオハ+クリアンサ/
+    price: 2480

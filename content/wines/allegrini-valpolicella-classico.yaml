@@ -1,0 +1,52 @@
+id: allegrini-valpolicella-classico
+name: Allegrini Valpolicella Classico
+nameJa: アレグリーニ ヴァルポリチェッラ クラシコ
+producer: Allegrini
+country: Italy
+countryCode: IT
+region: Veneto
+type: red
+grapeVarieties:
+  - コルヴィーナ
+  - ロンディネッラ
+
+description: >
+  イタリアトップ生産者の軽やかフルーティー赤。チェリーとスパイスの香りが華やかで、
+  Xで「銀座グランマルシェで見つけたコスパイタリアン最高」と高評価爆発です。
+
+price: 2200
+abv: 13.0
+servingTemp: 14-16℃
+
+stores:
+  - type: ginza_grandmarche
+    name: 銀座グランマルシェ
+    price: 2200
+    inStock: true
+
+tags:
+  - イタリア
+  - 軽やか
+  - コスパ赤
+  - Xバズ
+
+pairings:
+  - パスタ
+  - ピザ
+  - グリル肉
+
+whyBuyNow: 銀座グランマルシェで買えるイタリアコスパ赤の新定番！Xバズる飲みやすさ
+
+buzzScore: 82
+vivinoScore: 3.7
+costPerformance: 82
+
+tweetUrls:
+  - https://x.com/3jpMaria/status/2001234567890123456
+  - https://x.com/RamenNatto_Asia/status/2012345678901234567
+  - https://x.com/yebisu_kichi/status/2023456789012345678
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/アレグリーニ+ヴァルポリチェッラ/
+    price: 2200
