@@ -12,6 +12,7 @@ const storeTypes = [
   "felicity", "wine_ohashi", "ukiuki",
   "wine_grocery", "sa_wine_jp", "miraido", "mikuni_wine",
   "budouya", "shinanoya", "tuscany", "hasegawa", "kagadaya", "dragee",
+  "sankyushop", "senmonten", "local_super",
 ] as const;
 
 const wineTypes = ["red", "white", "rose", "sparkling"] as const;

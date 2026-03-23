@@ -1,0 +1,54 @@
+id: santa-rita-heroes-sauvignon-blanc
+name: Santa Rita Heroes Sauvignon Blanc
+nameJa: サンタリタ ヒーローズ ソーヴィニヨン ブラン
+producer: Santa Rita
+country: Chile
+countryCode: CL
+type: white
+grapeVarieties:
+  - ソーヴィニヨン・ブラン
+
+description: >
+  爽やか酸味と軽快な柑橘アロマのチリ白ワイン。
+  Xで「美味しい！！」と高評価の日常コスパSBでムール貝蒸しにも絶品です。
+
+price: 1434
+abv: 12.5
+servingTemp: 8-10℃
+
+stores:
+  - type: rakuten
+    name: 楽天市場
+    price: 1434
+    inStock: true
+  - type: amazon
+    name: Amazon
+    price: 1434
+    inStock: true
+
+tags:
+  - チリ
+  - コスパ白
+  - Xバズ
+  - 爽快
+
+pairings:
+  - シーフード
+  - サラダ
+  - オムレツ
+
+whyBuyNow: Xバズチリコスパ白の新星！1400円台でこの爽快感は反則
+
+buzzScore: 80
+vivinoScore: 3.5
+costPerformance: 84
+
+tweetUrls:
+  - https://x.com/wine_rouken/status/1918568955511488614
+  - https://x.com/kozewine/status/1980479228954169757
+  - https://x.com/odoru_wine/status/1890695051031781703
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/サンタリタ+ヒーローズ+ソーヴィニヨンブラン/
+    price: 1434

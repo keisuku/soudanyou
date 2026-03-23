@@ -1,0 +1,59 @@
+id: trola-tinto
+name: Trola Tinto
+nameJa: トロウラ・ティント
+producer: Trola
+country: Spain
+countryCode: ES
+type: red
+grapeVarieties:
+  - ガルナッチャ
+  - テンプラニーリョ
+
+description: >
+  ガルナッチャ60%・テンプラニーリョ40%のミディアムボディ赤。
+  ガーネット色で飲みやすくXで「ほんとにおいしい」と話題のスペインコスパです。
+
+price: 1980
+abv: 13.5
+servingTemp: 16-18℃
+
+stores:
+  - type: rakuten
+    name: 楽天市場
+    price: 1980
+    inStock: true
+  - type: amazon
+    name: Amazon
+    price: 1980
+    inStock: true
+  - type: local_super
+    name: 地元スーパー
+    price: 1980
+    inStock: true
+
+tags:
+  - スペイン
+  - ミディアムボディ
+  - コスパ赤
+  - Xバズ
+
+pairings:
+  - 肉料理
+  - パエリア
+  - チーズ
+
+whyBuyNow: Xでバズるスペインコスパ赤！飲みやすさ抜群の日常ワイン
+
+buzzScore: 82
+vivinoScore: 3.5
+costPerformance: 83
+
+tweetUrls:
+  - https://x.com/3jpMaria/status/2035276931839705519
+  - https://x.com/RamenNatto_Asia/status/2034075760504541540
+  - https://x.com/yebisu_kichi/status/1981635280340734178
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/トロウラ+ティント/
+    price: 1980
