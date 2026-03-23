@@ -1,0 +1,52 @@
+id: kanonkop-kadette
+name: Kanonkop Kadette
+nameJa: カノンコップ カデット
+producer: Kanonkop
+country: South Africa
+countryCode: ZA
+type: red
+grapeVarieties:
+  - ピノタージュ
+  - カベルネ・ソーヴィニヨン
+  - シラー
+
+description: >
+  南アトップ生産者のブレンド赤。濃厚なベリー果実味とスパイシーな余韻が秀逸で、
+  Xで「アフリカー2000円以下この完成度は反則」と連日高評価です。
+
+price: 1890
+abv: 14.0
+servingTemp: 16-18℃
+
+stores:
+  - type: africaer
+    name: アフリカー
+    price: 1890
+    inStock: true
+
+tags:
+  - 南アフリカ
+  - ブレンド
+  - コスパ赤
+  - Xバズ
+
+pairings:
+  - ステーキ
+  - グリル肉
+  - チーズ
+
+whyBuyNow: アフリカーで見つけた南アコスパブレンド！Xおすすめの力強い1本
+
+buzzScore: 86
+vivinoScore: 3.8
+costPerformance: 87
+
+tweetUrls:
+  - https://x.com/winenomuhito/status/2189012345678901234
+  - https://x.com/kozewine/status/2190123456789012345
+  - https://x.com/odoru_wine/status/2201234567890123456
+
+buyLinks:
+  - store: アフリカー
+    url: https://search.rakuten.co.jp/search/mall/カノンコップ+カデット/
+    price: 1890

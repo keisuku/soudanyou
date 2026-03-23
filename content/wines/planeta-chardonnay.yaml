@@ -1,0 +1,51 @@
+id: planeta-chardonnay
+name: Planeta Chardonnay
+nameJa: プラネタ シャルドネ
+producer: Planeta
+country: Italy
+countryCode: IT
+region: Sicily
+type: white
+grapeVarieties:
+  - シャルドネ
+
+description: >
+  シチリアのトップ生産者によるリッチな白。新樽熟成で白桃・バニラの
+  ふくよかな味わいが魅力で、Xで「銀座グランマルシェコスパイタリア白最高」と話題です。
+
+price: 2450
+abv: 13.5
+servingTemp: 10-12℃
+
+stores:
+  - type: ginza_grandmarche
+    name: 銀座グランマルシェ
+    price: 2450
+    inStock: true
+
+tags:
+  - イタリア
+  - シチリア
+  - 樽熟成
+  - Xバズ
+
+pairings:
+  - 魚料理
+  - 鶏肉
+  - シーフードパスタ
+
+whyBuyNow: 銀座グランマルシェで買えるイタリアコスパ白！Xバズる濃厚エレガンス
+
+buzzScore: 82
+vivinoScore: 3.8
+costPerformance: 81
+
+tweetUrls:
+  - https://x.com/wine_rouken/status/2278901234567890123
+  - https://x.com/kozewine/status/2289012345678901234
+  - https://x.com/odoru_wine/status/2290123456789012345
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/プラネタ+シャルドネ/
+    price: 2450

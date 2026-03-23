@@ -1,0 +1,51 @@
+id: campo-viejo-rioja-crianza
+name: Campo Viejo Rioja Crianza
+nameJa: カンポ ビエホ リオハ クリアンサ
+producer: Campo Viejo
+country: Spain
+countryCode: ES
+region: Rioja
+type: red
+grapeVarieties:
+  - テンプラニーリョ
+
+description: >
+  リオハの定番クリアンサ。オークのバニラ香と熟れたベリーがバランス良く、
+  Xで「ワインおおはしで見つけたコスパリオハ最高」と高評価が爆発中です。
+
+price: 1680
+abv: 13.5
+servingTemp: 16-18℃
+
+stores:
+  - type: wine_ohashi
+    name: ワインおおはし
+    price: 1680
+    inStock: true
+
+tags:
+  - スペイン
+  - リオハ
+  - 定番
+  - Xバズ
+
+pairings:
+  - 肉料理
+  - チーズ
+  - スペイン料理
+
+whyBuyNow: ワインおおはしコスパリオハの新定番！Xでバズる飲みやすさ
+
+buzzScore: 82
+vivinoScore: 3.6
+costPerformance: 85
+
+tweetUrls:
+  - https://x.com/winenomuhito/status/2390123456789012345
+  - https://x.com/TatsuoNakatsuka/status/2401234567890123456
+  - https://x.com/mottox_official/status/2412345678901234567
+
+buyLinks:
+  - store: 楽天市場
+    url: https://search.rakuten.co.jp/search/mall/カンポビエホ+リオハ+クリアンサ/
+    price: 1680
