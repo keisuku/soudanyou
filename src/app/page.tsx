@@ -14,11 +14,11 @@ const typeNav: { type: WineType; label: string; emoji: string; id: string }[] = 
 
 function getWines(type: WineType) {
   return allWines
-    .filter((w) => w.type === type)
+    .filter((w) => w.type === type && w.price >= 1000)
     .sort((a, b) => b.costPerformance - a.costPerformance);
 }
 
-const topPick = [...allWines].sort((a, b) => b.buzzScore - a.buzzScore)[0];
+const topPick = [...allWines].filter((w) => w.price >= 1000).sort((a, b) => b.buzzScore - a.buzzScore)[0];
 
 const faqs = [
   {
