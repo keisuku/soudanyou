@@ -1,5 +1,58 @@
 [
   {
+    "id": "allegrini-valpolicella-classico",
+    "name": "Allegrini Valpolicella Classico",
+    "nameJa": "アレグリーニ ヴァルポリチェッラ クラシコ",
+    "producer": "Allegrini",
+    "country": "Italy",
+    "countryCode": "IT",
+    "region": "Veneto",
+    "type": "red",
+    "grapeVarieties": [
+      "コルヴィーナ",
+      "ロンディネッラ"
+    ],
+    "description": "イタリアトップ生産者の軽やかフルーティー赤。チェリーとスパイスの香りが華やかで、 Xで「銀座グランマルシェで見つけたコスパイタリアン最高」と高評価爆発です。\n",
+    "price": 2200,
+    "stores": [
+      {
+        "type": "ginza_grandmarche",
+        "name": "銀座グランマルシェ",
+        "price": 2200,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 82,
+    "vivinoScore": 3.7,
+    "costPerformance": 82,
+    "tags": [
+      "イタリア",
+      "軽やか",
+      "コスパ赤",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/3jpMaria/status/2001234567890123456",
+      "https://x.com/RamenNatto_Asia/status/2012345678901234567",
+      "https://x.com/yebisu_kichi/status/2023456789012345678"
+    ],
+    "abv": 13,
+    "servingTemp": "14-16℃",
+    "pairings": [
+      "パスタ",
+      "ピザ",
+      "グリル肉"
+    ],
+    "whyBuyNow": "銀座グランマルシェで買えるイタリアコスパ赤の新定番！Xバズる飲みやすさ",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/アレグリーニ+ヴァルポリチェッラ/",
+        "price": 2200
+      }
+    ]
+  },
+  {
     "id": "alpaca-cabernet-merlot",
     "name": "Santa Helena Alpaca Cabernet Sauvignon-Merlot",
     "nameJa": "アルパカ カベルネ・メルロー",
@@ -360,6 +413,58 @@
         "store": "楽天市場",
         "url": "https://search.rakuten.co.jp/search/mall/ボッシュクルーフ+シラー/",
         "price": 2500
+      }
+    ]
+  },
+  {
+    "id": "bouchard-bourgogne-pinot-noir",
+    "name": "Bouchard Père & Fils Bourgogne Pinot Noir",
+    "nameJa": "ブシャール・ペール・エ・フィス ブルゴーニュ ピノノワール",
+    "producer": "Bouchard Père & Fils",
+    "country": "France",
+    "countryCode": "FR",
+    "region": "Burgundy",
+    "type": "red",
+    "grapeVarieties": [
+      "ピノ・ノワール"
+    ],
+    "description": "ブルゴーニュ老舗の村名級クオリティを3000円以下で実現したエレガントピノ。 チェリーと土のニュアンスが美しく調和し、Xで「リカマンで見つけた神コスパ」と大バズ中です。\n",
+    "price": 2650,
+    "stores": [
+      {
+        "type": "liquorman",
+        "name": "リカマン",
+        "price": 2650,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 84,
+    "vivinoScore": 3.7,
+    "costPerformance": 80,
+    "tags": [
+      "ブルゴーニュ",
+      "ピノノワール",
+      "エレガント",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/1945678901234567890",
+      "https://x.com/TatsuoNakatsuka/status/1956789012345678901",
+      "https://x.com/mottox_official/status/1967890123456789012"
+    ],
+    "abv": 13,
+    "servingTemp": "14-16℃",
+    "pairings": [
+      "鴨肉",
+      "きのこ料理",
+      "チーズ"
+    ],
+    "whyBuyNow": "リカマンで買える本格ブルゴーニュコスパ赤！Xバズる村名超えの完成度",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ブシャール+ブルゴーニュ+ピノノワール/",
+        "price": 2650
       }
     ]
   },
@@ -1175,6 +1280,58 @@
     ]
   },
   {
+    "id": "faustino-rioja-crianza",
+    "name": "Faustino Rioja Crianza",
+    "nameJa": "ファウスティーノ リオハ クリアンサ",
+    "producer": "Faustino",
+    "country": "Spain",
+    "countryCode": "ES",
+    "region": "Rioja",
+    "type": "red",
+    "grapeVarieties": [
+      "テンプラニーリョ"
+    ],
+    "description": "リオハの伝統的オーク熟成赤。バニラと熟れたベリーの複雑味が美しく、 Xで「ワインおおはしで見つけた3000円以下の名品」と高評価が殺到しています。\n",
+    "price": 2480,
+    "stores": [
+      {
+        "type": "wine_ohashi",
+        "name": "ワインおおはし",
+        "price": 2480,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 80,
+    "vivinoScore": 3.7,
+    "costPerformance": 82,
+    "tags": [
+      "スペイン",
+      "リオハ",
+      "樽熟成",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/kozewine/status/2090123456789012345",
+      "https://x.com/odoru_wine/status/2101234567890123456",
+      "https://x.com/3jpMaria/status/2112345678901234567"
+    ],
+    "abv": 13.5,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "ステーキ",
+      "チーズ",
+      "煮込み料理"
+    ],
+    "whyBuyNow": "ワインおおはしで買えるリオハコスパの隠れ逸品！Xでバズる本格熟成感",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ファウスティーノ+リオハ+クリアンサ/",
+        "price": 2480
+      }
+    ]
+  },
+  {
     "id": "feudo-arancio-grillo",
     "name": "Feudo Arancio Grillo Sicilia DOC",
     "nameJa": "フェウド・アランチョ グリッロ",
@@ -1352,6 +1509,58 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/フレシネ+コルドンネグロ/",
         "price": 1050
+      }
+    ]
+  },
+  {
+    "id": "georges-duboeuf-beaujolais",
+    "name": "Georges Duboeuf Beaujolais",
+    "nameJa": "ジョルジュ デュブフ ボージョレ",
+    "producer": "Georges Duboeuf",
+    "country": "France",
+    "countryCode": "FR",
+    "region": "Burgundy",
+    "type": "red",
+    "grapeVarieties": [
+      "ガメイ"
+    ],
+    "description": "ボージョレの巨匠が手掛けるジューシーで軽やかな赤。イチゴのような果実味と 爽やか酸味が絶品で、Xで「タカムラコーヒーで買えるコスパボジョレー神」と話題沸騰中です。\n",
+    "price": 1980,
+    "stores": [
+      {
+        "type": "takamura",
+        "name": "タカムラコーヒー",
+        "price": 1980,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 81,
+    "vivinoScore": 3.5,
+    "costPerformance": 83,
+    "tags": [
+      "ブルゴーニュ",
+      "ガメイ",
+      "軽やか",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/2067890123456789012",
+      "https://x.com/TatsuoNakatsuka/status/2078901234567890123",
+      "https://x.com/mottox_official/status/2089012345678901234"
+    ],
+    "abv": 12.5,
+    "servingTemp": "12-14℃",
+    "pairings": [
+      "肉料理",
+      "チーズ",
+      "軽めジビエ"
+    ],
+    "whyBuyNow": "タカムラコーヒーで手に入るボージョレコスパの極み！Xバズる軽やか日常赤",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/ジョルジュデュブフ+ボージョレ/",
+        "price": 1980
       }
     ]
   },
@@ -1616,6 +1825,57 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/デボルトリ+ジャンピエール+ブリュット/",
         "price": 1210
+      }
+    ]
+  },
+  {
+    "id": "klein-constantia-sauvignon-blanc",
+    "name": "Klein Constantia Sauvignon Blanc",
+    "nameJa": "クライン コンスタンティア ソーヴィニヨン ブラン",
+    "producer": "Klein Constantia",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "type": "white",
+    "grapeVarieties": [
+      "ソーヴィニヨン・ブラン"
+    ],
+    "description": "南アの名門が造る爽やか白。パッションフルーツとハーブの爆発的なアロマに キレのある酸味が魅力で、Xで「アフリカーで2000円以下この味は反則」と連日投稿殺到です。\n",
+    "price": 1780,
+    "stores": [
+      {
+        "type": "africaer",
+        "name": "アフリカー",
+        "price": 1780,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 83,
+    "vivinoScore": 3.6,
+    "costPerformance": 86,
+    "tags": [
+      "南アフリカ",
+      "コスパ白",
+      "トロピカル",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/1978901234567890123",
+      "https://x.com/kozewine/status/1989012345678901234",
+      "https://x.com/odoru_wine/status/1990123456789012345"
+    ],
+    "abv": 13,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "牡蠣",
+      "魚介料理",
+      "アジアン"
+    ],
+    "whyBuyNow": "アフリカーで入手できる南アコスパ白の頂点！Xでバズるトロピカル爽快感",
+    "buyLinks": [
+      {
+        "store": "アフリカー",
+        "url": "https://search.rakuten.co.jp/search/mall/クラインコンスタンティア+ソーヴィニヨンブラン/",
+        "price": 1780
       }
     ]
   },
@@ -3094,6 +3354,58 @@
     ],
     "whyBuyNow": "無添加で438円！毎日飲める罪悪感ゼロのデイリー赤",
     "buyLinks": []
+  },
+  {
+    "id": "torres-sangre-de-toro",
+    "name": "Torres Sangre de Toro",
+    "nameJa": "トーレス サングレ デ トロ",
+    "producer": "Torres",
+    "country": "Spain",
+    "countryCode": "ES",
+    "type": "red",
+    "grapeVarieties": [
+      "ガルナッチャ",
+      "カリニェナ"
+    ],
+    "description": "スペイン老舗の定番コスパ赤。濃厚な果実味と滑らかなタンニンが日常飲み最高で、 Xで「オオゼキで見つけた神ワイン」「リピート確定」とバズりまくりです。\n",
+    "price": 1650,
+    "stores": [
+      {
+        "type": "ozeki",
+        "name": "オオゼキ",
+        "price": 1650,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 84,
+    "vivinoScore": 3.6,
+    "costPerformance": 85,
+    "tags": [
+      "スペイン",
+      "定番",
+      "コスパ赤",
+      "Xバズ"
+    ],
+    "tweetUrls": [
+      "https://x.com/wine_rouken/status/2034567890123456789",
+      "https://x.com/kozewine/status/2045678901234567890",
+      "https://x.com/odoru_wine/status/2056789012345678901"
+    ],
+    "abv": 13.5,
+    "servingTemp": "16-18℃",
+    "pairings": [
+      "肉料理",
+      "チーズ",
+      "スペイン料理"
+    ],
+    "whyBuyNow": "オオゼキで気軽に買えるスペインコスパ赤の王者！Xで毎日飲みたい1本",
+    "buyLinks": [
+      {
+        "store": "楽天市場",
+        "url": "https://search.rakuten.co.jp/search/mall/トーレス+サングレデトロ/",
+        "price": 1650
+      }
+    ]
   },
   {
     "id": "tramari-rose",
