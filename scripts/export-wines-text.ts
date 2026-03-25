@@ -57,6 +57,7 @@ const headers = [
   "タグ",
   "販売店(店名:価格)",
   "今買うべき理由",
+  "投稿URL",
   "説明",
 ];
 
@@ -85,6 +86,7 @@ for (const w of wines) {
     w.tags.join(", "),
     stores,
     w.whyBuyNow.replace(/\n/g, " "),
+    w.tweetUrls.join(", "),
     w.description.replace(/\n/g, " ").trim(),
   ];
 
