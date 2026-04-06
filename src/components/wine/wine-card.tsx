@@ -6,11 +6,11 @@ import { cn, formatPrice } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, UtensilsCrossed } from "lucide-react";
 
-const wineTypeGradients: Record<Wine["type"], string> = {
-  red: "from-red-800 via-red-700 to-red-900",
-  white: "from-amber-200 via-yellow-100 to-amber-300",
-  rose: "from-pink-300 via-rose-200 to-pink-400",
-  sparkling: "from-sky-300 via-cyan-200 to-blue-300",
+const wineTypeColors: Record<Wine["type"], string> = {
+  red: "#7B2D3B",
+  white: "#8A7A3E",
+  rose: "#9E5A6E",
+  sparkling: "#3D7A8A",
 };
 
 const wineTypeLabels: Record<Wine["type"], string> = {
@@ -54,38 +54,38 @@ export function WineCard({ wine, rank, className }: WineCardProps) {
     <Link href={`/wines/${wine.id}`}>
       <Card
         className={cn(
-          "group cursor-pointer overflow-hidden transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10",
+          "group cursor-pointer overflow-hidden transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/5",
           className
         )}
       >
-        {/* Color bar */}
-        <div className={cn("h-2 bg-gradient-to-r", wineTypeGradients[wine.type])} />
+        {/* Thin color accent line */}
+        <div className="h-0.5" style={{ backgroundColor: wineTypeColors[wine.type] }} />
 
         <CardContent className="p-4">
           {/* Top: rank + type + price */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               {rank != null && (
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
-                  {rank}
+                <span className="text-[11px] font-bold tabular-nums text-muted-foreground">
+                  #{rank}
                 </span>
               )}
-              <span className="rounded-full bg-secondary px-2 py-0.5 text-[10px] font-bold text-secondary-foreground">
+              <span className="rounded bg-secondary px-2 py-0.5 text-[10px] font-semibold text-secondary-foreground">
                 {wineTypeLabels[wine.type]} {wine.abv}%
               </span>
             </div>
-            <span className="text-lg font-bold text-primary">
+            <span className="text-base font-bold tabular-nums text-primary">
               {formatPrice(wine.price)}
             </span>
           </div>
 
           {/* Name */}
-          <h3 className="mt-2 font-semibold leading-tight text-foreground">
+          <h3 className="mt-2 font-semibold leading-tight text-foreground group-hover:text-primary transition-colors">
             {wine.nameJa}
           </h3>
 
           {/* Why buy now */}
-          <p className="mt-1 text-sm leading-snug text-muted-foreground">
+          <p className="mt-1 text-sm leading-snug text-muted-foreground line-clamp-2">
             {wine.whyBuyNow}
           </p>
 

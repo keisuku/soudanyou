@@ -64,14 +64,14 @@ const W = [
   {n:"サン・マルツァーノ トラマーリ ロゼ",p:1500,a:12.5,t:"rose",d:"楽天ロゼ1位！南イタリアの太陽が詰まったルカマローニ96点",f:["トマトとモッツァレラ","グリル野菜"],s:["楽天"],c:"イタリア",g:"プリミティーヴォ"},
 ];
 
-const typeMap: Record<string, { label: string; color: string; bg: string; icon: string }> = { red: { label: "赤", color: "#8B1A2B", bg: "#FDF2F4", icon: "🍷" }, white: { label: "白", color: "#9B8A3E", bg: "#FEFDF2", icon: "🥂" }, sparkling: { label: "泡", color: "#2E7D6B", bg: "#F0FAF7", icon: "🍾" }, rose: { label: "ロゼ", color: "#C4627A", bg: "#FFF0F5", icon: "🌸" }};
+const typeMap: Record<string, { label: string; color: string; bg: string; icon: string }> = { red: { label: "赤", color: "#7B2D3B", bg: "#F8F0F2", icon: "🍷" }, white: { label: "白", color: "#8A7A3E", bg: "#F8F6EE", icon: "🥂" }, sparkling: { label: "泡", color: "#3D7A8A", bg: "#EEF6F8", icon: "🍾" }, rose: { label: "ロゼ", color: "#9E5A6E", bg: "#F8EEF2", icon: "🌸" }};
 const allStores = [...new Set(W.flatMap(w => w.s))].sort();
 const allCountries = [...new Set(W.map(w => w.c))].sort();
 const cospaScore = (w: typeof W[number]) => w.v ? Math.round((w.v / 5) * 100 * (3000 / w.p)) : Math.round(60 * (3000 / w.p));
 const fmt = (p: number) => "¥" + p.toLocaleString();
 
-const Badge = ({ children, color = "#8B1A2B", bg = "#FDF2F4", className = "" }: { children: React.ReactNode; color?: string; bg?: string; className?: string }) => (
-  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${className}`} style={{ color, backgroundColor: bg }}>{children}</span>
+const Badge = ({ children, color = "#7B2D3B", bg = "#F8F0F2", className = "" }: { children: React.ReactNode; color?: string; bg?: string; className?: string }) => (
+  <span className={`inline-flex items-center px-2.5 py-0.5 rounded text-[11px] font-semibold tracking-wide uppercase ${className}`} style={{ color, backgroundColor: bg }}>{children}</span>
 );
 const StarRating = ({ score }: { score?: number }) => {
   if (!score) return null;
@@ -84,13 +84,13 @@ const StarRating = ({ score }: { score?: number }) => {
 };
 const CospaBar = ({ score }: { score: number }) => {
   const clampedScore = Math.min(100, Math.max(0, score));
-  const color = clampedScore > 80 ? "#16a34a" : clampedScore > 60 ? "#ca8a04" : "#dc2626";
+  const color = clampedScore > 80 ? "#3d7a5a" : clampedScore > 60 ? "#9a7a2a" : "#a04040";
   return (
     <div className="flex items-center gap-2">
-      <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
-        <div className="h-full rounded-full transition-all duration-500" style={{ width: `${clampedScore}%`, backgroundColor: color }} />
+      <div className="flex-1 h-1 bg-stone-100 rounded overflow-hidden">
+        <div className="h-full rounded transition-all duration-500" style={{ width: `${clampedScore}%`, backgroundColor: color }} />
       </div>
-      <span className="text-xs font-bold" style={{ color }}>{clampedScore}</span>
+      <span className="text-[11px] font-bold tabular-nums" style={{ color }}>{clampedScore}</span>
     </div>
   );
 };
@@ -102,61 +102,57 @@ const WineCard = ({ wine, index, onClick, isFeatured }: { wine: WineItem; index?
   return (
     <div
       onClick={() => onClick(wine)}
-      className={`group relative bg-white rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${isFeatured ? "md:col-span-2 md:row-span-2" : ""}`}
-      style={{ border: "1px solid #f0ece8" }}
+      className={`group relative bg-white rounded-lg overflow-hidden cursor-pointer transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 ${isFeatured ? "md:col-span-2 md:row-span-2" : ""}`}
+      style={{ border: "1px solid #e5ddd3" }}
     >
+      {/* Top color accent line */}
+      <div className="h-0.5" style={{ backgroundColor: ti.color }} />
       {isFeatured && (
-        <div className="absolute top-3 left-3 z-10">
-          <Badge color="#fff" bg="#8B1A2B" className="shadow-lg"><Sparkles className="w-3 h-3 mr-1" />今週のイチオシ</Badge>
+        <div className="absolute top-4 left-4 z-10">
+          <Badge color="#fff" bg="#7B2D3B"><Sparkles className="w-3 h-3 mr-1" />PICK</Badge>
         </div>
       )}
       {index !== undefined && (
-        <div className="absolute top-3 right-3 z-10 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow-sm" style={{ backgroundColor: ti.bg, color: ti.color }}>
-          {index + 1}
+        <div className="absolute top-4 right-4 z-10 text-[11px] font-bold tabular-nums" style={{ color: ti.color }}>
+          #{index + 1}
         </div>
       )}
-      <div className={`relative ${isFeatured ? "p-8" : "p-5"}`}>
-        <div className="flex items-start gap-3 mb-3">
-          <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg" style={{ backgroundColor: ti.bg }}>
-            {ti.icon}
+      <div className={`relative ${isFeatured ? "p-7" : "p-5"}`}>
+        <div className="mb-3">
+          <div className="flex items-center gap-2 mb-2">
+            <Badge color={ti.color} bg={ti.bg}>{ti.icon} {ti.label}</Badge>
+            <span className="text-[11px] text-stone-400">{wine.a}%</span>
+            <span className="text-[11px] text-stone-400">{wine.c}</span>
           </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1">
-              <Badge color={ti.color} bg={ti.bg}>{ti.label}</Badge>
-              <span className="text-xs text-gray-400">{wine.a}%</span>
-            </div>
-            <h3 className={`font-bold text-gray-900 leading-snug group-hover:text-rose-800 transition-colors ${isFeatured ? "text-xl" : "text-sm"}`}>
-              {wine.n}
-            </h3>
-          </div>
+          <h3 className={`font-bold text-stone-900 leading-snug group-hover:text-[#7B2D3B] transition-colors ${isFeatured ? "text-xl font-display" : "text-sm"}`}>
+            {wine.n}
+          </h3>
         </div>
-        <p className={`text-gray-500 leading-relaxed mb-4 ${isFeatured ? "text-sm" : "text-xs line-clamp-2"}`}>{wine.d}</p>
-        <div className="flex flex-wrap gap-1.5 mb-4">
+        <p className={`text-stone-500 leading-relaxed mb-4 ${isFeatured ? "text-sm" : "text-xs line-clamp-2"}`}>{wine.d}</p>
+        <div className="flex flex-wrap gap-1.5 mb-3">
           {wine.f.map((food, i) => (
-            <span key={i} className="inline-flex items-center gap-1 px-2 py-0.5 bg-orange-50 text-orange-700 rounded-md text-xs">
+            <span key={i} className="inline-flex items-center gap-1 px-2 py-0.5 bg-amber-50/80 text-amber-800 rounded text-[11px]">
               <Utensils className="w-2.5 h-2.5" />{food}
             </span>
           ))}
         </div>
         <div className="flex flex-wrap gap-1 mb-4">
           {wine.s.map((store, i) => (
-            <span key={i} className="inline-flex items-center gap-1 px-2 py-0.5 bg-blue-50 text-blue-600 rounded-md text-xs">
+            <span key={i} className="inline-flex items-center gap-1 px-2 py-0.5 bg-stone-50 text-stone-600 rounded text-[11px]">
               <Store className="w-2.5 h-2.5" />{store}
             </span>
           ))}
         </div>
-        <div className="flex items-end justify-between pt-3" style={{ borderTop: "1px solid #f5f0eb" }}>
-          <div>
-            <div className="text-xs text-gray-400 mb-0.5">コスパ指標</div>
+        <div className="flex items-end justify-between pt-3 border-t border-stone-100">
+          <div className="flex-1 mr-4">
+            <div className="text-[10px] text-stone-400 mb-1 uppercase tracking-wider">コスパ</div>
             <CospaBar score={cp} />
           </div>
-          <div className="text-right">
+          <div className="text-right shrink-0">
             <div className="flex items-center gap-2 justify-end mb-1">
               {wine.v && <StarRating score={wine.v} />}
-              <Globe className="w-3 h-3 text-gray-300" />
-              <span className="text-xs text-gray-400">{wine.c}</span>
             </div>
-            <div className={`font-black ${isFeatured ? "text-2xl" : "text-lg"}`} style={{ color: "#8B1A2B" }}>{fmt(wine.p)}</div>
+            <div className={`font-black tabular-nums ${isFeatured ? "text-2xl" : "text-lg"}`} style={{ color: "#7B2D3B" }}>{fmt(wine.p)}</div>
           </div>
         </div>
       </div>
@@ -170,58 +166,53 @@ const WineModal = ({ wine, onClose }: { wine: WineItem | null; onClose: () => vo
   const cp = cospaScore(wine);
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={onClose}>
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
-      <div className="relative bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl" onClick={e => e.stopPropagation()}>
-        <button onClick={onClose} className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
-          <X className="w-5 h-5 text-gray-500" />
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+      <div className="relative bg-white rounded-lg max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl" onClick={e => e.stopPropagation()}>
+        <button onClick={onClose} className="absolute top-3 right-3 z-10 w-8 h-8 rounded flex items-center justify-center bg-stone-100 hover:bg-stone-200 transition-colors">
+          <X className="w-4 h-4 text-stone-500" />
         </button>
-        <div className="p-4 rounded-t-3xl" style={{ background: `linear-gradient(135deg, ${ti.color}15, ${ti.color}05)` }}>
-          <div className="flex items-center gap-3 mb-2">
-            <span className="text-3xl">{ti.icon}</span>
-            <Badge color={ti.color} bg={ti.bg}>{ti.label}ワイン</Badge>
-            <Badge color="#666" bg="#f5f5f5">{wine.a}%</Badge>
-            {wine.g && <Badge color="#6d28d9" bg="#f5f3ff">{wine.g}</Badge>}
+        <div className="p-5 border-b border-stone-100">
+          <div className="flex items-center gap-2 mb-2">
+            <Badge color={ti.color} bg={ti.bg}>{ti.icon} {ti.label}</Badge>
+            <span className="text-[11px] text-stone-400">{wine.a}% ・ {wine.c}</span>
+            {wine.g && <span className="text-[11px] text-stone-400">・ {wine.g}</span>}
           </div>
-          <h2 className="text-2xl font-black text-gray-900 mb-1">{wine.n}</h2>
-          <div className="flex items-center gap-2">
-            <Globe className="w-4 h-4 text-gray-400" />
-            <span className="text-sm text-gray-500">{wine.c}</span>
-          </div>
+          <h2 className="text-xl font-display font-bold text-stone-900">{wine.n}</h2>
         </div>
-        <div className="p-6 space-y-6">
-          <p className="text-gray-600 leading-relaxed">{wine.d}</p>
+        <div className="p-5 space-y-5">
+          <p className="text-stone-600 text-sm leading-relaxed">{wine.d}</p>
           <div className="grid grid-cols-3 gap-3">
-            <div className="bg-gray-50 rounded-xl p-3 text-center">
-              <div className="text-2xl font-black" style={{ color: "#8B1A2B" }}>{fmt(wine.p)}</div>
-              <div className="text-xs text-gray-400 mt-1">価格</div>
+            <div className="bg-stone-50 rounded p-3 text-center">
+              <div className="text-xl font-bold tabular-nums" style={{ color: "#7B2D3B" }}>{fmt(wine.p)}</div>
+              <div className="text-[10px] text-stone-400 mt-1 uppercase tracking-wider">価格</div>
             </div>
-            <div className="bg-gray-50 rounded-xl p-3 text-center">
-              <div className="text-2xl font-black text-amber-600">{wine.v || "—"}</div>
-              <div className="text-xs text-gray-400 mt-1">Vivino</div>
+            <div className="bg-stone-50 rounded p-3 text-center">
+              <div className="text-xl font-bold text-amber-700 tabular-nums">{wine.v || "—"}</div>
+              <div className="text-[10px] text-stone-400 mt-1 uppercase tracking-wider">Vivino</div>
             </div>
-            <div className="bg-gray-50 rounded-xl p-3 text-center">
-              <div className="text-2xl font-black text-emerald-600">{cp}</div>
-              <div className="text-xs text-gray-400 mt-1">コスパ</div>
+            <div className="bg-stone-50 rounded p-3 text-center">
+              <div className="text-xl font-bold text-emerald-700 tabular-nums">{cp}</div>
+              <div className="text-[10px] text-stone-400 mt-1 uppercase tracking-wider">コスパ</div>
             </div>
           </div>
           <div>
-            <h4 className="font-bold text-gray-900 mb-2 flex items-center gap-2"><Utensils className="w-4 h-4" />おすすめペアリング</h4>
-            <div className="flex flex-wrap gap-2">
+            <h4 className="font-semibold text-stone-900 mb-2 text-sm flex items-center gap-2"><Utensils className="w-3.5 h-3.5" />おすすめペアリング</h4>
+            <div className="flex flex-wrap gap-1.5">
               {wine.f.map((food, i) => (
-                <span key={i} className="px-3 py-1.5 bg-orange-50 text-orange-700 rounded-lg text-sm font-medium">{food}</span>
+                <span key={i} className="px-2.5 py-1 bg-amber-50/80 text-amber-800 rounded text-sm">{food}</span>
               ))}
             </div>
           </div>
           <div>
-            <h4 className="font-bold text-gray-900 mb-2 flex items-center gap-2"><ShoppingBag className="w-4 h-4" />購入できるお店</h4>
-            <div className="flex flex-wrap gap-2">
+            <h4 className="font-semibold text-stone-900 mb-2 text-sm flex items-center gap-2"><ShoppingBag className="w-3.5 h-3.5" />購入できるお店</h4>
+            <div className="flex flex-wrap gap-1.5">
               {wine.s.map((store, i) => (
-                <span key={i} className="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg text-sm font-medium">{store}</span>
+                <span key={i} className="px-2.5 py-1 bg-stone-50 text-stone-700 rounded text-sm border border-stone-200">{store}</span>
               ))}
             </div>
           </div>
-          <button className="w-full py-3 rounded-xl font-bold text-white transition-all hover:opacity-90 flex items-center justify-center gap-2" style={{ background: "linear-gradient(135deg, #8B1A2B, #6B1525)" }}>
-            <ExternalLink className="w-4 h-4" />楽天で探す
+          <button className="w-full py-2.5 rounded font-semibold text-white text-sm transition-all hover:opacity-90 flex items-center justify-center gap-2" style={{ backgroundColor: "#7B2D3B" }}>
+            <ExternalLink className="w-3.5 h-3.5" />楽天で探す
           </button>
         </div>
       </div>
@@ -245,38 +236,33 @@ const DinnerMatcher = ({ onSelectWine }: { onSelectWine: (w: WineItem) => void }
     return W.filter(w => w.f.some(food => kw.some(k => food.includes(k)))).sort((a, b) => cospaScore(b) - cospaScore(a)).slice(0, 6);
   }, [selected]);
   return (
-    <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm" style={{ border: "1px solid #f0ece8" }}>
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #8B1A2B, #C4627A)" }}>
-          <Utensils className="w-5 h-5 text-white" />
-        </div>
-        <div>
-          <h3 className="text-lg font-black text-gray-900">今夜の献立からワインを探す</h3>
-          <p className="text-xs text-gray-400">料理を選ぶだけで最適なワインをご提案</p>
-        </div>
+    <div className="bg-white rounded-lg p-6 md:p-8" style={{ border: "1px solid #e5ddd3" }}>
+      <div className="mb-6">
+        <p className="text-[11px] font-semibold tracking-[0.15em] uppercase text-stone-400 mb-1">PAIRING</p>
+        <h3 className="text-lg font-display font-bold text-stone-900">今夜の献立からワインを探す</h3>
       </div>
       <div className="grid grid-cols-3 md:grid-cols-6 gap-2 mb-6">
         {dinnerOptions.map((opt, i) => (
           <button
             key={i}
             onClick={() => setSelected(selected === i ? null : i)}
-            className={`p-3 rounded-xl text-center transition-all ${selected === i ? "shadow-md scale-105" : "hover:bg-gray-50"}`}
-            style={selected === i ? { backgroundColor: "#FDF2F4", border: "2px solid #8B1A2B" } : { border: "2px solid transparent" }}
+            className={`p-3 rounded-lg text-center transition-all ${selected === i ? "" : "hover:bg-stone-50"}`}
+            style={selected === i ? { backgroundColor: "#F8F0F2", border: "1px solid #7B2D3B" } : { border: "1px solid #e5ddd3" }}
           >
             <div className="text-2xl mb-1">{opt.icon}</div>
-            <div className="text-xs font-medium text-gray-700">{opt.label}</div>
+            <div className="text-[11px] font-medium text-stone-700">{opt.label}</div>
           </button>
         ))}
       </div>
       {matches.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 animate-fadeIn">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 animate-fadeIn">
           {matches.map((w, i) => (
-            <div key={i} onClick={() => onSelectWine(w)} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-gray-100 cursor-pointer transition-colors">
-              <span className="text-xl">{typeMap[w.t].icon}</span>
+            <div key={i} onClick={() => onSelectWine(w)} className="flex items-center gap-3 p-3 rounded-lg border border-stone-100 hover:border-stone-200 cursor-pointer transition-colors">
+              <span className="text-lg">{typeMap[w.t].icon}</span>
               <div className="flex-1 min-w-0">
-                <div className="text-sm font-bold text-gray-900 truncate">{w.n}</div>
+                <div className="text-sm font-semibold text-stone-900 truncate">{w.n}</div>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold" style={{ color: "#8B1A2B" }}>{fmt(w.p)}</span>
+                  <span className="text-xs font-bold tabular-nums" style={{ color: "#7B2D3B" }}>{fmt(w.p)}</span>
                   {w.v && <StarRating score={w.v} />}
                 </div>
               </div>
@@ -291,32 +277,30 @@ const DinnerMatcher = ({ onSelectWine }: { onSelectWine: (w: WineItem) => void }
 const PromoBanner = ({ type }: { type: string }) => {
   if (type === "store") {
     return (
-      <div className="relative overflow-hidden rounded-2xl p-6 md:p-8" style={{ background: "linear-gradient(135deg, #1a365d, #2d3748)" }}>
-        <div className="absolute top-2 right-3 text-xs text-white/40">PR</div>
+      <div className="relative overflow-hidden rounded-lg p-6 md:p-8" style={{ backgroundColor: "#1c2433" }}>
+        <div className="absolute top-3 right-3 text-[10px] tracking-wider uppercase text-white/30">AD</div>
         <div className="relative z-10">
-          <Badge color="#93c5fd" bg="#1e3a5f" className="mb-3">STORE SPOTLIGHT</Badge>
-          <h3 className="text-xl font-black text-white mb-2">成城石井のワインセレクション</h3>
-          <p className="text-blue-200 text-sm mb-4">厳選されたワインを日常に。今月のおすすめワインをチェック</p>
-          <button className="px-5 py-2 bg-white text-gray-900 rounded-lg font-bold text-sm hover:bg-gray-100 transition-colors flex items-center gap-2">
-            おすすめを見る <ArrowRight className="w-4 h-4" />
+          <p className="text-[11px] font-semibold tracking-[0.15em] uppercase mb-3" style={{ color: "#7aa2c4" }}>STORE SPOTLIGHT</p>
+          <h3 className="text-lg font-display font-bold text-white mb-2">成城石井のワインセレクション</h3>
+          <p className="text-stone-400 text-sm mb-5">厳選されたワインを日常に。今月のおすすめワインをチェック</p>
+          <button className="px-4 py-2 bg-white text-stone-900 rounded text-sm font-semibold hover:bg-stone-100 transition-colors flex items-center gap-2">
+            おすすめを見る <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
-        <div className="absolute -right-4 -bottom-4 text-8xl opacity-10">🏪</div>
       </div>
     );
   }
   return (
-    <div className="relative overflow-hidden rounded-2xl p-6 md:p-8" style={{ background: "linear-gradient(135deg, #7B2D3B, #4A0E1B)" }}>
-      <div className="absolute top-2 right-3 text-xs text-white/40">PR</div>
+    <div className="relative overflow-hidden rounded-lg p-6 md:p-8" style={{ backgroundColor: "#2c1620" }}>
+      <div className="absolute top-3 right-3 text-[10px] tracking-wider uppercase text-white/30">AD</div>
       <div className="relative z-10">
-        <Badge color="#fbbf24" bg="#7B2D3B" className="mb-3">PARTNER WINERY</Badge>
-        <h3 className="text-xl font-black text-white mb-2">南アフリカワインの魅力を発見</h3>
-        <p className="text-rose-200 text-sm mb-4">世界が注目するコスパ最強のワイン産地。この春おすすめの3本</p>
-        <button className="px-5 py-2 bg-white/20 text-white rounded-lg font-bold text-sm hover:bg-white/30 transition-colors backdrop-blur-sm flex items-center gap-2">
-          特集を読む <ArrowRight className="w-4 h-4" />
+        <p className="text-[11px] font-semibold tracking-[0.15em] uppercase mb-3" style={{ color: "#c8956c" }}>PARTNER WINERY</p>
+        <h3 className="text-lg font-display font-bold text-white mb-2">南アフリカワインの魅力を発見</h3>
+        <p className="text-stone-400 text-sm mb-5">世界が注目するコスパ最強のワイン産地。この春おすすめの3本</p>
+        <button className="px-4 py-2 border border-stone-600 text-white rounded text-sm font-semibold hover:bg-white/10 transition-colors flex items-center gap-2">
+          特集を読む <ArrowRight className="w-3.5 h-3.5" />
         </button>
       </div>
-      <div className="absolute -right-4 -bottom-4 text-8xl opacity-10">🍇</div>
     </div>
   );
 };
@@ -332,22 +316,22 @@ const guideItems = [
 const GuideSection = () => {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <div className="space-y-3">
+    <div className="space-y-2">
       {guideItems.map((item, i) => (
-        <div key={i} className="bg-white rounded-2xl overflow-hidden transition-all" style={{ border: "1px solid #f0ece8" }}>
+        <div key={i} className="bg-white rounded-lg overflow-hidden transition-all" style={{ border: "1px solid #e5ddd3" }}>
           <button
             onClick={() => setOpen(open === i ? null : i)}
-            className="w-full flex items-center gap-4 p-5 text-left hover:bg-gray-50 transition-colors"
+            className="w-full flex items-center gap-3 p-4 text-left hover:bg-stone-50 transition-colors"
           >
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#FDF2F4", color: "#8B1A2B" }}>
+            <div className="w-8 h-8 rounded flex items-center justify-center flex-shrink-0 text-stone-500 bg-stone-50">
               {item.icon}
             </div>
-            <span className="flex-1 font-bold text-gray-900">{item.q}</span>
-            {open === i ? <ChevronUp className="w-5 h-5 text-gray-400" /> : <ChevronDown className="w-5 h-5 text-gray-400" />}
+            <span className="flex-1 font-semibold text-stone-900 text-sm">{item.q}</span>
+            {open === i ? <ChevronUp className="w-4 h-4 text-stone-400" /> : <ChevronDown className="w-4 h-4 text-stone-400" />}
           </button>
           {open === i && (
-            <div className="px-5 pb-5 ml-14">
-              <p className="text-sm text-gray-600 leading-relaxed">{item.a}</p>
+            <div className="px-4 pb-4 ml-11">
+              <p className="text-sm text-stone-500 leading-relaxed">{item.a}</p>
             </div>
           )}
         </div>
@@ -402,124 +386,102 @@ export default function App() {
     { id: "rose", label: "ロゼ", icon: "🌸", count: W.filter(w => w.t === "rose").length },
   ];
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#FDFAF6" }}>
-      <style>{`
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-fadeIn { animation: fadeIn 0.4s ease-out; }
-        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-        .animate-float { animation: float 3s ease-in-out infinite; }
-        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
-        .shimmer-text { background: linear-gradient(90deg, #8B1A2B, #C4627A, #D4A853, #8B1A2B); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 3s linear infinite; }
-        * { scrollbar-width: thin; scrollbar-color: #d4c5b9 transparent; }
-      `}</style>
+    <div className="min-h-screen" style={{ backgroundColor: "#faf8f5" }}>
       {/* Header */}
-      <header className="sticky top-0 z-40 backdrop-blur-xl bg-white/80 shadow-sm" style={{ borderBottom: "1px solid #f0ece8" }}>
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #8B1A2B, #C4627A)" }}>
-              <Wine className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <h1 className="text-lg font-black" style={{ color: "#8B1A2B" }}>ご近所ワイン</h1>
-              <p className="text-xs text-gray-400 -mt-0.5 hidden md:block">近所で買うべき最高のワイン</p>
-            </div>
+      <header className="sticky top-0 z-40 backdrop-blur-xl bg-white/90" style={{ borderBottom: "1px solid #e5ddd3" }}>
+        <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
+            <Wine className="w-5 h-5" style={{ color: "#7B2D3B" }} />
+            <span className="text-base font-bold font-display tracking-tight" style={{ color: "#7B2D3B" }}>ご近所ワイン</span>
           </div>
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-0.5">
             {tabItems.map(t => (
               <button key={t.id} onClick={() => { setTab(t.id); setVisibleCount(12); }}
-                className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${tab === t.id ? "text-white shadow-sm" : "text-gray-500 hover:text-gray-900 hover:bg-gray-100"}`}
-                style={tab === t.id ? { background: "linear-gradient(135deg, #8B1A2B, #6B1525)" } : {}}>
+                className={`px-3 py-1.5 rounded text-sm transition-all ${tab === t.id ? "font-bold text-stone-900 bg-stone-100" : "text-stone-500 hover:text-stone-900"}`}>
                 {t.icon && <span className="mr-1">{t.icon}</span>}{t.label}
               </button>
             ))}
           </nav>
-          <button onClick={randomWine} className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-all hover:shadow-md" style={{ backgroundColor: "#FDF2F4", color: "#8B1A2B" }}>
-            <Shuffle className="w-4 h-4" /> 運命の1本
+          <button onClick={randomWine} className="flex items-center gap-1.5 px-3 py-1.5 rounded border text-sm font-medium transition-all hover:bg-stone-50" style={{ borderColor: "#e5ddd3", color: "#7B2D3B" }}>
+            <Shuffle className="w-3.5 h-3.5" /> 運命の1本
           </button>
         </div>
       </header>
       {/* Hero */}
-      <section className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #1A0A10, #3D1225, #1A0A10)" }}>
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, #8B1A2B 0%, transparent 50%), radial-gradient(circle at 70% 50%, #C4627A 0%, transparent 50%)" }} />
-        <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
-          <div className="max-w-2xl">
-            <Badge color="#D4A853" bg="#3D1225" className="mb-4 text-sm">厳選 {stats.total} 本 ・ {stats.countries} カ国 ・ {stats.stores} 店舗</Badge>
-            <h2 className="text-4xl md:text-6xl font-black text-white leading-tight mb-4">
-              近所で買うべき<br />
-              <span className="shimmer-text">最高のワイン</span>
+      <section className="relative overflow-hidden bg-texture" style={{ background: "#2c1620" }}>
+        <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "radial-gradient(circle at 20% 80%, #c8956c 0%, transparent 40%), radial-gradient(circle at 80% 20%, #7B2D3B 0%, transparent 40%)" }} />
+        <div className="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
+          <div className="max-w-xl">
+            <p className="text-[11px] font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: "#c8956c" }}>
+              {stats.total} wines ・ {stats.countries} countries ・ {stats.stores} stores
+            </p>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white leading-tight mb-4 tracking-tight">
+              近所で買うべき、<br />最高のワイン。
             </h2>
-            <p className="text-lg text-rose-200/80 mb-8 leading-relaxed">
-              コンビニ・スーパーで手に入る厳選ワインを<br className="hidden md:block" />
-              コスパと話題度でランキング。今夜の1本がすぐ見つかる。
+            <p className="text-base text-stone-400 mb-8 leading-relaxed max-w-md">
+              コンビニ・スーパーで手に入る厳選ワインを、コスパと話題度でランキング。今夜の1本がすぐ見つかる。
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="#wines" className="px-6 py-3 rounded-xl font-bold text-white flex items-center gap-2 transition-all hover:shadow-lg hover:scale-105" style={{ background: "linear-gradient(135deg, #8B1A2B, #C4627A)" }}>
+              <a href="#wines" className="px-5 py-2.5 rounded text-sm font-bold text-white flex items-center gap-2 transition-all hover:opacity-90" style={{ backgroundColor: "#7B2D3B" }}>
                 ワインを探す <ArrowRight className="w-4 h-4" />
               </a>
-              <a href="#guide" className="px-6 py-3 rounded-xl font-bold text-white/80 border border-white/20 flex items-center gap-2 hover:bg-white/10 transition-all backdrop-blur-sm">
+              <a href="#guide" className="px-5 py-2.5 rounded text-sm font-medium text-stone-400 border border-stone-700 flex items-center gap-2 hover:text-white hover:border-stone-500 transition-all">
                 初心者ガイド
               </a>
             </div>
           </div>
-          <div className="absolute right-10 top-1/2 -translate-y-1/2 hidden lg:block">
-            <div className="text-9xl animate-float opacity-30">🍷</div>
-          </div>
         </div>
       </section>
       {/* Stats Bar */}
-      <section className="bg-white shadow-sm" style={{ borderBottom: "1px solid #f0ece8" }}>
-        <div className="max-w-7xl mx-auto px-4 py-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <section className="bg-white" style={{ borderBottom: "1px solid #e5ddd3" }}>
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-center gap-6 md:gap-10 text-sm">
           {[
-            { icon: <Wine className="w-5 h-5" />, label: "厳選ワイン", value: `${stats.total}本`, color: "#8B1A2B" },
-            { icon: <DollarSign className="w-5 h-5" />, label: "平均価格", value: fmt(stats.avgPrice), color: "#ca8a04" },
-            { icon: <Globe className="w-5 h-5" />, label: "対象国", value: `${stats.countries}カ国`, color: "#2E7D6B" },
-            { icon: <Store className="w-5 h-5" />, label: "取扱店", value: `${stats.stores}店舗`, color: "#4338ca" },
+            { label: "厳選", value: `${stats.total}本` },
+            { label: "平均", value: fmt(stats.avgPrice) },
+            { label: "産地", value: `${stats.countries}カ国` },
+            { label: "取扱", value: `${stats.stores}店舗` },
           ].map((s, i) => (
-            <div key={i} className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: s.color + "10", color: s.color }}>{s.icon}</div>
-              <div>
-                <div className="text-lg font-black text-gray-900">{s.value}</div>
-                <div className="text-xs text-gray-400">{s.label}</div>
-              </div>
+            <div key={i} className="flex items-center gap-1.5">
+              <span className="text-stone-400 text-xs">{s.label}</span>
+              <span className="font-bold text-stone-800 tabular-nums">{s.value}</span>
             </div>
           ))}
         </div>
       </section>
-      <main className="max-w-7xl mx-auto px-4 py-8 space-y-10">
+      <main className="max-w-6xl mx-auto px-4 py-10 space-y-12">
         <DinnerMatcher onSelectWine={setSelectedWine} />
         <PromoBanner type="winery" />
         <section id="wines">
           {/* Mobile tabs */}
-          <div className="md:hidden flex gap-2 overflow-x-auto pb-3 mb-4 -mx-1 px-1">
+          <div className="md:hidden flex gap-1.5 overflow-x-auto pb-3 mb-4 -mx-1 px-1">
             {tabItems.map(t => (
               <button key={t.id} onClick={() => { setTab(t.id); setVisibleCount(12); }}
-                className={`flex-shrink-0 px-4 py-2 rounded-xl text-sm font-bold transition-all ${tab === t.id ? "text-white shadow-sm" : "text-gray-500 bg-white"}`}
-                style={tab === t.id ? { background: "linear-gradient(135deg, #8B1A2B, #6B1525)" } : { border: "1px solid #f0ece8" }}>
-                {t.icon && <span className="mr-1">{t.icon}</span>}{t.label}<span className="ml-1 text-xs opacity-70">{t.count}</span>
+                className={`flex-shrink-0 px-3 py-1.5 rounded text-sm transition-all ${tab === t.id ? "font-bold text-white" : "text-stone-500 bg-white"}`}
+                style={tab === t.id ? { backgroundColor: "#7B2D3B" } : { border: "1px solid #e5ddd3" }}>
+                {t.icon && <span className="mr-1">{t.icon}</span>}{t.label}<span className="ml-1 text-xs opacity-60">{t.count}</span>
               </button>
             ))}
           </div>
           {/* Search + Filters */}
-          <div className="bg-white rounded-2xl p-4 mb-6 shadow-sm" style={{ border: "1px solid #f0ece8" }}>
-            <div className="flex items-center gap-3 mb-3">
+          <div className="bg-white rounded-lg p-4 mb-6" style={{ border: "1px solid #e5ddd3" }}>
+            <div className="flex items-center gap-3">
               <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400" />
                 <input
                   type="text" value={search} onChange={e => setSearch(e.target.value)}
                   placeholder="ワイン名・品種・料理名で検索..."
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-gray-50 text-sm outline-none focus:ring-2 focus:ring-rose-200 transition-all"
+                  className="w-full pl-10 pr-4 py-2 rounded border border-stone-200 bg-stone-50 text-sm outline-none focus:border-stone-400 transition-all"
                 />
               </div>
-              <button onClick={() => setShowFilters(!showFilters)} className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-50 text-sm font-medium text-gray-600 hover:bg-gray-100 transition-colors">
-                <Filter className="w-4 h-4" /> 絞り込み {showFilters ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
+              <button onClick={() => setShowFilters(!showFilters)} className="flex items-center gap-1.5 px-3 py-2 rounded border border-stone-200 text-sm text-stone-600 hover:bg-stone-50 transition-colors">
+                <Filter className="w-3.5 h-3.5" /> 絞り込み {showFilters ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
               </button>
             </div>
             {showFilters && (
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 animate-fadeIn">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3 pt-3 border-t border-stone-100 animate-fadeIn">
                 <div>
-                  <label className="text-xs text-gray-400 mb-1 block">予算</label>
-                  <select value={priceRange} onChange={e => setPriceRange(e.target.value)} className="w-full px-3 py-2 rounded-lg bg-gray-50 text-sm outline-none">
+                  <label className="text-[11px] text-stone-400 mb-1 block uppercase tracking-wider">予算</label>
+                  <select value={priceRange} onChange={e => setPriceRange(e.target.value)} className="w-full px-3 py-2 rounded border border-stone-200 bg-white text-sm outline-none">
                     <option value="all">すべて</option>
                     <option value="under1500">〜¥1,500</option>
                     <option value="1500to2000">¥1,500〜2,000</option>
@@ -527,22 +489,22 @@ export default function App() {
                   </select>
                 </div>
                 <div>
-                  <label className="text-xs text-gray-400 mb-1 block">お店</label>
-                  <select value={store} onChange={e => setStore(e.target.value)} className="w-full px-3 py-2 rounded-lg bg-gray-50 text-sm outline-none">
+                  <label className="text-[11px] text-stone-400 mb-1 block uppercase tracking-wider">お店</label>
+                  <select value={store} onChange={e => setStore(e.target.value)} className="w-full px-3 py-2 rounded border border-stone-200 bg-white text-sm outline-none">
                     <option value="all">すべて</option>
                     {allStores.map(s => <option key={s} value={s}>{s}</option>)}
                   </select>
                 </div>
                 <div>
-                  <label className="text-xs text-gray-400 mb-1 block">国</label>
-                  <select value={country} onChange={e => setCountry(e.target.value)} className="w-full px-3 py-2 rounded-lg bg-gray-50 text-sm outline-none">
+                  <label className="text-[11px] text-stone-400 mb-1 block uppercase tracking-wider">国</label>
+                  <select value={country} onChange={e => setCountry(e.target.value)} className="w-full px-3 py-2 rounded border border-stone-200 bg-white text-sm outline-none">
                     <option value="all">すべて</option>
                     {allCountries.map(c => <option key={c} value={c}>{c}</option>)}
                   </select>
                 </div>
                 <div>
-                  <label className="text-xs text-gray-400 mb-1 block">並び替え</label>
-                  <select value={sort} onChange={e => setSort(e.target.value)} className="w-full px-3 py-2 rounded-lg bg-gray-50 text-sm outline-none">
+                  <label className="text-[11px] text-stone-400 mb-1 block uppercase tracking-wider">並び替え</label>
+                  <select value={sort} onChange={e => setSort(e.target.value)} className="w-full px-3 py-2 rounded border border-stone-200 bg-white text-sm outline-none">
                     <option value="cospa">コスパ順</option>
                     <option value="price_asc">安い順</option>
                     <option value="price_desc">高い順</option>
@@ -554,7 +516,7 @@ export default function App() {
           </div>
           {/* Results count */}
           <div className="flex items-center justify-between mb-4">
-            <p className="text-sm text-gray-500"><span className="font-bold text-gray-900">{filtered.length}</span> 本のワインが見つかりました</p>
+            <p className="text-sm text-stone-500"><span className="font-bold text-stone-800 tabular-nums">{filtered.length}</span> 本</p>
           </div>
           {/* Wine Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -565,7 +527,7 @@ export default function App() {
           {/* Load more */}
           {filtered.length > visibleCount && (
             <div className="text-center mt-8">
-              <button onClick={() => setVisibleCount(v => v + 12)} className="px-8 py-3 rounded-xl font-bold text-sm transition-all hover:shadow-md" style={{ backgroundColor: "#FDF2F4", color: "#8B1A2B" }}>
+              <button onClick={() => setVisibleCount(v => v + 12)} className="px-6 py-2.5 rounded border text-sm font-semibold transition-all hover:bg-stone-50" style={{ borderColor: "#e5ddd3", color: "#7B2D3B" }}>
                 もっと見る（残り {filtered.length - visibleCount} 本）
               </button>
             </div>
@@ -574,97 +536,82 @@ export default function App() {
         <PromoBanner type="store" />
         {/* Guide */}
         <section id="guide">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #D4A853, #B8860B)" }}>
-              <Award className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <h3 className="text-xl font-black text-gray-900">ワイン選びガイド</h3>
-              <p className="text-xs text-gray-400">初心者から中級者まで、知っておきたい基礎知識</p>
-            </div>
+          <div className="mb-6">
+            <p className="text-[11px] font-semibold tracking-[0.15em] uppercase text-stone-400 mb-1">GUIDE</p>
+            <h3 className="text-lg font-display font-bold text-stone-900">ワイン選びガイド</h3>
           </div>
           <GuideSection />
         </section>
         {/* Newsletter */}
-        <section className="bg-white rounded-3xl p-8 md:p-12 text-center shadow-sm" style={{ border: "1px solid #f0ece8" }}>
-          <div className="max-w-md mx-auto">
-            <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: "linear-gradient(135deg, #8B1A2B, #C4627A)" }}>
-              <Mail className="w-7 h-7 text-white" />
-            </div>
-            <h3 className="text-2xl font-black text-gray-900 mb-2">毎週おすすめワインをお届け</h3>
-            <p className="text-sm text-gray-500 mb-6">新着ワイン・セール情報・季節のペアリングレシピを毎週金曜にお届けします</p>
+        <section className="bg-white rounded-lg p-8 md:p-10 text-center" style={{ border: "1px solid #e5ddd3" }}>
+          <div className="max-w-sm mx-auto">
+            <Mail className="w-5 h-5 mx-auto mb-4 text-stone-400" />
+            <h3 className="text-lg font-display font-bold text-stone-900 mb-2">毎週おすすめワインをお届け</h3>
+            <p className="text-sm text-stone-500 mb-6">新着・セール情報・ペアリングレシピを毎週金曜に。</p>
             <div className="flex gap-2">
-              <input type="email" placeholder="メールアドレス" className="flex-1 px-4 py-3 rounded-xl bg-gray-50 text-sm outline-none focus:ring-2 focus:ring-rose-200" />
-              <button className="px-6 py-3 rounded-xl font-bold text-white text-sm transition-all hover:shadow-lg" style={{ background: "linear-gradient(135deg, #8B1A2B, #6B1525)" }}>登録</button>
+              <input type="email" placeholder="メールアドレス" className="flex-1 px-4 py-2.5 rounded border border-stone-200 bg-stone-50 text-sm outline-none focus:border-stone-400" />
+              <button className="px-5 py-2.5 rounded text-sm font-semibold text-white transition-all hover:opacity-90" style={{ backgroundColor: "#7B2D3B" }}>登録</button>
             </div>
-            <p className="text-xs text-gray-400 mt-3">いつでも解除できます。スパムは送りません。</p>
+            <p className="text-[11px] text-stone-400 mt-3">いつでも解除できます。</p>
           </div>
         </section>
         {/* Partner Section */}
-        <section className="bg-white rounded-3xl p-6 md:p-8 shadow-sm" style={{ border: "1px solid #f0ece8" }}>
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #059669, #34d399)" }}>
-              <BarChart3 className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <h3 className="text-lg font-black text-gray-900">パートナー企業様へ</h3>
-              <p className="text-xs text-gray-400">ユーザー無料・企業様からの広告で運営しています</p>
-            </div>
+        <section className="bg-white rounded-lg p-6 md:p-8" style={{ border: "1px solid #e5ddd3" }}>
+          <div className="mb-6">
+            <p className="text-[11px] font-semibold tracking-[0.15em] uppercase text-stone-400 mb-1">PARTNERSHIP</p>
+            <h3 className="text-lg font-display font-bold text-stone-900">パートナー企業様へ</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { icon: <Store className="w-6 h-6" />, title: "ストアスポットライト", desc: "御社の店舗をフィーチャー。ワインと店舗を紐づけて認知向上", price: "月額 ¥30,000〜" },
-              { icon: <Wine className="w-6 h-6" />, title: "ワイナリー特集", desc: "ワイナリー・インポーターの商品をネイティブ記事で紹介", price: "1記事 ¥50,000〜" },
-              { icon: <Gift className="w-6 h-6" />, title: "タイアップ企画", desc: "季節キャンペーン・プレゼント企画で双方のファンを獲得", price: "企画ごとにご相談" },
+              { icon: <Store className="w-5 h-5" />, title: "ストアスポットライト", desc: "御社の店舗をフィーチャー。ワインと店舗を紐づけて認知向上", price: "月額 ¥30,000〜" },
+              { icon: <Wine className="w-5 h-5" />, title: "ワイナリー特集", desc: "ワイナリー・インポーターの商品をネイティブ記事で紹介", price: "1記事 ¥50,000〜" },
+              { icon: <Gift className="w-5 h-5" />, title: "タイアップ企画", desc: "季節キャンペーン・プレゼント企画で双方のファンを獲得", price: "企画ごとにご相談" },
             ].map((item, i) => (
-              <div key={i} className="p-5 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-3" style={{ backgroundColor: "#ecfdf5", color: "#059669" }}>{item.icon}</div>
-                <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
-                <p className="text-xs text-gray-500 mb-3">{item.desc}</p>
-                <span className="text-sm font-bold" style={{ color: "#059669" }}>{item.price}</span>
+              <div key={i} className="p-5 rounded-lg bg-stone-50 hover:bg-stone-100 transition-colors">
+                <div className="w-9 h-9 rounded flex items-center justify-center mb-3 text-stone-500 bg-white border border-stone-200">{item.icon}</div>
+                <h4 className="font-semibold text-stone-900 mb-1 text-sm">{item.title}</h4>
+                <p className="text-xs text-stone-500 mb-3">{item.desc}</p>
+                <span className="text-sm font-bold" style={{ color: "#7B2D3B" }}>{item.price}</span>
               </div>
             ))}
           </div>
         </section>
       </main>
       {/* Footer */}
-      <footer className="mt-16" style={{ backgroundColor: "#1A0A10" }}>
-        <div className="max-w-7xl mx-auto px-4 py-12">
+      <footer className="mt-16 border-t" style={{ borderColor: "#e5ddd3", backgroundColor: "#faf8f5" }}>
+        <div className="max-w-6xl mx-auto px-4 py-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #8B1A2B, #C4627A)" }}>
-                  <Wine className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-black text-white">ご近所ワイン</h3>
+                <Wine className="w-4 h-4" style={{ color: "#7B2D3B" }} />
+                <span className="text-sm font-bold font-display" style={{ color: "#7B2D3B" }}>ご近所ワイン</span>
               </div>
-              <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
-                コンビニ・スーパーで買える手頃なワインを、コスパと話題度で厳選して紹介するサイトです。ユーザーの皆さまには無料でご利用いただけます。
+              <p className="text-sm text-stone-500 leading-relaxed max-w-sm">
+                コンビニ・スーパーで買える手頃なワインを、コスパと話題度で厳選して紹介するサイトです。
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-white mb-3">カテゴリ</h4>
+              <h4 className="text-[11px] font-semibold tracking-[0.15em] uppercase text-stone-400 mb-3">カテゴリ</h4>
               <div className="space-y-2">
                 {tabItems.slice(1).map(t => (
                   <button key={t.id} onClick={() => { setTab(t.id); setVisibleCount(12); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                    className="block text-sm text-gray-400 hover:text-white transition-colors">{t.icon} {t.label}ワイン（{t.count}本）</button>
+                    className="block text-sm text-stone-500 hover:text-stone-900 transition-colors">{t.icon} {t.label}（{t.count}）</button>
                 ))}
               </div>
             </div>
             <div>
-              <h4 className="font-bold text-white mb-3">リンク</h4>
+              <h4 className="text-[11px] font-semibold tracking-[0.15em] uppercase text-stone-400 mb-3">リンク</h4>
               <div className="space-y-2">
                 {["ワイン選びガイド", "パートナー企業様へ", "プライバシーポリシー", "お問い合わせ"].map(l => (
-                  <a key={l} href="#" className="block text-sm text-gray-400 hover:text-white transition-colors">{l}</a>
+                  <a key={l} href="#" className="block text-sm text-stone-500 hover:text-stone-900 transition-colors">{l}</a>
                 ))}
               </div>
             </div>
           </div>
-          <div className="pt-8 text-center" style={{ borderTop: "1px solid #2D1520" }}>
-            <p className="text-xs text-gray-500">
-              &copy; 2026 ご近所ワイン. 価格は参考値です。最新の価格は各店舗でご確認ください。
+          <div className="pt-6 border-t border-stone-200 text-center">
+            <p className="text-[11px] text-stone-400">
+              &copy; 2026 ご近所ワイン — 価格は参考値です。Vivinoスコアは各ワインのVivino公式ページの値を参照しています。
             </p>
-            <p className="text-xs text-gray-600 mt-1">Vivinoスコアは各ワインのVivino公式ページの値を参照しています。</p>
           </div>
         </div>
       </footer>

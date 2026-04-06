@@ -51,38 +51,38 @@ export default async function WineDetailPage({
   const sortedStores = [...wine.stores].sort((a, b) => a.price - b.price);
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:px-8">
       <Link
         href="/wines"
-        className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
       >
-        <ArrowLeft className="h-4 w-4" />
+        <ArrowLeft className="h-3.5 w-3.5" />
         一覧に戻る
       </Link>
 
-      <div className="mt-6 space-y-6">
+      <div className="mt-8 space-y-8">
         {/* Hero */}
         <div>
           <Badge variant="wine">{wineTypeLabels[wine.type]}</Badge>
-          <h1 className="mt-2 text-2xl font-bold sm:text-3xl">{wine.nameJa}</h1>
-          <p className="mt-1 text-sm text-muted-foreground">
+          <h1 className="mt-3 text-2xl font-bold font-display sm:text-3xl tracking-tight">{wine.nameJa}</h1>
+          <p className="mt-1.5 text-sm text-muted-foreground">
             {wine.name} — {wine.producer} / {wine.country}
           </p>
-          <p className="mt-3 text-lg font-medium text-primary">{wine.whyBuyNow}</p>
+          <p className="mt-4 text-base font-medium text-primary leading-relaxed">{wine.whyBuyNow}</p>
         </div>
 
         {/* Key metrics */}
         <div className="grid grid-cols-3 gap-3">
           <Card>
             <CardContent className="p-3 text-center">
-              <p className="text-[10px] text-muted-foreground">価格</p>
-              <p className="text-xl font-bold text-primary">{formatPrice(wine.price)}</p>
+              <p className="text-[10px] uppercase tracking-wider text-muted-foreground">価格</p>
+              <p className="text-xl font-bold tabular-nums text-primary">{formatPrice(wine.price)}</p>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-3 text-center">
-              <p className="text-[10px] text-muted-foreground">Vivino</p>
-              <p className="flex items-center justify-center gap-1 text-xl font-bold text-gold">
+              <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Vivino</p>
+              <p className="flex items-center justify-center gap-1 text-xl font-bold tabular-nums text-gold">
                 <Star className="h-4 w-4 fill-gold" />
                 {wine.vivinoScore?.toFixed(1) ?? "-"}
               </p>
@@ -90,8 +90,8 @@ export default async function WineDetailPage({
           </Card>
           <Card>
             <CardContent className="p-3 text-center">
-              <p className="text-[10px] text-muted-foreground">コスパ</p>
-              <p className="text-xl font-bold">{wine.costPerformance}<span className="text-sm text-muted-foreground">/100</span></p>
+              <p className="text-[10px] uppercase tracking-wider text-muted-foreground">コスパ</p>
+              <p className="text-xl font-bold tabular-nums">{wine.costPerformance}<span className="text-sm text-muted-foreground">/100</span></p>
             </CardContent>
           </Card>
         </div>
