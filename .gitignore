@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# X collection drafts (staged, not committed until promoted)
+content/wines/_drafts/*.yaml
+!content/wines/_drafts/.gitkeep

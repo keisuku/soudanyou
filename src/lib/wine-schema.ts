@@ -40,6 +40,11 @@ export const wineSchema = z.object({
   costPerformance: z.number().min(0).max(100),
   tags: z.array(z.string()),
   tweetUrls: z.array(z.string()),
+  discoveredFrom: z.object({
+    tweetUrl: z.string().url(),
+    collectedAt: z.string(),
+    query: z.string().optional(),
+  }).optional(),
   abv: z.number().positive(),
   servingTemp: z.string(),
   pairings: z.array(z.string()),
