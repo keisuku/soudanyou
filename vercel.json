@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "framework": "nextjs",
+  "env": {
+    "XAI_MODEL": "grok-2-1212",
+    "XAI_BASE_URL": "https://api.x.ai/v1"
+  }
+}

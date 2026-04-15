@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Sparkles, Send, Loader2, Wine as WineIcon, X, Bot, ArrowRight } from "lucide-react";
 import type { Wine } from "@/types/wine";
@@ -35,6 +35,21 @@ export function AiSommelier({ basePath = "/soudanyou" }: Props) {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<SommelierResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    setTimeout(() => inputRef.current?.focus(), 100);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   async function ask(q: string) {
     const text = q.trim();
@@ -216,11 +231,12 @@ export function AiSommelier({ basePath = "/soudanyou" }: Props) {
               >
                 <div className="flex gap-2">
                   <input
+                    ref={inputRef}
                     type="text"
                     value={question}
                     onChange={(e) => setQuestion(e.target.value)}
                     placeholder="料理・気分・予算を書いてみて…"
-                    className="flex-1 px-4 py-3 rounded-xl bg-gray-50 text-sm outline-none focus:ring-2 focus:ring-rose-200 min-h-[44px]"
+                    className="flex-1 px-4 py-3 rounded-xl bg-gray-50 text-base sm:text-sm outline-none focus:ring-2 focus:ring-rose-200 min-h-[44px]"
                     maxLength={400}
                     disabled={loading}
                   />
