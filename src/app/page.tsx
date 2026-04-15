@@ -1,6 +1,7 @@
 "use client";
 import { useState, useMemo, useCallback } from "react";
 import { Search, Wine, Star, ShoppingBag, ChevronDown, ChevronUp, X, Sparkles, ArrowRight, Filter, Globe, Store, Utensils, TrendingUp, Gift, Mail, ExternalLink, Shuffle, Clock, Award, DollarSign, BarChart3 } from "lucide-react";
+import { AiSommelier } from "@/components/sommelier/ai-sommelier";
 
 const W = [
   {n:"ジスト グランレゼルバ",p:1098,a:13.5,t:"red",d:"13年熟成グランレゼルバが1,098円。神の雫コラボで話題沸騰",f:["ファミチキ","ステーキ"],s:["ファミマ"],c:"スペイン",g:"テンプラニーリョ"},
@@ -434,7 +435,7 @@ export default function App() {
               </button>
             ))}
           </nav>
-          <button onClick={randomWine} className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-all hover:shadow-md" style={{ backgroundColor: "#FDF2F4", color: "#8B1A2B" }}>
+          <button onClick={randomWine} className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold transition-all hover:shadow-md min-h-[44px] active:scale-95" style={{ backgroundColor: "#FDF2F4", color: "#8B1A2B" }} aria-label="ランダムにワインを選ぶ">
             <Shuffle className="w-4 h-4" /> 運命の1本
           </button>
         </div>
@@ -506,12 +507,13 @@ export default function App() {
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input
-                  type="text" value={search} onChange={e => setSearch(e.target.value)}
+                  type="search" inputMode="search" value={search} onChange={e => setSearch(e.target.value)}
                   placeholder="ワイン名・品種・料理名で検索..."
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-gray-50 text-sm outline-none focus:ring-2 focus:ring-rose-200 transition-all"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-gray-50 text-base md:text-sm outline-none focus:ring-2 focus:ring-rose-200 transition-all min-h-[44px]"
+                  aria-label="ワインを検索"
                 />
               </div>
-              <button onClick={() => setShowFilters(!showFilters)} className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-50 text-sm font-medium text-gray-600 hover:bg-gray-100 transition-colors">
+              <button onClick={() => setShowFilters(!showFilters)} className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-50 text-sm font-medium text-gray-600 hover:bg-gray-100 transition-colors min-h-[44px]" aria-expanded={showFilters} aria-label="絞り込みパネルを開閉">
                 <Filter className="w-4 h-4" /> 絞り込み {showFilters ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
               </button>
             </div>
@@ -669,6 +671,7 @@ export default function App() {
         </div>
       </footer>
       <WineModal wine={selectedWine} onClose={() => setSelectedWine(null)} />
+      <AiSommelier />
     </div>
   );
 }
