@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
 import { MobileBottomNav } from "@/components/layout/mobile-bottom-nav";
+import { CompareTray } from "@/components/wine/compare-tray";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? process.env.NEXT_PUBLIC_SITE_URL
@@ -72,6 +73,7 @@ export default function RootLayout({
         style={{ fontFamily: "system-ui, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif" }}
       >
         <main className="flex-1 pb-16 md:pb-0">{children}</main>
+        <CompareTray />
         <MobileBottomNav />
         <Script
           src="https://platform.twitter.com/widgets.js"

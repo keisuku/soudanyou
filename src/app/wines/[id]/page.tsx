@@ -16,6 +16,7 @@ import { TweetEmbed } from "@/components/wine/tweet-embed";
 import { FavoriteButton } from "@/components/wine/favorite-button";
 import { ShareButton } from "@/components/wine/share-button";
 import { RecentTracker } from "@/components/wine/recent-tracker";
+import { CompareButton } from "@/components/wine/compare-button";
 import type { Wine as WineType } from "@/types/wine";
 
 export function generateStaticParams() {
@@ -137,11 +138,12 @@ export default async function WineDetailPage({
             {wine.name} — {wine.producer}
           </p>
           <p className="mt-3 text-lg font-medium text-primary">{wine.whyBuyNow}</p>
-          <div className="mt-4">
+          <div className="mt-4 flex flex-wrap gap-2">
             <ShareButton
               title={`${wine.nameJa} | ご近所ワイン`}
               text={wine.whyBuyNow}
             />
+            <CompareButton wineId={wine.id} />
           </div>
         </div>
 

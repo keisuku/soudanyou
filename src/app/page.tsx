@@ -493,6 +493,24 @@ export default function App() {
       <main className="max-w-7xl mx-auto px-4 py-8 space-y-10">
         <WineOfTheDay />
         <RecentWines />
+        {/* Quiz CTA */}
+        <Link
+          href="/quiz"
+          className="block relative overflow-hidden rounded-3xl p-6 md:p-8 text-left group hover:shadow-xl transition-shadow"
+          style={{ background: "linear-gradient(135deg, #D4A853, #B8860B 60%, #8B1A2B)" }}
+        >
+          <div className="absolute -right-6 -top-6 text-9xl opacity-15 group-hover:scale-110 transition-transform">🎯</div>
+          <div className="relative max-w-md">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-xs font-bold text-white mb-3">
+              <Sparkles className="w-3 h-3" /> NEW
+            </div>
+            <h3 className="text-2xl md:text-3xl font-black text-white mb-2 leading-tight">5問で見つける<br />あなたのワイン</h3>
+            <p className="text-sm text-amber-50/90 mb-4">料理・予算・気分に答えるだけ。ロジカル診断であなたに最適な1本を</p>
+            <span className="inline-flex items-center gap-1.5 bg-white text-gray-900 px-5 py-2.5 rounded-full font-bold text-sm">
+              診断をはじめる <ArrowRight className="w-4 h-4" />
+            </span>
+          </div>
+        </Link>
         <DinnerMatcher onSelectWine={setSelectedWine} />
         <PromoBanner type="winery" />
         <section id="wines">
