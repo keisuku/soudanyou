@@ -208,12 +208,13 @@ export default async function WineDetailPage({
           <CardContent>
             <div className="flex flex-wrap gap-2">
               {wine.pairings.map((p) => (
-                <span
+                <Link
                   key={p}
-                  className="rounded-full bg-secondary px-3 py-1 text-sm font-medium"
+                  href={`/wines?pairing=${encodeURIComponent(p)}`}
+                  className="rounded-full bg-secondary px-3 py-1 text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   {p}
-                </span>
+                </Link>
               ))}
             </div>
           </CardContent>

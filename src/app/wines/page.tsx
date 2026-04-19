@@ -11,7 +11,7 @@ import { FavoritesIndicator } from "@/components/wine/favorites-indicator";
 import type { WineType } from "@/types/wine";
 import { Suspense } from "react";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Sparkles } from "lucide-react";
 
 const typeFilters: { type: WineType; label: string }[] = [
   { type: "red", label: "🍷 赤" },
@@ -48,12 +48,14 @@ function WinesContent({
   initialStore,
   initialCountry,
   initialRegion,
+  initialPairing,
 }: {
   initialStore: string | null;
   initialCountry: string | null;
   initialRegion: string | null;
+  initialPairing: string | null;
 }) {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(initialPairing ?? "");
   const [activeType, setActiveType] = useState<WineType | null>(null);
   const [activeBudget, setActiveBudget] = useState<number | null>(null);
   const [sortBy, setSortBy] = useState<SortKey>("cospa");
@@ -129,6 +131,16 @@ function WinesContent({
         <FavoritesIndicator className="min-h-[40px] min-w-[40px] text-muted-foreground hover:bg-muted p-2" />
       </div>
       <h1 className="text-2xl font-bold">{heading}</h1>
+
+      <div className="mt-3">
+        <Link
+          href="/quiz"
+          className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-amber-400 to-rose-500 text-white px-3 py-1.5 text-xs font-bold shadow-sm hover:shadow-md transition-shadow"
+        >
+          <Sparkles className="w-3 h-3" />
+          迷ったら5問診断
+        </Link>
+      </div>
 
       <div className="mt-4">
         <SearchBar
@@ -363,14 +375,16 @@ function WinesWithParams() {
   const storeParam = searchParams.get("store");
   const countryParam = searchParams.get("country");
   const regionParam = searchParams.get("region");
+  const pairingParam = searchParams.get("pairing");
   // Remount on URL param change so state reinitializes from URL
-  const key = `${storeParam ?? ""}|${countryParam ?? ""}|${regionParam ?? ""}`;
+  const key = `${storeParam ?? ""}|${countryParam ?? ""}|${regionParam ?? ""}|${pairingParam ?? ""}`;
   return (
     <WinesContent
       key={key}
       initialStore={storeParam}
       initialCountry={countryParam}
       initialRegion={regionParam}
+      initialPairing={pairingParam}
     />
   );
 }
