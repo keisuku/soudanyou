@@ -8,6 +8,7 @@ import { FavoritesIndicator } from "@/components/wine/favorites-indicator";
 import { WineOfTheDay } from "@/components/wine/wine-of-the-day";
 import { RecentWines } from "@/components/wine/recent-wines";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { HomeTweetStrip } from "@/components/wine/home-tweet-strip";
 import {
   homeWines,
   homeAllStores,
@@ -471,6 +472,8 @@ export default function App() {
           </div>
         </div>
       </section>
+      {/* Tweet Strip */}
+      <HomeTweetStrip wines={homeWines} />
       {/* Stats Bar */}
       <section className="bg-white dark:bg-neutral-900 shadow-sm border-b border-[#f0ece8] dark:border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-4 grid grid-cols-2 md:grid-cols-4 gap-4">
