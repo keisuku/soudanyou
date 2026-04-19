@@ -132,7 +132,7 @@ function WinesContent({
       </div>
       <h1 className="text-2xl font-bold">{heading}</h1>
 
-      <div className="mt-3">
+      <div className="mt-3 flex flex-wrap items-center gap-2">
         <Link
           href="/quiz"
           className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-amber-400 to-rose-500 text-white px-3 py-1.5 text-xs font-bold shadow-sm hover:shadow-md transition-shadow"
@@ -140,6 +140,18 @@ function WinesContent({
           <Sparkles className="w-3 h-3" />
           迷ったら5問診断
         </Link>
+        {initialPairing && (
+          <span className="inline-flex items-center gap-1 rounded-full bg-orange-100 dark:bg-orange-500/20 text-orange-800 dark:text-orange-200 px-3 py-1 text-xs font-bold">
+            合う料理: {initialPairing}
+            <Link
+              href="/wines"
+              aria-label="料理フィルタを解除"
+              className="w-4 h-4 rounded-full flex items-center justify-center hover:bg-orange-200 dark:hover:bg-orange-500/40 transition-colors"
+            >
+              ×
+            </Link>
+          </span>
+        )}
       </div>
 
       <div className="mt-4">
