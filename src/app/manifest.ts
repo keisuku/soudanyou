@@ -1,11 +1,13 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "ご近所ワイン",
     short_name: "ご近所ワイン",
     description:
-      "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。AIソムリエがあなたに合う1本を提案します。",
+      "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。",
     start_url: "/soudanyou",
     scope: "/soudanyou",
     display: "standalone",

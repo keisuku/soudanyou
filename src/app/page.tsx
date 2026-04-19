@@ -2,7 +2,6 @@
 import { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
 import { Search, Wine, Star, ShoppingBag, ChevronDown, ChevronUp, X, Sparkles, ArrowRight, Filter, Globe, Store, Utensils, TrendingUp, Gift, Mail, ExternalLink, Shuffle, Clock, Award, DollarSign, BarChart3 } from "lucide-react";
-import { AiSommelier } from "@/components/sommelier/ai-sommelier";
 import { FavoriteButton } from "@/components/wine/favorite-button";
 import { FavoritesIndicator } from "@/components/wine/favorites-indicator";
 import { WineOfTheDay } from "@/components/wine/wine-of-the-day";
@@ -706,7 +705,6 @@ export default function App() {
         </div>
       </footer>
       <WineModal wine={selectedWine} onClose={() => setSelectedWine(null)} />
-      <AiSommelier />
       <ScrollToTop />
     </div>
   );

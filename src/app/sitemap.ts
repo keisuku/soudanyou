@@ -5,6 +5,8 @@ import type { Wine } from "@/types/wine";
 const wines = wineData as unknown as Wine[];
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://keisuku.github.io/soudanyou";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const staticPages: MetadataRoute.Sitemap = [

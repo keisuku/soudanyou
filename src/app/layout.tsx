@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | ご近所ワイン",
   },
   description:
-    "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。AIソムリエがあなたに合う1本を提案します。",
+    "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。Xで話題の1本がすぐ見つかる。",
   metadataBase: new URL(siteUrl),
   applicationName: "ご近所ワイン",
   authors: [{ name: "soudanyou" }],
@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     "コンビニワイン",
     "スーパーワイン",
     "コスパワイン",
-    "AIソムリエ",
     "Vivino",
     "赤ワイン",
     "白ワイン",
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ご近所ワイン",
     description:
-      "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。AIソムリエがあなたに合う1本を提案します。",
+      "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。Xで話題の1本がすぐ見つかる。",
     type: "website",
     locale: "ja_JP",
     siteName: "ご近所ワイン",
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ご近所ワイン",
     description:
-      "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。AIソムリエがあなたに合う1本を提案します。",
+      "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。Xで話題の1本がすぐ見つかる。",
   },
   robots: {
     index: true,
