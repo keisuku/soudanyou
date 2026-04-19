@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE_URL}/wines`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/favorites`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${BASE_URL}/compare`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
   ];
   const winePages: MetadataRoute.Sitemap = wines.map((w) => ({
     url: `${BASE_URL}/wines/${w.id}`,

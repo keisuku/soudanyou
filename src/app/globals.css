@@ -27,6 +27,35 @@
   --wine-sparkling: #5bc0de;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f0a0d;
+    --foreground: #f5ebe0;
+    --card: #1a1014;
+    --card-foreground: #f5ebe0;
+    --popover: #1a1014;
+    --popover-foreground: #f5ebe0;
+    --primary: #f06080;
+    --primary-foreground: #ffffff;
+    --secondary: #2a1e25;
+    --secondary-foreground: #e8d9cb;
+    --muted: #2a1e25;
+    --muted-foreground: #b5a296;
+    --accent: #9b7de8;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #3a2a32;
+    --input: #3a2a32;
+    --ring: #f06080;
+    --gold: #f0b84e;
+    --wine-red: #e85070;
+    --wine-white: #f0d868;
+    --wine-rose: #f4b2c4;
+    --wine-sparkling: #6bcfed;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -58,6 +87,10 @@
   --radius-xl: 1rem;
 }
 
+html {
+  color-scheme: light dark;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -78,4 +111,22 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
+}
+
+/* Focus visible: consistent across components */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

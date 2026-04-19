@@ -5,6 +5,7 @@ import type { Wine } from "@/types/wine";
 import { cn, formatPrice } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, UtensilsCrossed } from "lucide-react";
+import { FavoriteButton } from "@/components/wine/favorite-button";
 
 const wineTypeGradients: Record<Wine["type"], string> = {
   red: "from-red-800 via-red-700 to-red-900",
@@ -51,7 +52,10 @@ interface WineCardProps {
 
 export function WineCard({ wine, rank, className }: WineCardProps) {
   return (
-    <Link href={`/wines/${wine.id}`}>
+    <Link href={`/wines/${wine.id}`} className="relative block">
+      <div className="absolute top-3 right-3 z-10">
+        <FavoriteButton wineId={wine.id} size="sm" />
+      </div>
       <Card
         className={cn(
           "group cursor-pointer overflow-hidden transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10",

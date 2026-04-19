@@ -1,14 +1,17 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { wines as allWines } from "@/lib/wines";
 import { storeCategories, storeLabels, countryCategories } from "@/lib/wines";
 import { WineCard } from "@/components/wine/wine-card";
 import { SearchBar } from "@/components/search/search-bar";
 import { Badge } from "@/components/ui/badge";
+import { FavoritesIndicator } from "@/components/wine/favorites-indicator";
 import type { WineType } from "@/types/wine";
 import { Suspense } from "react";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 const typeFilters: { type: WineType; label: string }[] = [
   { type: "red", label: "🍷 赤" },
@@ -41,37 +44,28 @@ function regionLabel(country: string, region: string): string {
   return cat.subRegions.find((r) => r.key === region)?.label ?? region;
 }
 
-function WinesContent() {
-  const searchParams = useSearchParams();
-  const storeParam = searchParams.get("store");
-  const countryParam = searchParams.get("country");
-  const regionParam = searchParams.get("region");
-
+function WinesContent({
+  initialStore,
+  initialCountry,
+  initialRegion,
+}: {
+  initialStore: string | null;
+  initialCountry: string | null;
+  initialRegion: string | null;
+}) {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeType, setActiveType] = useState<WineType | null>(null);
   const [activeBudget, setActiveBudget] = useState<number | null>(null);
   const [sortBy, setSortBy] = useState<SortKey>("cospa");
   const [showBudgetWines, setShowBudgetWines] = useState(false);
-  const [activeStore, setActiveStore] = useState<string | null>(storeParam);
-  const [storeFilterOpen, setStoreFilterOpen] = useState(!!storeParam);
-  const [activeCountry, setActiveCountry] = useState<string | null>(countryParam);
-  const [activeRegion, setActiveRegion] = useState<string | null>(regionParam);
-  const [countryFilterOpen, setCountryFilterOpen] = useState(!!countryParam);
-
-  // Sync with URL params
-  useEffect(() => {
-    setActiveStore(storeParam);
-    if (storeParam) setStoreFilterOpen(true);
-  }, [storeParam]);
-
-  useEffect(() => {
-    setActiveCountry(countryParam);
-    setActiveRegion(regionParam);
-    if (countryParam) setCountryFilterOpen(true);
-  }, [countryParam, regionParam]);
+  const [activeStore, setActiveStore] = useState<string | null>(initialStore);
+  const [storeFilterOpen, setStoreFilterOpen] = useState(!!initialStore);
+  const [activeCountry, setActiveCountry] = useState<string | null>(initialCountry);
+  const [activeRegion, setActiveRegion] = useState<string | null>(initialRegion);
+  const [countryFilterOpen, setCountryFilterOpen] = useState(!!initialCountry);
 
   const filteredWines = useMemo(() => {
-    let result = allWines.filter((wine) => {
+    const result = allWines.filter((wine) => {
       // デフォルトで千円以下は非表示（格安ワインも表示がONなら表示）
       if (!showBudgetWines && wine.price < 1000) return false;
       if (activeType && wine.type !== activeType) return false;
@@ -127,6 +121,13 @@ function WinesContent() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="flex items-center justify-between gap-3 mb-2">
+        <Link href="/" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="h-4 w-4" />
+          ホーム
+        </Link>
+        <FavoritesIndicator className="min-h-[40px] min-w-[40px] text-muted-foreground hover:bg-muted p-2" />
+      </div>
       <h1 className="text-2xl font-bold">{heading}</h1>
 
       <div className="mt-4">
@@ -357,10 +358,27 @@ function WinesContent() {
   );
 }
 
+function WinesWithParams() {
+  const searchParams = useSearchParams();
+  const storeParam = searchParams.get("store");
+  const countryParam = searchParams.get("country");
+  const regionParam = searchParams.get("region");
+  // Remount on URL param change so state reinitializes from URL
+  const key = `${storeParam ?? ""}|${countryParam ?? ""}|${regionParam ?? ""}`;
+  return (
+    <WinesContent
+      key={key}
+      initialStore={storeParam}
+      initialCountry={countryParam}
+      initialRegion={regionParam}
+    />
+  );
+}
+
 export default function WinesPage() {
   return (
     <Suspense fallback={<div className="mx-auto max-w-5xl px-4 py-8">読み込み中...</div>}>
-      <WinesContent />
+      <WinesWithParams />
     </Suspense>
   );
 }

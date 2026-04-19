@@ -1,16 +1,52 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
+import { MobileBottomNav } from "@/components/layout/mobile-bottom-nav";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "https://keisuku.github.io";
 
 export const metadata: Metadata = {
-  title: "ご近所ワイン | 今買うべきワインがすぐわかる",
-  description: "コンビニ・スーパーで買えるワインをコスパと話題度で厳選",
-  metadataBase: new URL("https://keisuku.github.io"),
+  title: {
+    default: "ご近所ワイン | 今買うべきワインがすぐわかる",
+    template: "%s | ご近所ワイン",
+  },
+  description:
+    "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。AIソムリエがあなたに合う1本を提案します。",
+  metadataBase: new URL(siteUrl),
+  applicationName: "ご近所ワイン",
+  authors: [{ name: "soudanyou" }],
+  keywords: [
+    "ワイン",
+    "コンビニワイン",
+    "スーパーワイン",
+    "コスパワイン",
+    "AIソムリエ",
+    "Vivino",
+    "赤ワイン",
+    "白ワイン",
+    "スパークリングワイン",
+  ],
   openGraph: {
     title: "ご近所ワイン",
-    description: "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。AIソムリエがあなたに合う1本を提案します。",
+    description:
+      "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。AIソムリエがあなたに合う1本を提案します。",
     type: "website",
     locale: "ja_JP",
+    siteName: "ご近所ワイン",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ご近所ワイン",
+    description:
+      "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。AIソムリエがあなたに合う1本を提案します。",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -18,7 +54,10 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#1A0A10",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FDFAF6" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f0a0d" },
+  ],
 };
 
 export default function RootLayout({
@@ -32,7 +71,8 @@ export default function RootLayout({
         className="min-h-full flex flex-col"
         style={{ fontFamily: "system-ui, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif" }}
       >
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pb-16 md:pb-0">{children}</main>
+        <MobileBottomNav />
         <Script
           src="https://platform.twitter.com/widgets.js"
           strategy="lazyOnload"
