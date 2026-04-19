@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og";
 
+export const dynamic = "force-static";
+
 export const alt = "ご近所ワイン — コンビニ・スーパーで買える厳選ワイン";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
