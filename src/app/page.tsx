@@ -30,6 +30,7 @@ import {
   rakutenSearchUrl,
   type HomeWine,
 } from "@/lib/home-data";
+import { pickPrimaryTweetUrl } from "@/lib/tweets";
 import type { WineType } from "@/types/wine";
 
 const priceFmt = (price: number) => `¥${price.toLocaleString()}`;
@@ -252,12 +253,6 @@ function TweetMiniCard({
       </div>
     </div>
   );
-}
-
-function pickTweetUrl(urls: string[]): string | undefined {
-  if (urls.length === 0) return undefined;
-  const pinned = urls.find((url) => url.toLowerCase().includes("winenomuhito"));
-  return pinned ?? urls[0];
 }
 
 function HeroTweetFeature({
@@ -628,7 +623,7 @@ export default function Home() {
     return buzzWine ?? topWines[0] ?? homeWines[0];
   }, [topWines]);
 
-  const heroTweetUrl = useMemo(() => pickTweetUrl(heroWine.raw.tweetUrls), [heroWine]);
+  const heroTweetUrl = useMemo(() => pickPrimaryTweetUrl(heroWine.raw.tweetUrls), [heroWine]);
 
   const typeCounts = useMemo(() => {
     return homeWines.reduce<Record<WineType | "all", number>>(

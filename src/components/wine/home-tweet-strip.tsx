@@ -3,17 +3,12 @@
 import Link from "next/link";
 import { Flame, ArrowRight } from "lucide-react";
 import type { HomeWine } from "@/lib/home-data";
+import { pickPrimaryTweetUrl } from "@/lib/tweets";
 import { LazyTweetEmbed } from "./lazy-tweet-embed";
 
 interface HomeTweetStripProps {
   wines: HomeWine[];
   limit?: number;
-}
-
-function pickTweetUrl(urls: string[]): string | undefined {
-  if (urls.length === 0) return undefined;
-  const pinned = urls.find((u) => u.toLowerCase().includes("winenomuhito"));
-  return pinned ?? urls[0];
 }
 
 interface StripEntry {
@@ -32,7 +27,7 @@ function selectEntries(wines: HomeWine[], limit: number): StripEntry[] {
 
   const entries: StripEntry[] = [];
   for (const wine of candidates) {
-    const tweetUrl = pickTweetUrl(wine.raw.tweetUrls);
+    const tweetUrl = pickPrimaryTweetUrl(wine.raw.tweetUrls);
     if (!tweetUrl) continue;
     entries.push({ wine, tweetUrl });
     if (entries.length >= limit) break;
