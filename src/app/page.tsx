@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import type { ComponentType } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Bell,
@@ -23,6 +24,7 @@ import { FavoriteButton } from "@/components/wine/favorite-button";
 import { FavoritesIndicator } from "@/components/wine/favorites-indicator";
 import { LazyTweetEmbed } from "@/components/wine/lazy-tweet-embed";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import heroBackground from "../../public/images/home-hero-bg.png";
 import {
   homeAllCountries,
   homeAllStores,
@@ -736,6 +738,17 @@ export default function Home() {
 
       <main>
         <section className="relative overflow-hidden border-b border-stone-200 bg-[#faf6ef]">
+          <Image
+            src={heroBackground}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="pointer-events-none absolute inset-0 z-0 object-cover object-[58%_center]"
+            aria-hidden="true"
+          />
+          <div className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(250,246,239,0.98)_0%,rgba(250,246,239,0.9)_38%,rgba(250,246,239,0.48)_62%,rgba(250,246,239,0.82)_100%)]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-36 bg-gradient-to-t from-[#faf6ef] to-transparent" />
           <div className="mx-auto grid max-w-[1720px] gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] xl:min-h-[680px]">
             <div className="relative z-10 flex min-h-[560px] flex-col justify-center py-8 lg:pr-8">
               <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-[#8a001d]/20 bg-white px-3 py-1.5 text-xs font-black text-[#8a001d] shadow-sm">
