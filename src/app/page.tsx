@@ -79,6 +79,19 @@ const quickFilters = [
 type SortKey = "buzz" | "cospa" | "price" | "rating";
 type PriceFilter = "all" | "under1500" | "1500to2000" | "over2000";
 
+function tweetReliabilityScore(wine: HomeWine): number {
+  const tweetCount = wine.raw.tweetUrls.length;
+  const volumeScore = Math.min(60, tweetCount * 20);
+  const buzzScore = Math.min(40, Math.round(wine.raw.buzzScore * 0.4));
+  return Math.max(35, volumeScore + buzzScore);
+}
+
+function tweetReliabilityLabel(score: number): string {
+  if (score >= 85) return "高";
+  if (score >= 70) return "中";
+  return "参考";
+}
+
 function AppLogo() {
   return (
     <Link href="/" className="flex items-center gap-2.5" aria-label="ご近所バズワイン ホーム">
@@ -254,6 +267,8 @@ function TweetMiniCard({
   wine: HomeWine;
   compact?: boolean;
 }) {
+  const reliability = tweetReliabilityScore(wine);
+
   return (
     <div className={`rounded-md border border-stone-200 bg-white shadow-sm ${compact ? "p-3" : "p-4"}`}>
       <div className="mb-2 flex items-start gap-2">
@@ -268,10 +283,13 @@ function TweetMiniCard({
       <p className={`text-sm font-medium leading-6 text-stone-700 ${compact ? "line-clamp-2" : "line-clamp-3"}`}>
         {wine.storeLabels[0] ?? "近所"}で見つけたこの1本、価格以上の満足感。{wine.pairings[0] ?? "今夜のごはん"}に合わせたら最高でした。 #ご近所バズワイン
       </p>
-      <div className="mt-3 flex items-center gap-4 text-xs font-bold text-stone-400">
+      <div className="mt-3 flex flex-wrap items-center gap-3 text-xs font-bold text-stone-400">
         <span>♡ {Math.max(42, wine.raw.buzzScore * 3)}</span>
         <span>↗ {Math.max(12, Math.round(wine.cospa / 2))}</span>
         <span className="text-[#9b001f]">バズ度 {wine.raw.buzzScore}</span>
+        <span className="rounded border border-stone-200 bg-stone-50 px-2 py-1 text-[11px] font-black text-stone-600">
+          信頼度 {tweetReliabilityLabel(reliability)} ({reliability})
+        </span>
       </div>
     </div>
   );
@@ -982,7 +1000,7 @@ export default function Home() {
               </div>
               <p className="mt-5 text-sm font-medium leading-7 text-stone-600">
                 価格は目安です。最新の在庫と価格は各店舗で確認してください。
-                話題の根拠は詳細ページのX投稿から確認できます。
+                話題の根拠は詳細ページのX投稿から確認できます。信頼度は投稿件数とバズ度を合算した補助指標です。
               </p>
             </div>
           </div>
