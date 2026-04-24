@@ -6,17 +6,23 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
-  Bell,
+  BadgeCheck,
+  BarChart3,
+  Beef,
   ChevronDown,
   Crown,
+  Fish,
   Flame,
   LocateFixed,
+  MapPin,
   Search,
+  ShieldCheck,
   ShoppingBag,
   SlidersHorizontal,
+  Star,
   Store,
-  UserRound,
   Utensils,
+  Wheat,
   Wine,
   X,
 } from "lucide-react";
@@ -64,10 +70,10 @@ const storeTone = [
 ];
 
 const foodPresets = [
-  { label: "焼肉", query: "焼肉", icon: "🥩" },
-  { label: "チーズ", query: "チーズ", icon: "🧀" },
-  { label: "魚介", query: "魚", icon: "🐟" },
-  { label: "パスタ", query: "パスタ", icon: "🍝" },
+  { label: "焼肉", query: "焼肉", icon: Beef },
+  { label: "チーズ", query: "チーズ", icon: Utensils },
+  { label: "魚介", query: "魚", icon: Fish },
+  { label: "パスタ", query: "パスタ", icon: Wheat },
 ];
 
 const quickFilters = [
@@ -78,6 +84,19 @@ const quickFilters = [
 
 type SortKey = "buzz" | "cospa" | "price" | "rating";
 type PriceFilter = "all" | "under1500" | "1500to2000" | "over2000";
+
+function tweetReliabilityScore(wine: HomeWine): number {
+  const tweetCount = wine.raw.tweetUrls.length;
+  const volumeScore = Math.min(60, tweetCount * 20);
+  const buzzScore = Math.min(40, Math.round(wine.raw.buzzScore * 0.4));
+  return Math.max(35, volumeScore + buzzScore);
+}
+
+function tweetReliabilityLabel(score: number): string {
+  if (score >= 85) return "高";
+  if (score >= 70) return "中";
+  return "参考";
+}
 
 function AppLogo() {
   return (
@@ -93,32 +112,6 @@ function AppLogo() {
   );
 }
 
-function IconButton({
-  label,
-  Icon,
-  badge,
-}: {
-  label: string;
-  Icon: ComponentType<{ className?: string }>;
-  badge?: number;
-}) {
-  return (
-    <button
-      type="button"
-      className="relative flex h-10 min-w-10 items-center justify-center rounded-md text-stone-700 transition hover:bg-stone-100"
-      aria-label={label}
-      title={label}
-    >
-      <Icon className="h-5 w-5" />
-      {badge != null && badge > 0 && (
-        <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#9b001f] px-1 text-[10px] font-black text-white">
-          {badge}
-        </span>
-      )}
-    </button>
-  );
-}
-
 function StoreChip({ label, index = 0 }: { label: string; index?: number }) {
   return (
     <span className={`inline-flex min-h-8 items-center gap-1 rounded-md border px-2.5 text-xs font-black ${storeTone[index % storeTone.length]}`}>
@@ -130,12 +123,12 @@ function StoreChip({ label, index = 0 }: { label: string; index?: number }) {
 
 function FoodChip({
   label,
-  icon,
+  Icon,
   onClick,
   active = false,
 }: {
   label: string;
-  icon?: string;
+  Icon?: ComponentType<{ className?: string }>;
   onClick?: () => void;
   active?: boolean;
 }) {
@@ -150,7 +143,7 @@ function FoodChip({
           : "border-stone-200 bg-white text-stone-800 hover:border-[#8a001d]/40 hover:bg-rose-50"
       }`}
     >
-      {icon && <span className="text-base">{icon}</span>}
+      {Icon && <Icon className="h-4 w-4" />}
       {label}
     </button>
   );
@@ -178,6 +171,28 @@ function MetricBox({
       <div className="text-xs font-black text-stone-500">{label}</div>
       <div className={`mt-1 text-2xl font-black tracking-normal ${toneClass}`}>{value}</div>
       {sub && <div className="mt-0.5 text-[11px] font-medium text-stone-400">{sub}</div>}
+    </div>
+  );
+}
+
+function ProofStep({
+  Icon,
+  label,
+  text,
+}: {
+  Icon: ComponentType<{ className?: string }>;
+  label: string;
+  text: string;
+}) {
+  return (
+    <div className="flex gap-3 border-t border-stone-200 py-4 first:border-t-0 first:pt-0">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[#f7f3ea] text-[#8a001d]">
+        <Icon className="h-5 w-5" />
+      </span>
+      <div>
+        <div className="text-sm font-black text-stone-950">{label}</div>
+        <p className="mt-1 text-sm leading-6 text-stone-600">{text}</p>
+      </div>
     </div>
   );
 }
@@ -234,24 +249,35 @@ function TweetMiniCard({
   wine: HomeWine;
   compact?: boolean;
 }) {
+  const reliability = tweetReliabilityScore(wine);
+  const tweetCount = wine.raw.tweetUrls.length;
+
   return (
     <div className={`rounded-md border border-stone-200 bg-white shadow-sm ${compact ? "p-3" : "p-4"}`}>
-      <div className="mb-2 flex items-start gap-2">
-        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-stone-950 text-xs font-black text-white">
+      <div className="mb-3 flex items-start gap-3">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-stone-950 text-xs font-black text-white">
           X
         </span>
         <div className="min-w-0">
-          <div className="truncate text-xs font-black text-stone-900">ワイン好きの会社員</div>
-          <div className="text-[11px] font-medium text-stone-400">@wine_life · 3時間前</div>
+          <div className="truncate text-sm font-black text-stone-950">{wine.name}</div>
+          <div className="mt-0.5 text-[11px] font-bold text-stone-500">
+            実投稿 {tweetCount}件 / バズ度 {wine.raw.buzzScore}
+          </div>
         </div>
       </div>
       <p className={`text-sm font-medium leading-6 text-stone-700 ${compact ? "line-clamp-2" : "line-clamp-3"}`}>
-        {wine.storeLabels[0] ?? "近所"}で見つけたこの1本、価格以上の満足感。{wine.pairings[0] ?? "今夜のごはん"}に合わせたら最高でした。 #ご近所バズワイン
+        {wine.catch}
       </p>
-      <div className="mt-3 flex items-center gap-4 text-xs font-bold text-stone-400">
-        <span>♡ {Math.max(42, wine.raw.buzzScore * 3)}</span>
-        <span>↗ {Math.max(12, Math.round(wine.cospa / 2))}</span>
-        <span className="text-[#9b001f]">バズ度 {wine.raw.buzzScore}</span>
+      <div className="mt-3 flex flex-wrap items-center gap-2 text-xs font-bold text-stone-500">
+        <span className="rounded border border-stone-200 bg-stone-50 px-2 py-1 text-[11px] font-black text-stone-700">
+          {wine.storeLabels[0] ?? "取り扱い店あり"}
+        </span>
+        <span className="rounded border border-stone-200 bg-stone-50 px-2 py-1 text-[11px] font-black text-stone-700">
+          {priceFmt(wine.price)}
+        </span>
+        <span className="rounded border border-[#8a001d]/20 bg-[#fff6f6] px-2 py-1 text-[11px] font-black text-[#8a001d]">
+          信頼度 {tweetReliabilityLabel(reliability)} ({reliability})
+        </span>
       </div>
     </div>
   );
@@ -264,20 +290,22 @@ function HeroTweetFeature({
   wine: HomeWine;
   tweetUrl?: string;
 }) {
+  const reliability = tweetReliabilityScore(wine);
+
   return (
-    <article id="hero-tweet" className="relative overflow-hidden rounded-lg border border-[#8a001d]/35 bg-white shadow-[0_18px_45px_rgba(74,20,20,0.12)]">
-      <div className="flex h-11 items-center justify-between bg-[#820019] px-4 text-white">
+    <article id="hero-tweet" className="relative overflow-hidden rounded-lg border border-[#8a001d]/25 bg-white shadow-[0_24px_70px_rgba(61,36,28,0.16)]">
+      <div className="flex min-h-12 items-center justify-between gap-3 bg-[#7b001a] px-4 py-3 text-white">
         <div className="flex items-center gap-2 text-base font-black">
           <Flame className="h-4 w-4 fill-white" />
-          実際にバズっている投稿
+          実投稿から選ばれた1本
         </div>
-        <span className="hidden rounded-md border border-amber-300/50 bg-amber-200/10 px-2 py-1 text-xs font-black text-amber-100 sm:inline-flex">
-          タップで詳細へ
+        <span className="hidden rounded-md border border-white/20 bg-white/10 px-2 py-1 text-xs font-black text-white/90 sm:inline-flex">
+          信頼度 {tweetReliabilityLabel(reliability)} {reliability}
         </span>
       </div>
 
       <div className="grid gap-0 xl:grid-cols-[1fr_0.58fr]">
-        <div className="relative bg-[#fbf8f3] p-3 sm:p-4">
+        <div className="relative bg-[#f7f3ea] p-3 sm:p-4">
           {tweetUrl ? (
             <div className="pointer-events-none mx-auto min-h-[360px] max-w-[560px]">
               <LazyTweetEmbed tweetUrl={tweetUrl} />
@@ -295,7 +323,7 @@ function HeroTweetFeature({
               <div className="min-w-0">
                 <div className="truncate text-sm font-black text-stone-950">{wine.name}</div>
                 <div className="mt-0.5 text-xs font-bold text-stone-500">
-                  {wine.storeLabels.slice(0, 2).join(" / ")}で探せます
+                  {wine.storeLabels.slice(0, 2).join(" / ")}で取り扱い
                 </div>
               </div>
               <span className="inline-flex shrink-0 items-center gap-1 rounded-md bg-[#8a001d] px-3 py-2 text-xs font-black text-white">
@@ -351,7 +379,7 @@ function HeroTweetFeature({
             href={`/wines/${wine.id}`}
             className="mt-6 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-md bg-[#8a001d] px-4 text-sm font-black text-white transition hover:bg-[#6f0018]"
           >
-            投稿のワインを見る
+            詳細で投稿と購入先を見る
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -394,9 +422,18 @@ function RankingCard({
         </h3>
         <div className="mt-2 text-xl font-black tracking-normal text-[#8a001d]">{priceFmt(wine.price)}</div>
         <div className="mt-3 grid grid-cols-3 gap-2 border-y border-stone-100 py-2 text-xs">
-          <span className="font-black text-[#a00025]">🔥 {wine.raw.buzzScore}</span>
-          <span className="font-black text-amber-700">★ {wine.vivino?.toFixed(1) ?? "-"}</span>
-          <span className="font-black text-emerald-700">A{wine.cospa >= 85 ? "+" : ""}</span>
+          <span className="inline-flex items-center gap-1 font-black text-[#a00025]">
+            <Flame className="h-3.5 w-3.5" />
+            {wine.raw.buzzScore}
+          </span>
+          <span className="inline-flex items-center gap-1 font-black text-amber-700">
+            <Star className="h-3.5 w-3.5" />
+            {wine.vivino?.toFixed(1) ?? "-"}
+          </span>
+          <span className="inline-flex items-center gap-1 font-black text-emerald-700">
+            <BadgeCheck className="h-3.5 w-3.5" />
+            A{wine.cospa >= 85 ? "+" : ""}
+          </span>
         </div>
         <div className="mt-auto flex flex-wrap gap-1.5 pt-3">
           {wine.storeLabels.slice(0, 3).map((store, index) => (
@@ -477,9 +514,18 @@ function GridWineCard({
         </div>
       </button>
       <div className="mt-4 grid grid-cols-3 gap-2 border-y border-stone-100 py-2 text-xs font-black">
-        <span className="text-[#a00025]">🔥 {wine.raw.buzzScore}</span>
-        <span className="text-amber-700">★ {wine.vivino?.toFixed(1) ?? "-"}</span>
-        <span className="text-emerald-700">コスパ {wine.cospa}</span>
+        <span className="inline-flex items-center gap-1 text-[#a00025]">
+          <Flame className="h-3.5 w-3.5" />
+          {wine.raw.buzzScore}
+        </span>
+        <span className="inline-flex items-center gap-1 text-amber-700">
+          <Star className="h-3.5 w-3.5" />
+          {wine.vivino?.toFixed(1) ?? "-"}
+        </span>
+        <span className="inline-flex items-center gap-1 text-emerald-700">
+          <BadgeCheck className="h-3.5 w-3.5" />
+          {wine.cospa}
+        </span>
       </div>
       <div className="mt-3 flex flex-wrap gap-1.5">
         {wine.storeLabels.slice(0, 3).map((store, index) => (
@@ -627,6 +673,17 @@ export default function Home() {
 
   const heroTweetUrl = useMemo(() => pickPrimaryTweetUrl(heroWine.raw.tweetUrls), [heroWine]);
 
+  const stats = useMemo(() => {
+    const avgPrice = Math.round(homeWines.reduce((sum, wine) => sum + wine.price, 0) / homeWines.length);
+    const tweetCount = homeWines.reduce((sum, wine) => sum + wine.raw.tweetUrls.length, 0);
+    return {
+      total: homeWines.length,
+      avgPrice,
+      stores: homeAllStores.length,
+      tweets: tweetCount,
+    };
+  }, []);
+
   const typeCounts = useMemo(() => {
     return homeWines.reduce<Record<WineType | "all", number>>(
       (acc, wine) => {
@@ -700,19 +757,19 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f2eb] text-stone-950">
-      <header className="sticky top-0 z-40 border-b border-stone-200 bg-white/92 backdrop-blur-xl">
+    <div className="min-h-screen bg-[#f6f5f1] text-stone-950">
+      <header className="sticky top-0 z-40 border-b border-stone-200 bg-white/94 backdrop-blur-xl">
         <div className="mx-auto flex h-[68px] max-w-[1720px] items-center justify-between px-4 sm:px-6">
           <AppLogo />
 
           <nav className="hidden items-center gap-8 lg:flex" aria-label="メインナビゲーション">
             <a href="#ranking" className="text-sm font-black text-stone-900 transition hover:text-[#8a001d]">ランキング</a>
+            <a href="#proof" className="text-sm font-black text-stone-900 transition hover:text-[#8a001d]">選定基準</a>
             <a href="#search" className="text-sm font-black text-stone-900 transition hover:text-[#8a001d]">近くで買える</a>
-            <a href="#search" className="text-sm font-black text-stone-900 transition hover:text-[#8a001d]">料理で選ぶ</a>
             <a href="#hero-tweet" className="text-sm font-black text-stone-900 transition hover:text-[#8a001d]">バズ投稿</a>
           </nav>
 
-          <div className="hidden min-w-[420px] items-center rounded-lg border border-stone-200 bg-white px-3 shadow-sm xl:flex">
+          <div className="hidden min-w-[420px] items-center rounded-md border border-stone-200 bg-white px-3 shadow-sm xl:flex">
             <Search className="h-4 w-4 text-stone-400" />
             <input
               type="search"
@@ -725,19 +782,28 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-2">
-            <button type="button" className="hidden h-10 items-center gap-2 rounded-md px-3 text-sm font-black text-stone-700 transition hover:bg-stone-100 md:inline-flex">
+            <button
+              type="button"
+              onClick={jumpToSearch}
+              className="hidden h-10 items-center gap-2 rounded-md px-3 text-sm font-black text-stone-700 transition hover:bg-stone-100 md:inline-flex"
+            >
               <LocateFixed className="h-4 w-4" />
-              現在地から探す
+              買えるお店で探す
             </button>
             <FavoritesIndicator className="min-h-10 min-w-10 rounded-md text-stone-700 hover:bg-stone-100" />
-            <IconButton label="通知" Icon={Bell} badge={3} />
-            <IconButton label="ログイン" Icon={UserRound} />
+            <Link
+              href="/wines"
+              className="hidden h-10 items-center gap-2 rounded-md bg-stone-950 px-4 text-sm font-black text-white transition hover:bg-[#8a001d] sm:inline-flex"
+            >
+              一覧を見る
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </header>
 
       <main>
-        <section className="relative overflow-hidden border-b border-stone-200 bg-[#faf6ef]">
+        <section className="relative overflow-hidden border-b border-stone-200 bg-[#f6f0e7]">
           <Image
             src={heroBackground}
             alt=""
@@ -747,13 +813,13 @@ export default function Home() {
             className="pointer-events-none absolute inset-0 z-0 object-cover object-[58%_center]"
             aria-hidden="true"
           />
-          <div className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(250,246,239,0.98)_0%,rgba(250,246,239,0.9)_38%,rgba(250,246,239,0.48)_62%,rgba(250,246,239,0.82)_100%)]" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-36 bg-gradient-to-t from-[#faf6ef] to-transparent" />
-          <div className="mx-auto grid max-w-[1720px] gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] xl:min-h-[680px]">
+          <div className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(246,245,241,0.98)_0%,rgba(246,245,241,0.92)_39%,rgba(246,245,241,0.46)_65%,rgba(246,245,241,0.78)_100%)]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-36 bg-gradient-to-t from-[#f6f5f1] to-transparent" />
+          <div className="mx-auto grid max-w-[1720px] gap-7 px-4 py-7 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] xl:min-h-[700px]">
             <div className="relative z-10 flex min-h-[560px] flex-col justify-center py-8 lg:pr-8">
-              <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-[#8a001d]/20 bg-white px-3 py-1.5 text-xs font-black text-[#8a001d] shadow-sm">
+              <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-md border border-[#8a001d]/20 bg-white/92 px-3 py-1.5 text-xs font-black text-[#8a001d] shadow-sm">
                 <Flame className="h-3.5 w-3.5 fill-[#8a001d]" />
-                Xで伸びている1本から探す
+                Xで話題の実投稿から探す
               </div>
               <p className="mb-4 max-w-2xl text-lg font-black tracking-normal text-stone-900 sm:text-2xl" style={displayFont}>
                 安くて美味しい
@@ -761,17 +827,17 @@ export default function Home() {
                 は、どこで買えるの？
               </p>
 
-              <h1 className="max-w-3xl text-[clamp(3.6rem,8vw,8.8rem)] font-black leading-[0.94] tracking-normal text-stone-950" style={displayFont}>
+              <h1 className="max-w-3xl text-5xl font-black leading-[0.96] tracking-normal text-stone-950 sm:text-6xl lg:text-7xl xl:text-8xl" style={displayFont}>
                 そのワイン、
                 <span className="block text-[#8a001d]">ここにあります。</span>
               </h1>
 
               <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-stone-700 sm:text-lg">
-                実際に話題になっている投稿を入口に、価格・買えるお店・料理相性まで一気に整理。
-                投稿をタップすると、そのワインの詳細に進めます。
+                話題になっている投稿を起点に、税込目安・取り扱い店・料理相性・評価を照合。
+                気になった1本を、そのまま詳細と購入先まで追えます。
               </p>
 
-              <div className="mt-7 max-w-2xl rounded-lg border border-stone-200 bg-white p-2 shadow-[0_14px_30px_rgba(87,50,35,0.10)]">
+              <div className="mt-7 max-w-2xl rounded-md border border-stone-200 bg-white p-2 shadow-[0_14px_30px_rgba(87,50,35,0.10)]">
                 <div className="flex items-center gap-2">
                   <Search className="ml-3 h-5 w-5 shrink-0 text-stone-400" />
                   <input
@@ -795,13 +861,13 @@ export default function Home() {
               </div>
 
               <div className="mt-6">
-                <div className="mb-3 text-sm font-black text-stone-900">料理で選ぶ</div>
+                <div className="mb-3 text-sm font-black text-stone-900">今日の食事から絞る</div>
                 <div className="flex flex-wrap gap-3">
                   {foodPresets.map((food) => (
                     <FoodChip
                       key={food.label}
                       label={food.label}
-                      icon={food.icon}
+                      Icon={food.icon}
                       active={query === food.query}
                       onClick={() => applyFoodQuery(food.query)}
                     />
@@ -810,7 +876,7 @@ export default function Home() {
               </div>
 
               <div className="mt-5">
-                <div className="mb-3 text-sm font-black text-stone-900">クイックフィルター</div>
+                <div className="mb-3 text-sm font-black text-stone-900">すぐ見たい条件</div>
                 <div className="flex flex-wrap gap-3">
                   {quickFilters.map(({ label, icon: Icon, action }) => (
                     <button
@@ -827,16 +893,25 @@ export default function Home() {
               </div>
 
               <div className="mt-7 grid max-w-3xl gap-3 sm:grid-cols-3">
-                <div className="rounded-lg border border-stone-200 bg-white px-4 py-3 shadow-sm">
-                  <div className="text-xs font-black text-stone-400">今日の入口</div>
-                  <div className="mt-1 text-sm font-black text-stone-950">実X投稿を1件だけ表示</div>
+                <div className="rounded-md border border-stone-200 bg-white/94 px-4 py-3 shadow-sm">
+                  <div className="flex items-center gap-2 text-xs font-black text-stone-500">
+                    <ShieldCheck className="h-3.5 w-3.5 text-[#8a001d]" />
+                    原典
+                  </div>
+                  <div className="mt-1 text-sm font-black text-stone-950">{heroWine.raw.tweetUrls.length}件の実投稿</div>
                 </div>
-                <div className="rounded-lg border border-stone-200 bg-white px-4 py-3 shadow-sm">
-                  <div className="text-xs font-black text-stone-400">見つかる場所</div>
+                <div className="rounded-md border border-stone-200 bg-white/94 px-4 py-3 shadow-sm">
+                  <div className="flex items-center gap-2 text-xs font-black text-stone-500">
+                    <MapPin className="h-3.5 w-3.5 text-emerald-700" />
+                    店舗
+                  </div>
                   <div className="mt-1 text-sm font-black text-stone-950">{heroWine.storeLabels.slice(0, 2).join(" / ")}</div>
                 </div>
-                <div className="rounded-lg border border-stone-200 bg-white px-4 py-3 shadow-sm">
-                  <div className="text-xs font-black text-stone-400">価格の目安</div>
+                <div className="rounded-md border border-stone-200 bg-white/94 px-4 py-3 shadow-sm">
+                  <div className="flex items-center gap-2 text-xs font-black text-stone-500">
+                    <Star className="h-3.5 w-3.5 text-amber-700" />
+                    価格
+                  </div>
                   <div className="mt-1 text-sm font-black text-[#8a001d]">{priceFmt(heroWine.price)}</div>
                 </div>
               </div>
@@ -849,35 +924,75 @@ export default function Home() {
         </section>
 
         <section id="ranking" className="border-b border-stone-200 bg-white">
-          <div className="mx-auto max-w-[1720px] px-4 py-6 sm:px-6">
-            <div className="mb-4 flex items-center justify-between gap-4">
-              <div className="flex items-center gap-2">
-                <Crown className="h-5 w-5 text-[#d19a20]" />
-                <h2 className="text-xl font-black tracking-normal text-stone-950 sm:text-2xl">
-                  今日のバズワイン BEST 3
+          <div className="mx-auto max-w-[1720px] px-4 py-10 sm:px-6">
+            <div className="mb-6 flex flex-col justify-between gap-3 md:flex-row md:items-end">
+              <div>
+                <div className="mb-2 flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-[#8a001d]">
+                  <Crown className="h-4 w-4 text-[#d19a20]" />
+                  Daily Selection
+                </div>
+                <h2 className="text-2xl font-black tracking-normal text-stone-950 sm:text-3xl">
+                  投稿数とコスパで選ぶ、今日の3本
                 </h2>
-                <span className="hidden text-xs font-bold text-stone-400 sm:inline">更新: 12:00</span>
+                <p className="mt-2 text-sm font-medium leading-6 text-stone-600">
+                  X投稿の有無、バズ度、価格、取り扱い店を同じ基準で見比べられるように整理しています。
+                </p>
               </div>
-              <Link href="/wines" className="inline-flex items-center gap-1 text-sm font-black text-stone-600 transition hover:text-[#8a001d]">
-                もっと見る
+              <Link href="/wines" className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-stone-300 bg-white px-4 text-sm font-black text-stone-800 transition hover:border-[#8a001d] hover:text-[#8a001d]">
+                全ワインを見る
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-            <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-[1fr_1fr_1fr_230px]">
+            <div className="grid gap-4 lg:grid-cols-3 xl:grid-cols-[1fr_1fr_1fr_260px]">
               {topWines.map((wine, index) => (
                 <RankingCard key={wine.id} wine={wine} rank={index + 1} onOpen={setSelectedWine} />
               ))}
-              <div className="hidden rounded-lg border border-stone-200 bg-[#fbf8f3] p-4 xl:block">
-                <div className="mb-3 text-sm font-black text-stone-950">スマホでもサクッと探せる</div>
-                <ul className="space-y-2 text-xs font-bold leading-5 text-stone-600">
-                  <li>・今いる場所から近いお店を表示</li>
-                  <li>・気になった1本をお気に入り保存</li>
-                  <li>・料理名だけでも候補が出る</li>
+              <div className="hidden rounded-lg border border-stone-200 bg-[#f7f3ea] p-5 xl:block">
+                <div className="mb-3 flex items-center gap-2 text-sm font-black text-stone-950">
+                  <BadgeCheck className="h-4 w-4 text-[#8a001d]" />
+                  見るべきポイント
+                </div>
+                <ul className="space-y-3 text-xs font-bold leading-5 text-stone-600">
+                  <li>投稿の熱量だけでなく、実際に買える店舗も併記</li>
+                  <li>税込目安とVivino評価を同じカード内で確認</li>
+                  <li>料理名から探せるので、今夜の献立に合わせやすい</li>
                 </ul>
-                <Link href="/quiz" className="mt-4 inline-flex h-9 items-center justify-center rounded-md bg-stone-950 px-3 text-xs font-black text-white">
-                  診断で探す
+                <Link href="/quiz" className="mt-5 inline-flex h-10 items-center justify-center rounded-md bg-stone-950 px-4 text-xs font-black text-white transition hover:bg-[#8a001d]">
+                  診断で絞り込む
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="proof" className="border-b border-stone-200 bg-[#f6f5f1]">
+          <div className="mx-auto grid max-w-[1720px] gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.56fr_0.44fr]">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#8a001d]">Why It Feels Real</p>
+              <h2 className="mt-2 text-2xl font-black tracking-normal text-stone-950 sm:text-3xl">
+                投稿の熱量を、買える情報に変換する
+              </h2>
+              <p className="mt-4 max-w-2xl text-sm font-medium leading-7 text-stone-600">
+                架空レビューではなく、ワインごとのX投稿URL、価格、店舗、料理相性を同じデータから表示。
+                詳細ページでは元投稿に戻って確認できます。
+              </p>
+            </div>
+            <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
+              <ProofStep
+                Icon={ShieldCheck}
+                label="原典に戻れる"
+                text="ヒーローの投稿と詳細ページの投稿URLは同じ選定ロジックでそろえています。"
+              />
+              <ProofStep
+                Icon={BarChart3}
+                label="熱量を数値で比較"
+                text={`掲載 ${stats.total}本、Xリンク ${stats.tweets}件を、バズ度とコスパで並べ替えできます。`}
+              />
+              <ProofStep
+                Icon={MapPin}
+                label="買える場所まで短い"
+                text={`${stats.stores}種類の取り扱い先ラベルと価格目安を、検索とカードの両方で確認できます。`}
+              />
             </div>
           </div>
         </section>
@@ -895,7 +1010,7 @@ export default function Home() {
                 <FoodChip
                   key={food.label}
                   label={food.label}
-                  icon={food.icon}
+                  Icon={food.icon}
                   active={query === food.query}
                   onClick={() => {
                     setQuery(food.query);
