@@ -10,7 +10,9 @@ export default function Icon() {
     (
       <div
         style={{
-          fontSize: 40,
+          fontSize: 24,
+          fontWeight: 900,
+          color: "white",
           background: "linear-gradient(135deg, #8B1A2B, #C4627A)",
           width: "100%",
           height: "100%",
@@ -20,7 +22,7 @@ export default function Icon() {
           borderRadius: 16,
         }}
       >
-        🍷
+        BW
       </div>
     ),
     { ...size },
