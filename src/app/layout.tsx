@@ -12,13 +12,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
   title: {
-    default: "ご近所ワイン | 今買うべきワインがすぐわかる",
-    template: "%s | ご近所ワイン",
+    default: "ご近所バズワイン | そのワイン、ここにあります。",
+    template: "%s | ご近所バズワイン",
   },
   description:
-    "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。Xで話題の1本がすぐ見つかる。",
+    "安くて美味しいワインはどこで買えるの？Xで話題の1本を、価格・お店・料理相性で整理します。",
   metadataBase: new URL(siteUrl),
-  applicationName: "ご近所ワイン",
+  applicationName: "ご近所バズワイン",
   authors: [{ name: "soudanyou" }],
   keywords: [
     "ワイン",
@@ -31,18 +31,18 @@ export const metadata: Metadata = {
     "スパークリングワイン",
   ],
   openGraph: {
-    title: "ご近所ワイン",
+    title: "ご近所バズワイン",
     description:
-      "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。Xで話題の1本がすぐ見つかる。",
+      "安くて美味しいワインはどこで買えるの？Xで話題の1本を、価格・お店・料理相性で整理します。",
     type: "website",
     locale: "ja_JP",
-    siteName: "ご近所ワイン",
+    siteName: "ご近所バズワイン",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ご近所ワイン",
+    title: "ご近所バズワイン",
     description:
-      "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。Xで話題の1本がすぐ見つかる。",
+      "安くて美味しいワインはどこで買えるの？Xで話題の1本を、価格・お店・料理相性で整理します。",
   },
   robots: {
     index: true,

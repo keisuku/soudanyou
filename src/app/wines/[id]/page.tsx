@@ -31,7 +31,7 @@ export async function generateMetadata({
   const { id } = await params;
   const wine = allWines.find((w) => w.id === id);
   if (!wine) return { title: "ワインが見つかりません" };
-  const title = `${wine.nameJa} ${formatPrice(wine.price)} | ご近所ワイン`;
+  const title = `${wine.nameJa} ${formatPrice(wine.price)} | ご近所バズワイン`;
   const description = wine.whyBuyNow;
   return {
     title,
@@ -140,7 +140,7 @@ export default async function WineDetailPage({
           <p className="mt-3 text-lg font-medium text-primary">{wine.whyBuyNow}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             <ShareButton
-              title={`${wine.nameJa} | ご近所ワイン`}
+              title={`${wine.nameJa} | ご近所バズワイン`}
               text={wine.whyBuyNow}
             />
             <CompareButton wineId={wine.id} />

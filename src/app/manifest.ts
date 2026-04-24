@@ -4,8 +4,8 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "ご近所ワイン",
-    short_name: "ご近所ワイン",
+    name: "ご近所バズワイン",
+    short_name: "バズワイン",
     description:
       "コンビニ・スーパーで買えるワインをコスパと話題度で厳選。",
     start_url: "/soudanyou",

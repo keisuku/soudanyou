@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
 
-export const alt = "ご近所ワイン — コンビニ・スーパーで買える厳選ワイン";
+export const alt = "Gokinjo Buzz Wine";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -32,7 +32,23 @@ export default function OpenGraphImage() {
             opacity: 0.3,
           }}
         />
-        <div style={{ fontSize: 180, marginBottom: 20 }}>🍷</div>
+        <div
+          style={{
+            display: "flex",
+            width: 180,
+            height: 180,
+            alignItems: "center",
+            justifyContent: "center",
+            border: "5px solid #D4A853",
+            borderRadius: 999,
+            color: "#D4A853",
+            fontSize: 72,
+            fontWeight: 900,
+            marginBottom: 20,
+          }}
+        >
+          BW
+        </div>
         <div
           style={{
             fontSize: 80,
@@ -42,7 +58,7 @@ export default function OpenGraphImage() {
             gap: 20,
           }}
         >
-          <span style={{ color: "#fff" }}>ご近所</span>
+          <span style={{ color: "#fff" }}>GOKINJO</span>
           <span
             style={{
               background: "linear-gradient(90deg, #C4627A, #D4A853)",
@@ -51,11 +67,11 @@ export default function OpenGraphImage() {
               color: "transparent",
             }}
           >
-            ワイン
+            BUZZ WINE
           </span>
         </div>
         <div style={{ fontSize: 32, color: "#f9a8b4", marginTop: 24, fontWeight: 500 }}>
-          コンビニ・スーパーで買える厳選ワイン
+          Find the wine everyone is talking about.
         </div>
         <div
           style={{
@@ -66,9 +82,9 @@ export default function OpenGraphImage() {
             color: "#d4a853",
           }}
         >
-          <span>🍷 82本厳選</span>
-          <span>🤖 AIソムリエ</span>
-          <span>💰 コスパ指標</span>
+          <span>82 bottles</span>
+          <span>Buzz proof</span>
+          <span>Value picks</span>
         </div>
       </div>
     ),

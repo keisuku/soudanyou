@@ -69,8 +69,24 @@ export function TweetEmbed({ tweetUrl }: TweetEmbedProps) {
     return () => { cancelled = true; };
   }, [tweetId]);
 
-  // Hide completely if tweet fails to load
-  if (status === "error") return null;
+  if (status === "error") {
+    return (
+      <a
+        href={tweetUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex min-h-[220px] items-center justify-center rounded-lg border border-stone-200 bg-white p-5 text-center shadow-sm transition hover:border-stone-300"
+      >
+        <div>
+          <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-stone-950 text-sm font-black text-white">
+            X
+          </div>
+          <p className="text-sm font-black text-stone-950">X投稿を開く</p>
+          <p className="mt-1 break-all text-xs font-medium text-stone-500">{tweetUrl}</p>
+        </div>
+      </a>
+    );
+  }
 
   return (
     <div>
