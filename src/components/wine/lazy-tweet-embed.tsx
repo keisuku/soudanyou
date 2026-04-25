@@ -5,9 +5,11 @@ import { TweetEmbed } from "./tweet-embed";
 
 interface LazyTweetEmbedProps {
   tweetUrl: string;
+  className?: string;
+  contentClassName?: string;
 }
 
-export function LazyTweetEmbed({ tweetUrl }: LazyTweetEmbedProps) {
+export function LazyTweetEmbed({ tweetUrl, className, contentClassName }: LazyTweetEmbedProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -28,9 +30,15 @@ export function LazyTweetEmbed({ tweetUrl }: LazyTweetEmbedProps) {
   }, []);
 
   return (
-    <div ref={ref} className="min-h-[220px]">
+    <div ref={ref} className={className ?? "min-h-[220px]"}>
       {visible ? (
-        <TweetEmbed tweetUrl={tweetUrl} />
+        contentClassName ? (
+          <div className={contentClassName}>
+            <TweetEmbed tweetUrl={tweetUrl} />
+          </div>
+        ) : (
+          <TweetEmbed tweetUrl={tweetUrl} />
+        )
       ) : (
         <div className="flex min-h-[220px] items-center justify-center rounded-lg border border-stone-200 bg-white p-5 text-center shadow-sm">
           <div>

@@ -9,11 +9,52 @@ declare global {
         createTweet: (
           id: string,
           el: HTMLElement,
-          options?: Record<string, string>
+          options?: Record<string, string>,
         ) => Promise<HTMLElement | undefined>;
       };
     };
   }
+}
+
+let twitterWidgetsPromise: Promise<Window["twttr"] | undefined> | null = null;
+
+function loadTwitterWidgets(): Promise<Window["twttr"] | undefined> {
+  if (typeof window === "undefined") return Promise.resolve(undefined);
+  if (window.twttr) return Promise.resolve(window.twttr);
+  if (twitterWidgetsPromise) return twitterWidgetsPromise;
+
+  twitterWidgetsPromise = new Promise((resolve) => {
+    const finish = () => resolve(window.twttr);
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      'script[src="https://platform.twitter.com/widgets.js"]',
+    );
+
+    if (existingScript) {
+      existingScript.addEventListener("load", finish, { once: true });
+      existingScript.addEventListener("error", () => resolve(undefined), { once: true });
+    } else {
+      const script = document.createElement("script");
+      script.src = "https://platform.twitter.com/widgets.js";
+      script.async = true;
+      script.onload = finish;
+      script.onerror = () => resolve(undefined);
+      document.body.appendChild(script);
+    }
+
+    let attempts = 0;
+    const interval = window.setInterval(() => {
+      attempts += 1;
+      if (window.twttr) {
+        window.clearInterval(interval);
+        finish();
+      } else if (attempts > 60) {
+        window.clearInterval(interval);
+        resolve(undefined);
+      }
+    }, 250);
+  });
+
+  return twitterWidgetsPromise;
 }
 
 interface TweetEmbedProps {
@@ -22,51 +63,41 @@ interface TweetEmbedProps {
 
 export function TweetEmbed({ tweetUrl }: TweetEmbedProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [status, setStatus] = useState<"loading" | "loaded" | "error">("loading");
-
-  const tweetId = tweetUrl.split("/status/")[1]?.split("?")[0] ?? "";
+  const tweetId = tweetUrl.match(/\/status(?:es)?\/(\d+)/)?.[1] ?? "";
+  const [status, setStatus] = useState<"loading" | "loaded" | "error">(
+    tweetId ? "loading" : "error",
+  );
 
   useEffect(() => {
-    if (!ref.current || !tweetId) {
-      setStatus("error");
-      return;
-    }
+    if (!ref.current || !tweetId) return;
 
     let cancelled = false;
+    ref.current.innerHTML = "";
 
-    const render = () => {
-      if (window.twttr && ref.current) {
-        ref.current.innerHTML = "";
-        window.twttr.widgets
-          .createTweet(tweetId, ref.current, { lang: "ja", dnt: "true" })
-          .then((el) => {
-            if (cancelled) return;
-            setStatus(el ? "loaded" : "error");
-          })
-          .catch(() => {
-            if (!cancelled) setStatus("error");
-          });
-      }
-    };
-
-    if (window.twttr) {
-      render();
-    } else {
-      let attempts = 0;
-      const interval = setInterval(() => {
-        attempts++;
-        if (window.twttr) {
-          clearInterval(interval);
-          render();
-        } else if (attempts > 20) {
-          clearInterval(interval);
+    loadTwitterWidgets()
+      .then((twttr) => {
+        if (cancelled || !ref.current || !twttr) {
           if (!cancelled) setStatus("error");
+          return undefined;
         }
-      }, 500);
-      return () => { cancelled = true; clearInterval(interval); };
-    }
+        return twttr.widgets.createTweet(tweetId, ref.current, {
+          align: "center",
+          conversation: "none",
+          dnt: "true",
+          lang: "ja",
+        });
+      })
+      .then((el) => {
+        if (cancelled) return;
+        setStatus(el ? "loaded" : "error");
+      })
+      .catch(() => {
+        if (!cancelled) setStatus("error");
+      });
 
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, [tweetId]);
 
   if (status === "error") {

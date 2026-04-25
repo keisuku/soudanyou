@@ -2,19 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Wine, Heart, Trophy } from "lucide-react";
-import { useFavorites } from "@/lib/favorites";
+import { Home, Store, Trophy, Sparkles } from "lucide-react";
 
 const items = [
   { href: "/", label: "ホーム", Icon: Home, matches: (p: string) => p === "/" },
-  { href: "/wines", label: "全ワイン", Icon: Wine, matches: (p: string) => p.startsWith("/wines") },
-  { href: "/favorites", label: "お気に入り", Icon: Heart, matches: (p: string) => p === "/favorites", showBadge: true },
-  { href: "/compare", label: "比較", Icon: Trophy, matches: (p: string) => p === "/compare" },
+  { href: "/#search", label: "店舗", Icon: Store, matches: (p: string) => p === "/wines" },
+  { href: "/#ranking", label: "殿堂入り", Icon: Trophy, matches: (p: string) => p === "/compare" },
+  { href: "/quiz", label: "特集", Icon: Sparkles, matches: (p: string) => p === "/quiz" },
 ];
 
 export function MobileBottomNav() {
   const pathname = usePathname();
-  const { count } = useFavorites();
 
   return (
     <nav
@@ -23,7 +21,7 @@ export function MobileBottomNav() {
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <ul className="grid grid-cols-4">
-        {items.map(({ href, label, Icon, matches, showBadge }) => {
+        {items.map(({ href, label, Icon, matches }) => {
           const active = matches(pathname ?? "/");
           return (
             <li key={href}>
@@ -36,14 +34,6 @@ export function MobileBottomNav() {
               >
                 <div className="relative">
                   <Icon className={`w-5 h-5 ${active ? "fill-primary/10" : ""}`} />
-                  {showBadge && count > 0 && (
-                    <span
-                      className="absolute -top-1 -right-2 min-w-[16px] h-[16px] px-1 rounded-full bg-rose-600 text-white text-[9px] font-black flex items-center justify-center"
-                      aria-hidden="true"
-                    >
-                      {count > 99 ? "99+" : count}
-                    </span>
-                  )}
                 </div>
                 <span>{label}</span>
               </Link>
