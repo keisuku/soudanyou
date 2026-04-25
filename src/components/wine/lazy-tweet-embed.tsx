@@ -23,7 +23,7 @@ export function LazyTweetEmbed({ tweetUrl, className, contentClassName }: LazyTw
           io.disconnect();
         }
       },
-      { rootMargin: "300px 0px" },
+      { rootMargin: "1200px 0px" },
     );
     io.observe(el);
     return () => io.disconnect();

@@ -6,21 +6,27 @@ import Image from "next/image";
 import {
   ArrowRight,
   ChevronDown,
-  CircleDollarSign,
   Crown,
-  Flame,
-  Globe2,
-  Grape,
+  Heart,
+  MapPin,
+  Menu,
   Search,
   SlidersHorizontal,
-  Store,
-  Wine,
+  User,
+  X,
 } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
 import { FavoriteButton } from "@/components/wine/favorite-button";
 import { LazyTweetEmbed } from "@/components/wine/lazy-tweet-embed";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
-import heroBackground from "../../public/images/home-hero-bg.png";
+import heroBottle from "../../public/images/home-hero-bottle.png";
+import heroLogo from "../../public/images/home-hero-logo.png";
+import heroPhotoStrip from "../../public/images/home-hero-photo-strip.png";
+import heroProsciutto from "../../public/images/home-hero-prosciutto.png";
+import heroStreet from "../../public/images/home-hero-street.png";
+import foodCheese from "../../public/images/home-food-cheese.png";
+import foodPasta from "../../public/images/home-food-pasta.png";
+import foodSeafood from "../../public/images/home-food-seafood.png";
+import foodYakiniku from "../../public/images/home-food-yakiniku.png";
 import {
   homeWines,
   type HomeWine,
@@ -30,10 +36,6 @@ import { pickPrimaryTweetUrl } from "@/lib/tweets";
 import type { WineType } from "@/types/wine";
 
 const priceFmt = (price: number) => `¥${price.toLocaleString()}`;
-
-const displayFont = {
-  fontFamily: '"Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif',
-};
 
 const typeLabels: Record<WineType | "all", string> = {
   all: "すべて",
@@ -64,40 +66,17 @@ const foodPresets = [
   { label: "パスタ", query: "パスタ", icon: "🍝" },
 ];
 
+const heroFoodChips = [
+  { label: "焼肉", query: "焼肉", image: foodYakiniku },
+  { label: "チーズ", query: "チーズ", image: foodCheese },
+  { label: "魚介", query: "魚", image: foodSeafood },
+  { label: "パスタ", query: "パスタ", image: foodPasta },
+];
+
 type SortKey = "buzz" | "cospa" | "price" | "rating";
 type PriceFilter = "standard" | "bargain" | "under1500" | "1500to2000" | "over2000";
-type FacetKey = "convenience" | "supermarket" | "liquor" | "online" | "country" | "grape" | "price";
-
-const storeFacetGroups: Array<{
-  key: Extract<FacetKey, "convenience" | "supermarket" | "liquor" | "online">;
-  label: string;
-  stores: string[];
-}> = [
-  { key: "convenience", label: "コンビニ", stores: ["seven", "lawson", "familymart"] },
-  { key: "supermarket", label: "スーパー", stores: ["aeon", "summit", "ozeki", "seijoishii", "life"] },
-  { key: "liquor", label: "酒屋", stores: ["kaldi", "shinanoya", "yamaya", "africaer", "kakuyasu", "liquorman"] },
-  { key: "online", label: "ネット店舗", stores: ["rakuten", "amazon", "takamura", "felicity", "wine_ohashi", "ukiuki"] },
-];
-
-const primaryFacets: Array<{ key: FacetKey; label: string; Icon: LucideIcon }> = [
-  { key: "convenience", label: "コンビニ", Icon: Store },
-  { key: "supermarket", label: "スーパー", Icon: Store },
-  { key: "liquor", label: "酒屋", Icon: Store },
-  { key: "online", label: "ネット店舗", Icon: Store },
-  { key: "country", label: "国別", Icon: Globe2 },
-  { key: "grape", label: "品種別", Icon: Grape },
-  { key: "price", label: "価格帯", Icon: CircleDollarSign },
-];
 
 const grapeFacets = ["カベルネ", "シャルドネ", "ピノ", "ソーヴィニヨン", "甲州", "リースリング"];
-
-const priceFacets: Array<{ key: PriceFilter; label: string }> = [
-  { key: "standard", label: "800円以上" },
-  { key: "bargain", label: "格安ワイン" },
-  { key: "under1500", label: "〜1,500円" },
-  { key: "1500to2000", label: "1,501〜2,000円" },
-  { key: "over2000", label: "2,001円〜" },
-];
 
 const allStoreOptions = Array.from(
   new Map(
@@ -109,35 +88,37 @@ const allStoreOptions = Array.from(
   .map(([value, label]) => ({ value, label }))
   .sort((a, b) => a.label.localeCompare(b.label, "ja"));
 
+const wineShelfSections = [
+  {
+    key: "convenience",
+    title: "コンビニで買える",
+    description: "セブン・ローソン・ファミマで今夜すぐ探しやすい話題の1本。",
+    storeTypes: ["seven", "lawson", "familymart"],
+  },
+  {
+    key: "supermarket",
+    title: "スーパーで買える",
+    description: "イオン、サミット、成城石井など、普段の買い物ついでに見つかる棚。",
+    storeTypes: ["aeon", "summit", "ozeki", "seijoishii", "life", "local_super"],
+  },
+  {
+    key: "liquor",
+    title: "酒屋で買える",
+    description: "カルディ、信濃屋食品、やまや、アフリカーなどで探せる本命ワイン。",
+    storeTypes: ["kaldi", "shinanoya", "yamaya", "africaer", "kakuyasu", "biccamera", "liquorman", "hasegawa", "kagadaya", "mikuni_wine", "miraido"],
+  },
+  {
+    key: "online",
+    title: "ネット店舗で買える",
+    description: "楽天、Amazon、専門店から在庫を見つけやすいオンライン向けの候補。",
+    storeTypes: ["rakuten", "amazon", "ginza_grandmarche", "takamura", "felicity", "wine_ohashi", "ukiuki", "budouya", "dragee", "sa_wine_jp", "sankyushop", "senmonten", "tuscany", "wine_grocery"],
+  },
+] as const;
+
 const buzzLikes = (wine: HomeWine) => {
   const likes = Math.max(9800, Math.round((wine.raw.buzzScore * 128 + wine.cospa * 41) / 100) * 100);
   return likes >= 10000 ? `${(likes / 10000).toFixed(1)}万` : likes.toLocaleString();
 };
-
-const buzzReposts = (wine: HomeWine) => Math.max(820, wine.raw.buzzScore * 24).toLocaleString();
-
-function AppLogo() {
-  return (
-    <Link href="/" className="flex items-center gap-2" aria-label="ご近所バズワイン ホーム">
-      <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[#7f0019] text-white shadow-sm sm:h-9 sm:w-9">
-        <Wine className="h-4 w-4 sm:h-5 sm:w-5" />
-        <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-[#d6a22d] sm:h-2.5 sm:w-2.5" />
-      </span>
-      <span className="text-lg font-black tracking-normal text-[#620017] sm:text-xl">
-        ご近所バズワイン
-      </span>
-    </Link>
-  );
-}
-
-function StoreChip({ label, index = 0 }: { label: string; index?: number }) {
-  return (
-    <span className={`inline-flex min-h-8 items-center gap-1 rounded-md border px-2.5 text-xs font-black ${storeTone[index % storeTone.length]}`}>
-      <Store className="h-3.5 w-3.5" />
-      {label}
-    </span>
-  );
-}
 
 function FoodChip({
   label,
@@ -219,7 +200,7 @@ function TweetPreviewFrame({
         <LazyTweetEmbed
           tweetUrl={tweetUrl}
           className="absolute inset-0"
-          contentClassName={`pointer-events-none absolute left-1/2 top-[-214px] w-[500px] max-w-[250%] -translate-x-1/2 origin-top ${compact ? "scale-[0.64]" : "scale-[0.68]"}`}
+          contentClassName={`pointer-events-none absolute left-1/2 top-[-242px] w-[500px] max-w-[250%] -translate-x-1/2 origin-top ${compact ? "scale-[0.78]" : "scale-[0.86]"}`}
         />
       ) : (
         <div className="p-3">
@@ -227,95 +208,6 @@ function TweetPreviewFrame({
         </div>
       )}
     </div>
-  );
-}
-
-function HeroTweetFeature({
-  wine,
-  tweetUrl,
-}: {
-  wine: HomeWine;
-  tweetUrl?: string;
-}) {
-  return (
-    <article id="hero-tweet" className="relative w-full max-w-[650px] overflow-hidden rounded-lg border border-[#8a001d]/30 bg-white shadow-[0_18px_45px_rgba(74,20,20,0.15)]">
-      <div className="flex h-9 items-center justify-between bg-[#820019] px-3 text-white">
-        <div className="flex items-center gap-2 text-sm font-black">
-          <Flame className="h-4 w-4 fill-white" />
-          実際にバズっている投稿
-        </div>
-        <span className="rounded-md border border-amber-300/50 bg-amber-200/10 px-2 py-0.5 text-[11px] font-black text-amber-100">
-          詳細へ
-        </span>
-      </div>
-
-      <div className="grid min-h-[340px] grid-cols-[minmax(0,0.62fr)_minmax(220px,0.38fr)]">
-        <div className="relative overflow-hidden bg-[#fbf8f3]">
-          {tweetUrl ? (
-            <LazyTweetEmbed
-              tweetUrl={tweetUrl}
-              className="absolute inset-0"
-              contentClassName="pointer-events-none absolute left-1/2 top-[-248px] w-[540px] max-w-[190%] -translate-x-1/2 origin-top scale-[0.82]"
-            />
-          ) : (
-            <div className="p-3">
-              <TweetMiniCard wine={wine} compact />
-            </div>
-          )}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 to-transparent px-4 pb-3 pt-16 text-white">
-            <div className="line-clamp-1 text-sm font-black">
-              {wine.catch}
-            </div>
-          </div>
-        </div>
-
-        <div className="flex min-w-0 flex-col justify-between border-l border-stone-100 bg-white p-4">
-          <div>
-            <div className="text-[11px] font-black uppercase tracking-[0.2em] text-[#8a001d]">X BUZZ</div>
-            <div className="mt-1 text-[3.4rem] font-black leading-none tracking-normal text-[#8a001d]">
-              {buzzLikes(wine)}
-            </div>
-            <div className="mt-1 text-sm font-black text-stone-950">いいね</div>
-            <div className="mt-3 grid grid-cols-2 gap-2 border-y border-stone-100 py-3">
-              <div>
-                <div className="text-[11px] font-black text-stone-400">リポスト</div>
-                <div className="text-base font-black text-stone-950">{buzzReposts(wine)}</div>
-              </div>
-              <div>
-                <div className="text-[11px] font-black text-stone-400">バズ度</div>
-                <div className="text-base font-black text-stone-950">{wine.raw.buzzScore}</div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="mb-2 flex items-center gap-2">
-              <span className={`rounded-full border px-2 py-0.5 text-[11px] font-black ${typeTone[wine.type]}`}>
-                {typeLabels[wine.type]}
-              </span>
-              <span className="truncate text-[11px] font-bold text-stone-500">{wine.country}</span>
-            </div>
-            <h2 className="line-clamp-2 text-xl font-black leading-tight tracking-normal text-stone-950">
-              {wine.name}
-            </h2>
-            <div className="mt-2 flex items-end gap-2">
-              <span className="text-3xl font-black tracking-normal text-[#8a001d]">{priceFmt(wine.price)}</span>
-              <span className="pb-1 text-[11px] font-bold text-stone-400">税込目安</span>
-            </div>
-            <div className="mt-3 flex flex-wrap gap-1.5">
-              {wine.storeLabels.slice(0, 2).map((store, index) => (
-                <StoreChip key={store} label={store} index={index} />
-              ))}
-            </div>
-          </div>
-        </div>
-        <Link
-          href={`/wines/${wine.id}`}
-          className="absolute inset-0 z-10"
-          aria-label={`${wine.name} の詳細ページを見る`}
-        />
-      </div>
-    </article>
   );
 }
 
@@ -327,14 +219,17 @@ function RankingCard({
   rank: number;
 }) {
   return (
-    <article className="relative grid min-h-[292px] overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:grid-cols-[0.46fr_0.54fr]">
-      <div className="min-h-[220px] border-b border-stone-100 sm:min-h-full sm:border-b-0 sm:border-r">
+    <article className="relative flex min-h-[560px] flex-col overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+      <div className="aspect-[4/5] border-b border-stone-100 xl:aspect-auto xl:h-[380px]">
         <TweetPreviewFrame wine={wine} rank={rank} compact />
       </div>
-      <div className="flex min-w-0 flex-col p-4">
-        <div className="mb-3 rounded-md bg-[#8a001d] px-3 py-2 text-white">
+      <div className="flex min-w-0 flex-1 flex-col p-4">
+        <div className="mb-3 flex items-end justify-between rounded-md bg-[#8a001d] px-3 py-2 text-white">
+          <div>
           <div className="text-[11px] font-black uppercase tracking-[0.16em] text-white/70">likes</div>
           <div className="text-3xl font-black leading-none tracking-normal">{buzzLikes(wine)}</div>
+          </div>
+          <div className="text-right text-[11px] font-black text-white/70">Xで話題</div>
         </div>
         <div className="mb-2 flex items-center gap-2">
           <span className={`rounded-full border px-2 py-0.5 text-[11px] font-black ${typeTone[wine.type]}`}>
@@ -401,17 +296,17 @@ function GridWineCard({
   rank,
 }: {
   wine: HomeWine;
-  rank: number;
+  rank?: number;
 }) {
   return (
-    <article className="relative overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+    <article className="relative flex min-h-[690px] flex-col overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
       <div className="absolute right-3 top-3 z-30">
         <FavoriteButton wineId={wine.id} size="sm" />
       </div>
-      <div className="h-[156px] border-b border-stone-100">
+      <div className="aspect-[4/5] border-b border-stone-100 xl:aspect-auto xl:h-[500px]">
         <TweetPreviewFrame wine={wine} rank={rank} />
       </div>
-      <div className="p-4">
+      <div className="flex flex-1 flex-col p-4">
         <div className="min-w-0">
           <div className="mb-2 flex flex-wrap items-center gap-1.5">
             <span className={`rounded-full border px-2 py-0.5 text-[11px] font-black ${typeTone[wine.type]}`}>
@@ -420,10 +315,10 @@ function GridWineCard({
             <span className="text-[11px] font-bold text-stone-400">{wine.country}</span>
           </div>
           <h3 className="line-clamp-2 text-base font-black leading-snug text-stone-950">{wine.name}</h3>
-          <p className="mt-1 line-clamp-2 text-xs leading-5 text-stone-500">{wine.catch}</p>
+          <p className="mt-1 line-clamp-1 text-xs leading-5 text-stone-500">{wine.catch}</p>
           <div className="mt-2 text-xl font-black text-[#8a001d]">{priceFmt(wine.price)}</div>
         </div>
-        <div className="mt-4 grid grid-cols-3 gap-2 border-y border-stone-100 py-2 text-xs font-black">
+        <div className="mt-auto grid grid-cols-3 gap-2 border-y border-stone-100 py-2 text-xs font-black">
           <span className="text-[#a00025]">🔥 {wine.raw.buzzScore}</span>
           <span className="text-amber-700">★ {wine.vivino?.toFixed(1) ?? "-"}</span>
           <span className="text-emerald-700">コスパ {wine.cospa}</span>
@@ -453,7 +348,6 @@ export default function Home() {
   const [grape, setGrape] = useState("all");
   const [priceFilter, setPriceFilter] = useState<PriceFilter>("standard");
   const [sort, setSort] = useState<SortKey>("buzz");
-  const [activeFacet, setActiveFacet] = useState<FacetKey | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const [visibleCount, setVisibleCount] = useState(12);
 
@@ -468,18 +362,6 @@ export default function Home() {
         .slice(0, 3),
     [],
   );
-
-  const heroWine = useMemo(() => {
-    const buzzWine = [...homeWines]
-      .filter((wine) => wine.price >= 800 && wine.raw.tweetUrls.length > 0)
-      .sort((a, b) => {
-        if (b.raw.buzzScore !== a.raw.buzzScore) return b.raw.buzzScore - a.raw.buzzScore;
-        return b.cospa - a.cospa;
-      })[0];
-    return buzzWine ?? topWines[0] ?? homeWines[0];
-  }, [topWines]);
-
-  const heroTweetUrl = useMemo(() => pickPrimaryTweetUrl(heroWine.raw.tweetUrls), [heroWine]);
 
   const typeCounts = useMemo(() => {
     return homeWines.filter((wine) => wine.price >= 800).reduce<Record<WineType | "all", number>>(
@@ -529,272 +411,281 @@ export default function Home() {
       });
   }, [country, grape, priceFilter, query, sort, store, type]);
 
-  const visibleWines = filtered.slice(0, visibleCount);
+  const groupedWines = useMemo(() => {
+    return wineShelfSections
+      .map((section) => {
+        const storeTypeSet = new Set<string>(section.storeTypes);
+        const shelfWines = filtered.filter((wine) =>
+          wine.raw.stores.some((item) => storeTypeSet.has(item.type)),
+        );
+
+        return {
+          ...section,
+          wines: shelfWines.slice(0, visibleCount),
+          total: shelfWines.length,
+        };
+      })
+      .filter((section) => section.total > 0);
+  }, [filtered, visibleCount]);
 
   const jumpToSearch = () => {
     document.getElementById("search")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const applyFoodQuery = (value: string) => {
+  const applyHeroQuery = (value: string) => {
     setQuery(value);
     setVisibleCount(12);
     jumpToSearch();
   };
 
-  const applyStoreFilter = (value: string) => {
+  const applyHeroStore = (value: string) => {
     setStore(value);
     setVisibleCount(12);
     jumpToSearch();
   };
 
-  const applyCountryFilter = (value: string) => {
-    setCountry(value);
-    setVisibleCount(12);
-    jumpToSearch();
-  };
-
-  const applyGrapeFilter = (value: string) => {
-    setGrape(value);
-    setVisibleCount(12);
-    jumpToSearch();
-  };
-
-  const applyPriceFilter = (value: PriceFilter) => {
-    setPriceFilter(value);
-    setVisibleCount(12);
-    jumpToSearch();
-  };
-
-  const activeStoreGroup = storeFacetGroups.find((group) => group.key === activeFacet);
-
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f7f2eb] text-stone-950">
-      <header className="sticky top-0 z-40 border-b border-white/55 bg-[#faf6ef]/72 shadow-[0_6px_22px_rgba(92,55,34,0.05)] backdrop-blur-xl">
-        <div className="mx-auto flex h-14 max-w-[1720px] items-center justify-between px-4 sm:h-16 sm:px-6">
-          <AppLogo />
-
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="メインナビゲーション">
-            <a href="#ranking" className="text-sm font-black text-stone-900 transition hover:text-[#8a001d]">ランキング</a>
-            <a href="#search" className="text-sm font-black text-stone-900 transition hover:text-[#8a001d]">近くで買える</a>
-            <a href="#search" className="text-sm font-black text-stone-900 transition hover:text-[#8a001d]">料理で選ぶ</a>
-            <a href="#hero-tweet" className="text-sm font-black text-stone-900 transition hover:text-[#8a001d]">バズ投稿</a>
-          </nav>
-
-          <div className="hidden min-w-[420px] items-center rounded-lg border border-stone-200 bg-white px-3 shadow-sm xl:flex">
-            <Search className="h-4 w-4 text-stone-400" />
-            <input
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="ワイン名・料理・お店で検索"
-              className="h-11 flex-1 bg-transparent px-3 text-sm font-medium text-stone-900 outline-none placeholder:text-stone-400"
-              aria-label="ワインを検索"
-            />
-          </div>
-
-          <Link
-            href="#search"
-            className="hidden h-10 items-center justify-center rounded-md bg-[#8a001d] px-4 text-sm font-black text-white transition hover:bg-[#6f0018] lg:inline-flex"
-          >
-            ワインを探す
-          </Link>
-        </div>
-      </header>
-
       <main>
-        <section className="relative -mt-px overflow-hidden border-b border-stone-200 bg-[#faf6ef]">
+        <section className="relative isolate overflow-hidden border-b border-stone-200 bg-[#fbf7f1]">
           <Image
-            src={heroBackground}
+            src={heroStreet}
             alt=""
             fill
             priority
             sizes="100vw"
-            className="pointer-events-none absolute inset-0 z-0 object-cover object-[70%_center] opacity-100 sm:object-[58%_center]"
+            className="pointer-events-none absolute inset-0 -z-20 object-cover object-[68%_center] opacity-95 sm:object-[72%_center] lg:object-[82%_center]"
             aria-hidden="true"
           />
-          <div className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(250,246,239,0.9)_0%,rgba(250,246,239,0.52)_48%,rgba(250,246,239,0.08)_100%)] sm:bg-[linear-gradient(90deg,rgba(250,246,239,0.96)_0%,rgba(250,246,239,0.74)_36%,rgba(250,246,239,0.18)_70%,rgba(250,246,239,0.06)_100%)]" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-40 bg-gradient-to-t from-[#f7f2eb] to-transparent" />
-          <div className="mx-auto grid max-w-[1720px] gap-3 px-4 pb-4 pt-3 sm:gap-6 sm:px-6 sm:py-6 lg:min-h-[520px] lg:grid-cols-[minmax(0,0.95fr)_minmax(360px,0.58fr)] xl:min-h-[560px]">
-            <div className="relative z-10 flex flex-col justify-start py-2 sm:py-6 lg:min-h-[460px] lg:justify-center lg:pr-8">
-              <div className="mb-2 inline-flex w-fit items-center gap-2 rounded-full border border-[#8a001d]/20 bg-white/86 px-3 py-1.5 text-xs font-black text-[#8a001d] shadow-sm backdrop-blur sm:mb-5">
-                <Flame className="h-3.5 w-3.5 fill-[#8a001d]" />
-                Xでバズってるワインの情報をまとめました
-              </div>
-              <p className="mb-1 max-w-2xl text-sm font-black tracking-normal text-stone-900 sm:mb-4 sm:text-2xl" style={displayFont}>
-                安くて美味しい
-                <span className="mx-1 text-[#8a001d]">ワイン</span>
-                は、どこで買えるの？
-              </p>
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(251,247,241,0.96)_0%,rgba(251,247,241,0.80)_58%,rgba(251,247,241,0.24)_100%)] lg:bg-[linear-gradient(90deg,rgba(251,247,241,0.99)_0%,rgba(251,247,241,0.92)_34%,rgba(251,247,241,0.48)_58%,rgba(251,247,241,0.06)_100%)]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[#fbf7f1] to-transparent" />
 
-              <div className="grid max-w-3xl grid-cols-[minmax(0,1fr)_88px] items-end gap-2 min-[390px]:grid-cols-[minmax(0,1fr)_98px] sm:block">
-                <h1 className="min-w-0 max-w-full text-[2rem] font-black leading-[1.02] tracking-normal text-stone-950 min-[390px]:text-[2.08rem] sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[5.8rem]" style={displayFont}>
-                  そのワイン、
-                  <span className="block whitespace-nowrap text-[#8a001d]">ここにあります。</span>
+          <div className="mx-auto max-w-[1720px] px-4 sm:px-6">
+            <header className="flex h-12 items-center justify-between gap-4 sm:h-20">
+              <Link href="/" className="flex shrink-0 items-center" aria-label="ご近所バズワイン ホーム">
+                <Image
+                  src={heroLogo}
+                  alt="ご近所バズワイン"
+                  priority
+                  sizes="220px"
+                  className="h-7 w-auto sm:h-11"
+                />
+              </Link>
+
+              <nav className="hidden items-center gap-10 lg:flex" aria-label="メインナビゲーション">
+                <a href="#ranking" className="text-sm font-black text-stone-950 transition hover:text-[#8a001d]">ランキング</a>
+                <a href="#search" className="text-sm font-black text-stone-950 transition hover:text-[#8a001d]">近くで買える</a>
+                <a href="#search" className="text-sm font-black text-stone-950 transition hover:text-[#8a001d]">料理で選ぶ</a>
+                <Link href="/wines" className="text-sm font-black text-stone-950 transition hover:text-[#8a001d]">特集</Link>
+              </nav>
+
+              <div className="hidden h-12 min-w-[360px] items-center rounded-lg border border-stone-200 bg-white/90 px-4 shadow-sm backdrop-blur xl:flex">
+                <Search className="h-5 w-5 text-stone-500" />
+                <input
+                  type="search"
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="ワイン名・料理・お店で検索"
+                  className="min-w-0 flex-1 bg-transparent px-3 text-sm font-bold text-stone-900 outline-none placeholder:text-stone-400"
+                  aria-label="ワインを検索"
+                />
+              </div>
+
+              <div className="hidden items-center gap-5 md:flex">
+                <Link href="/favorites" className="inline-flex items-center gap-2 text-sm font-black text-stone-950 transition hover:text-[#8a001d]">
+                  <Heart className="h-5 w-5" />
+                  お気に入り
+                </Link>
+                <Link href="/favorites" className="inline-flex items-center gap-2 text-sm font-black text-stone-950 transition hover:text-[#8a001d]">
+                  <User className="h-5 w-5" />
+                  マイページ
+                </Link>
+              </div>
+
+              <button className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-stone-200 bg-white/88 text-stone-950 shadow-sm md:hidden" aria-label="メニュー">
+                <Menu className="h-5 w-5" />
+              </button>
+            </header>
+
+            <div className="relative grid gap-4 pb-5 pt-1 sm:pb-8 lg:min-h-[540px] lg:grid-cols-[minmax(0,0.9fr)_minmax(500px,0.74fr)] lg:items-center lg:pt-0 xl:min-h-[600px]">
+              <div className="pointer-events-none absolute right-[-78px] top-[-2px] z-0 h-[268px] w-[214px] sm:right-[-18px] sm:top-8 sm:h-[320px] sm:w-[240px] lg:hidden">
+                <Image src={heroBottle} alt="" fill priority sizes="240px" className="object-contain object-bottom drop-shadow-[0_22px_22px_rgba(60,32,14,0.26)]" aria-hidden="true" />
+              </div>
+              <div className="pointer-events-none absolute bottom-[188px] right-[-54px] z-0 h-[78px] w-[210px] opacity-90 sm:hidden">
+                <Image src={heroProsciutto} alt="" fill sizes="210px" className="object-contain drop-shadow-[0_18px_16px_rgba(70,35,18,0.18)]" aria-hidden="true" />
+              </div>
+              <div className="relative z-10 max-w-[760px]">
+                <h1 className="max-w-[314px] text-[2.45rem] font-black leading-[0.98] tracking-normal text-stone-950 min-[390px]:max-w-[360px] min-[390px]:text-[2.82rem] sm:max-w-none sm:text-7xl lg:text-[5.5rem] xl:text-[6.4rem]" style={{ fontFamily: '"Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif' }}>
+                  帰りに買える
+                  <span className="block text-[#8a001d]">ワインを探そう！</span>
                 </h1>
-                <div className="relative -mb-1 h-[126px] overflow-hidden rounded-[18px] shadow-[0_18px_35px_rgba(70,38,21,0.22)] sm:hidden">
-                  <Image
-                    src={heroBackground}
-                    alt=""
-                    fill
-                    sizes="98px"
-                    className="object-cover object-[88%_center]"
-                    aria-hidden="true"
-                  />
-                  <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(250,246,239,0)_0%,rgba(250,246,239,0.10)_55%,rgba(250,246,239,0.34)_100%)]" />
+                <p className="mt-3 max-w-[270px] text-xs font-bold leading-6 text-stone-800 min-[390px]:max-w-[300px] sm:mt-6 sm:max-w-2xl sm:text-lg sm:leading-8">
+                  Xで話題の“おいしいやつ”を、価格・お店・料理相性で整理。
+                  コンビニ、スーパー、近所の酒屋から今夜の1本が見つかります。
+                </p>
+
+                <div className="relative z-10 mt-3 grid max-w-[360px] grid-cols-[72px_minmax(0,1fr)] items-center gap-2 overflow-hidden rounded-xl border border-white/75 bg-white/88 p-2 shadow-[0_16px_34px_rgba(68,38,22,0.18)] backdrop-blur sm:hidden">
+                  <div className="relative h-24">
+                    <Image src={heroBottle} alt="今夜のおすすめワイン" fill sizes="72px" className="object-contain object-bottom" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="mb-1 inline-flex rounded bg-[#8a001d] px-2 py-0.5 text-[10px] font-black text-white">今夜のおすすめ</div>
+                    <div className="line-clamp-2 text-sm font-black leading-snug text-stone-950">ゴキンジョ バズワイン ブリュット</div>
+                    <div className="mt-1 flex items-end gap-2">
+                      <span className="text-2xl font-black tracking-normal text-[#8a001d]">¥1,280</span>
+                      <span className="pb-0.5 text-[10px] font-bold text-stone-500">税込</span>
+                    </div>
+                    <div className="mt-1 flex gap-1.5">
+                      {["セブン", "カルディ"].map((store, index) => (
+                        <span key={store} className={`rounded border px-1.5 py-0.5 text-[10px] font-black ${storeTone[index % storeTone.length]}`}>
+                          {store}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <p className="mt-2 max-w-2xl text-sm font-bold leading-6 text-stone-800 sm:mt-6 sm:text-lg sm:leading-8">
-                店舗と価格と品種など、もうワインに迷わない
-              </p>
-
-              <div className="mt-3 max-w-2xl rounded-lg border border-stone-200 bg-white/94 p-1.5 shadow-[0_14px_30px_rgba(87,50,35,0.10)] backdrop-blur sm:mt-7 sm:p-2">
-                <div className="flex items-center gap-2">
-                  <Search className="ml-3 h-5 w-5 shrink-0 text-stone-400" />
-                  <input
-                    type="search"
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                    onFocus={jumpToSearch}
-                    placeholder="ワイン名・料理・お店で検索"
-                    className="h-9 min-w-0 flex-1 bg-transparent text-sm font-medium text-stone-950 outline-none placeholder:text-stone-400 sm:h-12 sm:text-base"
-                    aria-label="ワインを検索"
-                  />
-                  <button
-                    type="button"
-                    onClick={jumpToSearch}
-                    className="hidden h-10 w-10 items-center justify-center rounded-md bg-stone-950 text-white transition hover:bg-[#8a001d] sm:flex"
-                    aria-label="検索結果へ移動"
-                  >
-                    <ArrowRight className="h-4 w-4" />
-                  </button>
+                <div className="mt-4 sm:mt-7">
+                  <div className="mb-2 text-xs font-black text-stone-950 sm:text-sm">料理で選ぶ</div>
+                  <div className="grid grid-cols-2 gap-2 min-[380px]:grid-cols-4 sm:max-w-[560px] sm:gap-3">
+                    {heroFoodChips.map((food) => (
+                      <button
+                        key={food.label}
+                        type="button"
+                        onClick={() => applyHeroQuery(food.query)}
+                        className="flex h-12 items-center gap-1.5 rounded-lg border border-stone-200 bg-white/92 px-2 text-xs font-black text-stone-950 shadow-sm transition hover:border-[#8a001d]/40 hover:bg-white sm:h-16 sm:gap-2 sm:px-3 sm:text-sm"
+                      >
+                        <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border-2 border-white shadow-sm sm:h-11 sm:w-11">
+                          <Image src={food.image} alt="" fill sizes="44px" className="object-cover" aria-hidden="true" />
+                        </span>
+                        <span className="whitespace-nowrap">{food.label}</span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              <div className="mt-2 sm:mt-6">
-                <div className="flex gap-2 overflow-x-auto pb-1 sm:flex-wrap sm:gap-3 sm:overflow-visible sm:pb-0">
-                  {primaryFacets.map(({ key, label, Icon }) => (
+                <div className="mt-3 sm:mt-6">
+                  <div className="mb-2 text-xs font-black text-stone-950 sm:text-sm">クイックフィルター</div>
+                  <div className="grid grid-cols-3 gap-2 sm:max-w-[560px] sm:gap-3">
                     <button
-                      key={key}
                       type="button"
-                      onClick={() => setActiveFacet((value) => (value === key ? null : key))}
-                      aria-pressed={activeFacet === key}
-                      className={`inline-flex h-8 min-w-[82px] shrink-0 items-center justify-center gap-1 rounded-md border px-2 text-[11px] font-black shadow-sm transition sm:h-10 sm:min-w-[116px] sm:gap-1.5 sm:px-3 sm:text-sm ${
-                        activeFacet === key
-                          ? "border-[#8a001d] bg-[#8a001d] text-white"
-                          : "border-stone-200 bg-white text-stone-800 hover:border-[#8a001d]/40 hover:bg-rose-50"
-                      }`}
+                      onClick={() => applyHeroStore("seven")}
+                      className="inline-flex h-10 items-center justify-center gap-1 rounded-lg border border-stone-200 bg-white/92 px-1.5 text-[11px] font-black text-stone-950 shadow-sm transition hover:border-[#8a001d]/40 hover:bg-white sm:h-12 sm:gap-2 sm:px-4 sm:text-sm"
                     >
-                      <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-                      {label}
+                      <MapPin className="h-4 w-4 sm:h-5 sm:w-5" />
+                      近くで買える
                     </button>
-                  ))}
-                </div>
-              </div>
-
-              {activeFacet && (
-              <div className="mt-1 sm:mt-5">
-                <div className="flex gap-2 overflow-x-auto pb-1 sm:flex-wrap sm:gap-3 sm:overflow-visible sm:pb-0">
-                  {activeStoreGroup?.stores.map((storeType) => (
                     <button
-                      key={storeType}
                       type="button"
-                      onClick={() => applyStoreFilter(storeType)}
-                      aria-pressed={store === storeType}
-                      className={`inline-flex h-8 shrink-0 items-center justify-center rounded-md border px-3 text-xs font-black shadow-sm transition sm:h-10 sm:text-sm ${
-                        store === storeType
-                          ? "border-[#8a001d] bg-[#8a001d] text-white"
-                          : "border-stone-200 bg-white text-stone-800 hover:border-[#8a001d]/40 hover:bg-rose-50"
-                      }`}
+                      onClick={() => {
+                        setSort("buzz");
+                        jumpToSearch();
+                      }}
+                      className="inline-flex h-10 items-center justify-center gap-1 rounded-lg border border-stone-200 bg-white/92 px-1.5 text-[11px] font-black text-stone-950 shadow-sm transition hover:border-[#8a001d]/40 hover:bg-white sm:h-12 sm:gap-2 sm:px-4 sm:text-sm"
                     >
-                      {storeLabels[storeType] ?? storeType}
+                      <X className="h-4 w-4 sm:h-5 sm:w-5" />
+                      Xで話題
                     </button>
-                  ))}
-                  {activeFacet === "country" &&
-                    countryCategories.map((item) => (
-                      <button
-                        key={item.country}
-                        type="button"
-                        onClick={() => applyCountryFilter(item.label)}
-                        aria-pressed={country === item.label}
-                        className={`inline-flex h-8 shrink-0 items-center justify-center rounded-md border px-3 text-xs font-black shadow-sm transition sm:h-10 sm:text-sm ${
-                          country === item.label
-                            ? "border-[#8a001d] bg-[#8a001d] text-white"
-                            : "border-stone-200 bg-white text-stone-800 hover:border-[#8a001d]/40 hover:bg-rose-50"
-                        }`}
-                      >
-                        {item.label}
-                      </button>
-                    ))}
-                  {activeFacet === "grape" &&
-                    grapeFacets.map((item) => (
-                      <button
-                        key={item}
-                        type="button"
-                        onClick={() => applyGrapeFilter(item)}
-                        aria-pressed={grape === item}
-                        className={`inline-flex h-8 shrink-0 items-center justify-center rounded-md border px-3 text-xs font-black shadow-sm transition sm:h-10 sm:text-sm ${
-                          grape === item
-                            ? "border-[#8a001d] bg-[#8a001d] text-white"
-                            : "border-stone-200 bg-white text-stone-800 hover:border-[#8a001d]/40 hover:bg-rose-50"
-                        }`}
-                      >
-                        {item}
-                      </button>
-                    ))}
-                  {activeFacet === "price" &&
-                    priceFacets.map((item) => (
-                      <button
-                        key={item.key}
-                        type="button"
-                        onClick={() => applyPriceFilter(item.key)}
-                        aria-pressed={priceFilter === item.key}
-                        className={`inline-flex h-8 shrink-0 items-center justify-center rounded-md border px-3 text-xs font-black shadow-sm transition sm:h-10 sm:text-sm ${
-                          priceFilter === item.key
-                            ? "border-[#8a001d] bg-[#8a001d] text-white"
-                            : "border-stone-200 bg-white text-stone-800 hover:border-[#8a001d]/40 hover:bg-rose-50"
-                        }`}
-                      >
-                        {item.label}
-                      </button>
-                    ))}
-                </div>
-              </div>
-              )}
-
-              <div className="hidden">
-                <div className="hidden text-sm font-black text-stone-900 sm:mb-3 sm:block">料理で選ぶ</div>
-                <div className="flex gap-2 overflow-x-auto pb-1 sm:flex-wrap sm:gap-3 sm:overflow-visible sm:pb-0">
-                  {foodPresets.map((food) => (
-                    <FoodChip
-                      key={food.label}
-                      label={food.label}
-                      icon={food.icon}
-                      active={query === food.query}
-                      onClick={() => applyFoodQuery(food.query)}
-                    />
-                  ))}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setPriceFilter("under1500");
+                        setVisibleCount(12);
+                        jumpToSearch();
+                      }}
+                      className="inline-flex h-10 items-center justify-center gap-1 rounded-lg border border-stone-200 bg-white/92 px-1.5 text-[11px] font-black text-stone-950 shadow-sm transition hover:border-[#8a001d]/40 hover:bg-white sm:h-12 sm:gap-2 sm:px-4 sm:text-sm"
+                    >
+                      <span className="flex h-4 w-4 items-center justify-center rounded-full border border-emerald-600 text-[10px] font-black text-emerald-700 sm:h-5 sm:w-5 sm:text-xs">¥</span>
+                      1,500円以下
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              <div className="hidden max-w-3xl grid-cols-3 gap-3 sm:mt-7">
-                <div className="rounded-lg border border-stone-200 bg-white px-3 py-2 shadow-sm sm:px-4 sm:py-3">
-                  <div className="text-xs font-black text-stone-400">今日の入口</div>
-                  <div className="mt-1 text-xs font-black text-stone-950 sm:text-sm">X投稿を表示</div>
-                </div>
-                <div className="rounded-lg border border-stone-200 bg-white px-3 py-2 shadow-sm sm:px-4 sm:py-3">
-                  <div className="text-xs font-black text-stone-400">見つかる場所</div>
-                  <div className="mt-1 truncate text-xs font-black text-stone-950 sm:text-sm">{heroWine.storeLabels.slice(0, 2).join(" / ")}</div>
-                </div>
-                <div className="rounded-lg border border-stone-200 bg-white px-3 py-2 shadow-sm sm:px-4 sm:py-3">
-                  <div className="text-xs font-black text-stone-400">価格の目安</div>
-                  <div className="mt-1 text-xs font-black text-[#8a001d] sm:text-sm">{priceFmt(heroWine.price)}</div>
-                </div>
+              <div className="pointer-events-none absolute bottom-0 left-[39%] hidden h-[390px] w-[310px] -translate-x-1/2 lg:block xl:h-[500px] xl:w-[390px]">
+                <Image src={heroBottle} alt="" fill priority sizes="390px" className="object-contain drop-shadow-[0_34px_36px_rgba(45,24,10,0.28)]" aria-hidden="true" />
               </div>
-            </div>
+              <div className="pointer-events-none absolute bottom-[-58px] left-[33%] hidden h-[160px] w-[430px] -translate-x-1/2 lg:block xl:h-[210px] xl:w-[560px]">
+                <Image src={heroProsciutto} alt="" fill sizes="560px" className="object-contain drop-shadow-[0_22px_18px_rgba(70,35,18,0.18)]" aria-hidden="true" />
+              </div>
 
-            <div className="relative z-10 hidden items-center justify-end pt-1 lg:flex lg:pt-4">
-              <HeroTweetFeature wine={heroWine} tweetUrl={heroTweetUrl} />
+              <div className="relative z-10 lg:justify-self-end">
+                <article className="overflow-hidden rounded-xl border border-stone-200 bg-white/96 shadow-[0_22px_60px_rgba(55,31,18,0.15)] backdrop-blur">
+                  <div className="grid gap-0 lg:grid-cols-[190px_minmax(0,1fr)_170px]">
+                    <div className="relative min-h-[230px] bg-white px-4 pt-10 sm:min-h-[270px] lg:min-h-[360px]">
+                      <div className="absolute left-0 top-0 rounded-br-lg bg-[#8a001d] px-5 py-2 text-sm font-black text-white">
+                        今夜のおすすめ
+                      </div>
+                      <Image src={heroBottle} alt="ゴキンジョ バズワイン ブリュット" fill sizes="220px" className="object-contain object-bottom p-5" />
+                    </div>
+
+                    <div className="border-t border-stone-100 p-5 lg:border-l lg:border-t-0">
+                      <h2 className="text-xl font-black leading-tight tracking-normal text-stone-950 sm:text-2xl">
+                        ゴキンジョ バズワイン ブリュット
+                      </h2>
+                      <p className="mt-2 text-sm font-bold text-stone-600">🇫🇷 フランス / ヴァン・ムスー</p>
+                      <div className="mt-5 flex items-end gap-2 border-b border-stone-200 pb-5">
+                        <span className="text-4xl font-black tracking-normal text-stone-950">¥1,280</span>
+                        <span className="pb-1 text-sm font-bold text-stone-500">税込</span>
+                      </div>
+                      <div className="mt-4">
+                        <div className="text-xs font-black text-stone-500">買えるお店</div>
+                        <div className="mt-2 flex flex-wrap gap-2">
+                          {["セブン", "イオン", "カルディ", "成城石井"].map((store, index) => (
+                            <span key={store} className={`rounded border px-2.5 py-1 text-xs font-black ${storeTone[index % storeTone.length]}`}>
+                              {store}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="mt-5">
+                        <div className="text-xs font-black text-stone-500">おすすめの料理</div>
+                        <div className="mt-2 flex flex-wrap gap-2">
+                          {["生ハム", "フライドチキン", "シーフード", "フルーツ"].map((item) => (
+                            <span key={item} className="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs font-black text-stone-700">
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-3 gap-0 border-t border-stone-100 p-5 text-center lg:block lg:border-l lg:border-t-0 lg:text-left">
+                      <div>
+                        <div className="text-xs font-black text-stone-500">バズ度</div>
+                        <div className="mt-2 text-2xl tracking-[0.1em] text-[#8a001d]">🔥🔥🔥🔥♨</div>
+                      </div>
+                      <div className="border-l border-stone-100 pl-3 lg:mt-7 lg:border-l-0 lg:border-t lg:pl-0 lg:pt-5">
+                        <div className="text-xs font-black text-stone-500">Vivino評価</div>
+                        <div className="mt-2 text-4xl font-black tracking-normal text-stone-950">3.9</div>
+                        <div className="mt-1 text-sm text-stone-950">★★★★<span className="text-stone-300">★</span></div>
+                      </div>
+                      <div className="border-l border-stone-100 pl-3 lg:mt-7 lg:border-l-0 lg:border-t lg:pl-0 lg:pt-5">
+                        <div className="text-xs font-black text-stone-500">コスパ</div>
+                        <div className="mt-2 text-sm font-black text-stone-950">とても良い</div>
+                        <div className="mt-2 flex justify-center gap-1 lg:justify-start">
+                          {[0, 1, 2, 3, 4].map((dot) => (
+                            <span key={dot} className={`h-3 w-3 rounded-full ${dot < 4 ? "bg-emerald-600" : "border border-emerald-600 bg-white"}`} />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid gap-3 border-t border-stone-100 p-4 sm:grid-cols-[1fr_150px]">
+                    <div className="flex gap-3">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-stone-950 text-2xl font-black text-white">X</span>
+                      <p className="text-sm font-bold leading-6 text-stone-800">
+                        泡好きの会社員 <span className="font-medium text-stone-500">@bubbly_love_jp · 5月10日</span><br />
+                        きめ細かな泡とすっきりした酸味、コスパ最高の泡！家飲みが一気に華やかになる〜 🙌✨
+                      </p>
+                    </div>
+                    <div className="relative hidden min-h-[82px] overflow-hidden rounded-lg sm:block">
+                      <Image src={heroPhotoStrip} alt="" fill sizes="150px" className="object-cover object-[88%_center]" aria-hidden="true" />
+                    </div>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </section>
@@ -996,7 +887,7 @@ export default function Home() {
 
           <div className="mt-5 flex items-center justify-between">
             <p className="text-sm font-medium text-stone-500">
-              <span className="font-black text-stone-950">{filtered.length}</span> 本が見つかりました
+              <span className="font-black text-stone-950">{filtered.length}</span> 本をジャンル別に表示中
             </p>
             {(query || type !== "all" || store !== "all" || country !== "all" || grape !== "all" || priceFilter !== "standard") && (
               <button
@@ -1017,15 +908,50 @@ export default function Home() {
             )}
           </div>
 
-          {visibleWines.length === 0 ? (
+          {filtered.length === 0 ? (
             <div className="mt-6 rounded-lg border border-dashed border-stone-300 bg-white p-10 text-center">
               <p className="text-lg font-black text-stone-950">条件に合うワインが見つかりませんでした</p>
               <p className="mt-2 text-sm text-stone-500">お店や料理名を少し広めにして試してみてください。</p>
             </div>
           ) : (
-            <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {visibleWines.map((wine, index) => (
-                <GridWineCard key={wine.id} wine={wine} rank={index + 1} />
+            <div className="mt-7 space-y-9">
+              {groupedWines.map((section) => (
+                <section key={section.key} aria-labelledby={`${section.key}-shelf-title`}>
+                  <div className="mb-3 flex flex-col gap-2 border-b border-stone-200 pb-3 md:flex-row md:items-end md:justify-between">
+                    <div>
+                      <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#8a001d]">Store Shelf</p>
+                      <h3 id={`${section.key}-shelf-title`} className="mt-1 text-xl font-black tracking-normal text-stone-950 sm:text-2xl">
+                        {section.title}
+                      </h3>
+                      <p className="mt-1 max-w-2xl text-sm font-bold leading-6 text-stone-500">{section.description}</p>
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {section.storeTypes.slice(0, 6).map((storeType, index) => (
+                        <button
+                          key={storeType}
+                          type="button"
+                          onClick={() => {
+                            setStore(storeType);
+                            setVisibleCount(12);
+                          }}
+                          className={`rounded border px-2 py-1 text-[11px] font-black transition hover:border-[#8a001d] ${storeTone[index % storeTone.length]}`}
+                        >
+                          {storeLabels[storeType] ?? storeType}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                    {section.wines.map((wine) => (
+                      <GridWineCard key={`${section.key}-${wine.id}`} wine={wine} />
+                    ))}
+                  </div>
+                  {section.total > visibleCount && (
+                    <div className="mt-3 text-right text-xs font-black text-stone-400">
+                      さらに {section.total - visibleCount} 本あります
+                    </div>
+                  )}
+                </section>
               ))}
             </div>
           )}
@@ -1037,7 +963,7 @@ export default function Home() {
                 onClick={() => setVisibleCount((count) => count + 12)}
                 className="inline-flex min-h-11 items-center justify-center rounded-md border border-stone-300 bg-white px-6 text-sm font-black text-stone-800 transition hover:border-stone-500"
               >
-                もっと見る（残り {filtered.length - visibleCount} 本）
+                各ジャンルをもっと表示する
               </button>
             </div>
           )}
