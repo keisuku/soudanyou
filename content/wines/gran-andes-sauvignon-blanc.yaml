@@ -1,0 +1,47 @@
+# グラン・アンデス ソーヴィニヨン・ブラン — セブンの超低価格チリ白
+id: gran-andes-sauvignon-blanc
+name: Gran Andes Sauvignon Blanc
+nameJa: グラン・アンデス ソーヴィニヨン・ブラン
+producer: Seven Premium
+country: Chile
+countryCode: CL
+region: Central Valley
+type: white
+grapeVarieties:
+  - ソーヴィニヨン・ブラン
+
+description: >
+  セブンプレミアムで買えるチリ産のやや辛口白。シトラス系の果実味と
+  フレッシュな酸が続き、600円以下でも爽やかに飲めるデイリー白。
+
+price: 591
+abv: 12.5
+servingTemp: 8-10℃
+
+stores:
+  - type: seven
+    name: セブン-イレブン
+    price: 591
+    inStock: true
+
+tags:
+  - セブン
+  - チリ白
+  - ソーヴィニヨンブラン
+  - 格安ワイン
+  - 爽やか
+
+pairings:
+  - サラダチキン
+  - シーフードサラダ
+  - レモン唐揚げ
+  - 冷製パスタ
+
+whyBuyNow: セブンで591円。柑橘系の爽やか白を気軽に試せる
+
+buzzScore: 68
+vivinoScore: null
+costPerformance: 88
+
+tweetUrls: []
+buyLinks: []

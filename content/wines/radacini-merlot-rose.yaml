@@ -1,0 +1,54 @@
+# ラダチーニ メルロー ロゼ — モルドバの旨安ロゼ
+id: radacini-merlot-rose
+name: Radacini Merlot Rose
+nameJa: ラダチーニ メルロー ロゼ
+producer: Radacini Wines
+country: Moldova
+countryCode: MD
+region: Codru
+type: rose
+grapeVarieties:
+  - メルロー
+
+description: >
+  モルドバのラダチーニが造るメルロー100%の辛口ロゼ。ラズベリーや
+  チェリーの甘酸っぱさがあり、淡い色合いと軽やかな飲み口で食卓に合わせやすい。
+
+price: 1419
+abv: 13.0
+servingTemp: 10-12℃
+
+stores:
+  - type: kaldi
+    name: カルディ
+    price: 1265
+    inStock: true
+  - type: tuscany
+    name: トスカニー
+    price: 1419
+    inStock: true
+
+tags:
+  - ロゼ
+  - モルドバ
+  - メルロー
+  - 旨安
+  - 初心者向け
+
+pairings:
+  - 生ハム
+  - キッシュ
+  - カルパッチョ
+  - 酢豚
+
+whyBuyNow: メルローの果実味を軽やかに楽しめるモルドバ旨安ロゼ
+
+buzzScore: 66
+vivinoScore: null
+costPerformance: 83
+
+tweetUrls: []
+buyLinks:
+  - store: トスカニー
+    url: https://www.tuscany.co.jp/products/detail/22437
+    price: 1419

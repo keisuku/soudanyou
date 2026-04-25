@@ -1,0 +1,46 @@
+# ペンヴィーノ カベルネ・ソーヴィニヨン — ファミマ限定チリ赤
+id: penvino-cabernet-sauvignon
+name: Penvino Cabernet Sauvignon
+nameJa: ペンヴィーノ カベルネ・ソーヴィニヨン
+producer: FamilyMart x Mercian
+country: Chile
+countryCode: CL
+type: red
+grapeVarieties:
+  - カベルネ・ソーヴィニヨン
+
+description: >
+  ファミリーマート限定のチリ産カベルネ。プラムを思わせる甘い香りと、
+  渋み・酸味のバランスが取りやすい味わいで、コンビニ赤の入口に向く。
+
+price: 698
+abv: 12.0
+servingTemp: 14-16℃
+
+stores:
+  - type: familymart
+    name: ファミリーマート
+    price: 698
+    inStock: true
+
+tags:
+  - ファミマ
+  - ファミマ限定
+  - チリカベ
+  - コンビニワイン
+  - 格安ワイン
+
+pairings:
+  - ハンバーグ
+  - ミートソース
+  - 焼き鳥たれ
+  - コンビニ惣菜
+
+whyBuyNow: ファミマで698円。迷ったら試せるチリカベ入門
+
+buzzScore: 64
+vivinoScore: null
+costPerformance: 84
+
+tweetUrls: []
+buyLinks: []

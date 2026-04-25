@@ -210,6 +210,7 @@
     ],
     "tweetUrls": [
       "https://x.com/winenomuhito/status/2014469640374911278",
+      "https://x.com/winenomuhito/status/1966645239839682972",
       "https://x.com/miyamoto_ryuta/status/1572877792676839427"
     ],
     "abv": 11.5,
@@ -410,6 +411,49 @@
         "price": 2673
       }
     ]
+  },
+  {
+    "id": "bellamour-premium-sparkling",
+    "name": "Bellamour Premium Sparkling Wine",
+    "nameJa": "ベラムール プレミアム スパークリングワイン",
+    "producer": "FamilyMart",
+    "country": "France",
+    "countryCode": "FR",
+    "type": "sparkling",
+    "grapeVarieties": [
+      "アイレン"
+    ],
+    "description": "ファミリーマートで買えるプレミアムスパークリング。シトラスを思わせる香りと 6か月熟成由来のまろやかな口当たりで、家飲みの乾杯に使いやすい。\n",
+    "price": 1078,
+    "stores": [
+      {
+        "type": "familymart",
+        "name": "ファミリーマート",
+        "price": 1078,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 69,
+    "vivinoScore": null,
+    "costPerformance": 82,
+    "tags": [
+      "ファミマ",
+      "ファミマ限定",
+      "スパークリング",
+      "神の雫",
+      "乾杯ワイン"
+    ],
+    "tweetUrls": [],
+    "abv": 11,
+    "servingTemp": "6-8℃",
+    "pairings": [
+      "フレッシュチーズ",
+      "塩味のスナック",
+      "生ハム",
+      "フルーツ"
+    ],
+    "whyBuyNow": "ファミマで買える千円台の本格泡。乾杯用に強い",
+    "buyLinks": []
   },
   {
     "id": "bodegas-muga-rioja-reserva",
@@ -1774,6 +1818,50 @@
     ]
   },
   {
+    "id": "gran-andes-sauvignon-blanc",
+    "name": "Gran Andes Sauvignon Blanc",
+    "nameJa": "グラン・アンデス ソーヴィニヨン・ブラン",
+    "producer": "Seven Premium",
+    "country": "Chile",
+    "countryCode": "CL",
+    "region": "Central Valley",
+    "type": "white",
+    "grapeVarieties": [
+      "ソーヴィニヨン・ブラン"
+    ],
+    "description": "セブンプレミアムで買えるチリ産のやや辛口白。シトラス系の果実味と フレッシュな酸が続き、600円以下でも爽やかに飲めるデイリー白。\n",
+    "price": 591,
+    "stores": [
+      {
+        "type": "seven",
+        "name": "セブン-イレブン",
+        "price": 591,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 68,
+    "vivinoScore": null,
+    "costPerformance": 88,
+    "tags": [
+      "セブン",
+      "チリ白",
+      "ソーヴィニヨンブラン",
+      "格安ワイン",
+      "爽やか"
+    ],
+    "tweetUrls": [],
+    "abv": 12.5,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "サラダチキン",
+      "シーフードサラダ",
+      "レモン唐揚げ",
+      "冷製パスタ"
+    ],
+    "whyBuyNow": "セブンで591円。柑橘系の爽やか白を気軽に試せる",
+    "buyLinks": []
+  },
+  {
     "id": "gran-sovento-gran-reserva",
     "name": "Gran Sovento Gran Reserva",
     "nameJa": "グラン・ソヴェント グランレゼルバ",
@@ -2311,6 +2399,12 @@
     "price": 2497,
     "stores": [
       {
+        "type": "africaer",
+        "name": "アフリカー",
+        "price": 2596,
+        "inStock": true
+      },
+      {
         "type": "rakuten",
         "name": "楽天市場",
         "price": 2497,
@@ -2335,15 +2429,16 @@
     "tags": [
       "南アフリカ",
       "ピノタージュ",
+      "アフリカー",
       "Xバズ",
       "リピート確定"
     ],
     "tweetUrls": [
       "https://x.com/winenomuhito/status/1891342550180540774",
-      "https://x.com/winenomuhito/status/2018087414733144219",
-      "https://x.com/winenomuhito/status/1903592075406520437"
+      "https://x.com/winenomuhito/status/1850677458837930119",
+      "https://x.com/winenomuhito/status/1831829677343957039"
     ],
-    "abv": 14,
+    "abv": 14.5,
     "servingTemp": "16-18℃",
     "pairings": [
       "グリル肉",
@@ -2352,6 +2447,11 @@
     ],
     "whyBuyNow": "X衝撃の南アコスパピノ！毎日飲みたくなる完成度",
     "buyLinks": [
+      {
+        "store": "アフリカー",
+        "url": "https://af-liquor.com/?pid=184831624",
+        "price": 2596
+      },
       {
         "store": "楽天市場",
         "url": "https://search.rakuten.co.jp/search/mall/KWV+カセドラルセラー+ピノタージュ/",
@@ -2467,6 +2567,60 @@
         "store": "楽天",
         "url": "https://search.rakuten.co.jp/search/mall/ラピウマ+ペコリーノ/",
         "price": 1580
+      }
+    ]
+  },
+  {
+    "id": "le-bar-a-vin-52-bianco",
+    "name": "Le Bar a Vin 52 Bianco",
+    "nameJa": "ル・バーラ・ヴァン 52 ビアンコ",
+    "producer": "Rocca",
+    "country": "Italy",
+    "countryCode": "IT",
+    "region": "Puglia",
+    "type": "white",
+    "grapeVarieties": [
+      "トレッビアーノ"
+    ],
+    "description": "成城石井のワインバー「Le Bar a Vin 52」のハウスワイン。プーリアのトレッビアーノを使った スッキリ辛口の白で、前菜やフレッシュチーズに合わせやすい万能デイリー白。\n",
+    "price": 1419,
+    "stores": [
+      {
+        "type": "seijoishii",
+        "name": "成城石井",
+        "price": 1419,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 86,
+    "vivinoScore": null,
+    "costPerformance": 87,
+    "tags": [
+      "成城石井",
+      "ハウスワイン",
+      "イタリア白",
+      "トレッビアーノ",
+      "料理万能"
+    ],
+    "tweetUrls": [
+      "https://x.com/winenomuhito/status/1996710182299357353",
+      "https://x.com/winenomuhito/status/1949255173521756377"
+    ],
+    "abv": 12,
+    "servingTemp": "8-10℃",
+    "pairings": [
+      "前菜",
+      "フレッシュチーズ",
+      "サラダ",
+      "白身魚",
+      "オイル系パスタ"
+    ],
+    "whyBuyNow": "成城石井のワインバー発。料理に寄り添う常備候補の辛口白",
+    "buyLinks": [
+      {
+        "store": "成城石井",
+        "url": "https://seijoishii.com/products/4519490516114",
+        "price": 1419
       }
     ]
   },
@@ -3058,6 +3212,49 @@
     ]
   },
   {
+    "id": "penvino-cabernet-sauvignon",
+    "name": "Penvino Cabernet Sauvignon",
+    "nameJa": "ペンヴィーノ カベルネ・ソーヴィニヨン",
+    "producer": "FamilyMart x Mercian",
+    "country": "Chile",
+    "countryCode": "CL",
+    "type": "red",
+    "grapeVarieties": [
+      "カベルネ・ソーヴィニヨン"
+    ],
+    "description": "ファミリーマート限定のチリ産カベルネ。プラムを思わせる甘い香りと、 渋み・酸味のバランスが取りやすい味わいで、コンビニ赤の入口に向く。\n",
+    "price": 698,
+    "stores": [
+      {
+        "type": "familymart",
+        "name": "ファミリーマート",
+        "price": 698,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 64,
+    "vivinoScore": null,
+    "costPerformance": 84,
+    "tags": [
+      "ファミマ",
+      "ファミマ限定",
+      "チリカベ",
+      "コンビニワイン",
+      "格安ワイン"
+    ],
+    "tweetUrls": [],
+    "abv": 12,
+    "servingTemp": "14-16℃",
+    "pairings": [
+      "ハンバーグ",
+      "ミートソース",
+      "焼き鳥たれ",
+      "コンビニ惣菜"
+    ],
+    "whyBuyNow": "ファミマで698円。迷ったら試せるチリカベ入門",
+    "buyLinks": []
+  },
+  {
     "id": "petes-pure-sauvignon-blanc",
     "name": "Pete's Pure Sauvignon Blanc",
     "nameJa": "ピーツ・ピュア ソーヴィニヨン・ブラン",
@@ -3254,6 +3451,62 @@
         "store": "楽天市場",
         "url": "https://search.rakuten.co.jp/search/mall/プラネタ+シャルドネ/",
         "price": 2450
+      }
+    ]
+  },
+  {
+    "id": "radacini-merlot-rose",
+    "name": "Radacini Merlot Rose",
+    "nameJa": "ラダチーニ メルロー ロゼ",
+    "producer": "Radacini Wines",
+    "country": "Moldova",
+    "countryCode": "MD",
+    "region": "Codru",
+    "type": "rose",
+    "grapeVarieties": [
+      "メルロー"
+    ],
+    "description": "モルドバのラダチーニが造るメルロー100%の辛口ロゼ。ラズベリーや チェリーの甘酸っぱさがあり、淡い色合いと軽やかな飲み口で食卓に合わせやすい。\n",
+    "price": 1419,
+    "stores": [
+      {
+        "type": "kaldi",
+        "name": "カルディ",
+        "price": 1265,
+        "inStock": true
+      },
+      {
+        "type": "tuscany",
+        "name": "トスカニー",
+        "price": 1419,
+        "inStock": true
+      }
+    ],
+    "buzzScore": 66,
+    "vivinoScore": null,
+    "costPerformance": 83,
+    "tags": [
+      "ロゼ",
+      "モルドバ",
+      "メルロー",
+      "旨安",
+      "初心者向け"
+    ],
+    "tweetUrls": [],
+    "abv": 13,
+    "servingTemp": "10-12℃",
+    "pairings": [
+      "生ハム",
+      "キッシュ",
+      "カルパッチョ",
+      "酢豚"
+    ],
+    "whyBuyNow": "メルローの果実味を軽やかに楽しめるモルドバ旨安ロゼ",
+    "buyLinks": [
+      {
+        "store": "トスカニー",
+        "url": "https://www.tuscany.co.jp/products/detail/22437",
+        "price": 1419
       }
     ]
   },

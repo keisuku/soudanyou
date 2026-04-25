@@ -1,0 +1,46 @@
+# ベラムール プレミアムスパークリング — ファミマ限定の泡
+id: bellamour-premium-sparkling
+name: Bellamour Premium Sparkling Wine
+nameJa: ベラムール プレミアム スパークリングワイン
+producer: FamilyMart
+country: France
+countryCode: FR
+type: sparkling
+grapeVarieties:
+  - アイレン
+
+description: >
+  ファミリーマートで買えるプレミアムスパークリング。シトラスを思わせる香りと
+  6か月熟成由来のまろやかな口当たりで、家飲みの乾杯に使いやすい。
+
+price: 1078
+abv: 11.0
+servingTemp: 6-8℃
+
+stores:
+  - type: familymart
+    name: ファミリーマート
+    price: 1078
+    inStock: true
+
+tags:
+  - ファミマ
+  - ファミマ限定
+  - スパークリング
+  - 神の雫
+  - 乾杯ワイン
+
+pairings:
+  - フレッシュチーズ
+  - 塩味のスナック
+  - 生ハム
+  - フルーツ
+
+whyBuyNow: ファミマで買える千円台の本格泡。乾杯用に強い
+
+buzzScore: 69
+vivinoScore: null
+costPerformance: 82
+
+tweetUrls: []
+buyLinks: []

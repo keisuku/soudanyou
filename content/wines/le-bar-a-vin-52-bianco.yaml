@@ -1,0 +1,55 @@
+# Le Bar a Vin 52 ビアンコ — 成城石井のワインバーハウス白
+id: le-bar-a-vin-52-bianco
+name: Le Bar a Vin 52 Bianco
+nameJa: ル・バーラ・ヴァン 52 ビアンコ
+producer: Rocca
+country: Italy
+countryCode: IT
+region: Puglia
+type: white
+grapeVarieties:
+  - トレッビアーノ
+
+description: >
+  成城石井のワインバー「Le Bar a Vin 52」のハウスワイン。プーリアのトレッビアーノを使った
+  スッキリ辛口の白で、前菜やフレッシュチーズに合わせやすい万能デイリー白。
+
+price: 1419
+abv: 12.0
+servingTemp: 8-10℃
+
+stores:
+  - type: seijoishii
+    name: 成城石井
+    price: 1419
+    inStock: true
+
+tags:
+  - 成城石井
+  - ハウスワイン
+  - イタリア白
+  - トレッビアーノ
+  - 料理万能
+
+pairings:
+  - 前菜
+  - フレッシュチーズ
+  - サラダ
+  - 白身魚
+  - オイル系パスタ
+
+whyBuyNow: 成城石井のワインバー発。料理に寄り添う常備候補の辛口白
+
+buzzScore: 86
+vivinoScore: null
+costPerformance: 87
+
+tweetUrls:
+  # @winenomuhito投稿は要確認ソースとして蓄積
+  - https://x.com/winenomuhito/status/1996710182299357353
+  - https://x.com/winenomuhito/status/1949255173521756377
+
+buyLinks:
+  - store: 成城石井
+    url: https://seijoishii.com/products/4519490516114
+    price: 1419

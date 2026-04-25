@@ -13,10 +13,14 @@ description: >
   Xで「優勝レベル」「リピート確定」と大バズのコスパピノタージュです。
 
 price: 2497
-abv: 14.0
+abv: 14.5
 servingTemp: 16-18℃
 
 stores:
+  - type: africaer
+    name: アフリカー
+    price: 2596
+    inStock: true
   - type: rakuten
     name: 楽天市場
     price: 2497
@@ -33,6 +37,7 @@ stores:
 tags:
   - 南アフリカ
   - ピノタージュ
+  - アフリカー
   - Xバズ
   - リピート確定
 
@@ -48,11 +53,15 @@ vivinoScore: 3.8
 costPerformance: 86
 
 tweetUrls:
+  # @winenomuhito投稿は要確認ソースとして蓄積
   - https://x.com/winenomuhito/status/1891342550180540774
-  - https://x.com/winenomuhito/status/2018087414733144219
-  - https://x.com/winenomuhito/status/1903592075406520437
+  - https://x.com/winenomuhito/status/1850677458837930119
+  - https://x.com/winenomuhito/status/1831829677343957039
 
 buyLinks:
+  - store: アフリカー
+    url: https://af-liquor.com/?pid=184831624
+    price: 2596
   - store: 楽天市場
     url: https://search.rakuten.co.jp/search/mall/KWV+カセドラルセラー+ピノタージュ/
     price: 2497

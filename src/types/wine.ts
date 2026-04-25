@@ -17,14 +17,28 @@ export type StoreType =
   | "yamaya"
   | "biccamera"
   | "liquorman"
+  | "shinanoya"
   // ネットショップ
   | "rakuten"
+  | "amazon"
   | "africaer"
   | "ginza_grandmarche"
   | "takamura"
   | "felicity"
   | "wine_ohashi"
-  | "ukiuki";
+  | "ukiuki"
+  | "budouya"
+  | "dragee"
+  | "hasegawa"
+  | "kagadaya"
+  | "local_super"
+  | "mikuni_wine"
+  | "miraido"
+  | "sa_wine_jp"
+  | "sankyushop"
+  | "senmonten"
+  | "tuscany"
+  | "wine_grocery";
 
 export type StoreCategory = "convenience" | "supermarket" | "liquor" | "online";
 

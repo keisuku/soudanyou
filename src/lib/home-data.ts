@@ -45,9 +45,7 @@ export function toHomeWine(w: Wine): HomeWine {
   };
 }
 
-export const homeWines: HomeWine[] = allWines
-  .filter((w) => w.price >= 1000)
-  .map(toHomeWine);
+export const homeWines: HomeWine[] = allWines.map(toHomeWine);
 
 export const homeAllStores: string[] = Array.from(
   new Set(homeWines.flatMap((w) => w.storeLabels)),
