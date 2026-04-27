@@ -27,6 +27,12 @@ import foodCheese from "../../public/images/home-food-cheese.png";
 import foodPasta from "../../public/images/home-food-pasta.png";
 import foodSeafood from "../../public/images/home-food-seafood.png";
 import foodYakiniku from "../../public/images/home-food-yakiniku.png";
+import canvaTopComposition from "../../public/images/canva-layers/top-composition.png";
+import canvaRankingStrip from "../../public/images/canva-layers/ranking-strip.png";
+import canvaBuzzStrip from "../../public/images/canva-layers/buzz-strip.png";
+import canvaPhoneMock from "../../public/images/canva-layers/phone-mock.png";
+import canvaHeroVisual from "../../public/images/canva-layers/hero-visual.png";
+import canvaRecommendCard from "../../public/images/canva-layers/recommend-card.png";
 import {
   homeWines,
   type HomeWine,
@@ -340,6 +346,135 @@ function GridWineCard({
   );
 }
 
+function CanvaMagicLanding() {
+  return (
+    <section id="ranking" className="border-b border-stone-200 bg-white">
+      <div className="mx-auto hidden max-w-[2048px] lg:block">
+        <div className="relative aspect-[2048/1152] overflow-hidden bg-white">
+          <Image
+            src={canvaTopComposition}
+            alt="ご近所バズワイン LP ファーストビュー"
+            priority
+            sizes="100vw"
+            className="absolute left-0 top-0 h-[66.7%] w-full object-fill"
+          />
+          <Image
+            src={canvaRankingStrip}
+            alt="今日のバズワイン BEST 3"
+            sizes="56vw"
+            className="absolute bottom-0 left-0 h-[34.1%] w-[55.2%] object-fill"
+          />
+          <Image
+            src={canvaBuzzStrip}
+            alt="Xで話題の投稿"
+            sizes="28vw"
+            className="absolute bottom-0 left-[55.1%] h-[34.1%] w-[27.4%] object-fill"
+          />
+          <Image
+            src={canvaPhoneMock}
+            alt="スマホでも探せるご近所バズワイン"
+            priority
+            sizes="20vw"
+            className="absolute bottom-0 right-0 z-10 h-[38.9%] w-[19.2%] object-fill"
+          />
+          <a
+            href="#search"
+            aria-label="ワイン検索へ移動"
+            className="absolute left-[3%] top-[60%] z-20 h-[6%] w-[31%] rounded-lg"
+          />
+          <Link
+            href="/favorites"
+            aria-label="お気に入りへ移動"
+            className="absolute right-[9.1%] top-[2.7%] z-20 h-[5%] w-[8.8%] rounded-lg"
+          />
+        </div>
+      </div>
+
+      <div className="lg:hidden">
+        <div className="relative min-h-[720px] overflow-hidden bg-[#fbf7f1] px-4 pb-6 pt-4">
+          <Image
+            src={canvaHeroVisual}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="pointer-events-none absolute inset-0 object-cover object-[62%_top] opacity-90"
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.94)_0%,rgba(255,255,255,0.80)_34%,rgba(255,255,255,0.34)_62%,rgba(255,255,255,0.92)_100%)]" />
+          <div className="relative z-10 flex items-center justify-between">
+            <Image
+              src={heroLogo}
+              alt="ご近所バズワイン"
+              priority
+              sizes="170px"
+              className="h-8 w-auto"
+            />
+            <button className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-stone-200 bg-white/90 text-stone-950 shadow-sm" aria-label="メニュー">
+              <Menu className="h-5 w-5" />
+            </button>
+          </div>
+          <div className="relative z-10 mt-7">
+            <h1 className="text-[3.1rem] font-black leading-[0.96] tracking-normal text-stone-950" style={{ fontFamily: '"Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif' }}>
+              帰りに買える
+              <span className="block text-[#8a001d]">ワインを探そう！</span>
+            </h1>
+            <p className="mt-4 text-sm font-bold leading-7 text-stone-800">
+              Xで話題の“おいしいやつ”を、価格・お店・料理相性で整理。
+              今夜の1本がすぐ見つかります。
+            </p>
+          </div>
+          <div className="relative z-10 mt-5 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-[0_22px_48px_rgba(72,36,18,0.18)]">
+            <Image
+              src={canvaRecommendCard}
+              alt="今夜のおすすめワイン"
+              priority
+              sizes="100vw"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="relative z-10 mt-5 flex gap-3 overflow-x-auto pb-2">
+            {heroFoodChips.map((food) => (
+              <button
+                key={food.label}
+                type="button"
+                className="flex h-14 min-w-[104px] shrink-0 items-center gap-2 rounded-xl border border-stone-200 bg-white px-3 text-sm font-black text-stone-950 shadow-sm"
+              >
+                <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full border-2 border-white shadow-sm">
+                  <Image src={food.image} alt="" fill sizes="36px" className="object-cover" aria-hidden="true" />
+                </span>
+                {food.label}
+              </button>
+            ))}
+          </div>
+          <div className="relative z-10 mt-2 flex gap-3 overflow-x-auto pb-2">
+            <a href="#search" className="inline-flex h-12 min-w-[150px] shrink-0 items-center justify-center gap-2 rounded-xl border border-stone-200 bg-white px-4 text-sm font-black text-stone-950 shadow-sm">
+              <MapPin className="h-5 w-5" />
+              近くで買える
+            </a>
+            <a href="#search" className="inline-flex h-12 min-w-[130px] shrink-0 items-center justify-center gap-2 rounded-xl border border-stone-200 bg-white px-4 text-sm font-black text-stone-950 shadow-sm">
+              <X className="h-5 w-5" />
+              Xで話題
+            </a>
+            <a href="#search" className="inline-flex h-12 min-w-[150px] shrink-0 items-center justify-center gap-2 rounded-xl border border-stone-200 bg-white px-4 text-sm font-black text-stone-950 shadow-sm">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full border border-emerald-600 text-xs font-black text-emerald-700">¥</span>
+              1,500円以下
+            </a>
+          </div>
+        </div>
+        <div className="bg-white px-4 py-5">
+          <Image
+            src={canvaPhoneMock}
+            alt="スマホ版ご近所バズワイン画面"
+            sizes="100vw"
+            className="mx-auto h-auto w-full max-w-[360px]"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const [query, setQuery] = useState("");
   const [type, setType] = useState<WineType | "all">("all");
@@ -447,7 +582,10 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f7f2eb] text-stone-950">
       <main>
-        <section className="relative isolate overflow-hidden border-b border-stone-200 bg-[#fbf7f1]">
+        <CanvaMagicLanding />
+
+        {false && (
+        <section className="hidden">
           <Image
             src={heroStreet}
             alt=""
@@ -689,8 +827,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+        )}
 
-        <section id="ranking" className="border-b border-stone-200 bg-white">
+        {false && (
+        <section id="legacy-ranking" className="hidden">
           <div className="mx-auto max-w-[1720px] px-4 py-6 sm:px-6">
             <div className="mb-4 flex items-center justify-between gap-4">
               <div className="flex items-center gap-2">
@@ -723,6 +863,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        )}
 
         <section id="search" className="mx-auto max-w-[1720px] px-4 py-10 sm:px-6">
           <div className="mb-5 flex flex-col justify-between gap-3 md:flex-row md:items-end">
@@ -980,7 +1121,7 @@ export default function Home() {
             <Link href="/wines" className="hover:text-stone-950">全ワイン</Link>
             <Link href="/quiz" className="hover:text-stone-950">診断</Link>
             <a href="#ranking" className="hover:text-stone-950">ランキング</a>
-            <a href="#hero-tweet" className="hover:text-stone-950">バズ投稿</a>
+            <a href="#ranking" className="hover:text-stone-950">バズ投稿</a>
           </div>
         </div>
       </footer>
