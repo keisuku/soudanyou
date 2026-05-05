@@ -10,7 +10,8 @@ Install a reusable Codex OS layer for soudanyou so future GitHub work follows th
 - [x] Add Codex operating docs, prompts, memory namespaces, and health check.
 - [x] Run `tools/codex-health-check.ps1`.
 - [x] Run available project validation.
-- [ ] Commit and push branch `codex/codex-os-bootstrap`.
+- [x] Commit and push branch `codex/codex-os-bootstrap`.
+- [x] Open draft PR `https://github.com/keisuku/soudanyou/pull/38`.
 
 ## Project Validation Baseline
 - `npm run wines:build`
