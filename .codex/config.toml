@@ -1,0 +1,14 @@
+# Repo-level Codex defaults for soudanyou.
+
+model = "gpt-5.5"
+model_reasoning_effort = "xhigh"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+project_root_markers = [".git", "AGENTS.md", "package.json", "next.config.ts"]
+
+[sandbox_workspace_write]
+network_access = true
+
+[windows]
+sandbox = "elevated"

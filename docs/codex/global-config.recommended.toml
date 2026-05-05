@@ -1,0 +1,14 @@
+# Recommended global config reference for ~/.codex/config.toml.
+# Merge intentionally; do not overwrite an existing config blindly.
+
+model = "gpt-5.5"
+model_reasoning_effort = "xhigh"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+project_root_markers = [".git", "AGENTS.md", "package.json", "pyproject.toml", "Cargo.toml"]
+
+[sandbox_workspace_write]
+network_access = true
+
+[windows]
+sandbox = "elevated"
